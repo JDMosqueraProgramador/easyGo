@@ -23,9 +23,9 @@ namespace wEasyGoDriver
         {
             UserController user = new UserController();
 
-            user.getIdentification("D:/Projects/wEasyGoDriver/prueba4.jpg");
+            user.getIdentification("D:/Projects/EasyGo/wEasyGoDriver/assets/prueba1.jpg");
 
-            // pictureBox1.Image = user.bitImg;
+            pictureBox1.Image = user.bitImg;
 
             MessageBox.Show(user.Text);
 

@@ -107,5 +107,12 @@
   <ItemGroup>
     <None Include="Resources\btn.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\prueba1.jpg" />
+    <Content Include="assets\prueba2.jpg" />
+    <Content Include="assets\prueba3.jfif" />
+    <Content Include="assets\prueba3.jpg" />
+    <Content Include="assets\prueba4.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

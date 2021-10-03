@@ -45,7 +45,7 @@ namespace wEasyGoDriver.controls
 
             Image<Bgr, byte> generateImg = img;
             
-            Image<Gray, byte> imgout = generateImg.Convert<Gray, byte>().ThresholdBinary(new Gray(50), new Gray(300));
+            Image<Gray, byte> imgout = generateImg.Convert<Gray, byte>().ThresholdBinary(new Gray(70), new Gray(455));
             VectorOfVectorOfPoint contours = new VectorOfVectorOfPoint();
             Mat hier = new Mat();
 
