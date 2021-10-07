@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibEasyGo
+namespace LibClassEasyGo
 {
     class User
     {

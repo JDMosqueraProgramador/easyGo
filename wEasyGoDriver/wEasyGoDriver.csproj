@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="models\Connect.cs" />
+    <Compile Include="models\Motorcycle.cs" />
+    <Compile Include="models\User.cs" />
     <Compile Include="views\Register.view.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,9 +93,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <PackageReference Include="Bunifu.UI.WinForms">
       <Version>5.2.3</Version>

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Npgsql; 
 
-namespace LibEasyGo
+namespace LibClassEasyGo
 {
     public class Connect
     {
