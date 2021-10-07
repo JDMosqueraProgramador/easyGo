@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibEasyGo
 {
-    abstract class User
+    class User
     {
         // Information to person
         private int intIdCardPerson;
@@ -37,7 +37,7 @@ namespace LibEasyGo
         public string StrRolUser { get => strRolUser; set => strRolUser = value; }
         public int IntIdPerson { get => intIdPerson; set => intIdPerson = value; }
 
-        protected User(int intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, string city, int intIdUser, int intPhoneUser, string strEmailUser, string dateCreateAd, string strRolUser, int intIdPerson)
+        public User(int intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, string city, int intIdUser, int intPhoneUser, string strEmailUser, string dateCreateAd, string strRolUser, int intIdPerson)
         {
             IntIdCardPerson = intIdCardPerson;
             StrNamePerson = strNamePerson;
