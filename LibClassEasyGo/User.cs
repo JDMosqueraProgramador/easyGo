@@ -55,5 +55,10 @@ namespace LibClassEasyGo
         }
 
         public abstract int CreateUser(NpgsqlConnection conn, string password, int idCity);
+
+        // public abstract User getUserById();
+        /* public abstract List<User> getUser(int id);
+        public abstract List<User> getUser(long idCard); */
+
     }
 }
