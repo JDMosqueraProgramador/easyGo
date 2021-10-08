@@ -38,6 +38,10 @@ namespace LibClassEasyGo
         public string StrRolUser { get => strRolUser; set => strRolUser = value; }
         public int IntIdPerson { get => intIdPerson; set => intIdPerson = value; }
 
+        public User()
+        {
+
+        }
         public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, string city, int intIdUser, long intPhoneUser, string strEmailUser, DateTime dateCreateAd, string strRolUser, int intIdPerson)
         {
             IntIdCardPerson = intIdCardPerson;
@@ -54,7 +58,21 @@ namespace LibClassEasyGo
             IntIdPerson = intIdPerson;
         }
 
-        public abstract int CreateUser(NpgsqlConnection conn, string password, int idCity);
+        public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, int intIdUser, long intPhoneUser, string strEmailUser, string strRolUser)
+        {
+            IntIdCardPerson = intIdCardPerson;
+            StrNamePerson = strNamePerson;
+            StrLastNamePerson = strLastNamePerson;
+            DateOfBirthPerson = dateOfBirthPerson;
+            BoolGenderPerson = boolGenderPerson;
+            IntIdUser = intIdUser;
+            IntPhoneUser = intPhoneUser;
+            StrEmailUser = strEmailUser;
+            StrRolUser = strRolUser;
+        }
+
+
+        //public abstract int CreateUser(string password, int idCity);
 
         // public abstract User getUserById();
         /* public abstract List<User> getUser(int id);
