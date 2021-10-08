@@ -10,6 +10,7 @@ using Emgu.CV;
 using Emgu.CV.Structure;
 using Emgu.CV.Util;
 using Emgu.CV.OCR;
+using LibClassEasyGo;
 
 
 namespace wEasyGoDriver.controls

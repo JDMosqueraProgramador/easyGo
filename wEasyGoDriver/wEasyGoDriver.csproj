@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LibClassEasyGo">
+      <HintPath>..\LibClassEasyGo\bin\Debug\LibClassEasyGo.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -49,9 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="models\Connect.cs" />
-    <Compile Include="models\Motorcycle.cs" />
-    <Compile Include="models\User.cs" />
     <Compile Include="views\Register.view.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,7 +93,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="models\" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bunifu.UI.WinForms">
       <Version>5.2.3</Version>

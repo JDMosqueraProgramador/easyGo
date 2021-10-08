@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Npgsql;
 
 namespace LibClassEasyGo
 {
-    class User
+    abstract public class User
     {
         // Information to person
-        private int intIdCardPerson;
+        private long intIdCardPerson;
         private string strNamePerson;
         private string strLastNamePerson;
         private DateTime dateOfBirthPerson;
@@ -18,26 +19,26 @@ namespace LibClassEasyGo
 
         // Information to user
         private int intIdUser;
-        private int intPhoneUser;
+        private long intPhoneUser;
         private string strEmailUser;
-        private string dateCreateAd;
+        private DateTime dateCreateAd;
         private string strRolUser;
         private int intIdPerson;
 
-        public int IntIdCardPerson { get => intIdCardPerson; set => intIdCardPerson = value; }
+        public long IntIdCardPerson { get => intIdCardPerson; set => intIdCardPerson = value; }
         public string StrNamePerson { get => strNamePerson; set => strNamePerson = value; }
         public string StrLastNamePerson { get => strLastNamePerson; set => strLastNamePerson = value; }
         public DateTime DateOfBirthPerson { get => dateOfBirthPerson; set => dateOfBirthPerson = value; }
         public string BoolGenderPerson { get => boolGenderPerson; set => boolGenderPerson = value; }
         public string City { get => city; set => city = value; }
         public int IntIdUser { get => intIdUser; set => intIdUser = value; }
-        public int IntPhoneUser { get => intPhoneUser; set => intPhoneUser = value; }
+        public long IntPhoneUser { get => intPhoneUser; set => intPhoneUser = value; }
         public string StrEmailUser { get => strEmailUser; set => strEmailUser = value; }
-        public string DateCreateAd { get => dateCreateAd; set => dateCreateAd = value; }
+        public DateTime DateCreateAd { get => dateCreateAd; set => dateCreateAd = value; }
         public string StrRolUser { get => strRolUser; set => strRolUser = value; }
         public int IntIdPerson { get => intIdPerson; set => intIdPerson = value; }
 
-        public User(int intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, string city, int intIdUser, int intPhoneUser, string strEmailUser, string dateCreateAd, string strRolUser, int intIdPerson)
+        public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, string city, int intIdUser, long intPhoneUser, string strEmailUser, DateTime dateCreateAd, string strRolUser, int intIdPerson)
         {
             IntIdCardPerson = intIdCardPerson;
             StrNamePerson = strNamePerson;
@@ -52,5 +53,7 @@ namespace LibClassEasyGo
             StrRolUser = strRolUser;
             IntIdPerson = intIdPerson;
         }
+
+        public abstract int CreateUser(NpgsqlConnection conn, string password, int idCity);
     }
 }
