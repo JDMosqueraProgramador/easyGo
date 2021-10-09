@@ -42,6 +42,20 @@ namespace LibClassEasyGo
         {
 
         }
+
+        public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, int intIdUser, long intPhoneUser, string strEmailUser, string strRolUser)
+        {
+            IntIdCardPerson = intIdCardPerson;
+            StrNamePerson = strNamePerson;
+            StrLastNamePerson = strLastNamePerson;
+            DateOfBirthPerson = dateOfBirthPerson;
+            BoolGenderPerson = boolGenderPerson;
+            IntIdUser = intIdUser;
+            IntPhoneUser = intPhoneUser;
+            StrEmailUser = strEmailUser;
+            StrRolUser = strRolUser;
+        }
+
         public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, string city, int intIdUser, long intPhoneUser, string strEmailUser, DateTime dateCreateAd, string strRolUser, int intIdPerson)
         {
             IntIdCardPerson = intIdCardPerson;
@@ -56,19 +70,6 @@ namespace LibClassEasyGo
             DateCreateAd = dateCreateAd;
             StrRolUser = strRolUser;
             IntIdPerson = intIdPerson;
-        }
-
-        public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, int intIdUser, long intPhoneUser, string strEmailUser, string strRolUser)
-        {
-            IntIdCardPerson = intIdCardPerson;
-            StrNamePerson = strNamePerson;
-            StrLastNamePerson = strLastNamePerson;
-            DateOfBirthPerson = dateOfBirthPerson;
-            BoolGenderPerson = boolGenderPerson;
-            IntIdUser = intIdUser;
-            IntPhoneUser = intPhoneUser;
-            StrEmailUser = strEmailUser;
-            StrRolUser = strRolUser;
         }
 
 
