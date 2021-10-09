@@ -10,7 +10,7 @@ namespace LibClassEasyGo
     public class Connect
     {
         private static readonly string host = "localhost";
-        private static readonly string user = "root";
+        private static readonly string user = "postgres";
         private static readonly string dbname = "EasyGo";
         private static readonly string password = "0000";
         private static readonly string port = "5432";
@@ -24,7 +24,6 @@ namespace LibClassEasyGo
             try
             {
                 connection = new NpgsqlConnection(connectString);
-                connection.Open();
             }
             catch (NpgsqlException e)
             {
@@ -35,6 +34,7 @@ namespace LibClassEasyGo
 
         public NpgsqlConnection Conn()
         {
+            connection.Open();
             return connection;
         }
     }

@@ -14,7 +14,7 @@ namespace LibClassEasyGo
         private string strNamePerson;
         private string strLastNamePerson;
         private DateTime dateOfBirthPerson;
-        private string boolGenderPerson;
+        private bool boolGenderPerson;
         private string city;
 
         // Information to user
@@ -29,7 +29,7 @@ namespace LibClassEasyGo
         public string StrNamePerson { get => strNamePerson; set => strNamePerson = value; }
         public string StrLastNamePerson { get => strLastNamePerson; set => strLastNamePerson = value; }
         public DateTime DateOfBirthPerson { get => dateOfBirthPerson; set => dateOfBirthPerson = value; }
-        public string BoolGenderPerson { get => boolGenderPerson; set => boolGenderPerson = value; }
+        public bool BoolGenderPerson { get => boolGenderPerson; set => boolGenderPerson = value; }
         public string City { get => city; set => city = value; }
         public int IntIdUser { get => intIdUser; set => intIdUser = value; }
         public long IntPhoneUser { get => intPhoneUser; set => intPhoneUser = value; }
@@ -43,19 +43,18 @@ namespace LibClassEasyGo
 
         }
 
-        public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, int intIdUser, long intPhoneUser, string strEmailUser)
+        public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, bool boolGenderPerson, long intPhoneUser, string strEmailUser)
         {
             IntIdCardPerson = intIdCardPerson;
             StrNamePerson = strNamePerson;
             StrLastNamePerson = strLastNamePerson;
             DateOfBirthPerson = dateOfBirthPerson;
             BoolGenderPerson = boolGenderPerson;
-            IntIdUser = intIdUser;
             IntPhoneUser = intPhoneUser;
             StrEmailUser = strEmailUser;
         }
 
-        public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, string city, int intIdUser, long intPhoneUser, string strEmailUser, DateTime dateCreateAd, string strRolUser, int intIdPerson)
+        public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, bool boolGenderPerson, string city, int intIdUser, long intPhoneUser, string strEmailUser, DateTime dateCreateAd, string strRolUser, int intIdPerson)
         {
             IntIdCardPerson = intIdCardPerson;
             StrNamePerson = strNamePerson;
