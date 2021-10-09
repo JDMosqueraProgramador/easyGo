@@ -43,7 +43,7 @@ namespace LibClassEasyGo
 
         }
 
-        public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, int intIdUser, long intPhoneUser, string strEmailUser, string strRolUser)
+        public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, int intIdUser, long intPhoneUser, string strEmailUser)
         {
             IntIdCardPerson = intIdCardPerson;
             StrNamePerson = strNamePerson;
@@ -53,7 +53,6 @@ namespace LibClassEasyGo
             IntIdUser = intIdUser;
             IntPhoneUser = intPhoneUser;
             StrEmailUser = strEmailUser;
-            StrRolUser = strRolUser;
         }
 
         public User(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, string boolGenderPerson, string city, int intIdUser, long intPhoneUser, string strEmailUser, DateTime dateCreateAd, string strRolUser, int intIdPerson)
