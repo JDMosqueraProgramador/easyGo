@@ -9,6 +9,13 @@ using System.Text;
 using Npgsql;
 namespace LibClassEasyGo
 {
+
+    public interface IDepartment
+    {
+        string strNameDepartment { get; set; }
+        string intIdDepartment { get; set; }
+        int intIdCountry { get; set; }
+    }
     public class City
     {
         private int intIdCity;
@@ -48,6 +55,36 @@ namespace LibClassEasyGo
 
             return cities;
         }
+
+        public List<Object> getDepartments()
+        {
+            List<Object> departments = new List<Object>();
+            string select = "SELECT * FROM tblDepartment";
+
+            NpgsqlCommand cmd = new NpgsqlCommand(select, conn);
+
+            NpgsqlDataReader data = cmd.ExecuteReader();
+
+            if (data.HasRows)
+            {
+                while (data.Read())
+                {
+                    Object department = new {
+
+                        intIdDepartment = Convert.ToInt32(data[0]),
+                        strNameDepartment = data[1].ToString(),
+                        intIdCountry = Convert.ToInt32(data[3]),
+
+                    };
+
+                    departments.Add(department);
+                }
+            }
+
+            return departments;
+        }
+
+        //public bool SetCity()
 
     }
 

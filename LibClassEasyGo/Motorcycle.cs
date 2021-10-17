@@ -22,6 +22,7 @@ namespace LibClassEasyGo
         private User owner;
         private User driver;
 
+        private string strColorMoto;
         public string StrLicensePlateMoto { get => strLicensePlateMoto; set => strLicensePlateMoto = value; }
         public int IntNumSerieMoto { get => intNumSerieMoto; set => intNumSerieMoto = value; }
         public int IntNumChasisMoto { get => intNumChasisMoto; set => intNumChasisMoto = value; }
@@ -35,8 +36,14 @@ namespace LibClassEasyGo
         public string StrLinkPropertyCard { get => strLinkPropertyCard; set => strLinkPropertyCard = value; }
         public User Owner { get => owner; set => owner = value; }
         public User Driver { get => driver; set => driver = value; }
+        public string StrColorMoto { get => strColorMoto; set => strColorMoto = value; }
 
-        public Motorcycle(string strLicensePlateMoto, int intNumSerieMoto, int intNumChasisMoto, int intVimMoto, string strStateMoto, int intNumLicenseMoto, string strMarkMoto, int intCylinderMoto, string strModelMoto, string strFuelTypeMoto, string strLinkPropertyCard, User owner, User driver)
+        public Motorcycle()
+        {
+
+        }
+
+        public Motorcycle(string strLicensePlateMoto, int intNumSerieMoto, int intNumChasisMoto, int intVimMoto, string strStateMoto, int intNumLicenseMoto, string strMarkMoto, int intCylinderMoto, string strModelMoto, string strFuelTypeMoto, string strLinkPropertyCard, User owner, User driver, string strColorMoto)
         {
             StrLicensePlateMoto = strLicensePlateMoto;
             IntNumSerieMoto = intNumSerieMoto;
@@ -51,6 +58,7 @@ namespace LibClassEasyGo
             StrLinkPropertyCard = strLinkPropertyCard;
             Owner = owner;
             Driver = driver;
+            StrColorMoto = strColorMoto;
         }
     }
 }
