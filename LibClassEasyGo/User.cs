@@ -70,7 +70,6 @@ namespace LibClassEasyGo
             IntIdPerson = intIdPerson;
         }
 
-
         //public abstract int CreateUser(string password, int idCity);
 
         // public abstract User getUserById();
