@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wEasyGoDriver.views;
 
 namespace wEasyGoDriver
 {
@@ -11,12 +12,13 @@ namespace wEasyGoDriver
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        /// 
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEasyGoDriver());
+            Application.Run(new frmIniciarSesion());
         }
     }
 }

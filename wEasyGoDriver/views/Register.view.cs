@@ -32,5 +32,14 @@ namespace wEasyGoDriver
 
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

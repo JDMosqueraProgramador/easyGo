@@ -29,342 +29,590 @@ namespace wEasyGoDriver
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEasyGoDriver));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnAddID = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.grpTypeUser = new System.Windows.Forms.GroupBox();
-            this.rboAdministrador = new System.Windows.Forms.RadioButton();
-            this.rboConductor = new System.Windows.Forms.RadioButton();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.dateOfBirthPerson = new System.Windows.Forms.DateTimePicker();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
+            this.cmbCiudad = new System.Windows.Forms.ComboBox();
+            this.txtNumeroCelular = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.pcbEmail = new System.Windows.Forms.PictureBox();
-            this.picIconPassword = new System.Windows.Forms.PictureBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.picPassword = new System.Windows.Forms.PictureBox();
-            this.pnlInputEmail = new System.Windows.Forms.Panel();
-            this.pnlInputPhone = new System.Windows.Forms.Panel();
-            this.pnlInputPassword = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.grpRoles = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.grpTypeUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbEmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picIconPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
-            this.pnlInputEmail.SuspendLayout();
-            this.pnlInputPhone.SuspendLayout();
-            this.pnlInputPassword.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpRoles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // dateOfBirthPerson
             // 
-            this.button1.Location = new System.Drawing.Point(643, 394);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 46);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dateOfBirthPerson.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateOfBirthPerson.Location = new System.Drawing.Point(673, 438);
+            this.dateOfBirthPerson.Name = "dateOfBirthPerson";
+            this.dateOfBirthPerson.Size = new System.Drawing.Size(160, 20);
+            this.dateOfBirthPerson.TabIndex = 78;
             // 
-            // button2
+            // btnRegistrar
             // 
-            this.button2.Location = new System.Drawing.Point(537, 394);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 46);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRegistrar.BackColor = System.Drawing.Color.White;
+            this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnRegistrar.Location = new System.Drawing.Point(804, 525);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(134, 50);
+            this.btnRegistrar.TabIndex = 74;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // btnAddID
+            // checkBox1
             // 
-            this.btnAddID.Location = new System.Drawing.Point(15, 295);
-            this.btnAddID.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.btnAddID.Name = "btnAddID";
-            this.btnAddID.Size = new System.Drawing.Size(262, 34);
-            this.btnAddID.TabIndex = 4;
-            this.btnAddID.Text = "Agregar cédula";
-            this.btnAddID.UseVisualStyleBackColor = true;
-            this.btnAddID.Click += new System.EventHandler(this.btnAddID_Click);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.White;
+            this.checkBox1.ForeColor = System.Drawing.Color.Black;
+            this.checkBox1.ImageKey = "(ninguno)";
+            this.checkBox1.Location = new System.Drawing.Point(780, 497);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(172, 17);
+            this.checkBox1.TabIndex = 53;
+            this.checkBox1.Text = "aceptar terminos y condiciones";
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // cmbGenero
             // 
-            this.button4.Location = new System.Drawing.Point(761, 394);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 46);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.cmbGenero.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbGenero.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.cmbGenero.Location = new System.Drawing.Point(927, 376);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(160, 21);
+            this.cmbGenero.TabIndex = 52;
+            this.cmbGenero.Text = "                   Genero";
             // 
-            // grpTypeUser
+            // cmbCiudad
             // 
-            this.grpTypeUser.Controls.Add(this.rboAdministrador);
-            this.grpTypeUser.Controls.Add(this.rboConductor);
-            this.grpTypeUser.Location = new System.Drawing.Point(2, 146);
-            this.grpTypeUser.Margin = new System.Windows.Forms.Padding(2);
-            this.grpTypeUser.Name = "grpTypeUser";
-            this.grpTypeUser.Padding = new System.Windows.Forms.Padding(2);
-            this.grpTypeUser.Size = new System.Drawing.Size(286, 65);
-            this.grpTypeUser.TabIndex = 10;
-            this.grpTypeUser.TabStop = false;
-            this.grpTypeUser.Text = "Tipo de persona";
+            this.cmbCiudad.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbCiudad.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbCiudad.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbCiudad.FormattingEnabled = true;
+            this.cmbCiudad.Location = new System.Drawing.Point(667, 376);
+            this.cmbCiudad.Name = "cmbCiudad";
+            this.cmbCiudad.Size = new System.Drawing.Size(166, 21);
+            this.cmbCiudad.TabIndex = 51;
+            this.cmbCiudad.Text = "                     Ciudad";
             // 
-            // rboAdministrador
+            // txtNumeroCelular
             // 
-            this.rboAdministrador.AutoSize = true;
-            this.rboAdministrador.Location = new System.Drawing.Point(145, 29);
-            this.rboAdministrador.Name = "rboAdministrador";
-            this.rboAdministrador.Size = new System.Drawing.Size(88, 17);
-            this.rboAdministrador.TabIndex = 11;
-            this.rboAdministrador.TabStop = true;
-            this.rboAdministrador.Text = "Administrador";
-            this.rboAdministrador.UseVisualStyleBackColor = true;
+            this.txtNumeroCelular.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtNumeroCelular.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNumeroCelular.ForeColor = System.Drawing.Color.DimGray;
+            this.txtNumeroCelular.Location = new System.Drawing.Point(921, 242);
+            this.txtNumeroCelular.Name = "txtNumeroCelular";
+            this.txtNumeroCelular.Size = new System.Drawing.Size(166, 13);
+            this.txtNumeroCelular.TabIndex = 67;
+            this.txtNumeroCelular.Text = "Numero de celular";
+            this.txtNumeroCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // rboConductor
+            // txtContraseña
             // 
-            this.rboConductor.AutoSize = true;
-            this.rboConductor.Location = new System.Drawing.Point(24, 29);
-            this.rboConductor.Name = "rboConductor";
-            this.rboConductor.Size = new System.Drawing.Size(74, 17);
-            this.rboConductor.TabIndex = 10;
-            this.rboConductor.TabStop = true;
-            this.rboConductor.Text = "Conductor";
-            this.rboConductor.UseVisualStyleBackColor = true;
+            this.txtContraseña.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
+            this.txtContraseña.Location = new System.Drawing.Point(921, 308);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(166, 13);
+            this.txtContraseña.TabIndex = 64;
+            this.txtContraseña.Text = "Contraseña";
+            this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pictureBox5
+            // txtApellidos
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(32, 21);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(39, 23);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 16;
-            this.pictureBox5.TabStop = false;
+            this.txtApellidos.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApellidos.ForeColor = System.Drawing.Color.DimGray;
+            this.txtApellidos.Location = new System.Drawing.Point(667, 242);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(166, 13);
+            this.txtApellidos.TabIndex = 61;
+            this.txtApellidos.Text = "Apellidos";
+            this.txtApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtPhone
+            // txtNombre
             // 
-            this.txtPhone.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhone.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPhone.Location = new System.Drawing.Point(72, 26);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(161, 13);
-            this.txtPhone.TabIndex = 14;
-            this.txtPhone.Text = "Número de teléfono";
-            this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNombre.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.txtNombre.Location = new System.Drawing.Point(921, 175);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(166, 13);
+            this.txtNombre.TabIndex = 58;
+            this.txtNombre.Text = "Nombre";
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCorreo.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCorreo.Location = new System.Drawing.Point(667, 308);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(166, 13);
+            this.txtCorreo.TabIndex = 55;
+            this.txtCorreo.Text = "Correo electronico";
+            this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(861, 419);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(248, 61);
+            this.groupBox1.TabIndex = 79;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tipo de persona";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(140, 23);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(74, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Conductor";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(21, 23);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(57, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Dueño";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // txtCedula
+            // 
+            this.txtCedula.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCedula.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCedula.Location = new System.Drawing.Point(667, 175);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(166, 13);
+            this.txtCedula.TabIndex = 80;
+            this.txtCedula.Text = "Cédula";
+            this.txtCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox9.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox9.Location = new System.Drawing.Point(622, 242);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 85;
+            this.pictureBox9.TabStop = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Image = global::wEasyGoDriver.Properties.Resources.x;
+            this.btnSalir.Location = new System.Drawing.Point(1123, 1);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(43, 25);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSalir.TabIndex = 84;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox8.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox8.Location = new System.Drawing.Point(622, 175);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 82;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox19.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox19.Location = new System.Drawing.Point(607, 152);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox19.TabIndex = 81;
+            this.pictureBox19.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
-            this.pictureBox3.Image = global::wEasyGoDriver.Properties.Resources.btn;
-            this.pictureBox3.InitialImage = global::wEasyGoDriver.Properties.Resources.btn;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox3.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox3.Location = new System.Drawing.Point(622, 440);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(279, 61);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.Size = new System.Drawing.Size(39, 16);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 77;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox2
+            // pictureBox5
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox2.Location = new System.Drawing.Point(27, 26);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox5.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox5.Location = new System.Drawing.Point(607, 419);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 76;
+            this.pictureBox5.TabStop = false;
             // 
-            // txtEmail
+            // btnCerrar
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.txtEmail.Location = new System.Drawing.Point(72, 27);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(161, 13);
-            this.txtEmail.TabIndex = 17;
-            this.txtEmail.Text = "Correo electrónico";
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCerrar.Location = new System.Drawing.Point(937, -62);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(43, 25);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 75;
+            this.btnCerrar.TabStop = false;
             // 
-            // pcbEmail
+            // pictureBox17
             // 
-            this.pcbEmail.BackColor = System.Drawing.Color.Transparent;
-            this.pcbEmail.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pcbEmail.ErrorImage")));
-            this.pcbEmail.Image = global::wEasyGoDriver.Properties.Resources.btn;
-            this.pcbEmail.InitialImage = global::wEasyGoDriver.Properties.Resources.btn;
-            this.pcbEmail.Location = new System.Drawing.Point(3, 3);
-            this.pcbEmail.Name = "pcbEmail";
-            this.pcbEmail.Size = new System.Drawing.Size(279, 61);
-            this.pcbEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbEmail.TabIndex = 18;
-            this.pcbEmail.TabStop = false;
+            this.pictureBox17.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox17.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox17.Location = new System.Drawing.Point(882, 379);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox17.TabIndex = 73;
+            this.pictureBox17.TabStop = false;
             // 
-            // picIconPassword
+            // pictureBox18
             // 
-            this.picIconPassword.BackColor = System.Drawing.Color.Gainsboro;
-            this.picIconPassword.Image = ((System.Drawing.Image)(resources.GetObject("picIconPassword.Image")));
-            this.picIconPassword.Location = new System.Drawing.Point(32, 22);
-            this.picIconPassword.Name = "picIconPassword";
-            this.picIconPassword.Size = new System.Drawing.Size(39, 23);
-            this.picIconPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picIconPassword.TabIndex = 22;
-            this.picIconPassword.TabStop = false;
+            this.pictureBox18.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox18.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox18.Location = new System.Drawing.Point(861, 352);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 72;
+            this.pictureBox18.TabStop = false;
             // 
-            // txtPassword
+            // pictureBox15
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPassword.Location = new System.Drawing.Point(72, 27);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(161, 13);
-            this.txtPassword.TabIndex = 20;
-            this.txtPassword.Text = "Contraseña";
-            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pictureBox15.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox15.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox15.Location = new System.Drawing.Point(622, 379);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 71;
+            this.pictureBox15.TabStop = false;
             // 
-            // picPassword
+            // pictureBox16
             // 
-            this.picPassword.BackColor = System.Drawing.Color.Transparent;
-            this.picPassword.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picPassword.ErrorImage")));
-            this.picPassword.Image = global::wEasyGoDriver.Properties.Resources.btn;
-            this.picPassword.InitialImage = global::wEasyGoDriver.Properties.Resources.btn;
-            this.picPassword.Location = new System.Drawing.Point(3, 3);
-            this.picPassword.Name = "picPassword";
-            this.picPassword.Size = new System.Drawing.Size(279, 61);
-            this.picPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPassword.TabIndex = 21;
-            this.picPassword.TabStop = false;
+            this.pictureBox16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox16.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox16.Location = new System.Drawing.Point(607, 353);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox16.TabIndex = 70;
+            this.pictureBox16.TabStop = false;
             // 
-            // pnlInputEmail
+            // pictureBox13
             // 
-            this.pnlInputEmail.Controls.Add(this.txtEmail);
-            this.pnlInputEmail.Controls.Add(this.pictureBox2);
-            this.pnlInputEmail.Controls.Add(this.pcbEmail);
-            this.pnlInputEmail.Location = new System.Drawing.Point(3, 75);
-            this.pnlInputEmail.Name = "pnlInputEmail";
-            this.pnlInputEmail.Size = new System.Drawing.Size(285, 66);
-            this.pnlInputEmail.TabIndex = 23;
+            this.pictureBox13.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox13.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox13.Location = new System.Drawing.Point(876, 242);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 69;
+            this.pictureBox13.TabStop = false;
             // 
-            // pnlInputPhone
+            // pictureBox14
             // 
-            this.pnlInputPhone.Controls.Add(this.txtPhone);
-            this.pnlInputPhone.Controls.Add(this.pictureBox5);
-            this.pnlInputPhone.Controls.Add(this.pictureBox3);
-            this.pnlInputPhone.Location = new System.Drawing.Point(3, 3);
-            this.pnlInputPhone.Name = "pnlInputPhone";
-            this.pnlInputPhone.Size = new System.Drawing.Size(285, 66);
-            this.pnlInputPhone.TabIndex = 24;
+            this.pictureBox14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox14.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox14.Location = new System.Drawing.Point(861, 219);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 68;
+            this.pictureBox14.TabStop = false;
             // 
-            // pnlInputPassword
+            // pictureBox11
             // 
-            this.pnlInputPassword.Controls.Add(this.txtPassword);
-            this.pnlInputPassword.Controls.Add(this.picIconPassword);
-            this.pnlInputPassword.Controls.Add(this.picPassword);
-            this.pnlInputPassword.Location = new System.Drawing.Point(3, 216);
-            this.pnlInputPassword.Name = "pnlInputPassword";
-            this.pnlInputPassword.Size = new System.Drawing.Size(285, 66);
-            this.pnlInputPassword.TabIndex = 25;
+            this.pictureBox11.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox11.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox11.Location = new System.Drawing.Point(876, 308);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 66;
+            this.pictureBox11.TabStop = false;
             // 
-            // flowLayoutPanel1
+            // pictureBox12
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Controls.Add(this.pnlInputPhone);
-            this.flowLayoutPanel1.Controls.Add(this.pnlInputEmail);
-            this.flowLayoutPanel1.Controls.Add(this.grpTypeUser);
-            this.flowLayoutPanel1.Controls.Add(this.pnlInputPassword);
-            this.flowLayoutPanel1.Controls.Add(this.btnAddID);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(552, 33);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(293, 339);
-            this.flowLayoutPanel1.TabIndex = 26;
+            this.pictureBox12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox12.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox12.Location = new System.Drawing.Point(861, 285);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 65;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox10.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox10.Location = new System.Drawing.Point(607, 219);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 62;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox7.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox7.Location = new System.Drawing.Point(876, 175);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 60;
+            this.pictureBox7.TabStop = false;
+            // 
+            // grpRoles
+            // 
+            this.grpRoles.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.grpRoles.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.grpRoles.Location = new System.Drawing.Point(861, 152);
+            this.grpRoles.Name = "grpRoles";
+            this.grpRoles.Size = new System.Drawing.Size(248, 61);
+            this.grpRoles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.grpRoles.TabIndex = 59;
+            this.grpRoles.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox4.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox4.Location = new System.Drawing.Point(622, 308);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 57;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox6.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox6.Location = new System.Drawing.Point(607, 286);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 56;
+            this.pictureBox6.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Image = global::wEasyGoDriver.Properties.Resources.locksmith;
+            this.pictureBox1.Location = new System.Drawing.Point(804, 47);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(503, 450);
-            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.Size = new System.Drawing.Size(107, 88);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::wEasyGoDriver.Properties.Resources.Bienvenido_a_la_plataforma;
+            this.pictureBox2.Location = new System.Drawing.Point(-8, -28);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(593, 637);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 54;
+            this.pictureBox2.TabStop = false;
             // 
             // frmEasyGoDriver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(874, 451);
+            this.ClientSize = new System.Drawing.Size(1162, 579);
             this.ControlBox = false;
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.pictureBox19);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.dateOfBirthPerson);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cmbGenero);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.cmbCiudad);
+            this.Controls.Add(this.pictureBox15);
+            this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.pictureBox13);
+            this.Controls.Add(this.txtNumeroCelular);
+            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.txtApellidos);
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.grpRoles);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEasyGoDriver";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.grpTypeUser.ResumeLayout(false);
-            this.grpTypeUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.Text = "Cédula";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbEmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picIconPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPassword)).EndInit();
-            this.pnlInputEmail.ResumeLayout(false);
-            this.pnlInputEmail.PerformLayout();
-            this.pnlInputPhone.ResumeLayout(false);
-            this.pnlInputPhone.PerformLayout();
-            this.pnlInputPassword.ResumeLayout(false);
-            this.pnlInputPassword.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpRoles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnAddID;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.GroupBox grpTypeUser;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox txtPhone;
+
+        private System.Windows.Forms.DateTimePicker dateOfBirthPerson;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.PictureBox pcbEmail;
-        private System.Windows.Forms.RadioButton rboAdministrador;
-        private System.Windows.Forms.RadioButton rboConductor;
-        private System.Windows.Forms.PictureBox picIconPassword;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.PictureBox picPassword;
-        private System.Windows.Forms.Panel pnlInputEmail;
-        private System.Windows.Forms.Panel pnlInputPhone;
-        private System.Windows.Forms.Panel pnlInputPassword;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox cmbGenero;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.ComboBox cmbCiudad;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.TextBox txtNumeroCelular;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.PictureBox grpRoles;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.PictureBox btnSalir;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }
 
