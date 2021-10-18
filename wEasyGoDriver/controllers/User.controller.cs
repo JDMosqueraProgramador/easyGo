@@ -11,6 +11,7 @@ using Emgu.CV.Structure;
 using Emgu.CV.Util;
 using Emgu.CV.OCR;
 using LibClassEasyGo;
+using wEasyGoDriver.models;
 
 
 namespace wEasyGoDriver.controls
@@ -18,6 +19,30 @@ namespace wEasyGoDriver.controls
     
     class UserController
     {
+
+        public User user;
+
+        public UserController(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, bool boolGenderPerson, long intPhoneUser, string strEmailUser, string strRolUser)
+        {
+            user = new UserModel(intIdCardPerson, strNamePerson, strLastNamePerson, dateOfBirthPerson, boolGenderPerson, intPhoneUser, strEmailUser, strRolUser);
+        }
+
+        public UserController(long intPhoneUser)
+        {
+            user = new UserModel().GetUserBy(intPhoneUser);
+        }
+
+        public UserController()
+        {
+
+        }
+
+        public int ExecuteSetUser(string password, int idCity)
+        {
+            return user.CreateUser(password, idCity);
+        }
+
+
         public Bitmap bitImg;
         public string Text;
         public string getIdentification(string url)
@@ -38,14 +63,14 @@ namespace wEasyGoDriver.controls
             handleImage(img);
 
             return imgText;
-            
+
         }
-        
+
         public /*async*/ void handleImage(Image<Bgr, byte> img)
         {
 
             Image<Bgr, byte> generateImg = img;
-            
+
             Image<Gray, byte> imgout = generateImg.Convert<Gray, byte>().ThresholdBinary(new Gray(70), new Gray(455));
             VectorOfVectorOfPoint contours = new VectorOfVectorOfPoint();
             Mat hier = new Mat();
@@ -80,6 +105,10 @@ namespace wEasyGoDriver.controls
             } */
 
         }
+
+
+
+
     }
-    
+
 }

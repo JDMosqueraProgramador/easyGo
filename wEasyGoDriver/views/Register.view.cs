@@ -14,6 +14,7 @@ namespace wEasyGoDriver
 {
     public partial class frmEasyGoDriver : Form
     {
+        UserController user;
         public frmEasyGoDriver()
         {
             InitializeComponent();
@@ -29,7 +30,6 @@ namespace wEasyGoDriver
 
             MessageBox.Show(user.Text);
 
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -39,7 +39,16 @@ namespace wEasyGoDriver
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            bool genero = (cmbGenero.Text == "Masculino" && cmbGenero.Text != "") ? true : false;
 
+            string rol = "Driver";
+            rol = (rdoDueño.Checked) ? "Owner" : "Driver";
+
+            user = new UserController(Convert.ToInt64(txtCedula.Text), txtNombre.Text, txtApellidos.Text, dateOfBirthPerson.Value, genero, Convert.ToInt64(txtNumeroCelular.Text), txtCorreo.Text, rol);
+            if(user.ExecuteSetUser(txtContraseña.Text, 1) == 1)
+            {
+                MessageBox.Show("Registrado");
+            }
         }
     }
 }

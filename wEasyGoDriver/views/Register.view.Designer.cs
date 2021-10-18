@@ -41,7 +41,7 @@ namespace wEasyGoDriver
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdoDueño = new System.Windows.Forms.RadioButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -217,7 +217,7 @@ namespace wEasyGoDriver
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rdoDueño);
             this.groupBox1.Location = new System.Drawing.Point(861, 419);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(248, 61);
@@ -236,16 +236,16 @@ namespace wEasyGoDriver
             this.radioButton2.Text = "Conductor";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdoDueño
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(21, 23);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(57, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Dueño";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoDueño.AutoSize = true;
+            this.rdoDueño.Location = new System.Drawing.Point(21, 23);
+            this.rdoDueño.Name = "rdoDueño";
+            this.rdoDueño.Size = new System.Drawing.Size(57, 17);
+            this.rdoDueño.TabIndex = 0;
+            this.rdoDueño.TabStop = true;
+            this.rdoDueño.Text = "Dueño";
+            this.rdoDueño.UseVisualStyleBackColor = true;
             // 
             // txtCedula
             // 
@@ -607,7 +607,7 @@ namespace wEasyGoDriver
         private System.Windows.Forms.GroupBox groupBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdoDueño;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.PictureBox pictureBox19;
