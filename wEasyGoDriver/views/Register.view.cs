@@ -50,5 +50,10 @@ namespace wEasyGoDriver
                 MessageBox.Show("Registrado");
             }
         }
+
+        private void frmEasyGoDriver_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
