@@ -45,13 +45,24 @@ namespace wEasyGoDriver
             rol = (rdoDueño.Checked) ? "Owner" : "Driver";
 
             user = new UserController(Convert.ToInt64(txtCedula.Text), txtNombre.Text, txtApellidos.Text, dateOfBirthPerson.Value, genero, Convert.ToInt64(txtNumeroCelular.Text), txtCorreo.Text, rol);
-            if(user.ExecuteSetUser(txtContraseña.Text, 1) == 1)
+            if (user.ExecuteSetUser(txtContraseña.Text, 1) == 1)
             {
                 MessageBox.Show("Registrado");
             }
         }
 
         private void frmEasyGoDriver_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void tabPapeles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
