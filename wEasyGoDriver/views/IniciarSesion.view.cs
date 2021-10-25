@@ -25,7 +25,7 @@ namespace wEasyGoDriver.views
 
         private void lnklblRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new frmEasyGoDriver().Show();
+            new frmRegistro().Show();
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)

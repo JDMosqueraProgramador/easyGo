@@ -12,10 +12,10 @@ using wEasyGoDriver.controls;
 
 namespace wEasyGoDriver
 {
-    public partial class frmEasyGoDriver : Form
+    public partial class frmRegistro : Form
     {
         UserController user;
-        public frmEasyGoDriver()
+        public frmRegistro()
         {
             InitializeComponent();
         }
@@ -63,6 +63,11 @@ namespace wEasyGoDriver
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPersona_Click(object sender, EventArgs e)
         {
 
         }

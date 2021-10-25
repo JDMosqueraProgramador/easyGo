@@ -131,6 +131,7 @@
     <Content Include="assets\prueba3.jfif" />
     <Content Include="assets\prueba3.jpg" />
     <Content Include="assets\prueba4.jpg" />
+    <None Include="Resources\Bienvenido a la plataforma1.png" />
     <None Include="Resources\1%281%29.png" />
     <None Include="Resources\x.png" />
     <None Include="Resources\Bienvenido a la plataforma.png" />
