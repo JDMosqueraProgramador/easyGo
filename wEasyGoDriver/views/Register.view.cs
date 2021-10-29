@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using wEasyGoDriver.controls;
+using wEasyGoDriver.controllers;
 
 
 namespace wEasyGoDriver
 {
     public partial class frmRegistro : Form
     {
-        UserController user;
+        UserController userController;
         public frmRegistro()
         {
             InitializeComponent();
@@ -39,37 +39,70 @@ namespace wEasyGoDriver
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            bool genero = (cmbGenero.Text == "Masculino" && cmbGenero.Text != "") ? true : false;
+            //try
+            //{
 
-            string rol = "Driver";
-            rol = (rdoDueño.Checked) ? "Owner" : "Driver";
+                bool genero = (cmbGenero.Text == "Masculino" && cmbGenero.Text != "") ? true : false;
 
-            user = new UserController(Convert.ToInt64(txtCedula.Text), txtNombre.Text, txtApellidos.Text, dateOfBirthPerson.Value, genero, Convert.ToInt64(txtNumeroCelular.Text), txtCorreo.Text, rol);
-            if (user.ExecuteSetUser(txtContraseña.Text, 1) == 1)
+                string rol = "Driver";
+                rol = (rdoDueño.Checked) ? "Owner" : "Driver";
+
+                userController = new UserController(Convert.ToInt64(txtCedula.Text), txtNombre.Text, txtApellidos.Text, dateOfBirthPerson.Value, genero, Convert.ToInt64(txtNumeroCelular.Text), txtCorreo.Text, rol);
+                if (userController.ExecuteSetUser(txtContraseña.Text, 1) == 1)
+                {
+                    tabsRegistros.SelectedTab = (rdoDueño.Checked) ? tabVehiculo : tabLicencia;
+                    userController = new UserController(Convert.ToInt64(txtNumeroCelular.Text));
+                    MessageBox.Show("Registrado, continúe con los pasos del registro");
+                }
+
+            /*}
+            catch (Exception err)
             {
-                MessageBox.Show("Registrado");
+                MessageBox.Show(err.Message);
+            }*/
+
+        }
+
+        private void btnRegistrarLicencia_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LicenseController license = new LicenseController(Convert.ToInt32(txtNumerodeLicencia.Text), dateVigenciaHastaLicencia.Value, userController.user.IntIdPerson, "");
+                if(license.ExecuteInsertLicense())
+                {
+                    MessageBox.Show("Licencia registrada");
+                    if(rdoSiVehiculo.Checked)
+                    {
+                        tabsRegistros.SelectedTab = tabVehiculo;
+                    }
+                }
             }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
         }
 
-        private void frmEasyGoDriver_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (rdoSiVehiculo.Checked)
+                {
+                    MotorcycleControlller motoController = new MotorcycleControlller(txtPlaca.Text, Convert.ToInt32(txtNumeroSerie.Text), Convert.ToInt32(txtNumeroChasis.Text), Convert.ToInt32(txtVin.Text), Convert.ToInt32(txtNumerodeLicencia.Text), txtMarca.Text, Convert.ToInt32(txtCilindraje.Text), txtModelo.Text, cmbTipoCombustible.Text, "http", userController.user.IntIdUser, userController.user.IntIdUser, cmbColorMotocicleta.Text);
 
+                    if(motoController.ExecuteInsertMoto())
+                    {
+                        MessageBox.Show("Moto registrada");
+                    }
+                }
 
-        }
-
-        private void tabPapeles_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPersona_Click(object sender, EventArgs e)
-        {
-
-        }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+}
     }
 }

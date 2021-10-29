@@ -53,6 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controllers\License.controller.cs" />
+    <Compile Include="controllers\Motorcycle.controller.cs" />
+    <Compile Include="models\License.model.cs" />
+    <Compile Include="models\Motocycle.model.cs" />
     <Compile Include="models\User.model.cs" />
     <Compile Include="views\Register.view.cs">
       <SubType>Form</SubType>
@@ -117,6 +121,9 @@
     </PackageReference>
     <PackageReference Include="GMap.NET.WindowsForms">
       <Version>1.7.5</Version>
+    </PackageReference>
+    <PackageReference Include="Npgsql">
+      <Version>5.0.10</Version>
     </PackageReference>
     <PackageReference Include="System.Buffers">
       <Version>4.5.1</Version>

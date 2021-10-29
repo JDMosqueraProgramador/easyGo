@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using wEasyGoDriver.views;
+using wEasyGoDriver.controllers;
 
 namespace wEasyGoDriver.views
 {
     public partial class frmIniciarSesion : Form
     {
+
+        UserController userController;
         public frmIniciarSesion()
         {
             InitializeComponent();
@@ -30,7 +33,11 @@ namespace wEasyGoDriver.views
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-
+            userController = new UserController();
+            if (userController.ExecuteLogin(Convert.ToInt64(txtusername.Text), txtContraseña.Text))
+            {
+                new frmRegistro().Show();
+            }
         }
     }
 }

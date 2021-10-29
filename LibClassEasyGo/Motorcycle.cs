@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibClassEasyGo
 {
-    public class Motorcycle
+    public class Motorcycle : Connect
     {
         private string strLicensePlateMoto;
         private int intNumSerieMoto;
