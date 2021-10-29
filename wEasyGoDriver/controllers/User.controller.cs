@@ -14,7 +14,7 @@ using LibClassEasyGo;
 using wEasyGoDriver.models;
 
 
-namespace wEasyGoDriver.controls
+namespace wEasyGoDriver.controllers
 {
     
     class UserController
@@ -42,9 +42,21 @@ namespace wEasyGoDriver.controls
             return user.CreateUser(password, idCity);
         }
 
+        public bool ExecuteLogin(long phone, string password)
+        {
+            return user.login(phone, password);
+        }
 
+
+
+
+        // ------------------------------------
+        // ------------------------------------
+        // ------------------------------------
         public Bitmap bitImg;
         public string Text;
+
+
         public string getIdentification(string url)
         {
 
