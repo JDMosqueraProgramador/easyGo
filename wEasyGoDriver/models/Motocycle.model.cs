@@ -19,7 +19,7 @@ namespace wEasyGoDriver.models
 
         public bool InsertMotorcycle()
         {
-            string insert = "EXEC sp_insert_moto(@strLicensePlateMoto, @intNumSerieMoto, @intNumChasisMoto, @intVimMoto, @strStateMoto, @intNumLicenseMoto, @strMarkMoto, @intCylinderMoto, @strModelMoto, @strFuelTypeMoto, @strLinkPropertyCard, @intIdOwner, @intIdDriver, @strColorMoto)";
+            string insert = "CALL sp_insert_moto(@strLicensePlateMoto, @intNumSerieMoto, @intNumChasisMoto, @intVimMoto, @strStateMoto, @intNumLicenseMoto, @strMarkMoto, @intCylinderMoto, @strModelMoto, @strFuelTypeMoto, @strLinkPropertyCard, @intIdOwner, @intIdDriver, @strColorMoto)";
 
             NpgsqlCommand cmd = new NpgsqlCommand(insert, Conn());
 
@@ -28,6 +28,7 @@ namespace wEasyGoDriver.models
             cmd.Parameters.AddWithValue("@intNumChasisMoto", IntNumChasisMoto);
             cmd.Parameters.AddWithValue("@intVimMoto", IntVimMoto);
             cmd.Parameters.AddWithValue("@strStateMoto", StrStateMoto);
+            cmd.Parameters.AddWithValue("@intNumLicenseMoto", IntNumLicenseMoto);
             cmd.Parameters.AddWithValue("@strMarkMoto", StrMarkMoto);
             cmd.Parameters.AddWithValue("@intCylinderMoto", IntCylinderMoto);
             cmd.Parameters.AddWithValue("@strModelMoto", StrModelMoto);
