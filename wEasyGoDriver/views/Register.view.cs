@@ -104,5 +104,10 @@ namespace wEasyGoDriver
                 MessageBox.Show(err.Message);
             }
 }
+
+        private void cmbColorMotocicleta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

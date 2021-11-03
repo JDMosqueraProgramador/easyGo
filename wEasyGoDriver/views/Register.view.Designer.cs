@@ -825,6 +825,7 @@ namespace wEasyGoDriver
             this.cmbColorMotocicleta.Size = new System.Drawing.Size(160, 21);
             this.cmbColorMotocicleta.TabIndex = 135;
             this.cmbColorMotocicleta.Text = "       Color de la motocicleta";
+            this.cmbColorMotocicleta.SelectedIndexChanged += new System.EventHandler(this.cmbColorMotocicleta_SelectedIndexChanged);
             // 
             // cmbTipoCombustible
             // 
