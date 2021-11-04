@@ -7,7 +7,7 @@ using Npgsql;
 
 namespace LibClassEasyGo
 {
-    public class User
+    public class User : IUser
     {
         // Information to person
         private long intIdCardPerson;

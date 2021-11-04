@@ -49,6 +49,7 @@
     <Compile Include="Motorcycle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="IUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Npgsql">

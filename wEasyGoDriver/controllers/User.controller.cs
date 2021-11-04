@@ -20,7 +20,7 @@ namespace wEasyGoDriver.controllers
     class UserController
     {
 
-        public User user;
+        private User user;
 
         public UserController(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, bool boolGenderPerson, long intPhoneUser, string strEmailUser, string strRolUser)
         {
@@ -47,8 +47,10 @@ namespace wEasyGoDriver.controllers
             return user.login(phone, password);
         }
 
-
-
+        public IUser getDataUser()
+        {
+            return user;
+        }
 
         // ------------------------------------
         // ------------------------------------

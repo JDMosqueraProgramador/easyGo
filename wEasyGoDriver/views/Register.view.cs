@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using wEasyGoDriver.controllers;
-
+using LibClassEasyGo;
 
 namespace wEasyGoDriver
 {
     public partial class frmRegistro : Form
     {
         UserController userController;
+
+        IUser DataUser;
         public frmRegistro()
         {
             InitializeComponent();
@@ -52,6 +54,8 @@ namespace wEasyGoDriver
                 {
                     tabsRegistros.SelectedTab = (rdoDueño.Checked) ? tabVehiculo : tabLicencia;
                     userController = new UserController(Convert.ToInt64(txtNumeroCelular.Text));
+
+                    DataUser = userController.getDataUser();
                     MessageBox.Show("Registrado, continúe con los pasos del registro");
                 }
 
@@ -67,7 +71,7 @@ namespace wEasyGoDriver
         {
             try
             {
-                LicenseController license = new LicenseController(Convert.ToInt32(txtNumerodeLicencia.Text), dateVigenciaHastaLicencia.Value, userController.user.IntIdPerson, "");
+                LicenseController license = new LicenseController(Convert.ToInt32(txtNumerodeLicencia.Text), dateVigenciaHastaLicencia.Value, DataUser.IntIdPerson, "");
                 if(license.ExecuteInsertLicense())
                 {
                     MessageBox.Show("Licencia registrada");
@@ -90,7 +94,7 @@ namespace wEasyGoDriver
             {
                 if (rdoSiVehiculo.Checked)
                 {
-                    MotorcycleControlller motoController = new MotorcycleControlller(txtPlaca.Text, Convert.ToInt32(txtNumeroSerie.Text), Convert.ToInt32(txtNumeroChasis.Text), Convert.ToInt32(txtVin.Text), Convert.ToInt32(txtNumerodeLicencia.Text), txtMarca.Text, Convert.ToInt32(txtCilindraje.Text), txtModelo.Text, cmbTipoCombustible.Text, "http", userController.user.IntIdUser, userController.user.IntIdUser, cmbColorMotocicleta.Text);
+                    MotorcycleControlller motoController = new MotorcycleControlller(txtPlaca.Text, Convert.ToInt32(txtNumeroSerie.Text), Convert.ToInt32(txtNumeroChasis.Text), Convert.ToInt32(txtVin.Text), Convert.ToInt32(txtNumerodeLicencia.Text), txtMarca.Text, Convert.ToInt32(txtCilindraje.Text), txtModelo.Text, cmbTipoCombustible.Text, "http", DataUser.IntIdUser, DataUser.IntIdUser, cmbColorMotocicleta.Text);
 
                     if(motoController.ExecuteInsertMoto())
                     {
