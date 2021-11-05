@@ -143,6 +143,7 @@ namespace wEasyGoDriver
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.flpRegistrarVehiculo = new System.Windows.Forms.FlowLayoutPanel();
             this.tabsRegistros.SuspendLayout();
             this.tabPersona.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -215,6 +216,7 @@ namespace wEasyGoDriver
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.flpRegistrarVehiculo.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabsRegistros
@@ -648,14 +650,12 @@ namespace wEasyGoDriver
             // 
             // tabVehiculo
             // 
-            this.tabVehiculo.Controls.Add(this.btnRegistrarMoto);
+            this.tabVehiculo.Controls.Add(this.flpRegistrarVehiculo);
             this.tabVehiculo.Controls.Add(this.txtModelo);
             this.tabVehiculo.Controls.Add(this.txtCilindraje);
             this.tabVehiculo.Controls.Add(this.txtMarca);
             this.tabVehiculo.Controls.Add(this.txtNumeroLicenciaMoto);
-            this.tabVehiculo.Controls.Add(this.lblSeleccioneConductor);
             this.tabVehiculo.Controls.Add(this.txtAsignarConductor);
-            this.tabVehiculo.Controls.Add(this.dtgBuscarConductor);
             this.tabVehiculo.Controls.Add(this.btnCargarTarjPropiedad);
             this.tabVehiculo.Controls.Add(this.cmbColorMotocicleta);
             this.tabVehiculo.Controls.Add(this.cmbTipoCombustible);
@@ -697,15 +697,16 @@ namespace wEasyGoDriver
             // 
             // btnRegistrarMoto
             // 
+            this.btnRegistrarMoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnRegistrarMoto.BackColor = System.Drawing.Color.White;
             this.btnRegistrarMoto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnRegistrarMoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnRegistrarMoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnRegistrarMoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarMoto.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnRegistrarMoto.Location = new System.Drawing.Point(232, 512);
+            this.btnRegistrarMoto.Location = new System.Drawing.Point(192, 93);
             this.btnRegistrarMoto.Name = "btnRegistrarMoto";
-            this.btnRegistrarMoto.Size = new System.Drawing.Size(134, 50);
+            this.btnRegistrarMoto.Size = new System.Drawing.Size(114, 50);
             this.btnRegistrarMoto.TabIndex = 156;
             this.btnRegistrarMoto.Text = "Registrar vehiculo";
             this.btnRegistrarMoto.UseVisualStyleBackColor = false;
@@ -761,12 +762,15 @@ namespace wEasyGoDriver
             // 
             // lblSeleccioneConductor
             // 
+            this.lblSeleccioneConductor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSeleccioneConductor.AutoSize = true;
-            this.lblSeleccioneConductor.Location = new System.Drawing.Point(179, 417);
+            this.lblSeleccioneConductor.Location = new System.Drawing.Point(8, 5);
             this.lblSeleccioneConductor.Name = "lblSeleccioneConductor";
-            this.lblSeleccioneConductor.Size = new System.Drawing.Size(220, 13);
+            this.lblSeleccioneConductor.Size = new System.Drawing.Size(482, 13);
             this.lblSeleccioneConductor.TabIndex = 143;
             this.lblSeleccioneConductor.Text = "Seleccione el conductor dando click sobre él";
+            this.lblSeleccioneConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtAsignarConductor
             // 
@@ -785,9 +789,9 @@ namespace wEasyGoDriver
             // 
             this.dtgBuscarConductor.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dtgBuscarConductor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgBuscarConductor.Location = new System.Drawing.Point(43, 433);
+            this.dtgBuscarConductor.Location = new System.Drawing.Point(8, 21);
             this.dtgBuscarConductor.Name = "dtgBuscarConductor";
-            this.dtgBuscarConductor.Size = new System.Drawing.Size(504, 66);
+            this.dtgBuscarConductor.Size = new System.Drawing.Size(482, 66);
             this.dtgBuscarConductor.TabIndex = 139;
             // 
             // btnCargarTarjPropiedad
@@ -1164,7 +1168,7 @@ namespace wEasyGoDriver
             this.tabPapelesVehiculo.Location = new System.Drawing.Point(4, 22);
             this.tabPapelesVehiculo.Name = "tabPapelesVehiculo";
             this.tabPapelesVehiculo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPapelesVehiculo.Size = new System.Drawing.Size(592, 594);
+            this.tabPapelesVehiculo.Size = new System.Drawing.Size(592, 577);
             this.tabPapelesVehiculo.TabIndex = 2;
             this.tabPapelesVehiculo.Text = "Papeles vehiculo";
             this.tabPapelesVehiculo.UseVisualStyleBackColor = true;
@@ -1579,12 +1583,28 @@ namespace wEasyGoDriver
             this.btnCerrar.TabIndex = 75;
             this.btnCerrar.TabStop = false;
             // 
+            // flpRegistrarVehiculo
+            // 
+            this.flpRegistrarVehiculo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.flpRegistrarVehiculo.AutoSize = true;
+            this.flpRegistrarVehiculo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flpRegistrarVehiculo.Controls.Add(this.lblSeleccioneConductor);
+            this.flpRegistrarVehiculo.Controls.Add(this.dtgBuscarConductor);
+            this.flpRegistrarVehiculo.Controls.Add(this.btnRegistrarMoto);
+            this.flpRegistrarVehiculo.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpRegistrarVehiculo.Location = new System.Drawing.Point(37, 420);
+            this.flpRegistrarVehiculo.Name = "flpRegistrarVehiculo";
+            this.flpRegistrarVehiculo.Padding = new System.Windows.Forms.Padding(5);
+            this.flpRegistrarVehiculo.Size = new System.Drawing.Size(498, 151);
+            this.flpRegistrarVehiculo.TabIndex = 157;
+            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1259, 721);
+            this.ClientSize = new System.Drawing.Size(1259, 650);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox26);
             this.Controls.Add(this.tabsRegistros);
@@ -1674,6 +1694,8 @@ namespace wEasyGoDriver
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.flpRegistrarVehiculo.ResumeLayout(false);
+            this.flpRegistrarVehiculo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1793,6 +1815,7 @@ namespace wEasyGoDriver
         private System.Windows.Forms.RadioButton rdoSiVehiculo;
         private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.PictureBox pictureBox48;
+        private System.Windows.Forms.FlowLayoutPanel flpRegistrarVehiculo;
     }
 }
 
