@@ -216,6 +216,7 @@ namespace wEasyGoDriver.views
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIniciarSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmIniciarSesion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

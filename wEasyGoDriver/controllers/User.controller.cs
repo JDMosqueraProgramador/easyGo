@@ -12,6 +12,7 @@ using Emgu.CV.Util;
 using Emgu.CV.OCR;
 using LibClassEasyGo;
 using wEasyGoDriver.models;
+using System.Data;
 
 
 namespace wEasyGoDriver.controllers
@@ -52,9 +53,15 @@ namespace wEasyGoDriver.controllers
             return user;
         }
 
+        public DataTable ExecuteSearchUser(string name)
+        {
+            return new UserModel().SearchDriver(name);
+        }
+
         // ------------------------------------
         // ------------------------------------
         // ------------------------------------
+
         public Bitmap bitImg;
         public string Text;
 

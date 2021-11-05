@@ -22,7 +22,6 @@ namespace wEasyGoDriver.controllers
             UserModel driverClass = new UserModel();
             driverClass.IntIdUser = driver;
 
-
             moto = new MotorcycleModel(strLicensePlateMoto, intNumSerieMoto, intNumChasisMoto, intVimMoto, strStateMoto, intNumLicenseMoto, strMarkMoto, intCylinderMoto, strModelMoto, strFuelTypeMoto, strLinkPropertyCard, ownerClass, driverClass, strColorMoto);
         }
 

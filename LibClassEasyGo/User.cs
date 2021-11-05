@@ -38,7 +38,7 @@ namespace LibClassEasyGo
         public string StrRolUser { get => strRolUser; set => strRolUser = value; }
         public int IntIdPerson { get => intIdPerson; set => intIdPerson = value; }
 
-        private NpgsqlConnection conn = new Connect().Conn();
+        protected NpgsqlConnection conn = new Connect().Conn();
 
         public User()
         {
@@ -76,7 +76,7 @@ namespace LibClassEasyGo
 
         public int CreateUser(string password, int idCity)
         {
-            string procedure = "SELECT * FROM set_user(null, @strNamePerson, @strLastNamePerson, @dateOfBirthPerson, @boolGenderPerson, @intIdCity, @intPhoneUser, @strEmailUser, @strPassword, @strRolUser)";
+            string procedure = "SELECT * FROM set_user(@intIdCardPerson, @strNamePerson, @strLastNamePerson, @dateOfBirthPerson, @boolGenderPerson, @intIdCity, @intPhoneUser, @strEmailUser, @strPassword, @strRolUser)";
             NpgsqlCommand cmd = new NpgsqlCommand(procedure, conn);
 
             /* if(this.IntIdCardPerson == 0)
@@ -88,6 +88,14 @@ namespace LibClassEasyGo
                 cmd.Parameters.AddWithValue("@intIdCardPerson", NpgsqlTypes.NpgsqlDbType.Bigint, this.IntIdCardPerson);
             } */
 
+            if(StrRolUser == "Customer")
+            {
+                cmd.Parameters.AddWithValue("@intIdCardPerson", null);
+            } else
+            {
+                cmd.Parameters.AddWithValue("@intIdCardPerson", NpgsqlTypes.NpgsqlDbType.Bigint, this.IntIdCardPerson);
+            }
+
             cmd.Parameters.AddWithValue("@strNamePerson", NpgsqlTypes.NpgsqlDbType.Varchar, this.StrNamePerson);
             cmd.Parameters.AddWithValue("@strLastNamePerson", NpgsqlTypes.NpgsqlDbType.Varchar, this.StrLastNamePerson);
             cmd.Parameters.AddWithValue("@dateOfBirthPerson", NpgsqlTypes.NpgsqlDbType.Date, this.DateOfBirthPerson);
@@ -96,7 +104,7 @@ namespace LibClassEasyGo
             cmd.Parameters.AddWithValue("@intPhoneUser", NpgsqlTypes.NpgsqlDbType.Bigint, this.IntPhoneUser);
             cmd.Parameters.AddWithValue("@strEmailUser", NpgsqlTypes.NpgsqlDbType.Varchar, this.StrEmailUser);
             cmd.Parameters.AddWithValue("@strPassword", NpgsqlTypes.NpgsqlDbType.Varchar, password);
-            cmd.Parameters.AddWithValue("@strRolUser", NpgsqlTypes.NpgsqlDbType.Varchar, this.strRolUser);
+            cmd.Parameters.AddWithValue("@strRolUser", NpgsqlTypes.NpgsqlDbType.Varchar, this.StrRolUser);
 
             NpgsqlDataReader data = cmd.ExecuteReader();
 

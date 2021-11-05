@@ -28,7 +28,9 @@ namespace wEasyGoDriver.views
 
         private void lnklblRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             new frmRegistro().Show();
+            
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
@@ -38,6 +40,11 @@ namespace wEasyGoDriver.views
             {
                 new frmRegistro().Show();
             }
+        }
+
+        private void frmIniciarSesion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

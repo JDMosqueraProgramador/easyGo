@@ -53,10 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controllers\City.controller.cs" />
     <Compile Include="controllers\License.controller.cs" />
     <Compile Include="controllers\Motorcycle.controller.cs" />
+    <Compile Include="controllers\Soat.controller.cs" />
+    <Compile Include="controllers\Technomechanical.controller.cs" />
     <Compile Include="models\License.model.cs" />
     <Compile Include="models\Motocycle.model.cs" />
+    <Compile Include="models\Soat.model.cs" />
+    <Compile Include="models\Technomechanical.model.cs" />
     <Compile Include="models\User.model.cs" />
     <Compile Include="views\Register.view.cs">
       <SubType>Form</SubType>
@@ -108,7 +113,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="assets\backups\" />
+    <Folder Include="assets\licencias\" />
+    <Folder Include="assets\soat\" />
+    <Folder Include="assets\tarjetasPropiedad\" />
+    <Folder Include="assets\tecnomecanicas\" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bunifu.UI.WinForms">
       <Version>5.2.3</Version>
