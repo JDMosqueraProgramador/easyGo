@@ -112,6 +112,7 @@ namespace wEasyGoDriver.views
             this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 50;
             this.label1.Text = "Inicio de sesión";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCerrar
             // 

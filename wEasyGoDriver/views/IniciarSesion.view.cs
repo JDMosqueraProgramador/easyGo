@@ -46,5 +46,10 @@ namespace wEasyGoDriver.views
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            new frmMain().Show();
+        }
     }
 }

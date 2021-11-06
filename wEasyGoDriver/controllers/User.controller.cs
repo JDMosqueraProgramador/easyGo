@@ -45,7 +45,7 @@ namespace wEasyGoDriver.controllers
 
         public bool ExecuteLogin(long phone, string password)
         {
-            return user.login(phone, password);
+            return new UserModel().login(phone, password);
         }
 
         public IUser getDataUser()
