@@ -35,11 +35,13 @@ namespace wEasyGoDriver.views
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            userController = new UserController();
+            new frmMain().Show();
+
+            /* userController = new UserController();
             if (userController.ExecuteLogin(Convert.ToInt64(txtusername.Text), txtContraseña.Text))
             {
                 new frmRegistro().Show();
-            }
+            } */
         }
 
         private void frmIniciarSesion_Load(object sender, EventArgs e)
@@ -49,7 +51,7 @@ namespace wEasyGoDriver.views
 
         private void label1_Click(object sender, EventArgs e)
         {
-            new frmMain().Show();
+
         }
     }
 }

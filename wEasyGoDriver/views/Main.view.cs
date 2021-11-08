@@ -47,7 +47,7 @@ namespace wEasyGoDriver.views
 
         public void InicializeForm()
         {
-            panel1.Visible = false;
+            pnlViajeAceptado.Visible = false;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -108,12 +108,17 @@ namespace wEasyGoDriver.views
             ITravel travel = new Travel();
             travel.StrStartingPlaceTravel = "Centro Comercial Terminal Del Sur, Carrera 65, Antioquia";
             travel.StrDestinationPlaceTravel = "Parque Recreativo Envigado INDER";
-            travel.NumKMPriceTravel = 2000;
-            this.flpViajes.Controls.Add(generateTravel(panelCant, travel));
+            travel.IntTotalPriceTravel = 2000;
+            travel.Customer = new User();
+            travel.Customer.StrNamePerson = "Alexander";
+            this.flpViajes.Controls.Add(generateTravelRequest(panelCant, travel));
             panelCant++;
+
+            if (panelCant > 0) this.lblAvisoViajes.Visible = false;
+
         }
 
-        public Panel generateTravel(int name, ITravel travel)
+        public Panel generateTravelRequest(int name, ITravel travel)
         {
 
             GeoCoderStatusCode statusStart;
@@ -121,6 +126,8 @@ namespace wEasyGoDriver.views
 
             var travelPointStart = GMapProviders.GoogleMap.GetPoint(travel.StrStartingPlaceTravel, out statusStart);
             var travelPointEnd = GMapProviders.GoogleMap.GetPoint(travel.StrDestinationPlaceTravel, out statusEnd);
+
+            #region [Generación de datos de solicitud ]
 
             System.Windows.Forms.Panel pnlViaje = new Panel();
             System.Windows.Forms.Button btnRechazarViaje = new Button();
@@ -146,7 +153,7 @@ namespace wEasyGoDriver.views
             pnlViaje.Controls.Add(lblSolicitudViaje);
             pnlViaje.Location = new System.Drawing.Point(698, 13);
             pnlViaje.Name = "pnlViaje" + name;
-            pnlViaje.Size = new System.Drawing.Size(300, 150);
+            pnlViaje.Size = new System.Drawing.Size(305, 150);
             pnlViaje.BorderStyle = BorderStyle.FixedSingle;
             pnlViaje.TabIndex = 1;
             pnlViaje.Padding = new Padding(20);
@@ -159,7 +166,7 @@ namespace wEasyGoDriver.views
             lblSolicitudViaje.Name = "lblSolicitudViaje" + name;
             lblSolicitudViaje.Size = new System.Drawing.Size(115, 20);
             lblSolicitudViaje.TabIndex = 0;
-            lblSolicitudViaje.Text = "Solicitud de viaje";
+            lblSolicitudViaje.Text = $"{travel.Customer.StrNamePerson} solicita un viaje";
             // 
             // label3
             // 
@@ -204,10 +211,13 @@ namespace wEasyGoDriver.views
             lblCantDinero.Name = "lblCantDinero" + name;
             lblCantDinero.Size = new System.Drawing.Size(95, 15);
             lblCantDinero.TabIndex = 5;
-            lblCantDinero.Text = travel.NumKMPriceTravel.ToString();
+            lblCantDinero.Text = travel.IntTotalPriceTravel.ToString() + " pesos";
             lblCantDinero.TextAlign = ContentAlignment.TopRight;
+
+            #endregion
+
             // 
-            // button1
+            // Button VER DETALLES ---------------------------------------------------------------
             // 
             btnVerDetalles.Location = new System.Drawing.Point(10, 89);
             btnVerDetalles.Name = "btnVerDetalles" + name;
@@ -246,7 +256,7 @@ namespace wEasyGoDriver.views
             });
 
             // 
-            // button2
+            // Button ACEPTAR VIAJE ---------------------------------------------------------------
             // 
             btnAceptarViaje.Location = new System.Drawing.Point(10, 118);
             btnAceptarViaje.Name = "btnAceptarViaje" + name;
@@ -254,8 +264,74 @@ namespace wEasyGoDriver.views
             btnAceptarViaje.TabIndex = 7;
             btnAceptarViaje.Text = "Aceptar viaje";
             btnAceptarViaje.UseVisualStyleBackColor = true;
+
+            btnAceptarViaje.Click += new System.EventHandler((object sender, EventArgs e) =>
+            {
+
+                if (statusEnd == GeoCoderStatusCode.OK && statusStart == GeoCoderStatusCode.OK)
+                {
+
+                    #region [Rutas de viaje y de inicio, marcadores y mapas]
+                    // RUTA DEL CONDUCTOR HASTA EL USUARIO -------------------------
+
+                    GDirections dirPositionToStart = getRoute(actualPoint, travelPointStart.Value);
+
+                    startRoute = new GMapRoute(dirPositionToStart.Route, "Ruta de llegada de conductor");
+                    startRoute.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+                    startRoute.Stroke.Color = Color.Red;
+
+                    // Marcador inicial del usuario
+                    changeStartMarker(dirPositionToStart.EndLocation);
+
+                    // RUTA DEL USUARIO -------------------------
+
+                    GDirections direction = getRoute(travelPointStart.Value, travelPointEnd.Value);
+                    travelRoute = new GMapRoute(direction.Route, "Ruta de viaje");
+                    travelRoute.Stroke.Color = Color.BlueViolet;
+                    travelRoute.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+
+                    // Marcador final
+                    changeEndMarker(direction.EndLocation);
+
+                    routeOver.Routes.Clear();
+                    routeOver.Routes.Add(startRoute);
+                    // routeOver.Routes.Add(travelRoute);
+
+                    if (gMapPrincipal.Overlays.Contains(routeOver)) gMapPrincipal.Overlays.Remove(routeOver);
+
+                    gMapPrincipal.Overlays.Add(routeOver);
+                    gMapPrincipal.Overlays.Remove(markerOverlay);
+                    gMapPrincipal.Overlays.Add(markerOverlay);
+
+                    gMapPrincipal.Zoom = gMapPrincipal.Zoom += 1;
+                    gMapPrincipal.Zoom = gMapPrincipal.Zoom -= 1;
+
+                    #endregion
+
+
+                    // Habilitar panel para manejo del viaje
+
+                    lblTitleViajeAceptado.Text = "Recogiendo a " + travel.Customer.StrNamePerson;
+                    lblPrecioAceptado.Text = travel.IntTotalPriceTravel.ToString() + " pesos";
+                    lblInicioAceptado.Text = travel.StrStartingPlaceTravel;
+                    lblDestinoAceptado.Text = travel.StrDestinationPlaceTravel;
+                    lblTelefonoAceptado.Text = travel.Customer.IntPhoneUser.ToString();
+                    lblNombreAceptado.Text = $"{travel.Customer.StrNamePerson} {travel.Customer.StrLastNamePerson}";
+
+                    flpViajes.Controls.Clear();
+                    pnlViajeAceptado.Visible = true;
+                    flpViajes.Controls.Add(pnlViajeAceptado);
+
+                    
+
+                    //flpViajes.Controls.
+
+                }
+            });
+
+
             // 
-            // button3
+            // button RECHAZAR VIAJE ---------------------------------------------------------------
             // 
             btnRechazarViaje.Location = new System.Drawing.Point(180, 118);
             btnRechazarViaje.Name = "btnRechazarViaje" + name;
@@ -341,6 +417,30 @@ namespace wEasyGoDriver.views
         private void tabMainViajes_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void flpViajes_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            if (flpViajes.Controls.Count == 2) this.lblAvisoViajes.Visible = true;
+        }
+
+        private void tabMainHistorial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelarAceptado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnViajeAceptado_Click(object sender, EventArgs e)
+        {
+            this.routeOver.Routes.Clear();
+            this.routeOver.Routes.Add(travelRoute);
+
+            gMapPrincipal.Zoom += 1;
+            gMapPrincipal.Zoom -= 1;
         }
     }
 }

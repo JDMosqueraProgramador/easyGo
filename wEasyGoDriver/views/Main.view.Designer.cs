@@ -30,6 +30,7 @@ namespace wEasyGoDriver.views
         private void InitializeComponent()
         {
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.tabsMain = new System.Windows.Forms.TabControl();
             this.tabMainInicio = new System.Windows.Forms.TabPage();
@@ -45,26 +46,38 @@ namespace wEasyGoDriver.views
             this.lblTituloMain = new System.Windows.Forms.Label();
             this.tabMainViajes = new System.Windows.Forms.TabPage();
             this.flpViajes = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblAvisoViajes = new System.Windows.Forms.Label();
+            this.pnlViajeAceptado = new System.Windows.Forms.Panel();
+            this.btnEnInicioAceptado = new System.Windows.Forms.Button();
+            this.lblDistanciaInicioAceptado = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblTelefonoAceptado = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblNombreAceptado = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblEstadoViajeAceptado = new System.Windows.Forms.Label();
+            this.lblEstadoAceptado = new System.Windows.Forms.Label();
+            this.btnCancelarAceptado = new System.Windows.Forms.Button();
+            this.btnViajeAceptado = new System.Windows.Forms.Button();
+            this.lblPrecioAceptado = new System.Windows.Forms.Label();
+            this.lblDestinoAceptado = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblInicioAceptado = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblTitleViajeAceptado = new System.Windows.Forms.Label();
             this.gMapPrincipal = new GMap.NET.WindowsForms.GMapControl();
             this.tabMainHistorial = new System.Windows.Forms.TabPage();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.lblTituloHistorial = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.tabsMain.SuspendLayout();
             this.tabMainInicio.SuspendLayout();
             this.tabMainViajes.SuspendLayout();
             this.flpViajes.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.pnlViajeAceptado.SuspendLayout();
+            this.tabMainHistorial.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitulo
@@ -77,6 +90,18 @@ namespace wEasyGoDriver.views
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1011, 60);
             this.pnlTitulo.TabIndex = 2;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
+            this.btnCerrar.Location = new System.Drawing.Point(953, 14);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(43, 25);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 47;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // lblTitle
             // 
@@ -233,112 +258,209 @@ namespace wEasyGoDriver.views
             // 
             // flpViajes
             // 
+            this.flpViajes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flpViajes.AutoScroll = true;
-            this.flpViajes.Controls.Add(this.panel1);
+            this.flpViajes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flpViajes.Controls.Add(this.lblAvisoViajes);
+            this.flpViajes.Controls.Add(this.pnlViajeAceptado);
             this.flpViajes.Location = new System.Drawing.Point(671, 6);
             this.flpViajes.Name = "flpViajes";
             this.flpViajes.Size = new System.Drawing.Size(324, 406);
             this.flpViajes.TabIndex = 2;
+            this.flpViajes.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.flpViajes_ControlRemoved);
             // 
-            // panel1
+            // lblAvisoViajes
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(297, 151);
-            this.panel1.TabIndex = 1;
+            this.lblAvisoViajes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAvisoViajes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvisoViajes.Location = new System.Drawing.Point(3, 0);
+            this.lblAvisoViajes.Name = "lblAvisoViajes";
+            this.lblAvisoViajes.Size = new System.Drawing.Size(318, 45);
+            this.lblAvisoViajes.TabIndex = 2;
+            this.lblAvisoViajes.Text = "Aquí aparecerán las solicitudes de viajes";
+            this.lblAvisoViajes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button3
+            // pnlViajeAceptado
             // 
-            this.button3.Location = new System.Drawing.Point(180, 118);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Rechazar viaje";
-            this.button3.UseVisualStyleBackColor = true;
+            this.pnlViajeAceptado.Controls.Add(this.btnEnInicioAceptado);
+            this.pnlViajeAceptado.Controls.Add(this.lblDistanciaInicioAceptado);
+            this.pnlViajeAceptado.Controls.Add(this.label8);
+            this.pnlViajeAceptado.Controls.Add(this.lblTelefonoAceptado);
+            this.pnlViajeAceptado.Controls.Add(this.label11);
+            this.pnlViajeAceptado.Controls.Add(this.lblNombreAceptado);
+            this.pnlViajeAceptado.Controls.Add(this.label9);
+            this.pnlViajeAceptado.Controls.Add(this.lblEstadoViajeAceptado);
+            this.pnlViajeAceptado.Controls.Add(this.lblEstadoAceptado);
+            this.pnlViajeAceptado.Controls.Add(this.btnCancelarAceptado);
+            this.pnlViajeAceptado.Controls.Add(this.btnViajeAceptado);
+            this.pnlViajeAceptado.Controls.Add(this.lblPrecioAceptado);
+            this.pnlViajeAceptado.Controls.Add(this.lblDestinoAceptado);
+            this.pnlViajeAceptado.Controls.Add(this.label10);
+            this.pnlViajeAceptado.Controls.Add(this.lblInicioAceptado);
+            this.pnlViajeAceptado.Controls.Add(this.label12);
+            this.pnlViajeAceptado.Controls.Add(this.lblTitleViajeAceptado);
+            this.pnlViajeAceptado.Location = new System.Drawing.Point(3, 48);
+            this.pnlViajeAceptado.Name = "pnlViajeAceptado";
+            this.pnlViajeAceptado.Size = new System.Drawing.Size(318, 257);
+            this.pnlViajeAceptado.TabIndex = 3;
             // 
-            // button2
+            // btnEnInicioAceptado
             // 
-            this.button2.Location = new System.Drawing.Point(10, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Aceptar viaje";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEnInicioAceptado.Location = new System.Drawing.Point(13, 219);
+            this.btnEnInicioAceptado.Name = "btnEnInicioAceptado";
+            this.btnEnInicioAceptado.Size = new System.Drawing.Size(172, 23);
+            this.btnEnInicioAceptado.TabIndex = 17;
+            this.btnEnInicioAceptado.Text = "En el lugar de inicio";
+            this.btnEnInicioAceptado.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // lblDistanciaInicioAceptado
             // 
-            this.button1.Location = new System.Drawing.Point(10, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(280, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Ver detalles";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lblDistanciaInicioAceptado.AutoSize = true;
+            this.lblDistanciaInicioAceptado.Location = new System.Drawing.Point(153, 159);
+            this.lblDistanciaInicioAceptado.Name = "lblDistanciaInicioAceptado";
+            this.lblDistanciaInicioAceptado.Size = new System.Drawing.Size(93, 13);
+            this.lblDistanciaInicioAceptado.TabIndex = 16;
+            this.lblDistanciaInicioAceptado.Text = "Número en metros";
             // 
-            // label7
+            // label8
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(194, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Cantidad de dinero";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(10, 159);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Distancia de lugar de inicio:";
             // 
-            // label5
+            // lblTelefonoAceptado
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(105, 63);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Calle tal sitio tal y tal";
+            this.lblTelefonoAceptado.AutoSize = true;
+            this.lblTelefonoAceptado.Location = new System.Drawing.Point(75, 135);
+            this.lblTelefonoAceptado.Name = "lblTelefonoAceptado";
+            this.lblTelefonoAceptado.Size = new System.Drawing.Size(54, 13);
+            this.lblTelefonoAceptado.TabIndex = 14;
+            this.lblTelefonoAceptado.Text = "Cellphone";
             // 
-            // label6
+            // label11
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Lugar de destino:";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(10, 135);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 13);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Contancto:";
             // 
-            // label4
+            // lblNombreAceptado
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(95, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Calle tal sitio tal y tal";
+            this.lblNombreAceptado.AutoSize = true;
+            this.lblNombreAceptado.Location = new System.Drawing.Point(58, 114);
+            this.lblNombreAceptado.Name = "lblNombreAceptado";
+            this.lblNombreAceptado.Size = new System.Drawing.Size(90, 13);
+            this.lblNombreAceptado.TabIndex = 12;
+            this.lblNombreAceptado.Text = "Nombre completo";
             // 
-            // label3
+            // label9
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Lugar de inicio:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(10, 114);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 13);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Cliente:";
             // 
-            // label2
+            // lblEstadoViajeAceptado
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Solicitud de viaje";
+            this.lblEstadoViajeAceptado.AutoSize = true;
+            this.lblEstadoViajeAceptado.Location = new System.Drawing.Point(95, 46);
+            this.lblEstadoViajeAceptado.Name = "lblEstadoViajeAceptado";
+            this.lblEstadoViajeAceptado.Size = new System.Drawing.Size(40, 13);
+            this.lblEstadoViajeAceptado.TabIndex = 10;
+            this.lblEstadoViajeAceptado.Text = "Estado";
+            // 
+            // lblEstadoAceptado
+            // 
+            this.lblEstadoAceptado.AutoSize = true;
+            this.lblEstadoAceptado.Location = new System.Drawing.Point(10, 46);
+            this.lblEstadoAceptado.Name = "lblEstadoAceptado";
+            this.lblEstadoAceptado.Size = new System.Drawing.Size(85, 13);
+            this.lblEstadoAceptado.TabIndex = 9;
+            this.lblEstadoAceptado.Text = "Estado del viaje:";
+            // 
+            // btnCancelarAceptado
+            // 
+            this.btnCancelarAceptado.Location = new System.Drawing.Point(191, 219);
+            this.btnCancelarAceptado.Name = "btnCancelarAceptado";
+            this.btnCancelarAceptado.Size = new System.Drawing.Size(110, 23);
+            this.btnCancelarAceptado.TabIndex = 8;
+            this.btnCancelarAceptado.Text = "Cancelar viaje";
+            this.btnCancelarAceptado.UseVisualStyleBackColor = true;
+            this.btnCancelarAceptado.Click += new System.EventHandler(this.btnCancelarAceptado_Click);
+            // 
+            // btnViajeAceptado
+            // 
+            this.btnViajeAceptado.Location = new System.Drawing.Point(13, 190);
+            this.btnViajeAceptado.Name = "btnViajeAceptado";
+            this.btnViajeAceptado.Size = new System.Drawing.Size(288, 23);
+            this.btnViajeAceptado.TabIndex = 7;
+            this.btnViajeAceptado.Text = "Inciar viaje";
+            this.btnViajeAceptado.UseVisualStyleBackColor = true;
+            this.btnViajeAceptado.Click += new System.EventHandler(this.btnViajeAceptado_Click);
+            // 
+            // lblPrecioAceptado
+            // 
+            this.lblPrecioAceptado.AutoSize = true;
+            this.lblPrecioAceptado.Location = new System.Drawing.Point(205, 14);
+            this.lblPrecioAceptado.Name = "lblPrecioAceptado";
+            this.lblPrecioAceptado.Size = new System.Drawing.Size(96, 13);
+            this.lblPrecioAceptado.TabIndex = 5;
+            this.lblPrecioAceptado.Text = "Cantidad de dinero";
+            this.lblPrecioAceptado.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblDestinoAceptado
+            // 
+            this.lblDestinoAceptado.AutoSize = true;
+            this.lblDestinoAceptado.Location = new System.Drawing.Point(105, 91);
+            this.lblDestinoAceptado.Name = "lblDestinoAceptado";
+            this.lblDestinoAceptado.Size = new System.Drawing.Size(101, 13);
+            this.lblDestinoAceptado.TabIndex = 4;
+            this.lblDestinoAceptado.Text = "Calle tal sitio tal y tal";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(10, 91);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(89, 13);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Lugar de destino:";
+            // 
+            // lblInicioAceptado
+            // 
+            this.lblInicioAceptado.AutoSize = true;
+            this.lblInicioAceptado.Location = new System.Drawing.Point(95, 69);
+            this.lblInicioAceptado.Name = "lblInicioAceptado";
+            this.lblInicioAceptado.Size = new System.Drawing.Size(101, 13);
+            this.lblInicioAceptado.TabIndex = 2;
+            this.lblInicioAceptado.Text = "Calle tal sitio tal y tal";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(10, 69);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 13);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Lugar de inicio:";
+            // 
+            // lblTitleViajeAceptado
+            // 
+            this.lblTitleViajeAceptado.AutoSize = true;
+            this.lblTitleViajeAceptado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleViajeAceptado.Location = new System.Drawing.Point(7, 9);
+            this.lblTitleViajeAceptado.Name = "lblTitleViajeAceptado";
+            this.lblTitleViajeAceptado.Size = new System.Drawing.Size(117, 18);
+            this.lblTitleViajeAceptado.TabIndex = 0;
+            this.lblTitleViajeAceptado.Text = "Solicitud de viaje";
             // 
             // gMapPrincipal
             // 
@@ -368,6 +490,8 @@ namespace wEasyGoDriver.views
             // 
             // tabMainHistorial
             // 
+            this.tabMainHistorial.Controls.Add(this.lblTituloHistorial);
+            this.tabMainHistorial.Controls.Add(this.dataGridView1);
             this.tabMainHistorial.Location = new System.Drawing.Point(4, 22);
             this.tabMainHistorial.Name = "tabMainHistorial";
             this.tabMainHistorial.Padding = new System.Windows.Forms.Padding(3);
@@ -375,18 +499,25 @@ namespace wEasyGoDriver.views
             this.tabMainHistorial.TabIndex = 2;
             this.tabMainHistorial.Text = "Historial";
             this.tabMainHistorial.UseVisualStyleBackColor = true;
+            this.tabMainHistorial.Click += new System.EventHandler(this.tabMainHistorial_Click);
             // 
-            // btnCerrar
+            // lblTituloHistorial
             // 
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
-            this.btnCerrar.Location = new System.Drawing.Point(953, 14);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(43, 25);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 47;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.lblTituloHistorial.AutoSize = true;
+            this.lblTituloHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloHistorial.Location = new System.Drawing.Point(8, 19);
+            this.lblTituloHistorial.Name = "lblTituloHistorial";
+            this.lblTituloHistorial.Size = new System.Drawing.Size(174, 24);
+            this.lblTituloHistorial.TabIndex = 1;
+            this.lblTituloHistorial.Text = "Historial de viajes";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 55);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(657, 357);
+            this.dataGridView1.TabIndex = 0;
             // 
             // frmMain
             // 
@@ -401,14 +532,17 @@ namespace wEasyGoDriver.views
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.tabsMain.ResumeLayout(false);
             this.tabMainInicio.ResumeLayout(false);
             this.tabMainInicio.PerformLayout();
             this.tabMainViajes.ResumeLayout(false);
             this.flpViajes.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.pnlViajeAceptado.ResumeLayout(false);
+            this.pnlViajeAceptado.PerformLayout();
+            this.tabMainHistorial.ResumeLayout(false);
+            this.tabMainHistorial.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,16 +567,27 @@ namespace wEasyGoDriver.views
         private System.Windows.Forms.TabPage tabMainHistorial;
         private System.Windows.Forms.Label label1;
         private GMap.NET.WindowsForms.GMapControl gMapPrincipal;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flpViajes;
+        private System.Windows.Forms.Label lblAvisoViajes;
+        private System.Windows.Forms.Label lblTituloHistorial;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel pnlViajeAceptado;
+        private System.Windows.Forms.Button btnEnInicioAceptado;
+        private System.Windows.Forms.Label lblDistanciaInicioAceptado;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblTelefonoAceptado;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblNombreAceptado;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblEstadoViajeAceptado;
+        private System.Windows.Forms.Label lblEstadoAceptado;
+        private System.Windows.Forms.Button btnCancelarAceptado;
+        private System.Windows.Forms.Button btnViajeAceptado;
+        private System.Windows.Forms.Label lblPrecioAceptado;
+        private System.Windows.Forms.Label lblDestinoAceptado;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblInicioAceptado;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblTitleViajeAceptado;
     }
 }
