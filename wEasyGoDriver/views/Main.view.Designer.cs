@@ -30,7 +30,6 @@ namespace wEasyGoDriver.views
         private void InitializeComponent()
         {
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.tabsMain = new System.Windows.Forms.TabControl();
             this.tabMainInicio = new System.Windows.Forms.TabPage();
@@ -69,8 +68,12 @@ namespace wEasyGoDriver.views
             this.tabMainHistorial = new System.Windows.Forms.TabPage();
             this.lblTituloHistorial = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.lblEstadoMoto = new System.Windows.Forms.Label();
+            this.cerrarForm = new System.Windows.Forms.PictureBox();
             this.pnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.tabsMain.SuspendLayout();
             this.tabMainInicio.SuspendLayout();
             this.tabMainViajes.SuspendLayout();
@@ -78,11 +81,15 @@ namespace wEasyGoDriver.views
             this.pnlViajeAceptado.SuspendLayout();
             this.tabMainHistorial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitulo
             // 
             this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(156)))));
+            this.pnlTitulo.Controls.Add(this.cerrarForm);
             this.pnlTitulo.Controls.Add(this.btnCerrar);
             this.pnlTitulo.Controls.Add(this.lblTitle);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -90,18 +97,6 @@ namespace wEasyGoDriver.views
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1011, 60);
             this.pnlTitulo.TabIndex = 2;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
-            this.btnCerrar.Location = new System.Drawing.Point(953, 14);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(43, 25);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 47;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // lblTitle
             // 
@@ -127,6 +122,9 @@ namespace wEasyGoDriver.views
             // 
             // tabMainInicio
             // 
+            this.tabMainInicio.Controls.Add(this.lblEstadoMoto);
+            this.tabMainInicio.Controls.Add(this.pictureBox1);
+            this.tabMainInicio.Controls.Add(this.label2);
             this.tabMainInicio.Controls.Add(this.label1);
             this.tabMainInicio.Controls.Add(this.lblFechaSoat);
             this.tabMainInicio.Controls.Add(this.lblSoat);
@@ -149,7 +147,7 @@ namespace wEasyGoDriver.views
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(79, 269);
+            this.label1.Location = new System.Drawing.Point(320, 275);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 10;
@@ -158,7 +156,8 @@ namespace wEasyGoDriver.views
             // 
             this.lblFechaSoat.AutoSize = true;
             this.lblFechaSoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaSoat.Location = new System.Drawing.Point(79, 239);
+            this.lblFechaSoat.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblFechaSoat.Location = new System.Drawing.Point(583, 264);
             this.lblFechaSoat.Name = "lblFechaSoat";
             this.lblFechaSoat.Size = new System.Drawing.Size(97, 16);
             this.lblFechaSoat.TabIndex = 8;
@@ -168,7 +167,8 @@ namespace wEasyGoDriver.views
             // 
             this.lblSoat.AutoSize = true;
             this.lblSoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoat.Location = new System.Drawing.Point(34, 239);
+            this.lblSoat.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblSoat.Location = new System.Drawing.Point(538, 264);
             this.lblSoat.Name = "lblSoat";
             this.lblSoat.Size = new System.Drawing.Size(39, 16);
             this.lblSoat.TabIndex = 7;
@@ -178,7 +178,8 @@ namespace wEasyGoDriver.views
             // 
             this.lblFechaTecnomecanica.AutoSize = true;
             this.lblFechaTecnomecanica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaTecnomecanica.Location = new System.Drawing.Point(149, 206);
+            this.lblFechaTecnomecanica.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblFechaTecnomecanica.Location = new System.Drawing.Point(653, 231);
             this.lblFechaTecnomecanica.Name = "lblFechaTecnomecanica";
             this.lblFechaTecnomecanica.Size = new System.Drawing.Size(163, 16);
             this.lblFechaTecnomecanica.TabIndex = 6;
@@ -188,7 +189,8 @@ namespace wEasyGoDriver.views
             // 
             this.lblTecnomecanica.AutoSize = true;
             this.lblTecnomecanica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTecnomecanica.Location = new System.Drawing.Point(34, 206);
+            this.lblTecnomecanica.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblTecnomecanica.Location = new System.Drawing.Point(538, 231);
             this.lblTecnomecanica.Name = "lblTecnomecanica";
             this.lblTecnomecanica.Size = new System.Drawing.Size(109, 16);
             this.lblTecnomecanica.TabIndex = 5;
@@ -198,7 +200,8 @@ namespace wEasyGoDriver.views
             // 
             this.lblFechaLicencia.AutoSize = true;
             this.lblFechaLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaLicencia.Location = new System.Drawing.Point(101, 173);
+            this.lblFechaLicencia.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblFechaLicencia.Location = new System.Drawing.Point(605, 198);
             this.lblFechaLicencia.Name = "lblFechaLicencia";
             this.lblFechaLicencia.Size = new System.Drawing.Size(128, 16);
             this.lblFechaLicencia.TabIndex = 4;
@@ -208,7 +211,8 @@ namespace wEasyGoDriver.views
             // 
             this.lblLicencia.AutoSize = true;
             this.lblLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLicencia.Location = new System.Drawing.Point(34, 173);
+            this.lblLicencia.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblLicencia.Location = new System.Drawing.Point(538, 198);
             this.lblLicencia.Name = "lblLicencia";
             this.lblLicencia.Size = new System.Drawing.Size(61, 16);
             this.lblLicencia.TabIndex = 3;
@@ -217,16 +221,18 @@ namespace wEasyGoDriver.views
             // lblVencimiento
             // 
             this.lblVencimiento.AutoSize = true;
-            this.lblVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVencimiento.Location = new System.Drawing.Point(30, 134);
+            this.lblVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVencimiento.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblVencimiento.Location = new System.Drawing.Point(537, 159);
             this.lblVencimiento.Name = "lblVencimiento";
-            this.lblVencimiento.Size = new System.Drawing.Size(179, 20);
+            this.lblVencimiento.Size = new System.Drawing.Size(201, 20);
             this.lblVencimiento.TabIndex = 2;
             this.lblVencimiento.Text = "Vencimiento de papeles";
             // 
             // btnEstado
             // 
-            this.btnEstado.Location = new System.Drawing.Point(22, 61);
+            this.btnEstado.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnEstado.Location = new System.Drawing.Point(643, 79);
             this.btnEstado.Name = "btnEstado";
             this.btnEstado.Size = new System.Drawing.Size(208, 45);
             this.btnEstado.TabIndex = 1;
@@ -237,7 +243,8 @@ namespace wEasyGoDriver.views
             // 
             this.lblTituloMain.AutoSize = true;
             this.lblTituloMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloMain.Location = new System.Drawing.Point(18, 22);
+            this.lblTituloMain.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblTituloMain.Location = new System.Drawing.Point(518, 28);
             this.lblTituloMain.Name = "lblTituloMain";
             this.lblTituloMain.Size = new System.Drawing.Size(455, 24);
             this.lblTituloMain.TabIndex = 0;
@@ -274,6 +281,7 @@ namespace wEasyGoDriver.views
             // 
             this.lblAvisoViajes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAvisoViajes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvisoViajes.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblAvisoViajes.Location = new System.Drawing.Point(3, 0);
             this.lblAvisoViajes.Name = "lblAvisoViajes";
             this.lblAvisoViajes.Size = new System.Drawing.Size(318, 45);
@@ -307,6 +315,7 @@ namespace wEasyGoDriver.views
             // 
             // btnEnInicioAceptado
             // 
+            this.btnEnInicioAceptado.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.btnEnInicioAceptado.Location = new System.Drawing.Point(13, 219);
             this.btnEnInicioAceptado.Name = "btnEnInicioAceptado";
             this.btnEnInicioAceptado.Size = new System.Drawing.Size(172, 23);
@@ -317,6 +326,7 @@ namespace wEasyGoDriver.views
             // lblDistanciaInicioAceptado
             // 
             this.lblDistanciaInicioAceptado.AutoSize = true;
+            this.lblDistanciaInicioAceptado.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblDistanciaInicioAceptado.Location = new System.Drawing.Point(153, 159);
             this.lblDistanciaInicioAceptado.Name = "lblDistanciaInicioAceptado";
             this.lblDistanciaInicioAceptado.Size = new System.Drawing.Size(93, 13);
@@ -326,6 +336,7 @@ namespace wEasyGoDriver.views
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label8.Location = new System.Drawing.Point(10, 159);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(137, 13);
@@ -335,6 +346,7 @@ namespace wEasyGoDriver.views
             // lblTelefonoAceptado
             // 
             this.lblTelefonoAceptado.AutoSize = true;
+            this.lblTelefonoAceptado.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblTelefonoAceptado.Location = new System.Drawing.Point(75, 135);
             this.lblTelefonoAceptado.Name = "lblTelefonoAceptado";
             this.lblTelefonoAceptado.Size = new System.Drawing.Size(54, 13);
@@ -344,6 +356,7 @@ namespace wEasyGoDriver.views
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label11.Location = new System.Drawing.Point(10, 135);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(59, 13);
@@ -353,6 +366,7 @@ namespace wEasyGoDriver.views
             // lblNombreAceptado
             // 
             this.lblNombreAceptado.AutoSize = true;
+            this.lblNombreAceptado.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblNombreAceptado.Location = new System.Drawing.Point(58, 114);
             this.lblNombreAceptado.Name = "lblNombreAceptado";
             this.lblNombreAceptado.Size = new System.Drawing.Size(90, 13);
@@ -362,6 +376,7 @@ namespace wEasyGoDriver.views
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label9.Location = new System.Drawing.Point(10, 114);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 13);
@@ -371,6 +386,7 @@ namespace wEasyGoDriver.views
             // lblEstadoViajeAceptado
             // 
             this.lblEstadoViajeAceptado.AutoSize = true;
+            this.lblEstadoViajeAceptado.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblEstadoViajeAceptado.Location = new System.Drawing.Point(95, 46);
             this.lblEstadoViajeAceptado.Name = "lblEstadoViajeAceptado";
             this.lblEstadoViajeAceptado.Size = new System.Drawing.Size(40, 13);
@@ -380,6 +396,7 @@ namespace wEasyGoDriver.views
             // lblEstadoAceptado
             // 
             this.lblEstadoAceptado.AutoSize = true;
+            this.lblEstadoAceptado.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblEstadoAceptado.Location = new System.Drawing.Point(10, 46);
             this.lblEstadoAceptado.Name = "lblEstadoAceptado";
             this.lblEstadoAceptado.Size = new System.Drawing.Size(85, 13);
@@ -388,6 +405,7 @@ namespace wEasyGoDriver.views
             // 
             // btnCancelarAceptado
             // 
+            this.btnCancelarAceptado.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.btnCancelarAceptado.Location = new System.Drawing.Point(191, 219);
             this.btnCancelarAceptado.Name = "btnCancelarAceptado";
             this.btnCancelarAceptado.Size = new System.Drawing.Size(110, 23);
@@ -398,6 +416,7 @@ namespace wEasyGoDriver.views
             // 
             // btnViajeAceptado
             // 
+            this.btnViajeAceptado.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.btnViajeAceptado.Location = new System.Drawing.Point(13, 190);
             this.btnViajeAceptado.Name = "btnViajeAceptado";
             this.btnViajeAceptado.Size = new System.Drawing.Size(288, 23);
@@ -409,6 +428,7 @@ namespace wEasyGoDriver.views
             // lblPrecioAceptado
             // 
             this.lblPrecioAceptado.AutoSize = true;
+            this.lblPrecioAceptado.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblPrecioAceptado.Location = new System.Drawing.Point(205, 14);
             this.lblPrecioAceptado.Name = "lblPrecioAceptado";
             this.lblPrecioAceptado.Size = new System.Drawing.Size(96, 13);
@@ -419,6 +439,7 @@ namespace wEasyGoDriver.views
             // lblDestinoAceptado
             // 
             this.lblDestinoAceptado.AutoSize = true;
+            this.lblDestinoAceptado.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblDestinoAceptado.Location = new System.Drawing.Point(105, 91);
             this.lblDestinoAceptado.Name = "lblDestinoAceptado";
             this.lblDestinoAceptado.Size = new System.Drawing.Size(101, 13);
@@ -428,6 +449,7 @@ namespace wEasyGoDriver.views
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label10.Location = new System.Drawing.Point(10, 91);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 13);
@@ -437,6 +459,7 @@ namespace wEasyGoDriver.views
             // lblInicioAceptado
             // 
             this.lblInicioAceptado.AutoSize = true;
+            this.lblInicioAceptado.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblInicioAceptado.Location = new System.Drawing.Point(95, 69);
             this.lblInicioAceptado.Name = "lblInicioAceptado";
             this.lblInicioAceptado.Size = new System.Drawing.Size(101, 13);
@@ -446,6 +469,7 @@ namespace wEasyGoDriver.views
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label12.Location = new System.Drawing.Point(10, 69);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 13);
@@ -456,6 +480,7 @@ namespace wEasyGoDriver.views
             // 
             this.lblTitleViajeAceptado.AutoSize = true;
             this.lblTitleViajeAceptado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleViajeAceptado.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblTitleViajeAceptado.Location = new System.Drawing.Point(7, 9);
             this.lblTitleViajeAceptado.Name = "lblTitleViajeAceptado";
             this.lblTitleViajeAceptado.Size = new System.Drawing.Size(117, 18);
@@ -505,7 +530,8 @@ namespace wEasyGoDriver.views
             // 
             this.lblTituloHistorial.AutoSize = true;
             this.lblTituloHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloHistorial.Location = new System.Drawing.Point(8, 19);
+            this.lblTituloHistorial.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblTituloHistorial.Location = new System.Drawing.Point(415, 19);
             this.lblTituloHistorial.Name = "lblTituloHistorial";
             this.lblTituloHistorial.Size = new System.Drawing.Size(174, 24);
             this.lblTituloHistorial.TabIndex = 1;
@@ -513,16 +539,74 @@ namespace wEasyGoDriver.views
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 55);
+            this.dataGridView1.Location = new System.Drawing.Point(151, 55);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(657, 357);
+            this.dataGridView1.Size = new System.Drawing.Size(683, 357);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label2.Location = new System.Drawing.Point(538, 293);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Estado:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::wEasyGoDriver.Properties.Resources.biker_iStock_1575255671;
+            this.pictureBox1.Location = new System.Drawing.Point(-4, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(507, 419);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
+            this.btnCerrar.Location = new System.Drawing.Point(886, 14);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(43, 25);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 47;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // lblEstadoMoto
+            // 
+            this.lblEstadoMoto.AutoSize = true;
+            this.lblEstadoMoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoMoto.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblEstadoMoto.Location = new System.Drawing.Point(593, 293);
+            this.lblEstadoMoto.Name = "lblEstadoMoto";
+            this.lblEstadoMoto.Size = new System.Drawing.Size(38, 16);
+            this.lblEstadoMoto.TabIndex = 13;
+            this.lblEstadoMoto.Text = "valor";
+            // 
+            // cerrarForm
+            // 
+            this.cerrarForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cerrarForm.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
+            this.cerrarForm.Location = new System.Drawing.Point(953, 14);
+            this.cerrarForm.Name = "cerrarForm";
+            this.cerrarForm.Size = new System.Drawing.Size(43, 25);
+            this.cerrarForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cerrarForm.TabIndex = 48;
+            this.cerrarForm.TabStop = false;
+            this.cerrarForm.Click += new System.EventHandler(this.cerrarForm_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1011, 512);
             this.Controls.Add(this.tabsMain);
             this.Controls.Add(this.pnlTitulo);
@@ -532,7 +616,6 @@ namespace wEasyGoDriver.views
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.tabsMain.ResumeLayout(false);
             this.tabMainInicio.ResumeLayout(false);
             this.tabMainInicio.PerformLayout();
@@ -543,6 +626,9 @@ namespace wEasyGoDriver.views
             this.tabMainHistorial.ResumeLayout(false);
             this.tabMainHistorial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -589,5 +675,9 @@ namespace wEasyGoDriver.views
         private System.Windows.Forms.Label lblInicioAceptado;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblTitleViajeAceptado;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblEstadoMoto;
+        private System.Windows.Forms.PictureBox cerrarForm;
     }
 }

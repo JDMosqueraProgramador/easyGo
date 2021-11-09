@@ -165,6 +165,8 @@
     <Content Include="assets\prueba3.jfif" />
     <Content Include="assets\prueba3.jpg" />
     <Content Include="assets\prueba4.jpg" />
+    <None Include="Resources\biker-iStock-1575255671.jpg" />
+    <None Include="Resources\biker-iStock-157525567.jpg" />
     <None Include="Resources\CerrarForm.png" />
     <None Include="Resources\Bienvenido a la plataforma1.png" />
     <None Include="Resources\1%281%29.png" />

@@ -93,6 +93,26 @@ namespace wEasyGoDriver.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap biker_iStock_157525567 {
+            get {
+                object obj = ResourceManager.GetObject("biker-iStock-157525567", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap biker_iStock_1575255671 {
+            get {
+                object obj = ResourceManager.GetObject("biker-iStock-1575255671", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn {
             get {
                 object obj = ResourceManager.GetObject("btn", resourceCulture);

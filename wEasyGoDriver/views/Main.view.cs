@@ -442,5 +442,10 @@ namespace wEasyGoDriver.views
             gMapPrincipal.Zoom += 1;
             gMapPrincipal.Zoom -= 1;
         }
+
+        private void cerrarForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
