@@ -90,6 +90,8 @@ namespace wEasyGoDriver.views
             this.txtContraseña.TabIndex = 53;
             this.txtContraseña.Text = "Contraseña";
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
+            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // txtusername
             // 
@@ -100,8 +102,10 @@ namespace wEasyGoDriver.views
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(161, 13);
             this.txtusername.TabIndex = 51;
-            this.txtusername.Text = "Numero de celular";
+            this.txtusername.Text = "Número de celular";
             this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtusername.Enter += new System.EventHandler(this.txtusername_Enter);
+            this.txtusername.Leave += new System.EventHandler(this.txtusername_Leave);
             // 
             // label1
             // 
@@ -129,6 +133,7 @@ namespace wEasyGoDriver.views
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox6.Image = global::wEasyGoDriver.Properties.Resources.key;
             this.pictureBox6.Location = new System.Drawing.Point(541, 281);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(39, 14);
@@ -139,6 +144,7 @@ namespace wEasyGoDriver.views
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox5.Image = global::wEasyGoDriver.Properties.Resources.email1;
             this.pictureBox5.Location = new System.Drawing.Point(541, 214);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(39, 14);
