@@ -271,6 +271,7 @@ namespace wEasyGoDriver
             this.tabPersona.TabIndex = 0;
             this.tabPersona.Text = "Persona";
             this.tabPersona.UseVisualStyleBackColor = true;
+            this.tabPersona.Click += new System.EventHandler(this.tabPersona_Click);
             // 
             // pictureBox9
             // 
@@ -305,6 +306,8 @@ namespace wEasyGoDriver
             this.txtCedula.TabIndex = 113;
             this.txtCedula.Text = "Cédula";
             this.txtCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCedula.Enter += new System.EventHandler(this.txtCedula_Enter);
+            this.txtCedula.Leave += new System.EventHandler(this.txtCedula_Leave);
             // 
             // pictureBox19
             // 
@@ -499,8 +502,10 @@ namespace wEasyGoDriver
             this.txtNumeroCelular.Name = "txtNumeroCelular";
             this.txtNumeroCelular.Size = new System.Drawing.Size(166, 13);
             this.txtNumeroCelular.TabIndex = 101;
-            this.txtNumeroCelular.Text = "Numero de celular";
+            this.txtNumeroCelular.Text = "Número de celular";
             this.txtNumeroCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumeroCelular.Enter += new System.EventHandler(this.txtNumeroCelular_Enter);
+            this.txtNumeroCelular.Leave += new System.EventHandler(this.txtNumeroCelular_Leave);
             // 
             // pictureBox14
             // 
@@ -535,6 +540,8 @@ namespace wEasyGoDriver
             this.txtContraseña.TabIndex = 98;
             this.txtContraseña.Text = "Contraseña";
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
+            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // pictureBox12
             // 
@@ -558,6 +565,8 @@ namespace wEasyGoDriver
             this.txtApellidos.TabIndex = 96;
             this.txtApellidos.Text = "Apellidos";
             this.txtApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
+            this.txtApellidos.Leave += new System.EventHandler(this.txtApellidos_Leave);
             // 
             // pictureBox10
             // 
@@ -592,6 +601,8 @@ namespace wEasyGoDriver
             this.txtNombre.TabIndex = 93;
             this.txtNombre.Text = "Nombre";
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // grpRoles
             // 
@@ -626,6 +637,8 @@ namespace wEasyGoDriver
             this.txtCorreo.TabIndex = 90;
             this.txtCorreo.Text = "Correo electronico";
             this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
+            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
             // pictureBox6
             // 
@@ -759,6 +772,8 @@ namespace wEasyGoDriver
             this.txtModelo.TabIndex = 153;
             this.txtModelo.Text = "Modelo";
             this.txtModelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtModelo.Enter += new System.EventHandler(this.txtModelo_Enter);
+            this.txtModelo.Leave += new System.EventHandler(this.txtModelo_Leave);
             // 
             // txtCilindraje
             // 
@@ -771,6 +786,8 @@ namespace wEasyGoDriver
             this.txtCilindraje.TabIndex = 150;
             this.txtCilindraje.Text = "Cilindraje";
             this.txtCilindraje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCilindraje.Enter += new System.EventHandler(this.txtCilindraje_Enter);
+            this.txtCilindraje.Leave += new System.EventHandler(this.txtCilindraje_Leave);
             // 
             // txtMarca
             // 
@@ -783,6 +800,8 @@ namespace wEasyGoDriver
             this.txtMarca.TabIndex = 147;
             this.txtMarca.Text = "Marca";
             this.txtMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMarca.Enter += new System.EventHandler(this.txtMarca_Enter);
+            this.txtMarca.Leave += new System.EventHandler(this.txtMarca_Leave);
             // 
             // txtNumeroLicenciaMoto
             // 
@@ -793,8 +812,10 @@ namespace wEasyGoDriver
             this.txtNumeroLicenciaMoto.Name = "txtNumeroLicenciaMoto";
             this.txtNumeroLicenciaMoto.Size = new System.Drawing.Size(166, 13);
             this.txtNumeroLicenciaMoto.TabIndex = 144;
-            this.txtNumeroLicenciaMoto.Text = "Numero de licencia";
+            this.txtNumeroLicenciaMoto.Text = "Número de licencia";
             this.txtNumeroLicenciaMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumeroLicenciaMoto.Enter += new System.EventHandler(this.txtNumeroLicenciaMoto_Enter);
+            this.txtNumeroLicenciaMoto.Leave += new System.EventHandler(this.txtNumeroLicenciaMoto_Leave);
             // 
             // txtAsignarConductor
             // 
@@ -858,6 +879,8 @@ namespace wEasyGoDriver
             this.txtVin.TabIndex = 125;
             this.txtVin.Text = "vin de la moto";
             this.txtVin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVin.Enter += new System.EventHandler(this.txtVin_Enter);
+            this.txtVin.Leave += new System.EventHandler(this.txtVin_Leave);
             // 
             // txtNumeroChasis
             // 
@@ -868,8 +891,10 @@ namespace wEasyGoDriver
             this.txtNumeroChasis.Name = "txtNumeroChasis";
             this.txtNumeroChasis.Size = new System.Drawing.Size(166, 13);
             this.txtNumeroChasis.TabIndex = 122;
-            this.txtNumeroChasis.Text = "Chasis";
+            this.txtNumeroChasis.Text = "Número chasis";
             this.txtNumeroChasis.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumeroChasis.Enter += new System.EventHandler(this.txtNumeroChasis_Enter);
+            this.txtNumeroChasis.Leave += new System.EventHandler(this.txtNumeroChasis_Leave);
             // 
             // txtNumeroSerie
             // 
@@ -880,8 +905,10 @@ namespace wEasyGoDriver
             this.txtNumeroSerie.Name = "txtNumeroSerie";
             this.txtNumeroSerie.Size = new System.Drawing.Size(166, 13);
             this.txtNumeroSerie.TabIndex = 119;
-            this.txtNumeroSerie.Text = "Numero de serie";
+            this.txtNumeroSerie.Text = "Número de serie";
             this.txtNumeroSerie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumeroSerie.Enter += new System.EventHandler(this.txtNumeroSerie_Enter);
+            this.txtNumeroSerie.Leave += new System.EventHandler(this.txtNumeroSerie_Leave);
             // 
             // txtPlaca
             // 
@@ -894,6 +921,8 @@ namespace wEasyGoDriver
             this.txtPlaca.TabIndex = 116;
             this.txtPlaca.Text = "Placa";
             this.txtPlaca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPlaca.Enter += new System.EventHandler(this.txtPlaca_Enter);
+            this.txtPlaca.Leave += new System.EventHandler(this.txtPlaca_Leave);
             // 
             // pictureBox39
             // 
@@ -1241,6 +1270,8 @@ namespace wEasyGoDriver
             this.txtIdSoat.TabIndex = 170;
             this.txtIdSoat.Text = "id soat";
             this.txtIdSoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIdSoat.Enter += new System.EventHandler(this.txtIdSoat_Enter);
+            this.txtIdSoat.Leave += new System.EventHandler(this.txtIdSoat_Leave);
             // 
             // btnCargarImgSoat
             // 
@@ -1413,6 +1444,7 @@ namespace wEasyGoDriver
             this.tabLicencia.TabIndex = 3;
             this.tabLicencia.Text = "Licencia";
             this.tabLicencia.UseVisualStyleBackColor = true;
+            this.tabLicencia.Enter += new System.EventHandler(this.tabLicencia_Enter);
             // 
             // grpPropiedad
             // 
@@ -1489,8 +1521,10 @@ namespace wEasyGoDriver
             this.txtNumerodeLicencia.Name = "txtNumerodeLicencia";
             this.txtNumerodeLicencia.Size = new System.Drawing.Size(166, 13);
             this.txtNumerodeLicencia.TabIndex = 128;
-            this.txtNumerodeLicencia.Text = "Numero de licencia";
+            this.txtNumerodeLicencia.Text = "Número de licencia";
             this.txtNumerodeLicencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumerodeLicencia.Enter += new System.EventHandler(this.txtNumerodeLicencia_Enter);
+            this.txtNumerodeLicencia.Leave += new System.EventHandler(this.txtNumerodeLicencia_Leave);
             // 
             // grpVigenciaLicencia
             // 
@@ -1604,7 +1638,7 @@ namespace wEasyGoDriver
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1259, 650);
+            this.ClientSize = new System.Drawing.Size(1259, 591);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox26);
             this.Controls.Add(this.tabsRegistros);
@@ -1616,6 +1650,7 @@ namespace wEasyGoDriver
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmRegistro_Load);
             this.tabsRegistros.ResumeLayout(false);
             this.tabPersona.ResumeLayout(false);
             this.tabPersona.PerformLayout();

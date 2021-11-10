@@ -15,6 +15,25 @@ namespace wEasyGoDriver
 {
     public partial class frmRegistro : Form
     {
+        string cedula = "";
+        string nombre = "";
+        string apellidos = "";
+        string numeroCelular = "";
+        string correoElectronico = "";
+        string contraseña = "";
+
+        string placa = "";
+        string numeroSerie = "";
+        string numeroChasis = "";
+        string vin= "";
+        string numeroLicenciaMoto= "";
+        string marca= "";
+        string cilindraje= "";
+        string modelo= "";
+        string idSoat = "";
+        string numeroLicencia = "";
+
+
         UserController userController;
         List<City> cities = new CityController().getCities();
 
@@ -294,6 +313,534 @@ namespace wEasyGoDriver
             {
                 MessageBox.Show(err.Message);
                 throw;
+            }
+        }
+
+        private void tabPersona_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmRegistro_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtCedula_Enter(object sender, EventArgs e)
+        {
+            txtCedula.Text = "";
+            txtCedula.ForeColor = Color.DimGray;
+        }
+
+        private void txtCedula_Leave(object sender, EventArgs e)
+        {
+            cedula = txtCedula.Text;
+
+            if (cedula.Equals("Cedula"))
+            {
+                txtCedula.Text = "Cedula";
+                txtCedula.ForeColor = Color.DimGray;
+            }
+            else
+            {
+                if (cedula.Equals(""))
+                {
+                    txtCedula.Text = "Cedula";
+                    txtCedula.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtCedula.Text = cedula;
+                    txtCedula.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtNombre_Enter(object sender, EventArgs e)
+        {
+            txtNombre.Text = "";
+            txtNombre.ForeColor = Color.DimGray;
+        }
+
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+            nombre = txtNombre.Text;
+
+            if (nombre.Equals("Nombre"))
+            {
+                txtNombre.Text = "Nombre";
+                txtNombre.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (nombre.Equals(""))
+                {
+                    txtNombre.Text = "Nombre";
+                    txtNombre.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtNombre.Text = nombre;
+                    txtNombre.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtApellidos_Enter(object sender, EventArgs e)
+        {
+            txtApellidos.Text = "";
+            txtApellidos.ForeColor = Color.DimGray;
+        }
+
+        private void txtApellidos_Leave(object sender, EventArgs e)
+        {
+            apellidos = txtApellidos.Text;
+
+            if (nombre.Equals("Apellidos"))
+            {
+                txtApellidos.Text = "Apellidos";
+                txtApellidos.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (apellidos.Equals(""))
+                {
+                    txtApellidos.Text = "Apellidos";
+                    txtApellidos.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtApellidos.Text = apellidos;
+                    txtApellidos.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtNumeroCelular_Enter(object sender, EventArgs e)
+        {
+            txtNumeroCelular.Text = "";
+            txtNumeroCelular.ForeColor = Color.DimGray;
+        }
+
+        private void txtNumeroCelular_Leave(object sender, EventArgs e)
+        {
+            numeroCelular = txtNumeroCelular.Text;
+
+            if (numeroCelular.Equals("Número celular"))
+            {
+                txtNumeroCelular.Text = "Número celular";
+                txtNumeroCelular.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (nombre.Equals(""))
+                {
+                    txtNumeroCelular.Text = "Número celular";
+                    txtNumeroCelular.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtNumeroCelular.Text = numeroCelular;
+                    txtNumeroCelular.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtCorreo_Enter(object sender, EventArgs e)
+        {
+            txtCorreo.Text = "";
+            txtCorreo.ForeColor = Color.DimGray;
+        }
+
+        private void txtCorreo_Leave(object sender, EventArgs e)
+        {
+            correoElectronico = txtCorreo.Text;
+
+            if (correoElectronico.Equals("Correo electronico"))
+            {
+                txtCorreo.Text = "Correo electronico";
+                txtCorreo.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (correoElectronico.Equals(""))
+                {
+                    txtCorreo.Text = "Correo electronico";
+                    txtCorreo.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtCorreo.Text = correoElectronico;
+                    txtCorreo.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtContraseña_Enter(object sender, EventArgs e)
+        {
+            txtContraseña.Text = "";
+            txtContraseña.ForeColor = Color.DimGray;
+        }
+
+        private void txtContraseña_Leave(object sender, EventArgs e)
+        {
+            contraseña = txtContraseña.Text;
+
+            if (contraseña.Equals("Contraseña"))
+            {
+                txtContraseña.Text = "Contraseña";
+                txtContraseña.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (contraseña.Equals(""))
+                {
+                    txtContraseña.PasswordChar = '\0';
+                    txtContraseña.Text = "Contraseña";
+                    txtContraseña.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtContraseña.PasswordChar = '*';
+                    txtContraseña.Text = contraseña;
+                    txtContraseña.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtPlaca_Enter(object sender, EventArgs e)
+        {
+            txtPlaca.Text = "";
+            txtPlaca.ForeColor = Color.DimGray;
+        }
+
+        private void txtPlaca_Leave(object sender, EventArgs e)
+        {
+             placa= txtPlaca.Text;
+
+            if (placa.Equals("Placa"))
+            {
+                txtPlaca.Text = "Placa";
+                txtPlaca.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (placa.Equals(""))
+                {
+                    txtPlaca.Text = "Placa";
+                    txtPlaca.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtPlaca.Text = placa;
+                    txtPlaca.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtNumeroSerie_Enter(object sender, EventArgs e)
+        {
+            txtNumeroSerie.Text = "";
+            txtNumeroSerie.ForeColor = Color.DimGray;
+        }
+
+        private void txtNumeroSerie_Leave(object sender, EventArgs e)
+        {
+            numeroSerie = txtNumeroSerie.Text;
+
+            if (numeroSerie.Equals("Número de serie"))
+            {
+                txtNumeroSerie.Text = "Número de serie";
+                txtNumeroSerie.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (numeroSerie.Equals(""))
+                {
+                    txtNumeroSerie.Text = "Número de serie";
+                    txtNumeroSerie.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtNumeroSerie.Text = numeroSerie;
+                    txtNumeroSerie.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtNumeroChasis_Enter(object sender, EventArgs e)
+        {
+            txtNumeroChasis.Text = "";
+            txtNumeroChasis.ForeColor = Color.DimGray;
+        }
+
+        private void txtNumeroChasis_Leave(object sender, EventArgs e)
+        {
+            numeroChasis = txtNumeroChasis.Text;
+
+            if (numeroChasis.Equals("Número chasis"))
+            {
+                txtNumeroChasis.Text = "Número chasis";
+                txtNumeroChasis.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (numeroChasis.Equals(""))
+                {
+                    txtNumeroChasis.Text = "Número chasis";
+                    txtNumeroChasis.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtNumeroChasis.Text = numeroChasis;
+                    txtNumeroChasis.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtVin_Enter(object sender, EventArgs e)
+        {
+            txtVin.ForeColor = Color.DimGray;
+            txtVin.Text = "";
+        }
+
+        private void txtVin_Leave(object sender, EventArgs e)
+        {
+            vin = txtVin.Text;
+
+            if (vin.Equals("Vin de la moto"))
+            {
+                txtVin.Text = "Vin de la moto";
+                txtVin.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (vin.Equals(""))
+                {
+                    txtVin.Text = "Vin de la moto";
+                    txtVin.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtVin.Text = vin;
+                    txtVin.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtNumeroLicenciaMoto_Enter(object sender, EventArgs e)
+        {
+            txtNumeroLicenciaMoto.Text = "";
+            txtNumeroLicenciaMoto.ForeColor = Color.DimGray;
+        }
+
+        private void txtNumeroLicenciaMoto_Leave(object sender, EventArgs e)
+        {
+            numeroLicenciaMoto = txtNumeroLicenciaMoto.Text;
+
+            if (numeroLicenciaMoto.Equals("Número licencia"))
+            {
+                txtNumeroLicenciaMoto.Text = "Número licencia";
+                txtNumeroLicenciaMoto.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (numeroLicenciaMoto.Equals(""))
+                {
+                    txtNumeroLicenciaMoto.Text = "Número licencia";
+                    txtNumeroLicenciaMoto.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtNumeroLicenciaMoto.Text = numeroLicenciaMoto;
+                    txtNumeroLicenciaMoto.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtMarca_Enter(object sender, EventArgs e)
+        {
+            txtMarca.Text = "";
+            txtMarca.ForeColor = Color.DimGray;
+        }
+
+        private void txtMarca_Leave(object sender, EventArgs e)
+        {
+            marca = txtMarca.Text;
+
+            if (marca.Equals("Marca"))
+            {
+                txtMarca.Text = "Marca";
+                txtMarca.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (marca.Equals(""))
+                {
+                    txtMarca.Text = "Marca";
+                    txtMarca.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtMarca.Text = marca;
+                    txtMarca.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtCilindraje_Enter(object sender, EventArgs e)
+        {
+            txtCilindraje.Text = "";
+            txtCilindraje.ForeColor = Color.DimGray;
+        }
+
+        private void txtCilindraje_Leave(object sender, EventArgs e)
+        {
+            cilindraje = txtCilindraje.Text;
+
+            if (cilindraje.Equals("Cilindraje"))
+            {
+                txtCilindraje.Text = "Cilindraje";
+                txtCilindraje.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (cilindraje.Equals(""))
+                {
+                    txtCilindraje.Text = "Cilindraje";
+                    txtCilindraje.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtCilindraje.Text = cilindraje;
+                    txtCilindraje.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtModelo_Enter(object sender, EventArgs e)
+        {
+            txtModelo.Text = "";
+            txtModelo.ForeColor = Color.DimGray;
+        }
+
+        private void txtModelo_Leave(object sender, EventArgs e)
+        {
+            modelo = txtModelo.Text;
+
+            if (modelo.Equals("Modelo"))
+            {
+                txtModelo.Text = "Modelo";
+                txtModelo.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (modelo.Equals(""))
+                {
+                    txtModelo.Text = "Modelo";
+                    txtModelo.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtModelo.Text = modelo;
+                    txtModelo.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void txtIdSoat_Enter(object sender, EventArgs e)
+        {
+            txtIdSoat.Text = "";
+            txtIdSoat.ForeColor = Color.DimGray;
+        }
+
+        private void txtIdSoat_Leave(object sender, EventArgs e)
+        {
+            idSoat = txtIdSoat.Text;
+
+            if (idSoat.Equals("Id soat"))
+            {
+                txtIdSoat.Text = "Id soat";
+                txtIdSoat.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (idSoat.Equals(""))
+                {
+                    txtIdSoat.Text = "Id soat";
+                    txtIdSoat.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtIdSoat.Text = idSoat;
+                    txtIdSoat.ForeColor = Color.DimGray;
+                }
+            }
+        }
+
+        private void tabLicencia_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumerodeLicencia_Enter(object sender, EventArgs e)
+        {
+            txtNumerodeLicencia.Text = "";
+            txtNumerodeLicencia.ForeColor = Color.DimGray;
+        }
+
+        private void txtNumerodeLicencia_Leave(object sender, EventArgs e)
+        {
+            numeroLicencia = txtNumerodeLicencia.Text;
+
+            if (numeroLicencia.Equals("Número Licencia"))
+            {
+                txtNumerodeLicencia.Text = "Número Licencia";
+                txtNumerodeLicencia.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (numeroLicencia.Equals(""))
+                {
+                    txtNumerodeLicencia.Text = "Número Licencia";
+                    txtNumerodeLicencia.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtNumerodeLicencia.Text = numeroLicencia;
+                    txtNumerodeLicencia.ForeColor = Color.DimGray;
+                }
             }
         }
     }
