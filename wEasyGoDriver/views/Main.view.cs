@@ -103,7 +103,7 @@ namespace wEasyGoDriver.views
             positionWatcher.Start();
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private async void btnCerrar_Click(object sender, EventArgs e)
         {
             ITravel travel = new Travel();
             travel.StrStartingPlaceTravel = "Centro Comercial Terminal Del Sur, Carrera 65, Antioquia";
@@ -111,14 +111,14 @@ namespace wEasyGoDriver.views
             travel.IntTotalPriceTravel = 2000;
             travel.Customer = new User();
             travel.Customer.StrNamePerson = "Alexander";
-            this.flpViajes.Controls.Add(generateTravelRequest(panelCant, travel));
+            this.flpViajes.Controls.Add(await generateTravelRequest(panelCant, travel));
             panelCant++;
 
             if (panelCant > 0) this.lblAvisoViajes.Visible = false;
 
         }
 
-        public Panel generateTravelRequest(int name, ITravel travel)
+        public async Task<Panel> generateTravelRequest(int name, ITravel travel)
         {
 
             GeoCoderStatusCode statusStart;
@@ -153,8 +153,8 @@ namespace wEasyGoDriver.views
             pnlViaje.Controls.Add(lblSolicitudViaje);
             pnlViaje.Location = new System.Drawing.Point(698, 13);
             pnlViaje.Name = "pnlViaje" + name;
-            pnlViaje.Size = new System.Drawing.Size(305, 150);
-            pnlViaje.BorderStyle = BorderStyle.FixedSingle;
+            pnlViaje.Size = new System.Drawing.Size(318, 150);
+            //pnlViaje.BorderStyle = BorderStyle.FixedSingle;
             pnlViaje.TabIndex = 1;
             pnlViaje.Padding = new Padding(20);
             // 
@@ -221,7 +221,7 @@ namespace wEasyGoDriver.views
             // 
             btnVerDetalles.Location = new System.Drawing.Point(10, 89);
             btnVerDetalles.Name = "btnVerDetalles" + name;
-            btnVerDetalles.Size = new System.Drawing.Size(280, 25);
+            btnVerDetalles.Size = new System.Drawing.Size(288, 25);
             btnVerDetalles.TabIndex = 6;
             btnVerDetalles.Text = "Ver detalles";
             btnVerDetalles.UseVisualStyleBackColor = true;
@@ -260,7 +260,7 @@ namespace wEasyGoDriver.views
             // 
             btnAceptarViaje.Location = new System.Drawing.Point(10, 118);
             btnAceptarViaje.Name = "btnAceptarViaje" + name;
-            btnAceptarViaje.Size = new System.Drawing.Size(164, 25);
+            btnAceptarViaje.Size = new System.Drawing.Size(172, 25);
             btnAceptarViaje.TabIndex = 7;
             btnAceptarViaje.Text = "Aceptar viaje";
             btnAceptarViaje.UseVisualStyleBackColor = true;
@@ -308,7 +308,6 @@ namespace wEasyGoDriver.views
 
                     #endregion
 
-
                     // Habilitar panel para manejo del viaje
 
                     lblTitleViajeAceptado.Text = "Recogiendo a " + travel.Customer.StrNamePerson;
@@ -323,17 +322,15 @@ namespace wEasyGoDriver.views
                     flpViajes.Controls.Add(pnlViajeAceptado);
 
                     
-
                     //flpViajes.Controls.
 
                 }
             });
 
-
             // 
             // button RECHAZAR VIAJE ---------------------------------------------------------------
             // 
-            btnRechazarViaje.Location = new System.Drawing.Point(180, 118);
+            btnRechazarViaje.Location = new System.Drawing.Point(188, 118);
             btnRechazarViaje.Name = "btnRechazarViaje" + name;
             btnRechazarViaje.Size = new System.Drawing.Size(110, 25);
             btnRechazarViaje.TabIndex = 8;
@@ -424,14 +421,19 @@ namespace wEasyGoDriver.views
             if (flpViajes.Controls.Count == 2) this.lblAvisoViajes.Visible = true;
         }
 
-        private void tabMainHistorial_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancelarAceptado_Click(object sender, EventArgs e)
         {
+            pnlViajeAceptado.Visible = false;
 
+            flpViajes.Controls.Clear();
+            flpViajes.Controls.Add(lblAvisoViajes);
+            lblAvisoViajes.Visible = true;
+
+            gMapPrincipal.Overlays.Remove(routeOver);
+            markerOverlay.Markers.Remove(markerStart);
+            markerOverlay.Markers.Remove(markerEnd);
+            this.enfocarPosicion();
+            
         }
 
         private void btnViajeAceptado_Click(object sender, EventArgs e)
@@ -446,6 +448,17 @@ namespace wEasyGoDriver.views
         private void cerrarForm_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnEnfocarPosicion_Click(object sender, EventArgs e)
+        {
+            this.enfocarPosicion();
+        }
+
+        public void enfocarPosicion()
+        {
+            this.gMapPrincipal.Position = actualPoint;
+
         }
     }
 }

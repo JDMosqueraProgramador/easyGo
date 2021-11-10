@@ -59,6 +59,7 @@
     <Compile Include="controllers\Motorcycle.controller.cs" />
     <Compile Include="controllers\Soat.controller.cs" />
     <Compile Include="controllers\Technomechanical.controller.cs" />
+    <Compile Include="Hubs\TravelsHub.cs" />
     <Compile Include="models\License.model.cs" />
     <Compile Include="models\Motocycle.model.cs" />
     <Compile Include="models\Soat.model.cs" />
@@ -148,6 +149,12 @@
     </PackageReference>
     <PackageReference Include="GMap.NET.WinPresentation">
       <Version>2.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.SignalR">
+      <Version>2.4.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.SignalR.Client">
+      <Version>2.4.2</Version>
     </PackageReference>
     <PackageReference Include="Npgsql">
       <Version>5.0.10</Version>
