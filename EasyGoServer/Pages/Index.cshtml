@@ -1,0 +1,63 @@
+﻿@page
+@model IndexModel
+@{
+
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<button id="btn_change">Change state 1</button>
+<button id="btn_change1">Change state 2</button>
+<button id="btn_change2">Change state 3</button>
+
+<p>Estado actual: <span id="state"></span></p>
+
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+
+<script>
+    let connection = new signalR.HubConnectionBuilder().withUrl("/stateHub").build();
+
+    let states = ["Manejando", "Duermiendo", "en espera"];
+
+    let stateSpan = document.getElementById("state");
+
+    // Enviar info con Invoke
+
+    connection.start().then(() => {
+        console.log("Conectado")
+    })
+
+    document.getElementById("btn_change").addEventListener("click", (e) => {
+        connection.invoke("SendState", states[0]).catch((error) => {
+            console.log(error);
+        });
+        stateSpan.innerText = states[0];
+    });
+
+    document.getElementById("btn_change1").addEventListener("click", (e) => {
+        connection.invoke("SendState", states[1]).catch((error) => {
+            console.log(error);
+        });
+        stateSpan.innerText = states[1];
+
+    });
+
+    document.getElementById("btn_change2").addEventListener("click", (e) => {
+        connection.invoke("SendState", states[2]).catch((error) => {
+            console.log(error);
+        });
+        stateSpan.innerText = states[2];
+
+    });
+
+
+    connection.connection("ReceiveState", (state) => {
+        stateSpan.innerText = state;
+    })
+
+
+</script>
