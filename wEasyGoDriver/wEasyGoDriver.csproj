@@ -68,11 +68,23 @@
     <Compile Include="models\Soat.model.cs" />
     <Compile Include="models\Technomechanical.model.cs" />
     <Compile Include="models\User.model.cs" />
+    <Compile Include="views\Comentarios.view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Comentarios.view.Designer.cs">
+      <DependentUpon>Comentarios.view.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\Main.view.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\Main.view.Designer.cs">
       <DependentUpon>Main.view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\PerfilConductor.view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\PerfilConductor.view.Designer.cs">
+      <DependentUpon>PerfilConductor.view.cs</DependentUpon>
     </Compile>
     <Compile Include="views\Register.view.cs">
       <SubType>Form</SubType>
@@ -88,11 +100,17 @@
     <Compile Include="views\IniciarSesion.view.Designer.cs">
       <DependentUpon>IniciarSesion.view.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="views\Comentarios.view.resx">
+      <DependentUpon>Comentarios.view.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\IniciarSesion.view.resx">
       <DependentUpon>IniciarSesion.view.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\Main.view.resx">
       <DependentUpon>Main.view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\PerfilConductor.view.resx">
+      <DependentUpon>PerfilConductor.view.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\Register.view.resx">
       <DependentUpon>Register.view.cs</DependentUpon>
@@ -184,6 +202,10 @@
     <Content Include="assets\prueba3.jfif" />
     <Content Include="assets\prueba3.jpg" />
     <Content Include="assets\prueba4.jpg" />
+    <None Include="Resources\atras.png" />
+    <None Include="Resources\cuenta-bancaria.png" />
+    <None Include="Resources\btnDatos.png" />
+    <None Include="Resources\delivery_motorcycle_shipping_vespa_coronavirus_icon_142121.png" />
     <None Include="Resources\key.png" />
     <None Include="Resources\email1.png" />
     <None Include="Resources\biker-iStock-1575255671.jpg" />

@@ -37,6 +37,7 @@ namespace wEasyGoDriver.views
             this.lblTitle = new System.Windows.Forms.Label();
             this.tabsMain = new System.Windows.Forms.TabControl();
             this.tabMainInicio = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblEstadoMoto = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -150,6 +151,7 @@ namespace wEasyGoDriver.views
             // 
             // tabMainInicio
             // 
+            this.tabMainInicio.Controls.Add(this.button1);
             this.tabMainInicio.Controls.Add(this.lblEstadoMoto);
             this.tabMainInicio.Controls.Add(this.pictureBox1);
             this.tabMainInicio.Controls.Add(this.label2);
@@ -171,14 +173,25 @@ namespace wEasyGoDriver.views
             this.tabMainInicio.Text = "Inicio";
             this.tabMainInicio.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1.Location = new System.Drawing.Point(643, 130);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 45);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "ver mi perfil";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // lblEstadoMoto
             // 
             this.lblEstadoMoto.AutoSize = true;
             this.lblEstadoMoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoMoto.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblEstadoMoto.Location = new System.Drawing.Point(593, 293);
+            this.lblEstadoMoto.Location = new System.Drawing.Point(593, 334);
             this.lblEstadoMoto.Name = "lblEstadoMoto";
-            this.lblEstadoMoto.Size = new System.Drawing.Size(37, 16);
+            this.lblEstadoMoto.Size = new System.Drawing.Size(38, 16);
             this.lblEstadoMoto.TabIndex = 13;
             this.lblEstadoMoto.Text = "valor";
             // 
@@ -197,9 +210,9 @@ namespace wEasyGoDriver.views
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(538, 293);
+            this.label2.Location = new System.Drawing.Point(538, 334);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 16);
+            this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Estado:";
             // 
@@ -217,9 +230,9 @@ namespace wEasyGoDriver.views
             this.lblFechaSoat.AutoSize = true;
             this.lblFechaSoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaSoat.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblFechaSoat.Location = new System.Drawing.Point(583, 264);
+            this.lblFechaSoat.Location = new System.Drawing.Point(583, 305);
             this.lblFechaSoat.Name = "lblFechaSoat";
-            this.lblFechaSoat.Size = new System.Drawing.Size(96, 16);
+            this.lblFechaSoat.Size = new System.Drawing.Size(97, 16);
             this.lblFechaSoat.TabIndex = 8;
             this.lblFechaSoat.Text = "Fecha del soat";
             // 
@@ -228,9 +241,9 @@ namespace wEasyGoDriver.views
             this.lblSoat.AutoSize = true;
             this.lblSoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoat.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblSoat.Location = new System.Drawing.Point(538, 264);
+            this.lblSoat.Location = new System.Drawing.Point(538, 305);
             this.lblSoat.Name = "lblSoat";
-            this.lblSoat.Size = new System.Drawing.Size(38, 16);
+            this.lblSoat.Size = new System.Drawing.Size(39, 16);
             this.lblSoat.TabIndex = 7;
             this.lblSoat.Text = "Soat:";
             // 
@@ -239,9 +252,9 @@ namespace wEasyGoDriver.views
             this.lblFechaTecnomecanica.AutoSize = true;
             this.lblFechaTecnomecanica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaTecnomecanica.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblFechaTecnomecanica.Location = new System.Drawing.Point(653, 231);
+            this.lblFechaTecnomecanica.Location = new System.Drawing.Point(653, 272);
             this.lblFechaTecnomecanica.Name = "lblFechaTecnomecanica";
-            this.lblFechaTecnomecanica.Size = new System.Drawing.Size(162, 16);
+            this.lblFechaTecnomecanica.Size = new System.Drawing.Size(163, 16);
             this.lblFechaTecnomecanica.TabIndex = 6;
             this.lblFechaTecnomecanica.Text = "Fecha de tecnomecánica ";
             // 
@@ -250,9 +263,9 @@ namespace wEasyGoDriver.views
             this.lblTecnomecanica.AutoSize = true;
             this.lblTecnomecanica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTecnomecanica.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblTecnomecanica.Location = new System.Drawing.Point(538, 231);
+            this.lblTecnomecanica.Location = new System.Drawing.Point(538, 272);
             this.lblTecnomecanica.Name = "lblTecnomecanica";
-            this.lblTecnomecanica.Size = new System.Drawing.Size(108, 16);
+            this.lblTecnomecanica.Size = new System.Drawing.Size(109, 16);
             this.lblTecnomecanica.TabIndex = 5;
             this.lblTecnomecanica.Text = "Tecnomecánica:";
             // 
@@ -261,9 +274,9 @@ namespace wEasyGoDriver.views
             this.lblFechaLicencia.AutoSize = true;
             this.lblFechaLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaLicencia.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblFechaLicencia.Location = new System.Drawing.Point(605, 198);
+            this.lblFechaLicencia.Location = new System.Drawing.Point(605, 239);
             this.lblFechaLicencia.Name = "lblFechaLicencia";
-            this.lblFechaLicencia.Size = new System.Drawing.Size(127, 16);
+            this.lblFechaLicencia.Size = new System.Drawing.Size(128, 16);
             this.lblFechaLicencia.TabIndex = 4;
             this.lblFechaLicencia.Text = "Fecha de la licencia";
             // 
@@ -272,9 +285,9 @@ namespace wEasyGoDriver.views
             this.lblLicencia.AutoSize = true;
             this.lblLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLicencia.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblLicencia.Location = new System.Drawing.Point(538, 198);
+            this.lblLicencia.Location = new System.Drawing.Point(538, 239);
             this.lblLicencia.Name = "lblLicencia";
-            this.lblLicencia.Size = new System.Drawing.Size(60, 16);
+            this.lblLicencia.Size = new System.Drawing.Size(61, 16);
             this.lblLicencia.TabIndex = 3;
             this.lblLicencia.Text = "Licencia:";
             // 
@@ -283,7 +296,7 @@ namespace wEasyGoDriver.views
             this.lblVencimiento.AutoSize = true;
             this.lblVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVencimiento.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblVencimiento.Location = new System.Drawing.Point(537, 159);
+            this.lblVencimiento.Location = new System.Drawing.Point(537, 200);
             this.lblVencimiento.Name = "lblVencimiento";
             this.lblVencimiento.Size = new System.Drawing.Size(201, 20);
             this.lblVencimiento.TabIndex = 2;
@@ -601,7 +614,7 @@ namespace wEasyGoDriver.views
             this.lblTituloHistorial.AutoSize = true;
             this.lblTituloHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloHistorial.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblTituloHistorial.Location = new System.Drawing.Point(415, 19);
+            this.lblTituloHistorial.Location = new System.Drawing.Point(576, 17);
             this.lblTituloHistorial.Name = "lblTituloHistorial";
             this.lblTituloHistorial.Size = new System.Drawing.Size(174, 24);
             this.lblTituloHistorial.TabIndex = 1;
@@ -611,7 +624,7 @@ namespace wEasyGoDriver.views
             // 
             this.dtgHistorialViajes.BackgroundColor = System.Drawing.Color.White;
             this.dtgHistorialViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgHistorialViajes.Location = new System.Drawing.Point(151, 55);
+            this.dtgHistorialViajes.Location = new System.Drawing.Point(300, 59);
             this.dtgHistorialViajes.Name = "dtgHistorialViajes";
             this.dtgHistorialViajes.Size = new System.Drawing.Size(683, 357);
             this.dtgHistorialViajes.TabIndex = 0;
@@ -701,5 +714,6 @@ namespace wEasyGoDriver.views
         private System.Windows.Forms.PictureBox cerrarForm;
         private System.Windows.Forms.Button btnEnfocarPosicion;
         private System.Windows.Forms.NotifyIcon notifyViaje;
+        private System.Windows.Forms.Button button1;
     }
 }

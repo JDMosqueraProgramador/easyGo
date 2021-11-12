@@ -73,6 +73,16 @@ namespace wEasyGoDriver.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap atras {
+            get {
+                object obj = ResourceManager.GetObject("atras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bienvenido_a_la_plataforma {
             get {
                 object obj = ResourceManager.GetObject("Bienvenido a la plataforma", resourceCulture);
@@ -133,9 +143,39 @@ namespace wEasyGoDriver.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnDatos {
+            get {
+                object obj = ResourceManager.GetObject("btnDatos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CerrarForm {
             get {
                 object obj = ResourceManager.GetObject("CerrarForm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cuenta_bancaria {
+            get {
+                object obj = ResourceManager.GetObject("cuenta-bancaria", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delivery_motorcycle_shipping_vespa_coronavirus_icon_142121 {
+            get {
+                object obj = ResourceManager.GetObject("delivery_motorcycle_shipping_vespa_coronavirus_icon_142121", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -41,7 +41,6 @@ namespace wEasyGoDriver.views
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -49,7 +48,6 @@ namespace wEasyGoDriver.views
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIniciarSesion
@@ -193,14 +191,6 @@ namespace wEasyGoDriver.views
             this.pictureBox3.TabIndex = 52;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(802, 24);
-            this.pictureBox7.TabIndex = 60;
-            this.pictureBox7.TabStop = false;
-            // 
             // frmIniciarSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,7 +209,6 @@ namespace wEasyGoDriver.views
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIniciarSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -231,7 +220,6 @@ namespace wEasyGoDriver.views
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,6 +239,5 @@ namespace wEasyGoDriver.views
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }
