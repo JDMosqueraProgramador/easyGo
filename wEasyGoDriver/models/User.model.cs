@@ -42,5 +42,23 @@ namespace wEasyGoDriver.models
             return table; 
 
         }
+
+        public DataTable DriverHistory(string licensePlate)
+        {
+            string select = "SELECT * FROM sp_get_history_driver(@licensePlate)";
+
+            NpgsqlCommand cmd = new NpgsqlCommand(select, this.conn);
+            cmd.Parameters.AddWithValue("@licensePlate", licensePlate);
+
+            // NpgsqlDataReader data = cmd.ExecuteReader();
+            DataTable table = new DataTable();
+            NpgsqlDataAdapter history = new NpgsqlDataAdapter(cmd);
+            NpgsqlCommandBuilder builder = new NpgsqlCommandBuilder(history);
+
+            history.Fill(table);
+
+            return table;
+
+        }
     }
 }

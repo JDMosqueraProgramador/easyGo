@@ -22,6 +22,7 @@ namespace wEasyGoDriver.controllers
     {
 
         private User user;
+        private static UserModel model = new UserModel();
 
         public UserController(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, bool boolGenderPerson, long intPhoneUser, string strEmailUser, string strRolUser)
         {
@@ -30,7 +31,7 @@ namespace wEasyGoDriver.controllers
 
         public UserController(long intPhoneUser)
         {
-            user = new UserModel().GetUserBy(intPhoneUser);
+            user = model.GetUserBy(intPhoneUser);
         }
 
         public UserController()
@@ -45,7 +46,7 @@ namespace wEasyGoDriver.controllers
 
         public bool ExecuteLogin(long phone, string password)
         {
-            return new UserModel().login(phone, password);
+            return model.login(phone, password);
         }
 
         public IUser getDataUser()
@@ -55,7 +56,12 @@ namespace wEasyGoDriver.controllers
 
         public DataTable ExecuteSearchUser(string name)
         {
-            return new UserModel().SearchDriver(name);
+            return model.SearchDriver(name);
+        }
+
+        public DataTable GetDriverHistory(string licensePlate)
+        {
+            return model.DriverHistory(licensePlate);
         }
 
         // ------------------------------------
@@ -64,7 +70,6 @@ namespace wEasyGoDriver.controllers
 
         public Bitmap bitImg;
         public string Text;
-
 
         public string getIdentification(string url)
         {

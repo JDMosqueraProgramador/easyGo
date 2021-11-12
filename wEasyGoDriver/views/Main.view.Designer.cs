@@ -29,6 +29,8 @@ namespace wEasyGoDriver.views
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.cerrarForm = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -49,6 +51,7 @@ namespace wEasyGoDriver.views
             this.btnEstado = new System.Windows.Forms.Button();
             this.lblTituloMain = new System.Windows.Forms.Label();
             this.tabMainViajes = new System.Windows.Forms.TabPage();
+            this.btnEnfocarPosicion = new System.Windows.Forms.Button();
             this.flpViajes = new System.Windows.Forms.FlowLayoutPanel();
             this.lblAvisoViajes = new System.Windows.Forms.Label();
             this.pnlViajeAceptado = new System.Windows.Forms.Panel();
@@ -71,10 +74,9 @@ namespace wEasyGoDriver.views
             this.lblTitleViajeAceptado = new System.Windows.Forms.Label();
             this.gMapPrincipal = new GMap.NET.WindowsForms.GMapControl();
             this.tabMainHistorial = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblTituloHistorial = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgHistorialViajes = new System.Windows.Forms.DataGridView();
+            this.notifyViaje = new System.Windows.Forms.NotifyIcon(this.components);
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -85,7 +87,7 @@ namespace wEasyGoDriver.views
             this.flpViajes.SuspendLayout();
             this.pnlViajeAceptado.SuspendLayout();
             this.tabMainHistorial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHistorialViajes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitulo
@@ -174,9 +176,9 @@ namespace wEasyGoDriver.views
             this.lblEstadoMoto.AutoSize = true;
             this.lblEstadoMoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoMoto.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblEstadoMoto.Location = new System.Drawing.Point(585, 292);
+            this.lblEstadoMoto.Location = new System.Drawing.Point(593, 293);
             this.lblEstadoMoto.Name = "lblEstadoMoto";
-            this.lblEstadoMoto.Size = new System.Drawing.Size(38, 16);
+            this.lblEstadoMoto.Size = new System.Drawing.Size(37, 16);
             this.lblEstadoMoto.TabIndex = 13;
             this.lblEstadoMoto.Text = "valor";
             // 
@@ -195,9 +197,9 @@ namespace wEasyGoDriver.views
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(530, 292);
+            this.label2.Location = new System.Drawing.Point(538, 293);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.Size = new System.Drawing.Size(53, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Estado:";
             // 
@@ -215,9 +217,9 @@ namespace wEasyGoDriver.views
             this.lblFechaSoat.AutoSize = true;
             this.lblFechaSoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaSoat.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblFechaSoat.Location = new System.Drawing.Point(575, 263);
+            this.lblFechaSoat.Location = new System.Drawing.Point(583, 264);
             this.lblFechaSoat.Name = "lblFechaSoat";
-            this.lblFechaSoat.Size = new System.Drawing.Size(97, 16);
+            this.lblFechaSoat.Size = new System.Drawing.Size(96, 16);
             this.lblFechaSoat.TabIndex = 8;
             this.lblFechaSoat.Text = "Fecha del soat";
             // 
@@ -226,9 +228,9 @@ namespace wEasyGoDriver.views
             this.lblSoat.AutoSize = true;
             this.lblSoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoat.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblSoat.Location = new System.Drawing.Point(530, 263);
+            this.lblSoat.Location = new System.Drawing.Point(538, 264);
             this.lblSoat.Name = "lblSoat";
-            this.lblSoat.Size = new System.Drawing.Size(39, 16);
+            this.lblSoat.Size = new System.Drawing.Size(38, 16);
             this.lblSoat.TabIndex = 7;
             this.lblSoat.Text = "Soat:";
             // 
@@ -237,9 +239,9 @@ namespace wEasyGoDriver.views
             this.lblFechaTecnomecanica.AutoSize = true;
             this.lblFechaTecnomecanica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaTecnomecanica.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblFechaTecnomecanica.Location = new System.Drawing.Point(645, 230);
+            this.lblFechaTecnomecanica.Location = new System.Drawing.Point(653, 231);
             this.lblFechaTecnomecanica.Name = "lblFechaTecnomecanica";
-            this.lblFechaTecnomecanica.Size = new System.Drawing.Size(163, 16);
+            this.lblFechaTecnomecanica.Size = new System.Drawing.Size(162, 16);
             this.lblFechaTecnomecanica.TabIndex = 6;
             this.lblFechaTecnomecanica.Text = "Fecha de tecnomecánica ";
             // 
@@ -248,9 +250,9 @@ namespace wEasyGoDriver.views
             this.lblTecnomecanica.AutoSize = true;
             this.lblTecnomecanica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTecnomecanica.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblTecnomecanica.Location = new System.Drawing.Point(530, 230);
+            this.lblTecnomecanica.Location = new System.Drawing.Point(538, 231);
             this.lblTecnomecanica.Name = "lblTecnomecanica";
-            this.lblTecnomecanica.Size = new System.Drawing.Size(109, 16);
+            this.lblTecnomecanica.Size = new System.Drawing.Size(108, 16);
             this.lblTecnomecanica.TabIndex = 5;
             this.lblTecnomecanica.Text = "Tecnomecánica:";
             // 
@@ -259,9 +261,9 @@ namespace wEasyGoDriver.views
             this.lblFechaLicencia.AutoSize = true;
             this.lblFechaLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaLicencia.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblFechaLicencia.Location = new System.Drawing.Point(597, 197);
+            this.lblFechaLicencia.Location = new System.Drawing.Point(605, 198);
             this.lblFechaLicencia.Name = "lblFechaLicencia";
-            this.lblFechaLicencia.Size = new System.Drawing.Size(128, 16);
+            this.lblFechaLicencia.Size = new System.Drawing.Size(127, 16);
             this.lblFechaLicencia.TabIndex = 4;
             this.lblFechaLicencia.Text = "Fecha de la licencia";
             // 
@@ -270,9 +272,9 @@ namespace wEasyGoDriver.views
             this.lblLicencia.AutoSize = true;
             this.lblLicencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLicencia.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblLicencia.Location = new System.Drawing.Point(530, 197);
+            this.lblLicencia.Location = new System.Drawing.Point(538, 198);
             this.lblLicencia.Name = "lblLicencia";
-            this.lblLicencia.Size = new System.Drawing.Size(61, 16);
+            this.lblLicencia.Size = new System.Drawing.Size(60, 16);
             this.lblLicencia.TabIndex = 3;
             this.lblLicencia.Text = "Licencia:";
             // 
@@ -281,7 +283,7 @@ namespace wEasyGoDriver.views
             this.lblVencimiento.AutoSize = true;
             this.lblVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVencimiento.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblVencimiento.Location = new System.Drawing.Point(529, 158);
+            this.lblVencimiento.Location = new System.Drawing.Point(537, 159);
             this.lblVencimiento.Name = "lblVencimiento";
             this.lblVencimiento.Size = new System.Drawing.Size(201, 20);
             this.lblVencimiento.TabIndex = 2;
@@ -296,7 +298,6 @@ namespace wEasyGoDriver.views
             this.btnEstado.TabIndex = 1;
             this.btnEstado.Text = "Iniciar jornada";
             this.btnEstado.UseVisualStyleBackColor = true;
-            this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
             // 
             // lblTituloMain
             // 
@@ -311,6 +312,7 @@ namespace wEasyGoDriver.views
             // 
             // tabMainViajes
             // 
+            this.tabMainViajes.Controls.Add(this.btnEnfocarPosicion);
             this.tabMainViajes.Controls.Add(this.flpViajes);
             this.tabMainViajes.Controls.Add(this.gMapPrincipal);
             this.tabMainViajes.Location = new System.Drawing.Point(4, 22);
@@ -321,6 +323,16 @@ namespace wEasyGoDriver.views
             this.tabMainViajes.Text = "Viajes";
             this.tabMainViajes.UseVisualStyleBackColor = true;
             this.tabMainViajes.Click += new System.EventHandler(this.tabMainViajes_Click);
+            // 
+            // btnEnfocarPosicion
+            // 
+            this.btnEnfocarPosicion.Location = new System.Drawing.Point(525, 389);
+            this.btnEnfocarPosicion.Name = "btnEnfocarPosicion";
+            this.btnEnfocarPosicion.Size = new System.Drawing.Size(140, 23);
+            this.btnEnfocarPosicion.TabIndex = 3;
+            this.btnEnfocarPosicion.Text = "Enfocar posición actual";
+            this.btnEnfocarPosicion.UseVisualStyleBackColor = true;
+            this.btnEnfocarPosicion.Click += new System.EventHandler(this.btnEnfocarPosicion_Click);
             // 
             // flpViajes
             // 
@@ -574,10 +586,8 @@ namespace wEasyGoDriver.views
             // 
             // tabMainHistorial
             // 
-            this.tabMainHistorial.Controls.Add(this.label3);
-            this.tabMainHistorial.Controls.Add(this.button1);
             this.tabMainHistorial.Controls.Add(this.lblTituloHistorial);
-            this.tabMainHistorial.Controls.Add(this.dataGridView1);
+            this.tabMainHistorial.Controls.Add(this.dtgHistorialViajes);
             this.tabMainHistorial.Location = new System.Drawing.Point(4, 22);
             this.tabMainHistorial.Name = "tabMainHistorial";
             this.tabMainHistorial.Padding = new System.Windows.Forms.Padding(3);
@@ -585,46 +595,32 @@ namespace wEasyGoDriver.views
             this.tabMainHistorial.TabIndex = 2;
             this.tabMainHistorial.Text = "Historial";
             this.tabMainHistorial.UseVisualStyleBackColor = true;
-            this.tabMainHistorial.Click += new System.EventHandler(this.tabMainHistorial_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(267, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Aqui podra ver el historial de los viajes que ha realizado";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(87, 350);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 35);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Ver mi historial";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // lblTituloHistorial
             // 
             this.lblTituloHistorial.AutoSize = true;
             this.lblTituloHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloHistorial.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblTituloHistorial.Location = new System.Drawing.Point(564, 17);
+            this.lblTituloHistorial.Location = new System.Drawing.Point(415, 19);
             this.lblTituloHistorial.Name = "lblTituloHistorial";
             this.lblTituloHistorial.Size = new System.Drawing.Size(174, 24);
             this.lblTituloHistorial.TabIndex = 1;
             this.lblTituloHistorial.Text = "Historial de viajes";
             // 
-            // dataGridView1
+            // dtgHistorialViajes
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(294, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(683, 357);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgHistorialViajes.BackgroundColor = System.Drawing.Color.White;
+            this.dtgHistorialViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgHistorialViajes.Location = new System.Drawing.Point(151, 55);
+            this.dtgHistorialViajes.Name = "dtgHistorialViajes";
+            this.dtgHistorialViajes.Size = new System.Drawing.Size(683, 357);
+            this.dtgHistorialViajes.TabIndex = 0;
+            // 
+            // notifyViaje
+            // 
+            this.notifyViaje.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyViaje.Icon")));
+            this.notifyViaje.Text = "notifyIcon1";
+            this.notifyViaje.Visible = true;
             // 
             // frmMain
             // 
@@ -652,7 +648,7 @@ namespace wEasyGoDriver.views
             this.pnlViajeAceptado.PerformLayout();
             this.tabMainHistorial.ResumeLayout(false);
             this.tabMainHistorial.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHistorialViajes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -680,7 +676,7 @@ namespace wEasyGoDriver.views
         private System.Windows.Forms.FlowLayoutPanel flpViajes;
         private System.Windows.Forms.Label lblAvisoViajes;
         private System.Windows.Forms.Label lblTituloHistorial;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgHistorialViajes;
         private System.Windows.Forms.Panel pnlViajeAceptado;
         private System.Windows.Forms.Button btnEnInicioAceptado;
         private System.Windows.Forms.Label lblDistanciaInicioAceptado;
@@ -703,7 +699,7 @@ namespace wEasyGoDriver.views
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblEstadoMoto;
         private System.Windows.Forms.PictureBox cerrarForm;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEnfocarPosicion;
+        private System.Windows.Forms.NotifyIcon notifyViaje;
     }
 }

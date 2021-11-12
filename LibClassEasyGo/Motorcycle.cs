@@ -3,10 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Npgsql;
 
 namespace LibClassEasyGo
 {
-    public class Motorcycle : Connect
+
+    public interface IMotorcycle
+    {
+        string StrLicensePlateMoto { get; set; }
+        int IntNumSerieMoto { get; set; }
+        int IntNumChasisMoto { get; set; }
+        int IntVimMoto { get; set; }
+        string StrStateMoto { get; set; }
+        int IntNumLicenseMoto { get; set; }
+        string StrMarkMoto { get; set; }
+        int IntCylinderMoto { get; set; }
+        string StrModelMoto { get; set; }
+        string StrFuelTypeMoto { get; set; }
+        string StrLinkPropertyCard { get; set; }
+        IUser Owner { get; set; }
+        IUser Driver { get; set; }
+        string StrColorMoto { get; set; }
+    }
+
+    public class Motorcycle : IMotorcycle
     {
         private string strLicensePlateMoto;
         private int intNumSerieMoto;
@@ -19,8 +39,8 @@ namespace LibClassEasyGo
         private string strModelMoto;
         private string strFuelTypeMoto;
         private string strLinkPropertyCard;
-        private User owner;
-        private User driver;
+        private IUser owner;
+        private IUser driver;
 
         private string strColorMoto;
         public string StrLicensePlateMoto { get => strLicensePlateMoto; set => strLicensePlateMoto = value; }
@@ -34,16 +54,18 @@ namespace LibClassEasyGo
         public string StrModelMoto { get => strModelMoto; set => strModelMoto = value; }
         public string StrFuelTypeMoto { get => strFuelTypeMoto; set => strFuelTypeMoto = value; }
         public string StrLinkPropertyCard { get => strLinkPropertyCard; set => strLinkPropertyCard = value; }
-        public User Owner { get => owner; set => owner = value; }
-        public User Driver { get => driver; set => driver = value; }
+        public IUser Owner { get => owner; set => owner = value; }
+        public IUser Driver { get => driver; set => driver = value; }
         public string StrColorMoto { get => strColorMoto; set => strColorMoto = value; }
 
+
+        private Connect conn = new Connect();
         public Motorcycle()
         {
 
         }
 
-        public Motorcycle(string strLicensePlateMoto, int intNumSerieMoto, int intNumChasisMoto, int intVimMoto, string strStateMoto, int intNumLicenseMoto, string strMarkMoto, int intCylinderMoto, string strModelMoto, string strFuelTypeMoto, string strLinkPropertyCard, User owner, User driver, string strColorMoto)
+        public Motorcycle(string strLicensePlateMoto, int intNumSerieMoto, int intNumChasisMoto, int intVimMoto, string strStateMoto, int intNumLicenseMoto, string strMarkMoto, int intCylinderMoto, string strModelMoto, string strFuelTypeMoto, string strLinkPropertyCard, IUser owner, IUser driver, string strColorMoto)
         {
             StrLicensePlateMoto = strLicensePlateMoto;
             IntNumSerieMoto = intNumSerieMoto;
@@ -59,6 +81,31 @@ namespace LibClassEasyGo
             Owner = owner;
             Driver = driver;
             StrColorMoto = strColorMoto;
+        }
+
+        public IMotorcycle SelectMoto(int idUser)
+        {
+            IMotorcycle moto = null;
+
+            string select = "SELECT * FROM moto WHERE intiduser = @idUser";
+            NpgsqlCommand cmd = new NpgsqlCommand(select, conn.Conn());
+            cmd.Parameters.AddWithValue("@idUser", idUser);
+
+            NpgsqlDataReader data = cmd.ExecuteReader();
+
+            if(data.HasRows)
+            {
+                while (data.Read())
+                {
+                    IUser user = new User(Convert.ToInt32(data[15]), data[16].ToString(), data[17].ToString(), Convert.ToDateTime(data[18]), Convert.ToBoolean(data[19]), data[20].ToString(), Convert.ToInt32(data[21]), Convert.ToInt64(data[22]), data[23].ToString(), Convert.ToDateTime(data[24]), data[25].ToString(), Convert.ToInt32(data[25]));
+                    
+                    moto = new Motorcycle(data[0].ToString(), Convert.ToInt32(data[1]), Convert.ToInt32(data[2]), Convert.ToInt32(data[3]), data[4].ToString(), Convert.ToInt32(data[5]), data[6].ToString(), Convert.ToInt32(data[7]), data[8].ToString(), data[9].ToString(), data[10].ToString(), user, user, data[13].ToString());
+
+                }
+            }
+
+            return moto;
+            
         }
     }
 }
