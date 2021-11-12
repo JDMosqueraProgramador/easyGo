@@ -447,5 +447,15 @@ namespace wEasyGoDriver.views
         {
             this.Close();
         }
+
+        private void btnEstado_Click(object sender, EventArgs e)
+        {
+            tabsMain.SelectedTab = tabMainViajes;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
