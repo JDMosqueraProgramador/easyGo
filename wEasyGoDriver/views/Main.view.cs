@@ -8,18 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibClassEasyGo;
+using wEasyGoDriver.controllers;
+
 using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using System.Device.Location;
+using Microsoft.AspNetCore.SignalR.Client;
+using Newtonsoft.Json;
 
 namespace wEasyGoDriver.views
 {
     public partial class frmMain : Form
     {
 
-        //UserController userController;
+        UserController userController;
+        IUser dataUser;
+
+        MotorcycleControlller motoControlller = new MotorcycleControlller();
+        IMotorcycle dataMoto;
+        
 
         GMarkerGoogle markerStart;
         GMarkerGoogle markerEnd;
@@ -43,15 +52,36 @@ namespace wEasyGoDriver.views
         {
             InitializeComponent();
             InicializeForm();
+            initializeSignal();
+        }
+
+        public frmMain(long phone)
+        {
+
+            InitializeComponent();
+            InicializeForm();
+            initializeSignal();
+
+            dataUser = new UserController(phone).getDataUser();
+            dataMoto = motoControlller.ExecuteGetMotorcycle(dataUser.IntIdUser);
+
         }
 
         public void InicializeForm()
         {
             pnlViajeAceptado.Visible = false;
+            if(dataMoto != null && dataUser != null)
+            { 
+                dtgHistorialViajes.DataSource = userController.GetDriverHistory(dataMoto.StrLicensePlateMoto);
+
+            } 
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
+        private async void frmMain_Load(object sender, EventArgs e)
         {
+
+            #region [Configuración inicial de mapas]
+
             GMapProviders.GoogleMap.ApiKey = "AIzaSyD53-lwKKlRgkrmqM2kb19laYtq_BdG_RY";
             gMapPrincipal.DragButton = MouseButtons.Left;
             gMapPrincipal.CanDragMap = true;
@@ -70,9 +100,9 @@ namespace wEasyGoDriver.views
 
             markerOverlay = new GMapOverlay("Marcador");
 
-            /* markerStart = new GMarkerGoogle(new PointLatLng(latitude, longitude), GMarkerGoogleType.red);
+            markerStart = new GMarkerGoogle(new PointLatLng(latitude, longitude), GMarkerGoogleType.red);
             markerOverlay.Markers.Add(markerStart);
-            markerStart.ToolTipMode = MarkerTooltipMode.Always; */
+            markerStart.ToolTipMode = MarkerTooltipMode.Always;
 
             positionWatcher.PositionChanged += (sen, evt) =>
             {
@@ -101,7 +131,47 @@ namespace wEasyGoDriver.views
             };
 
             positionWatcher.Start();
+            
+
+            #endregion
+
+            #region [Configuración de signalR]
+
+            try
+            {
+                await signalConn.StartAsync();
+
+                MessageBox.Show(signalConn.State.ToString());
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
+            signalConn.On<string>("ReceiveTravel", async (travelJSON) =>
+            {
+                await notificationTravelRequest(travelJSON);
+
+                // notifyViaje.Icon = System.Drawing.Icon = ;
+
+            });
+
+            #endregion
         }
+
+        private async Task notificationTravelRequest (string travelJSON)
+        {
+
+            dynamic travel = JsonConvert.DeserializeObject(travelJSON);
+
+            notifyViaje.Text = $"Solicitud de viaje de Alex";
+            notifyViaje.ShowBalloonTip(4000, notifyViaje.Text, "Notificación", ToolTipIcon.Info);
+            MessageBox.Show(travelJSON);
+
+            flpViajes.Controls.Add(await generateTravelRequest(panelCant, travel));
+
+            panelCant++;
+        } 
 
         private async void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -354,6 +424,14 @@ namespace wEasyGoDriver.views
             return pnlViaje;
         }
 
+        public async Task<Panel> generateTravelRequest(int name, object travel)
+        {
+            ITravel travelObj = (ITravel)travel;
+
+            return await generateTravelRequest(name, travelObj);
+
+        }
+
         public GDirections getRoute(PointLatLng start, PointLatLng end)
         {
             GDirections direction;
@@ -460,5 +538,21 @@ namespace wEasyGoDriver.views
             this.gMapPrincipal.Position = actualPoint;
 
         }
+
+        private string _baseUrl = "https://localhost:7173";
+        private string _url = "https://localhost:7173/travelHub";
+        Microsoft.AspNetCore.SignalR.Client.HubConnection signalConn;
+
+        public void initializeSignal()
+        {
+            signalConn = new HubConnectionBuilder().WithUrl(_url).Build();
+
+            signalConn.Closed += async (error) =>
+            {
+                System.Threading.Thread.Sleep(5000);
+                await signalConn.StartAsync();
+            };
+        }
     }
+
 }

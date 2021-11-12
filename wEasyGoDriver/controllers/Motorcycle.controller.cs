@@ -25,9 +25,20 @@ namespace wEasyGoDriver.controllers
             moto = new MotorcycleModel(strLicensePlateMoto, intNumSerieMoto, intNumChasisMoto, intVimMoto, strStateMoto, intNumLicenseMoto, strMarkMoto, intCylinderMoto, strModelMoto, strFuelTypeMoto, strLinkPropertyCard, ownerClass, driverClass, strColorMoto);
         }
 
+        public MotorcycleControlller()
+        {
+            moto = new MotorcycleModel();
+        }
+
         public bool ExecuteInsertMoto()
         {
             return moto.InsertMotorcycle();
         }
+
+        public IMotorcycle ExecuteGetMotorcycle(int idUser)
+        {
+            return moto.SelectMoto(idUser);
+        }
+
     }
 }

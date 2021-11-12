@@ -22,7 +22,7 @@ namespace LibClassEasyGo
         string StrCommentaryTravel { get; set; }
         string PaymentMethod { get; set; }
         IUser Customer { get; set; }
-        Motorcycle Moto { get; set; }
+        IMotorcycle Moto { get; set; }
 
     }
 }

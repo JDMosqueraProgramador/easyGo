@@ -25,7 +25,8 @@ app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapHub<PruebaHub>("/stateHub");
+    endpoints.MapHub<TravelHub>("/travelHub");
+    // endpoints.MapHub<CustomerHub>("/customerHub");
 });
 
 app.MapRazorPages();

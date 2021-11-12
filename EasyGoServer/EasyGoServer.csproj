@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="LibClassEasyGo">
+      <HintPath>..\LibClassEasyGo\bin\Debug\LibClassEasyGo.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

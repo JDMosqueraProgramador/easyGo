@@ -19,9 +19,15 @@
 <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
 
 <script>
-    let connection = new signalR.HubConnectionBuilder().withUrl("/stateHub").build();
+
+    
+    let connection = new signalR.HubConnectionBuilder().withUrl("/travelHub").build();
 
     let states = ["Manejando", "Duermiendo", "en espera"];
+
+    let Travel = {
+        
+    }
 
     let stateSpan = document.getElementById("state");
 
@@ -32,14 +38,14 @@
     })
 
     document.getElementById("btn_change").addEventListener("click", (e) => {
-        connection.invoke("SendState", states[0]).catch((error) => {
+        connection.invoke("SendTravel", states[0]).catch((error) => {
             console.log(error);
         });
         stateSpan.innerText = states[0];
     });
 
     document.getElementById("btn_change1").addEventListener("click", (e) => {
-        connection.invoke("SendState", states[1]).catch((error) => {
+        connection.invoke("SendTravel", states[1]).catch((error) => {
             console.log(error);
         });
         stateSpan.innerText = states[1];
@@ -47,17 +53,41 @@
     });
 
     document.getElementById("btn_change2").addEventListener("click", (e) => {
-        connection.invoke("SendState", states[2]).catch((error) => {
+        connection.invoke("SendTravel", states[2]).catch((error) => {
             console.log(error);
         });
         stateSpan.innerText = states[2];
 
     });
 
-
-    connection.connection("ReceiveState", (state) => {
-        stateSpan.innerText = state;
+    connection.connection("ReceiveTravel", (state) => {
+        console.log(state);
+        // stateSpan.innerText = state;
     })
 
+    
+
+   /*
+    let otherConn = new signalR.HubConnectionBuilder().withUrl("/customerHub").build();
+
+    otherConn.start().then(() => {
+        console.log("Conectado x2")
+    })
+
+    document.getElementById("btn_change").addEventListener("click", (e) => {
+        otherConn.invoke("SendTravel", {name: true}).then(response => console.log(response)).catch((error) => {
+            console.log(error);
+        });
+        // stateSpan.innerText = states[0];
+    });
+
+    otherConn
+
+    otherConn.on("ReceiveTravel", (travel) => {
+        debbuger
+        console.log(travel);
+    });
+
+    */
 
 </script>

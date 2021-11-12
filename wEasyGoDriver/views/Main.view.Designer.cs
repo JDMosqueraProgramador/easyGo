@@ -29,6 +29,8 @@ namespace wEasyGoDriver.views
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.cerrarForm = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -49,6 +51,7 @@ namespace wEasyGoDriver.views
             this.btnEstado = new System.Windows.Forms.Button();
             this.lblTituloMain = new System.Windows.Forms.Label();
             this.tabMainViajes = new System.Windows.Forms.TabPage();
+            this.btnEnfocarPosicion = new System.Windows.Forms.Button();
             this.flpViajes = new System.Windows.Forms.FlowLayoutPanel();
             this.lblAvisoViajes = new System.Windows.Forms.Label();
             this.pnlViajeAceptado = new System.Windows.Forms.Panel();
@@ -72,8 +75,8 @@ namespace wEasyGoDriver.views
             this.gMapPrincipal = new GMap.NET.WindowsForms.GMapControl();
             this.tabMainHistorial = new System.Windows.Forms.TabPage();
             this.lblTituloHistorial = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnEnfocarPosicion = new System.Windows.Forms.Button();
+            this.dtgHistorialViajes = new System.Windows.Forms.DataGridView();
+            this.notifyViaje = new System.Windows.Forms.NotifyIcon(this.components);
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -84,7 +87,7 @@ namespace wEasyGoDriver.views
             this.flpViajes.SuspendLayout();
             this.pnlViajeAceptado.SuspendLayout();
             this.tabMainHistorial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHistorialViajes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitulo
@@ -320,6 +323,16 @@ namespace wEasyGoDriver.views
             this.tabMainViajes.Text = "Viajes";
             this.tabMainViajes.UseVisualStyleBackColor = true;
             this.tabMainViajes.Click += new System.EventHandler(this.tabMainViajes_Click);
+            // 
+            // btnEnfocarPosicion
+            // 
+            this.btnEnfocarPosicion.Location = new System.Drawing.Point(525, 389);
+            this.btnEnfocarPosicion.Name = "btnEnfocarPosicion";
+            this.btnEnfocarPosicion.Size = new System.Drawing.Size(140, 23);
+            this.btnEnfocarPosicion.TabIndex = 3;
+            this.btnEnfocarPosicion.Text = "Enfocar posición actual";
+            this.btnEnfocarPosicion.UseVisualStyleBackColor = true;
+            this.btnEnfocarPosicion.Click += new System.EventHandler(this.btnEnfocarPosicion_Click);
             // 
             // flpViajes
             // 
@@ -574,7 +587,7 @@ namespace wEasyGoDriver.views
             // tabMainHistorial
             // 
             this.tabMainHistorial.Controls.Add(this.lblTituloHistorial);
-            this.tabMainHistorial.Controls.Add(this.dataGridView1);
+            this.tabMainHistorial.Controls.Add(this.dtgHistorialViajes);
             this.tabMainHistorial.Location = new System.Drawing.Point(4, 22);
             this.tabMainHistorial.Name = "tabMainHistorial";
             this.tabMainHistorial.Padding = new System.Windows.Forms.Padding(3);
@@ -594,24 +607,20 @@ namespace wEasyGoDriver.views
             this.lblTituloHistorial.TabIndex = 1;
             this.lblTituloHistorial.Text = "Historial de viajes";
             // 
-            // dataGridView1
+            // dtgHistorialViajes
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(151, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(683, 357);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgHistorialViajes.BackgroundColor = System.Drawing.Color.White;
+            this.dtgHistorialViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgHistorialViajes.Location = new System.Drawing.Point(151, 55);
+            this.dtgHistorialViajes.Name = "dtgHistorialViajes";
+            this.dtgHistorialViajes.Size = new System.Drawing.Size(683, 357);
+            this.dtgHistorialViajes.TabIndex = 0;
             // 
-            // btnEnfocarPosicion
+            // notifyViaje
             // 
-            this.btnEnfocarPosicion.Location = new System.Drawing.Point(525, 389);
-            this.btnEnfocarPosicion.Name = "btnEnfocarPosicion";
-            this.btnEnfocarPosicion.Size = new System.Drawing.Size(140, 23);
-            this.btnEnfocarPosicion.TabIndex = 3;
-            this.btnEnfocarPosicion.Text = "Enfocar posición actual";
-            this.btnEnfocarPosicion.UseVisualStyleBackColor = true;
-            this.btnEnfocarPosicion.Click += new System.EventHandler(this.btnEnfocarPosicion_Click);
+            this.notifyViaje.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyViaje.Icon")));
+            this.notifyViaje.Text = "notifyIcon1";
+            this.notifyViaje.Visible = true;
             // 
             // frmMain
             // 
@@ -639,7 +648,7 @@ namespace wEasyGoDriver.views
             this.pnlViajeAceptado.PerformLayout();
             this.tabMainHistorial.ResumeLayout(false);
             this.tabMainHistorial.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHistorialViajes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -667,7 +676,7 @@ namespace wEasyGoDriver.views
         private System.Windows.Forms.FlowLayoutPanel flpViajes;
         private System.Windows.Forms.Label lblAvisoViajes;
         private System.Windows.Forms.Label lblTituloHistorial;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgHistorialViajes;
         private System.Windows.Forms.Panel pnlViajeAceptado;
         private System.Windows.Forms.Button btnEnInicioAceptado;
         private System.Windows.Forms.Label lblDistanciaInicioAceptado;
@@ -691,5 +700,6 @@ namespace wEasyGoDriver.views
         private System.Windows.Forms.Label lblEstadoMoto;
         private System.Windows.Forms.PictureBox cerrarForm;
         private System.Windows.Forms.Button btnEnfocarPosicion;
+        private System.Windows.Forms.NotifyIcon notifyViaje;
     }
 }

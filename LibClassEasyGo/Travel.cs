@@ -22,7 +22,7 @@ namespace LibClassEasyGo
         private string strCommentaryTravel;
         private string paymentMethod;
         private IUser customer;
-        private Motorcycle moto;
+        private IMotorcycle moto;
 
         public int IntIdTravel { get => intIdTravel; set => intIdTravel = value; }
         public string StrStartingPlaceTravel { get => strStartingPlaceTravel; set => strStartingPlaceTravel = value; }
@@ -38,6 +38,21 @@ namespace LibClassEasyGo
         public string StrCommentaryTravel { get => strCommentaryTravel; set => strCommentaryTravel = value; }
         public string PaymentMethod { get => paymentMethod; set => paymentMethod = value; }
         public IUser Customer { get => customer; set => customer = value; }
-        public Motorcycle Moto { get => moto; set => moto = value; }
+        public IMotorcycle Moto { get => moto; set => moto = value; }
+
+        public Travel()
+        {
+
+        }
+
+        public Travel(string strStartingPlaceTravel, string strDestinationPlaceTravel, int intTotalPriceTravel, int numKMPriceTravel, DateTime dateRequestTravel, IUser customer)
+        {
+            StrStartingPlaceTravel = strStartingPlaceTravel;
+            StrDestinationPlaceTravel = strDestinationPlaceTravel;
+            IntTotalPriceTravel = intTotalPriceTravel;
+            NumKMPriceTravel = numKMPriceTravel;
+            DateRequestTravel = dateRequestTravel;
+            Customer = customer;
+        }
     }
 }
