@@ -109,7 +109,7 @@ namespace wEasyGoDriver
         {
             try
             {
-                LicenseController license = new LicenseController(Convert.ToInt32(txtNumerodeLicencia.Text), dateVigenciaHastaLicencia.Value, DataUser.IntIdPerson, btnCargarimgLicencia.Tag.ToString());
+                LicenseController license = new LicenseController(Convert.ToInt32(txtNumerodeLicencia.Text), dateVigenciaHastaLicencia.Value, DataUser.IntIdUser, btnCargarimgLicencia.Tag.ToString());
                 if(license.ExecuteInsertLicense())
                 {
                     MessageBox.Show("Licencia registrada");

@@ -13,7 +13,7 @@ namespace wEasyGoDriver.models
         {
         }
 
-        private Connect con = new Connect();
+        private NpgsqlConnection conn = new Connect().Conn();
 
         public MotorcycleModel(string strLicensePlateMoto, int intNumSerieMoto, int intNumChasisMoto, int intVimMoto, string strStateMoto, int intNumLicenseMoto, string strMarkMoto, int intCylinderMoto, string strModelMoto, string strFuelTypeMoto, string strLinkPropertyCard, User owner, User driver, string strColorMoto) : base(strLicensePlateMoto, intNumSerieMoto, intNumChasisMoto, intVimMoto, strStateMoto, intNumLicenseMoto, strMarkMoto, intCylinderMoto, strModelMoto, strFuelTypeMoto, strLinkPropertyCard, owner, driver, strColorMoto)
         {
@@ -23,7 +23,7 @@ namespace wEasyGoDriver.models
         {
             string insert = "CALL sp_insert_moto(@strLicensePlateMoto, @intNumSerieMoto, @intNumChasisMoto, @intVimMoto, @strStateMoto, @intNumLicenseMoto, @strMarkMoto, @intCylinderMoto, @strModelMoto, @strFuelTypeMoto, @strLinkPropertyCard, @intIdOwner, @intIdDriver, @strColorMoto)";
 
-            NpgsqlCommand cmd = new NpgsqlCommand(insert, con.Conn());
+            NpgsqlCommand cmd = new NpgsqlCommand(insert, conn);
 
             cmd.Parameters.AddWithValue("@strLicensePlateMoto", StrLicensePlateMoto);
             cmd.Parameters.AddWithValue("@intNumSerieMoto", IntNumSerieMoto);
@@ -45,5 +45,19 @@ namespace wEasyGoDriver.models
             return true;
         }
 
+
+        public bool ChangeState(string state, string licensePlate)
+        {
+            string update = "CALL sp_set_motorcycle_state(@state, @licensePlate)";
+
+            NpgsqlCommand cmd = new NpgsqlCommand(update, conn);
+            cmd.Parameters.AddWithValue("@state", state);
+            cmd.Parameters.AddWithValue("@licensePlate", licensePlate);
+
+            int res = cmd.ExecuteNonQuery();
+
+            return true;
+
+        }
     }
 }

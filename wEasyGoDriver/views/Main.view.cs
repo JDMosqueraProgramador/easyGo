@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibClassEasyGo;
 using wEasyGoDriver.controllers;
-
 using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
@@ -23,12 +22,17 @@ namespace wEasyGoDriver.views
     public partial class frmMain : Form
     {
 
+        #region [Controladores y variables de datos]
+
         UserController userController;
         IUser dataUser;
 
         MotorcycleControlller motoControlller = new MotorcycleControlller();
         IMotorcycle dataMoto;
-        
+
+        #endregion
+
+        #region [Variables de mapas]
 
         GMarkerGoogle markerStart;
         GMarkerGoogle markerEnd;
@@ -46,6 +50,16 @@ namespace wEasyGoDriver.views
 
         GDirections direction;
 
+        #endregion
+
+        #region [Variables de signalR]
+
+        private string _baseUrl = "https://localhost:7173";
+        private string _url = "https://localhost:7173/travelHub";
+        Microsoft.AspNetCore.SignalR.Client.HubConnection signalConn;
+
+        #endregion
+
         int panelCant = 0;
 
         public frmMain()
@@ -59,22 +73,62 @@ namespace wEasyGoDriver.views
         {
 
             InitializeComponent();
-            InicializeForm();
             initializeSignal();
+            InicializeForm();
 
             dataUser = new UserController(phone).getDataUser();
             dataMoto = motoControlller.ExecuteGetMotorcycle(dataUser.IntIdUser);
 
         }
 
-        public void InicializeForm()
+        public async void InicializeForm()
         {
             pnlViajeAceptado.Visible = false;
-            if(dataMoto != null && dataUser != null)
-            { 
+            if (dataMoto != null && dataUser != null)
+            {
                 dtgHistorialViajes.DataSource = userController.GetDriverHistory(dataMoto.StrLicensePlateMoto);
+            }
 
-            } 
+            #region [Configuración de signalR]
+
+            try
+            {
+                await signalConn.StartAsync();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
+            signalConn.On<int, string, string, string, string>("ReceiveTravel", async (idUser, customerName, startPlace, endPlace, connectId) =>
+            {
+
+                ITravel travel = new Travel();
+                travel.StrStartingPlaceTravel = startPlace;
+                travel.StrDestinationPlaceTravel = endPlace;
+                travel.Customer = new User();
+                travel.Customer.IntIdUser = idUser;
+                travel.Customer.StrNamePerson = customerName;
+
+                notifyViaje.Text = $"Solicitud de viaje de {customerName}";
+                notifyViaje.ShowBalloonTip(4000, notifyViaje.Text, "Podrás aceptar o rechazar la solicitud", ToolTipIcon.Info);
+
+                // MessageBox.Show(travel.ToString());
+
+                flpViajes.Controls.Add(await generateTravelRequest(panelCant, travel, connectId));
+
+                panelCant++;
+
+            });
+
+            signalConn.On<int, string>("RemoveTravel", async (idUser, customerName) =>
+            {
+                flpViajes.Controls.Remove(flpViajes.Controls.Find($"pnlViaje{idUser}", false)[0]);
+                notifyViaje.ShowBalloonTip(2000, $"{customerName} ha cancelado el viaje", "Se eliminará de tu panel de viajes", ToolTipIcon.Error);
+
+            });
+
+            #endregion
         }
 
         private async void frmMain_Load(object sender, EventArgs e)
@@ -135,47 +189,25 @@ namespace wEasyGoDriver.views
 
             #endregion
 
-            #region [Configuración de signalR]
-
-            try
-            {
-                await signalConn.StartAsync();
-
-                MessageBox.Show(signalConn.State.ToString());
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-
-            signalConn.On<string>("ReceiveTravel", async (travelJSON) =>
-            {
-                await notificationTravelRequest(travelJSON);
-
-                // notifyViaje.Icon = System.Drawing.Icon = ;
-
-            });
-
-            #endregion
         }
 
-        private async Task notificationTravelRequest (string travelJSON)
+        public void initializeSignal()
         {
+            signalConn = new HubConnectionBuilder().WithUrl(_url).Build();
 
-            dynamic travel = JsonConvert.DeserializeObject(travelJSON);
+            signalConn.Closed += async (error) =>
+            {
+                System.Threading.Thread.Sleep(5000);
+                await signalConn.StartAsync();
+            };
+        }
 
-            notifyViaje.Text = $"Solicitud de viaje de Alex";
-            notifyViaje.ShowBalloonTip(4000, notifyViaje.Text, "Notificación", ToolTipIcon.Info);
-            MessageBox.Show(travelJSON);
 
-            flpViajes.Controls.Add(await generateTravelRequest(panelCant, travel));
-
-            panelCant++;
-        } 
+        // PANEL DEL MAPA --------------------------------------------------------------
 
         private async void btnCerrar_Click(object sender, EventArgs e)
         {
-            ITravel travel = new Travel();
+            /* ITravel travel = new Travel();
             travel.StrStartingPlaceTravel = "Centro Comercial Terminal Del Sur, Carrera 65, Antioquia";
             travel.StrDestinationPlaceTravel = "Parque Recreativo Envigado INDER";
             travel.IntTotalPriceTravel = 2000;
@@ -184,11 +216,11 @@ namespace wEasyGoDriver.views
             this.flpViajes.Controls.Add(await generateTravelRequest(panelCant, travel));
             panelCant++;
 
-            if (panelCant > 0) this.lblAvisoViajes.Visible = false;
+            if (panelCant > 0) this.lblAvisoViajes.Visible = false; */
 
         }
 
-        public async Task<Panel> generateTravelRequest(int name, ITravel travel)
+        public async Task<Panel> generateTravelRequest(int name, ITravel travel, string connectId)
         {
 
             GeoCoderStatusCode statusStart;
@@ -222,7 +254,8 @@ namespace wEasyGoDriver.views
             pnlViaje.Controls.Add(lblLugarInicio);
             pnlViaje.Controls.Add(lblSolicitudViaje);
             pnlViaje.Location = new System.Drawing.Point(698, 13);
-            pnlViaje.Name = "pnlViaje" + name;
+            pnlViaje.Name = "pnlViaje" + travel.Customer.IntIdUser;
+            pnlViaje.Tag = travel.Customer.IntIdUser;
             pnlViaje.Size = new System.Drawing.Size(318, 150);
             //pnlViaje.BorderStyle = BorderStyle.FixedSingle;
             pnlViaje.TabIndex = 1;
@@ -335,7 +368,7 @@ namespace wEasyGoDriver.views
             btnAceptarViaje.Text = "Aceptar viaje";
             btnAceptarViaje.UseVisualStyleBackColor = true;
 
-            btnAceptarViaje.Click += new System.EventHandler((object sender, EventArgs e) =>
+            btnAceptarViaje.Click += new System.EventHandler(async (object sender, EventArgs e) =>
             {
 
                 if (statusEnd == GeoCoderStatusCode.OK && statusStart == GeoCoderStatusCode.OK)
@@ -375,6 +408,20 @@ namespace wEasyGoDriver.views
 
                     gMapPrincipal.Zoom = gMapPrincipal.Zoom += 1;
                     gMapPrincipal.Zoom = gMapPrincipal.Zoom -= 1;
+
+                    #endregion
+
+
+                    #region [Registro de viaje, movimientos en SIGNALR]
+
+                    // Cambiar estado de la moto/conductor en base de datos
+
+                    if (motoControlller.ExecuteChangeState("busy", dataMoto.StrLicensePlateMoto))
+                    {
+                        // Desconectar de el grupo de disponibles
+                        await signalConn.InvokeAsync("RemoveAvailable");
+                        await signalConn.InvokeAsync("AcceptTravel", dataUser.IntIdUser, connectId);
+                    }
 
                     #endregion
 
@@ -422,14 +469,6 @@ namespace wEasyGoDriver.views
             });
 
             return pnlViaje;
-        }
-
-        public async Task<Panel> generateTravelRequest(int name, object travel)
-        {
-            ITravel travelObj = (ITravel)travel;
-
-            return await generateTravelRequest(name, travelObj);
-
         }
 
         public GDirections getRoute(PointLatLng start, PointLatLng end)
@@ -483,23 +522,12 @@ namespace wEasyGoDriver.views
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            PointLatLng p = new PointLatLng(6.171821097107039, -75.59399111110366);
-            changeStartMarker(p);
-        }
-
-        private void tabMainViajes_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void flpViajes_ControlRemoved(object sender, ControlEventArgs e)
         {
             if (flpViajes.Controls.Count == 2) this.lblAvisoViajes.Visible = true;
         }
 
-        private void btnCancelarAceptado_Click(object sender, EventArgs e)
+        private async void btnCancelarAceptado_Click(object sender, EventArgs e)
         {
             pnlViajeAceptado.Visible = false;
 
@@ -511,6 +539,8 @@ namespace wEasyGoDriver.views
             markerOverlay.Markers.Remove(markerStart);
             markerOverlay.Markers.Remove(markerEnd);
             this.enfocarPosicion();
+
+            await signalConn.InvokeAsync("AddAvailable");
             
         }
 
@@ -523,8 +553,9 @@ namespace wEasyGoDriver.views
             gMapPrincipal.Zoom -= 1;
         }
 
-        private void cerrarForm_Click(object sender, EventArgs e)
+        private async void cerrarForm_Click(object sender, EventArgs e)
         {
+            await signalConn.InvokeAsync("RemoveAvailable");
             this.Close();
         }
 
@@ -539,19 +570,62 @@ namespace wEasyGoDriver.views
 
         }
 
-        private string _baseUrl = "https://localhost:7173";
-        private string _url = "https://localhost:7173/travelHub";
-        Microsoft.AspNetCore.SignalR.Client.HubConnection signalConn;
 
-        public void initializeSignal()
+
+
+
+
+
+
+
+
+        // Primer TAB -----------------------------------------------------------------------
+
+        private async void btnEstado_Click(object sender, EventArgs e)
         {
-            signalConn = new HubConnectionBuilder().WithUrl(_url).Build();
 
-            signalConn.Closed += async (error) =>
+            switch (dataMoto.StrStateMoto)
             {
-                System.Threading.Thread.Sleep(5000);
-                await signalConn.StartAsync();
-            };
+                case "inactive":
+                    if(motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto))
+                    {
+                        await signalConn.InvokeAsync("AddAvailable");
+                        dataMoto.StrStateMoto = "available";
+                        btnEstado.Text = "Terminar jornada";
+                    }
+
+                    break;
+               
+                case "available":
+
+                    if(motoControlller.ExecuteChangeState("inactive", dataMoto.StrLicensePlateMoto))
+                    {
+                        await signalConn.InvokeAsync("RemoveAvailable");
+                        dataMoto.StrStateMoto = "inactive";
+                        btnEstado.Text = "Iniciar jornada";
+                    }
+
+                    break;
+
+                case "disabled":
+                    btnEstado.Text = "";
+                    break;
+
+                case "busy":
+                    btnEstado.Enabled = false;
+                    break;
+
+                default:
+                    if (motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto))
+                    {
+                        await signalConn.InvokeAsync("AddAvailable");
+                        dataMoto.StrStateMoto = "available";
+                        btnEstado.Text = "Terminar jornada";
+                    }
+
+                    break;
+
+            }
         }
     }
 

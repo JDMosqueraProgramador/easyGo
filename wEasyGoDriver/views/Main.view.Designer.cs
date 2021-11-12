@@ -298,6 +298,7 @@ namespace wEasyGoDriver.views
             this.btnEstado.TabIndex = 1;
             this.btnEstado.Text = "Iniciar jornada";
             this.btnEstado.UseVisualStyleBackColor = true;
+            this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
             // 
             // lblTituloMain
             // 
@@ -322,7 +323,6 @@ namespace wEasyGoDriver.views
             this.tabMainViajes.TabIndex = 1;
             this.tabMainViajes.Text = "Viajes";
             this.tabMainViajes.UseVisualStyleBackColor = true;
-            this.tabMainViajes.Click += new System.EventHandler(this.tabMainViajes_Click);
             // 
             // btnEnfocarPosicion
             // 

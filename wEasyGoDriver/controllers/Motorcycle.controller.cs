@@ -15,7 +15,7 @@ namespace wEasyGoDriver.controllers
 
         public MotorcycleControlller(string strLicensePlateMoto, int intNumSerieMoto, int intNumChasisMoto, int intVimMoto, int intNumLicenseMoto, string strMarkMoto, int intCylinderMoto, string strModelMoto, string strFuelTypeMoto, string strLinkPropertyCard, int owner, int driver, string strColorMoto)
         {
-            string strStateMoto = "Default";
+            string strStateMoto = "inactive";
 
             UserModel ownerClass = new UserModel();
             ownerClass.IntIdUser = owner;
@@ -38,6 +38,11 @@ namespace wEasyGoDriver.controllers
         public IMotorcycle ExecuteGetMotorcycle(int idUser)
         {
             return moto.SelectMoto(idUser);
+        }
+
+        public bool ExecuteChangeState(string state, string licensePlate)
+        {
+            return this.moto.ChangeState(state, licensePlate);
         }
 
     }
