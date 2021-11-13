@@ -30,6 +30,8 @@ namespace wEasyGoDriver.controllers
             moto = new MotorcycleModel();
         }
 
+
+
         public bool ExecuteInsertMoto()
         {
             return moto.InsertMotorcycle();
