@@ -56,7 +56,7 @@ namespace wEasyGoDriver.views
 
         private string _baseUrl = "https://localhost:7173";
         private string _url = "https://localhost:7173/travelHub";
-        Microsoft.AspNetCore.SignalR.Client.HubConnection signalConn;
+        HubConnection signalConn;
 
         #endregion
 
@@ -186,7 +186,6 @@ namespace wEasyGoDriver.views
 
             positionWatcher.Start();
             
-
             #endregion
 
         }
@@ -205,21 +204,6 @@ namespace wEasyGoDriver.views
 
         // PANEL DEL MAPA --------------------------------------------------------------
 
-        private async void btnCerrar_Click(object sender, EventArgs e)
-        {
-            /* ITravel travel = new Travel();
-            travel.StrStartingPlaceTravel = "Centro Comercial Terminal Del Sur, Carrera 65, Antioquia";
-            travel.StrDestinationPlaceTravel = "Parque Recreativo Envigado INDER";
-            travel.IntTotalPriceTravel = 2000;
-            travel.Customer = new User();
-            travel.Customer.StrNamePerson = "Alexander";
-            this.flpViajes.Controls.Add(await generateTravelRequest(panelCant, travel));
-            panelCant++;
-
-            if (panelCant > 0) this.lblAvisoViajes.Visible = false; */
-
-        }
-
         public async Task<Panel> generateTravelRequest(int name, ITravel travel, string connectId)
         {
 
@@ -229,7 +213,7 @@ namespace wEasyGoDriver.views
             var travelPointStart = GMapProviders.GoogleMap.GetPoint(travel.StrStartingPlaceTravel, out statusStart);
             var travelPointEnd = GMapProviders.GoogleMap.GetPoint(travel.StrDestinationPlaceTravel, out statusEnd);
 
-            #region [Generación de datos de solicitud ]
+            #region [Generación de datos de solicitud]
 
             System.Windows.Forms.Panel pnlViaje = new Panel();
             System.Windows.Forms.Button btnRechazarViaje = new Button();
@@ -375,6 +359,7 @@ namespace wEasyGoDriver.views
                 {
 
                     #region [Rutas de viaje y de inicio, marcadores y mapas]
+
                     // RUTA DEL CONDUCTOR HASTA EL USUARIO -------------------------
 
                     GDirections dirPositionToStart = getRoute(actualPoint, travelPointStart.Value);
@@ -411,8 +396,8 @@ namespace wEasyGoDriver.views
 
                     #endregion
 
-
                     #region [Registro de viaje, movimientos en SIGNALR]
+
 
                     // Cambiar estado de la moto/conductor en base de datos
 
@@ -425,7 +410,7 @@ namespace wEasyGoDriver.views
 
                     #endregion
 
-                    // Habilitar panel para manejo del viaje
+                    #region [Habilitar panel para manejo del viaje]
 
                     lblTitleViajeAceptado.Text = "Recogiendo a " + travel.Customer.StrNamePerson;
                     lblPrecioAceptado.Text = travel.IntTotalPriceTravel.ToString() + " pesos";
@@ -438,9 +423,8 @@ namespace wEasyGoDriver.views
                     pnlViajeAceptado.Visible = true;
                     flpViajes.Controls.Add(pnlViajeAceptado);
 
+                    #endregion
                     
-                    //flpViajes.Controls.
-
                 }
             });
 
@@ -470,6 +454,8 @@ namespace wEasyGoDriver.views
 
             return pnlViaje;
         }
+
+        #region [Funciones de marcadores y rutas (Mapas)]
 
         public GDirections getRoute(PointLatLng start, PointLatLng end)
         {
@@ -522,10 +508,11 @@ namespace wEasyGoDriver.views
             }
         }
 
-        private void flpViajes_ControlRemoved(object sender, ControlEventArgs e)
-        {
-            if (flpViajes.Controls.Count == 2) this.lblAvisoViajes.Visible = true;
-        }
+        #endregion
+
+        #region [Configuración y botones de viaje aceptado]
+
+        // Viaje aceptado -----------------------------------------------------------
 
         private async void btnCancelarAceptado_Click(object sender, EventArgs e)
         {
@@ -553,10 +540,18 @@ namespace wEasyGoDriver.views
             gMapPrincipal.Zoom -= 1;
         }
 
+        #endregion
+
+
         private async void cerrarForm_Click(object sender, EventArgs e)
         {
             await signalConn.InvokeAsync("RemoveAvailable");
             this.Close();
+        }
+
+        private void flpViajes_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            if (flpViajes.Controls.Count == 2) this.lblAvisoViajes.Visible = true;
         }
 
         private void btnEnfocarPosicion_Click(object sender, EventArgs e)
@@ -611,9 +606,10 @@ namespace wEasyGoDriver.views
                     btnEstado.Text = "";
                     break;
 
-                case "busy":
+                /*case "busy":
+
                     btnEstado.Enabled = false;
-                    break;
+                    break; */
 
                 default:
                     if (motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto))

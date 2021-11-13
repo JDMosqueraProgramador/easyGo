@@ -110,7 +110,11 @@ namespace LibClassEasyGo
 
             data.Read();
 
-            return Convert.ToInt32(data["set_user"]);
+            var id = Convert.ToInt32(data["set_user"]);
+
+            data.Close();
+
+            return id;
 
         }
 
@@ -135,6 +139,8 @@ namespace LibClassEasyGo
                 }
             }
 
+            data.Close();
+
             return user;
         }
 
@@ -156,6 +162,8 @@ namespace LibClassEasyGo
                     user = new User(0, (string)data[1], data.GetString(2), (DateTime)data[3], (bool)data[4], data.GetString(5), (int)data[6], (long)data[7], data.GetString(8), (DateTime)data[9], data.GetString(10), (int)data[11]);
                 }
             }
+
+            data.Close();
 
             return user;
         }
@@ -202,16 +210,14 @@ namespace LibClassEasyGo
             cmd.Parameters.AddWithValue("@phone", NpgsqlTypes.NpgsqlDbType.Bigint, phone);
             cmd.Parameters.AddWithValue("@password", NpgsqlTypes.NpgsqlDbType.Varchar, password);
 
-            if (cmd.ExecuteReader().HasRows)
-            {
-                return true;
+            NpgsqlDataReader data = cmd.ExecuteReader();
 
-            }
-            else
-            {
-                cmd.Cancel();
-                return false;
-            }
+            bool state = data.HasRows;
+
+            data.Close();
+
+            return state;
+            
         }
 
         //public abstract int CreateUser(string password, int idCity);

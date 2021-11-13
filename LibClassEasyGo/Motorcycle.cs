@@ -104,6 +104,8 @@ namespace LibClassEasyGo
                 }
             }
 
+            data.Close();
+
             return moto;
             
         }

@@ -53,6 +53,8 @@ namespace LibClassEasyGo
                 }
             }
 
+            data.Close();
+
             return cities;
         }
 
@@ -80,6 +82,8 @@ namespace LibClassEasyGo
                     departments.Add(department);
                 }
             }
+
+            data.Close();
 
             return departments;
         }
