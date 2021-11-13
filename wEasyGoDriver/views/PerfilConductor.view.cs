@@ -74,6 +74,7 @@ namespace wEasyGoDriver.views
                 MessageBox.Show("Acceso denegado a esta sesión");
                 this.Close();
 
+
             }
             else
             {
