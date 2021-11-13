@@ -20,13 +20,13 @@ namespace wEasyGoDriver.models
         {
         }
 
-        public TravelModel(string strStartingPlaceTravel, string strDestinationPlaceTravel, int intTotalPriceTravel, int numKMPriceTravel, DateTime dateRequestTravel, IUser customer, IMotorcycle moto) : base(strStartingPlaceTravel, strDestinationPlaceTravel, intTotalPriceTravel, numKMPriceTravel, dateRequestTravel, customer, moto)
+        public TravelModel(string strStartingPlaceTravel, string strDestinationPlaceTravel, int intTotalPriceTravel, int numKMPriceTravel, DateTime dateRequestTravel, string strRuteTravel, string strStateTravel, IUser customer, IMotorcycle moto) : base(strStartingPlaceTravel, strDestinationPlaceTravel, intTotalPriceTravel, numKMPriceTravel, dateRequestTravel, strRuteTravel, strStateTravel, customer, moto)
         {
         }
 
         public bool InsertTravel()
         {
-            string insert = "CALL sp_register_trip(@strStartingPlaceTravel,@strDestinationPlaceTravel,@intTotalPriceTravel,@numKMPriceTravel,@dateStartTravel,@dateRequestTravel,@strRuteTravel,@strStateTravel,@intIdPaymentMethod,@intIdCustomer,@strLicensePlateMoto)";
+            string insert = "select * from register_travel(@strStartingPlaceTravel,@strDestinationPlaceTravel,@intTotalPriceTravel,@numKMPriceTravel,@dateRequestTravel,@strRuteTravel,@strStateTravel,@intIdPaymentMethod,@intIdCustomer,@strLicensePlateMoto)";
 
             NpgsqlCommand cmd = new NpgsqlCommand(insert, this.conn);
 
@@ -34,11 +34,10 @@ namespace wEasyGoDriver.models
             cmd.Parameters.AddWithValue("@strDestinationPlaceTravel", StrDestinationPlaceTravel);
             cmd.Parameters.AddWithValue("@intTotalPriceTravel", IntTotalPriceTravel);
             cmd.Parameters.AddWithValue("@numKMPriceTravel", NumKMPriceTravel);
-            cmd.Parameters.AddWithValue("@dateStartTravel", DateStartTravel);
             cmd.Parameters.AddWithValue("@dateRequestTravel", DateRequestTravel);
             cmd.Parameters.AddWithValue("@strRuteTravel", StrRuteTravel);
             cmd.Parameters.AddWithValue("@strStateTravel", StrStateTravel);
-            cmd.Parameters.AddWithValue("@intIdPaymentMethod",PaymentMethod);
+            cmd.Parameters.AddWithValue("@intIdPaymentMethod", 1);
             cmd.Parameters.AddWithValue("@intIdCustomer", Customer.IntIdUser);
             cmd.Parameters.AddWithValue("@strLicensePlateMoto", Moto.StrLicensePlateMoto);
 

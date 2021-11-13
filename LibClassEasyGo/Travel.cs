@@ -60,7 +60,7 @@ namespace LibClassEasyGo
         }
 
         
-        public Travel(string strStartingPlaceTravel, string strDestinationPlaceTravel, int intTotalPriceTravel, int numKMPriceTravel, DateTime dateRequestTravel, IUser customer, IMotorcycle moto)
+        public Travel(string strStartingPlaceTravel, string strDestinationPlaceTravel, int intTotalPriceTravel, int numKMPriceTravel, DateTime dateRequestTravel,string strRuteTravel, string strStateTravel, IUser customer, IMotorcycle moto)
         {
             StrStartingPlaceTravel = strStartingPlaceTravel;
             StrDestinationPlaceTravel = strDestinationPlaceTravel;
@@ -69,6 +69,10 @@ namespace LibClassEasyGo
             DateRequestTravel = dateRequestTravel;
             Customer = customer;
             Moto = moto;
+            StrRuteTravel = strRuteTravel;
+            StrStateTravel = strStateTravel;
         }
+
+
     }
 }

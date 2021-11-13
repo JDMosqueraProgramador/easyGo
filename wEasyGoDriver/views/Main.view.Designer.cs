@@ -56,6 +56,7 @@ namespace wEasyGoDriver.views
             this.flpViajes = new System.Windows.Forms.FlowLayoutPanel();
             this.lblAvisoViajes = new System.Windows.Forms.Label();
             this.pnlViajeAceptado = new System.Windows.Forms.Panel();
+            this.btnTerminarViaje = new System.Windows.Forms.Button();
             this.btnEnInicioAceptado = new System.Windows.Forms.Button();
             this.lblDistanciaInicioAceptado = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -78,7 +79,6 @@ namespace wEasyGoDriver.views
             this.lblTituloHistorial = new System.Windows.Forms.Label();
             this.dtgHistorialViajes = new System.Windows.Forms.DataGridView();
             this.notifyViaje = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btnTerminarViaje = new System.Windows.Forms.Button();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -191,7 +191,7 @@ namespace wEasyGoDriver.views
             this.lblEstadoMoto.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblEstadoMoto.Location = new System.Drawing.Point(593, 334);
             this.lblEstadoMoto.Name = "lblEstadoMoto";
-            this.lblEstadoMoto.Size = new System.Drawing.Size(37, 16);
+            this.lblEstadoMoto.Size = new System.Drawing.Size(38, 16);
             this.lblEstadoMoto.TabIndex = 13;
             this.lblEstadoMoto.Text = "valor";
             // 
@@ -212,7 +212,7 @@ namespace wEasyGoDriver.views
             this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label2.Location = new System.Drawing.Point(538, 334);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 16);
+            this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Estado:";
             // 
@@ -232,7 +232,7 @@ namespace wEasyGoDriver.views
             this.lblFechaSoat.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblFechaSoat.Location = new System.Drawing.Point(583, 305);
             this.lblFechaSoat.Name = "lblFechaSoat";
-            this.lblFechaSoat.Size = new System.Drawing.Size(96, 16);
+            this.lblFechaSoat.Size = new System.Drawing.Size(97, 16);
             this.lblFechaSoat.TabIndex = 8;
             this.lblFechaSoat.Text = "Fecha del soat";
             // 
@@ -243,7 +243,7 @@ namespace wEasyGoDriver.views
             this.lblSoat.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblSoat.Location = new System.Drawing.Point(538, 305);
             this.lblSoat.Name = "lblSoat";
-            this.lblSoat.Size = new System.Drawing.Size(38, 16);
+            this.lblSoat.Size = new System.Drawing.Size(39, 16);
             this.lblSoat.TabIndex = 7;
             this.lblSoat.Text = "Soat:";
             // 
@@ -254,7 +254,7 @@ namespace wEasyGoDriver.views
             this.lblFechaTecnomecanica.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblFechaTecnomecanica.Location = new System.Drawing.Point(653, 272);
             this.lblFechaTecnomecanica.Name = "lblFechaTecnomecanica";
-            this.lblFechaTecnomecanica.Size = new System.Drawing.Size(162, 16);
+            this.lblFechaTecnomecanica.Size = new System.Drawing.Size(163, 16);
             this.lblFechaTecnomecanica.TabIndex = 6;
             this.lblFechaTecnomecanica.Text = "Fecha de tecnomecánica ";
             // 
@@ -265,7 +265,7 @@ namespace wEasyGoDriver.views
             this.lblTecnomecanica.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblTecnomecanica.Location = new System.Drawing.Point(538, 272);
             this.lblTecnomecanica.Name = "lblTecnomecanica";
-            this.lblTecnomecanica.Size = new System.Drawing.Size(108, 16);
+            this.lblTecnomecanica.Size = new System.Drawing.Size(109, 16);
             this.lblTecnomecanica.TabIndex = 5;
             this.lblTecnomecanica.Text = "Tecnomecánica:";
             // 
@@ -276,7 +276,7 @@ namespace wEasyGoDriver.views
             this.lblFechaLicencia.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblFechaLicencia.Location = new System.Drawing.Point(605, 239);
             this.lblFechaLicencia.Name = "lblFechaLicencia";
-            this.lblFechaLicencia.Size = new System.Drawing.Size(127, 16);
+            this.lblFechaLicencia.Size = new System.Drawing.Size(128, 16);
             this.lblFechaLicencia.TabIndex = 4;
             this.lblFechaLicencia.Text = "Fecha de la licencia";
             // 
@@ -287,7 +287,7 @@ namespace wEasyGoDriver.views
             this.lblLicencia.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblLicencia.Location = new System.Drawing.Point(538, 239);
             this.lblLicencia.Name = "lblLicencia";
-            this.lblLicencia.Size = new System.Drawing.Size(60, 16);
+            this.lblLicencia.Size = new System.Drawing.Size(61, 16);
             this.lblLicencia.TabIndex = 3;
             this.lblLicencia.Text = "Licencia:";
             // 
@@ -397,6 +397,17 @@ namespace wEasyGoDriver.views
             this.pnlViajeAceptado.Name = "pnlViajeAceptado";
             this.pnlViajeAceptado.Size = new System.Drawing.Size(318, 287);
             this.pnlViajeAceptado.TabIndex = 3;
+            // 
+            // btnTerminarViaje
+            // 
+            this.btnTerminarViaje.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnTerminarViaje.Location = new System.Drawing.Point(13, 248);
+            this.btnTerminarViaje.Name = "btnTerminarViaje";
+            this.btnTerminarViaje.Size = new System.Drawing.Size(288, 23);
+            this.btnTerminarViaje.TabIndex = 18;
+            this.btnTerminarViaje.Text = "Terminar viaje";
+            this.btnTerminarViaje.UseVisualStyleBackColor = true;
+            this.btnTerminarViaje.Click += new System.EventHandler(this.btnTerminarViaje_Click);
             // 
             // btnEnInicioAceptado
             // 
@@ -636,17 +647,6 @@ namespace wEasyGoDriver.views
             this.notifyViaje.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyViaje.Icon")));
             this.notifyViaje.Text = "EasyGo Driver";
             this.notifyViaje.Visible = true;
-            // 
-            // btnTerminarViaje
-            // 
-            this.btnTerminarViaje.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnTerminarViaje.Location = new System.Drawing.Point(13, 248);
-            this.btnTerminarViaje.Name = "btnTerminarViaje";
-            this.btnTerminarViaje.Size = new System.Drawing.Size(288, 23);
-            this.btnTerminarViaje.TabIndex = 18;
-            this.btnTerminarViaje.Text = "Terminar viaje";
-            this.btnTerminarViaje.UseVisualStyleBackColor = true;
-            this.btnTerminarViaje.Click += new System.EventHandler(this.btnTerminarViaje_Click);
             // 
             // frmMain
             // 
