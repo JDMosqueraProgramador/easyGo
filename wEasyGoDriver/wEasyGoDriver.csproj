@@ -62,11 +62,13 @@
     <Compile Include="controllers\Motorcycle.controller.cs" />
     <Compile Include="controllers\Soat.controller.cs" />
     <Compile Include="controllers\Technomechanical.controller.cs" />
+    <Compile Include="controllers\Travel.controller.cs" />
     <Compile Include="Hubs\TravelsHub.cs" />
     <Compile Include="models\License.model.cs" />
     <Compile Include="models\Motocycle.model.cs" />
     <Compile Include="models\Soat.model.cs" />
     <Compile Include="models\Technomechanical.model.cs" />
+    <Compile Include="models\Travel.model.cs" />
     <Compile Include="models\User.model.cs" />
     <Compile Include="views\Comentarios.view.cs">
       <SubType>Form</SubType>

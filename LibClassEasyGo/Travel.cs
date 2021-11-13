@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Npgsql;
 
 namespace LibClassEasyGo
 {
     public class Travel : ITravel
     {
+
+        protected NpgsqlConnection conn;
+
         private int intIdTravel;
         private string strStartingPlaceTravel;
         private string strDestinationPlaceTravel;
@@ -53,6 +57,18 @@ namespace LibClassEasyGo
             NumKMPriceTravel = numKMPriceTravel;
             DateRequestTravel = dateRequestTravel;
             Customer = customer;
+        }
+
+        
+        public Travel(string strStartingPlaceTravel, string strDestinationPlaceTravel, int intTotalPriceTravel, int numKMPriceTravel, DateTime dateRequestTravel, IUser customer, IMotorcycle moto)
+        {
+            StrStartingPlaceTravel = strStartingPlaceTravel;
+            StrDestinationPlaceTravel = strDestinationPlaceTravel;
+            IntTotalPriceTravel = intTotalPriceTravel;
+            NumKMPriceTravel = numKMPriceTravel;
+            DateRequestTravel = dateRequestTravel;
+            Customer = customer;
+            Moto = moto;
         }
     }
 }
