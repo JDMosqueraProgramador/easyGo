@@ -31,5 +31,10 @@ namespace wEasyGoDriver.controllers
             return (distance * 200);
         }
 
+        public ITravel GetTravel()
+        {
+            return travelModel;
+        }
+
     }
 }

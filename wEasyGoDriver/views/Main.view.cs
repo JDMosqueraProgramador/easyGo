@@ -250,6 +250,7 @@ namespace wEasyGoDriver.views
             GDirections directionTravel = (statusEnd == GeoCoderStatusCode.OK && statusStart == GeoCoderStatusCode.OK) ? getRoute(travelPointStart.Value, travelPointEnd.Value) : null;
             travel.IntTotalPriceTravel = TravelController.CalculePriceTravel((int)directionTravel.DistanceValue);
             travel.NumKMPriceTravel = (int)directionTravel.DistanceValue;
+            travel.StrRuteTravel = JsonConvert.SerializeObject(directionTravel.Route);
 
             #region [Generación de datos de solicitud]
 
@@ -441,30 +442,37 @@ namespace wEasyGoDriver.views
                         _groupID = $"{dataUser.IntIdUser}{connectId}";
 
                         this.travelController = new TravelController(travel.StrStartingPlaceTravel, travel.StrDestinationPlaceTravel, travel.IntTotalPriceTravel, travel.NumKMPriceTravel, travel.DateRequestTravel, travel.Customer, dataMoto);
+                        if (this.travelController.ExecuteCreateTravel())
+                        {
+                            actualTravel = this.travelController.GetTravel();
+                            actualTravel.StrStateTravel = "waiting";
 
-                        actualTravel = new Travel();
-                        actualTravel.StrStateTravel = "waiting";
+                            // Desconectar de el grupo de disponibles
+                            await signalConn.InvokeAsync("RemoveAvailable");
+                            await signalConn.InvokeAsync("AcceptTravel", dataUser.IntIdUser, connectId);
 
-                        // Desconectar de el grupo de disponibles
-                        await signalConn.InvokeAsync("RemoveAvailable");
-                        await signalConn.InvokeAsync("AcceptTravel", dataUser.IntIdUser, connectId);
+                            #region [Habilitar panel para manejo del viaje]
+
+                            lblTitleViajeAceptado.Text = "Recogiendo a " + travel.Customer.StrNamePerson;
+                            lblPrecioAceptado.Text = travel.IntTotalPriceTravel.ToString() + " pesos";
+                            lblInicioAceptado.Text = travel.StrStartingPlaceTravel;
+                            lblDestinoAceptado.Text = travel.StrDestinationPlaceTravel;
+                            lblTelefonoAceptado.Text = travel.Customer.IntPhoneUser.ToString();
+                            lblNombreAceptado.Text = $"{travel.Customer.StrNamePerson} {travel.Customer.StrLastNamePerson}";
+
+                            flpViajes.Controls.Clear();
+                            pnlViajeAceptado.Visible = true;
+                            flpViajes.Controls.Add(pnlViajeAceptado);
+
+                            #endregion
+
+                        }
+                        else
+                        {
+                            throw new Exception("No ha sido posible registrar el viaje, intente nuevamente");
+                        }
 
                     }
-
-                    #endregion
-
-                    #region [Habilitar panel para manejo del viaje]
-
-                    lblTitleViajeAceptado.Text = "Recogiendo a " + travel.Customer.StrNamePerson;
-                    lblPrecioAceptado.Text = travel.IntTotalPriceTravel.ToString() + " pesos";
-                    lblInicioAceptado.Text = travel.StrStartingPlaceTravel;
-                    lblDestinoAceptado.Text = travel.StrDestinationPlaceTravel;
-                    lblTelefonoAceptado.Text = travel.Customer.IntPhoneUser.ToString();
-                    lblNombreAceptado.Text = $"{travel.Customer.StrNamePerson} {travel.Customer.StrLastNamePerson}";
-
-                    flpViajes.Controls.Clear();
-                    pnlViajeAceptado.Visible = true;
-                    flpViajes.Controls.Add(pnlViajeAceptado);
 
                     #endregion
                     
@@ -626,6 +634,12 @@ namespace wEasyGoDriver.views
                     dataMoto.StrStateMoto = "available";
                     btnEstado.Text = "Terminar jornada";
                     ClearMap();
+
+
+                    btnTerminarViaje.Visible = false;
+                    pnlViajeAceptado.Visible = false;
+                    if (!this.Controls.Contains(lblAvisoViajes)) this.Controls.Add(lblAvisoViajes);
+                    lblAvisoViajes.Visible = true;
 
                 }
 
