@@ -83,6 +83,8 @@ namespace wEasyGoDriver.views
 
         public async void InicializeForm()
         {
+            lblEstadoMoto.Text = dataMoto.StrStateMoto;
+
             pnlViajeAceptado.Visible = false;
             if (dataMoto != null && dataUser != null)
             {
@@ -582,7 +584,7 @@ namespace wEasyGoDriver.views
             switch (dataMoto.StrStateMoto)
             {
                 case "inactive":
-                    if(motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto))
+                    if (motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto))
                     {
                         await signalConn.InvokeAsync("AddAvailable");
                         dataMoto.StrStateMoto = "available";
@@ -590,10 +592,10 @@ namespace wEasyGoDriver.views
                     }
 
                     break;
-               
+
                 case "available":
 
-                    if(motoControlller.ExecuteChangeState("inactive", dataMoto.StrLicensePlateMoto))
+                    if (motoControlller.ExecuteChangeState("inactive", dataMoto.StrLicensePlateMoto))
                     {
                         await signalConn.InvokeAsync("RemoveAvailable");
                         dataMoto.StrStateMoto = "inactive";
@@ -622,6 +624,9 @@ namespace wEasyGoDriver.views
                     break;
 
             }
+
+            lblEstadoMoto.Text = dataMoto.StrStateMoto;
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
