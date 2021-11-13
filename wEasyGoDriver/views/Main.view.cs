@@ -202,6 +202,7 @@ namespace wEasyGoDriver.views
                 System.Threading.Thread.Sleep(5000);
                 await signalConn.StartAsync();
             };
+
         }
 
 
@@ -633,6 +634,8 @@ namespace wEasyGoDriver.views
         private void button1_Click_1(object sender, EventArgs e)
         {
             new frmPerfilConductor(3127022532).Show();
+
+           
         }
     }
 

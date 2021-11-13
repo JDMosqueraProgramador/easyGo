@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LibClassEasyGo;
 using Npgsql;
+
 namespace wEasyGoDriver.models
 {
     class MotorcycleModel : Motorcycle
