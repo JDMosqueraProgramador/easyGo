@@ -72,23 +72,24 @@ namespace wEasyGoDriver.views
         public frmMain(long phone)
         {
 
+            dataUser = new UserController(phone).getDataUser();
+            dataMoto = motoControlller.ExecuteGetMotorcycle(dataUser.IntIdUser);
+
             InitializeComponent();
             initializeSignal();
             InicializeForm();
-
-            dataUser = new UserController(phone).getDataUser();
-            dataMoto = motoControlller.ExecuteGetMotorcycle(dataUser.IntIdUser);
 
         }
 
         public async void InicializeForm()
         {
-            lblEstadoMoto.Text = dataMoto.StrStateMoto;
 
             pnlViajeAceptado.Visible = false;
             if (dataMoto != null && dataUser != null)
             {
                 dtgHistorialViajes.DataSource = userController.GetDriverHistory(dataMoto.StrLicensePlateMoto);
+                lblEstadoMoto.Text = dataMoto.StrStateMoto;
+
             }
 
             #region [Configuración de signalR]
