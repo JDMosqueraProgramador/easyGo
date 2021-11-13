@@ -65,6 +65,12 @@
     <Compile Include="models\Soat.model.cs" />
     <Compile Include="models\Technomechanical.model.cs" />
     <Compile Include="models\User.model.cs" />
+    <Compile Include="views\Comentarios.view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Comentarios.view.Designer.cs">
+      <DependentUpon>Comentarios.view.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\Main.view.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <Compile Include="views\IniciarSesion.view.Designer.cs">
       <DependentUpon>IniciarSesion.view.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="views\Comentarios.view.resx">
+      <DependentUpon>Comentarios.view.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\IniciarSesion.view.resx">
       <DependentUpon>IniciarSesion.view.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +199,8 @@
     <Content Include="assets\prueba3.jfif" />
     <Content Include="assets\prueba3.jpg" />
     <Content Include="assets\prueba4.jpg" />
+    <None Include="Resources\atras.png" />
+    <None Include="Resources\cuenta-bancaria.png" />
     <None Include="Resources\btnDatos.png" />
     <None Include="Resources\delivery_motorcycle_shipping_vespa_coronavirus_icon_142121.png" />
     <None Include="Resources\key.png" />

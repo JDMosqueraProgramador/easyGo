@@ -12,6 +12,8 @@ namespace wEasyGoDriver.views
 {
     public partial class frmPerfilConductor : Form
     {
+
+
         public frmPerfilConductor()
         {
             InitializeComponent();
@@ -21,5 +23,32 @@ namespace wEasyGoDriver.views
         {
             this.Close();
         }
+
+        private void frmPerfilConductor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       /* public Main(long phone)
+        {
+
+            InitializeComponent();
+
+            userController = new UserController(phone);
+            if (userController.getDataUser() == null)
+            {
+
+                MessageBox.Show("Acceso denegado a esta sesión");
+                this.Close();
+
+            }
+            else
+            {
+                InitializeForm();
+                initializeSignal();
+
+            }
+
+        }*/
     }
 }

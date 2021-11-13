@@ -553,6 +553,11 @@ namespace wEasyGoDriver.views
                 await signalConn.StartAsync();
             };
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            new frmPerfilConductor().Show();
+        }
     }
 
 }
