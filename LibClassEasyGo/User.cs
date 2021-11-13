@@ -157,6 +157,7 @@ namespace LibClassEasyGo
                 }
             }
 
+            data.Close();
             return user;
         }
 
