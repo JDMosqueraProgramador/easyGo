@@ -95,7 +95,12 @@ namespace wEasyGoDriver
 
                     DataUser = userController.getDataUser();
                     MessageBox.Show("Registrado, continúe con los pasos del registro");
+
+                    this.EnableTab(tabLicencia);
                 }
+
+                
+
 
             }
             catch (Exception err)
@@ -121,7 +126,7 @@ namespace wEasyGoDriver
                         dtgBuscarConductor.Visible = false;
                         lblSeleccioneConductor.Visible = false;
                         tabsRegistros.SelectedTab = tabVehiculo;
-
+                        this.EnableTab(tabVehiculo);
                     }
                 }
             }
@@ -150,6 +155,7 @@ namespace wEasyGoDriver
                 {
                     MessageBox.Show("Moto registrada");
                     tabsRegistros.SelectedTab = tabPapelesVehiculo;
+                    this.EnableTab(tabPapelesVehiculo);
 
                 }
                 else
@@ -323,7 +329,7 @@ namespace wEasyGoDriver
 
         private void frmRegistro_Load(object sender, EventArgs e)
         {
-            
+            this.EnableTab(tabPersona);
         }
 
         private void txtCedula_Enter(object sender, EventArgs e)
@@ -439,7 +445,7 @@ namespace wEasyGoDriver
             }
             else
             {
-                if (nombre.Equals(""))
+                if (numeroCelular.Equals(""))
                 {
                     txtNumeroCelular.Text = "Número celular";
                     txtNumeroCelular.ForeColor = Color.DimGray;
@@ -843,5 +849,18 @@ namespace wEasyGoDriver
                 }
             }
         }
+
+        private void txtNumeroCelular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void EnableTab(TabPage page)
+        {
+            foreach (Control ctl in this.tabsRegistros.TabPages) ctl.Enabled = false;
+
+            ((Control)page).Enabled = true;
+        }
+
     }
 }

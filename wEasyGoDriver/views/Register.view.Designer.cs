@@ -504,6 +504,7 @@ namespace wEasyGoDriver
             this.txtNumeroCelular.TabIndex = 101;
             this.txtNumeroCelular.Text = "Número de celular";
             this.txtNumeroCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumeroCelular.TextChanged += new System.EventHandler(this.txtNumeroCelular_TextChanged);
             this.txtNumeroCelular.Enter += new System.EventHandler(this.txtNumeroCelular_Enter);
             this.txtNumeroCelular.Leave += new System.EventHandler(this.txtNumeroCelular_Leave);
             // 

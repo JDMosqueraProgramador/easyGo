@@ -62,6 +62,7 @@ namespace wEasyGoDriver.views
         public frmPerfilConductor(long phone)
         {
 
+
             InitializeComponent();
 
             userController = new UserController(phone);
@@ -74,15 +75,12 @@ namespace wEasyGoDriver.views
                 MessageBox.Show("Acceso denegado a esta sesión");
                 this.Close();
 
-
             }
             else
             {
                 InitializeForm();
 
             }
-
-
         }
 
         public void InitializeForm()

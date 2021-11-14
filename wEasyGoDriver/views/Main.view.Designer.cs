@@ -623,7 +623,7 @@ namespace wEasyGoDriver.views
             // 
             this.dtgHistorialViajes.BackgroundColor = System.Drawing.Color.White;
             this.dtgHistorialViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgHistorialViajes.Location = new System.Drawing.Point(300, 59);
+            this.dtgHistorialViajes.Location = new System.Drawing.Point(309, 55);
             this.dtgHistorialViajes.Name = "dtgHistorialViajes";
             this.dtgHistorialViajes.Size = new System.Drawing.Size(683, 357);
             this.dtgHistorialViajes.TabIndex = 0;

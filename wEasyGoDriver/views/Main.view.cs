@@ -84,6 +84,7 @@ namespace wEasyGoDriver.views
         public async void InicializeForm()
         {
 
+
             pnlViajeAceptado.Visible = false;
             if (dataMoto != null && dataUser != null)
             {
