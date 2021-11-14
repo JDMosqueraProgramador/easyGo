@@ -787,6 +787,10 @@ namespace wEasyGoDriver.views
            
         }
 
+        private void tabMainHistorial_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

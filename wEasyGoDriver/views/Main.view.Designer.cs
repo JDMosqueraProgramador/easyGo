@@ -621,6 +621,7 @@ namespace wEasyGoDriver.views
             this.tabMainHistorial.TabIndex = 2;
             this.tabMainHistorial.Text = "Historial";
             this.tabMainHistorial.UseVisualStyleBackColor = true;
+            this.tabMainHistorial.Click += new System.EventHandler(this.tabMainHistorial_Click);
             // 
             // lblTituloHistorial
             // 
