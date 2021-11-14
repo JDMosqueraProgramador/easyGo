@@ -689,6 +689,7 @@ namespace wEasyGoDriver.views
                         await signalConn.InvokeAsync("AddAvailable");
                         dataMoto.StrStateMoto = "available";
                         btnEstado.Text = "Terminar jornada";
+                        tabsMain.SelectedTab = tabMainViajes;
                     }
 
                     break;
@@ -719,6 +720,7 @@ namespace wEasyGoDriver.views
                         await signalConn.InvokeAsync("AddAvailable");
                         dataMoto.StrStateMoto = "available";
                         btnEstado.Text = "Terminar jornada";
+                        tabsMain.SelectedTab = tabMainViajes;
                     }
 
                     break;
