@@ -66,13 +66,6 @@ namespace wEasyGoDriver.views
 
         int panelCant = 0;
 
-        public frmMain()
-        {
-            InitializeComponent();
-            InicializeForm();
-            initializeSignal();
-        }
-
         public frmMain(long phone)
         {
             userController = new UserController(phone);
@@ -94,6 +87,7 @@ namespace wEasyGoDriver.views
             {
                 dtgHistorialViajes.DataSource = userController.GetDriverHistory(dataMoto.StrLicensePlateMoto);
                 lblEstadoMoto.Text = dataMoto.StrStateMoto;
+                dataMoto.StrStateMoto = "inactive";
             }
 
             #region [Configuración de signalR]
@@ -451,7 +445,7 @@ namespace wEasyGoDriver.views
 
                         // Desconectar de el grupo de disponibles
                         await signalConn.InvokeAsync("RemoveAvailable");
-                        await signalConn.InvokeAsync("AcceptTravel", dataUser.IntIdUser, connectId);
+                        await signalConn.InvokeAsync("AcceptTravel", dataUser.IntIdUser, connectId, actualTravel.IntIdTravel);
 
                         #region [Habilitar panel para manejo del viaje]
 
@@ -568,7 +562,7 @@ namespace wEasyGoDriver.views
 
         private async void btnCancelarAceptado_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Cancelación de viaje", "¿Seguro que deseas cancelar el viaje ya aceptado?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("¿Seguro que deseas cancelar el viaje ya aceptado?", "Cancelación de viaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
 
                 if (this.travelController.ExecuteCancelTravel())

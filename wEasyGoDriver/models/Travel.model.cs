@@ -59,23 +59,23 @@ namespace wEasyGoDriver.models
 
         public bool UpdateTravel()
         {
-            string update = "SELECT update_travel(@date, @state ,@idTravel)";
+            string update = "SELECT update_travel(@dateTravel, @state, @idTravel)";
 
             NpgsqlCommand cmd = new NpgsqlCommand(update, this.conn);
 
             switch (this.StrStateTravel)
             {
                 case "traveling":
-                    cmd.Parameters.AddWithValue("@date", this.DateStartTravel);
+                    cmd.Parameters.AddWithValue("@dateTravel", NpgsqlTypes.NpgsqlDbType.Date, this.DateStartTravel);
                     break;
 
                 case "finalized":
-                    cmd.Parameters.AddWithValue("@date", this.DateFinishTravel);
+                    cmd.Parameters.AddWithValue("@dateTravel", NpgsqlTypes.NpgsqlDbType.Date, this.DateFinishTravel);
                     break;
             }
 
-            cmd.Parameters.AddWithValue("@state", this.StrStateTravel);
-            cmd.Parameters.AddWithValue("@idTravel", this.IntIdTravel);
+            cmd.Parameters.AddWithValue("@state", NpgsqlTypes.NpgsqlDbType.Varchar, this.StrStateTravel);
+            cmd.Parameters.AddWithValue("@idTravel", NpgsqlTypes.NpgsqlDbType.Integer, this.IntIdTravel);
 
             cmd.ExecuteNonQuery();
 

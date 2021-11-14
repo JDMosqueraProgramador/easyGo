@@ -19,12 +19,12 @@ namespace EasyGoServer.Hubs
         }
 
         // Accepted travel ------------------------------------------------------------
-        public async Task AcceptTravel(int idDriver, string connectId)
+        public async Task AcceptTravel(int idDriver, string connectId, int idTravel)
         {
             string groupName = $"{idDriver}{connectId}";
-            string driverConnection = Context.ConnectionId;
+            // string driverConnection = Context.ConnectionId;
             await this.AddGroup(groupName);
-            await Clients.Client(connectId).SendAsync("AcceptedTravel", idDriver, groupName, driverConnection);
+            await Clients.Client(connectId).SendAsync("AcceptedTravel", idDriver, groupName, idTravel);
 
         }
 
