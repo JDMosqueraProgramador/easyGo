@@ -13,17 +13,44 @@ namespace wEasyGoDriver.controllers
 
         public TravelController()
         {
-
+            travelModel = new TravelModel();
         }
 
-        public TravelController(string strStartingPlaceTravel, string strDestinationPlaceTravel, int intTotalPriceTravel, int numKMPriceTravel, DateTime dateRequestTravel, IUser customer, IMotorcycle moto)
+        public TravelController(string strStartingPlaceTravel, string strDestinationPlaceTravel, int intTotalPriceTravel, int numKMPriceTravel, DateTime dateRequestTravel, string strRouteTravel, string strStateTravel, IUser customer, IMotorcycle moto)
         {
-            travelModel = new TravelModel( strStartingPlaceTravel, strDestinationPlaceTravel, intTotalPriceTravel, numKMPriceTravel, dateRequestTravel, customer, moto);
+            travelModel = new TravelModel(strStartingPlaceTravel, strDestinationPlaceTravel, intTotalPriceTravel, numKMPriceTravel, dateRequestTravel, strRouteTravel, strStateTravel, customer, moto);
         }
 
         public bool ExecuteCreateTravel()
         {
-            return this.travelModel.InsertTravel();
+            travelModel.IntIdTravel = this.travelModel.InsertTravel();
+            if(travelModel.IntIdTravel > 0)
+            {
+                return true;
+            } else
+            {
+                travelModel.IntIdTravel = 0;
+                return false;
+            }
+        }
+
+        public bool StartTravel()
+        {
+            this.travelModel.DateStartTravel = DateTime.Now;
+            this.travelModel.StrStateTravel = "traveling";
+            return this.travelModel.UpdateTravel();
+        }
+
+        public bool FinishTravel()
+        {
+            this.travelModel.DateFinishTravel = DateTime.Now;
+            this.travelModel.StrStateTravel = "finalized";
+            return this.travelModel.UpdateTravel();
+        }
+
+        public bool ExecuteCancelTravel()
+        {
+            return this.travelModel.CancelTravel();
         }
 
         public static int CalculePriceTravel(int distance)

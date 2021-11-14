@@ -24,5 +24,5 @@ namespace LibClassEasyGo
         IUser Customer { get; set; }
         IMotorcycle Moto { get; set; }
 
-    }
+    }                                   
 }

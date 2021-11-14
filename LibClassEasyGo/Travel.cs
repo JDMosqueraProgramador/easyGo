@@ -10,7 +10,7 @@ namespace LibClassEasyGo
     public class Travel : ITravel
     {
 
-        protected NpgsqlConnection conn;
+        protected NpgsqlConnection conn = new Connect().Conn();
 
         private int intIdTravel;
         private string strStartingPlaceTravel;
@@ -71,6 +71,17 @@ namespace LibClassEasyGo
             Moto = moto;
             StrRuteTravel = strRuteTravel;
             StrStateTravel = strStateTravel;
+        }
+
+        public bool CancelTravel()
+        {
+            string update = "SELECT cancel_travel(@id)";
+            NpgsqlCommand cmd = new NpgsqlCommand(update, this.conn);
+            cmd.Parameters.AddWithValue("@id", IntIdTravel);
+
+            cmd.ExecuteNonQuery();
+
+            return true;
         }
 
 
