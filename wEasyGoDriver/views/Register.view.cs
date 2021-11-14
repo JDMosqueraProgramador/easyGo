@@ -840,7 +840,6 @@ namespace wEasyGoDriver
                 {
                     txtNumerodeLicencia.Text = "Número Licencia";
                     txtNumerodeLicencia.ForeColor = Color.DimGray;
-
                 }
                 else
                 {
@@ -848,6 +847,7 @@ namespace wEasyGoDriver
                     txtNumerodeLicencia.ForeColor = Color.DimGray;
                 }
             }
+            
         }
 
         private void txtNumeroCelular_TextChanged(object sender, EventArgs e)
