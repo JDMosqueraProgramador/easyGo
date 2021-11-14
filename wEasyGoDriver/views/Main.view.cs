@@ -30,6 +30,7 @@ namespace wEasyGoDriver.views
         MotorcycleControlller motoControlller = new MotorcycleControlller();
         IMotorcycle dataMoto;
 
+        TravelController travelController;
         ITravel actualTravel;
 
         #endregion
@@ -86,8 +87,6 @@ namespace wEasyGoDriver.views
 
         public async void InicializeForm()
         {
-
-
             pnlViajeAceptado.Visible = false;
             btnTerminarViaje.Visible = false;
 
@@ -95,7 +94,6 @@ namespace wEasyGoDriver.views
             {
                 dtgHistorialViajes.DataSource = userController.GetDriverHistory(dataMoto.StrLicensePlateMoto);
                 lblEstadoMoto.Text = dataMoto.StrStateMoto;
-
             }
 
             #region [Configuración de signalR]
@@ -109,12 +107,13 @@ namespace wEasyGoDriver.views
                 MessageBox.Show(err.Message);
             }
 
-            signalConn.On<int, string, string, string, string>("ReceiveTravel", async (idUser, customerName, startPlace, endPlace, connectId) =>
+            signalConn.On<int, string, string, string, DateTime, string>("ReceiveTravel", async (idUser, customerName, startPlace, endPlace, dateRequest, connectId) =>
             {
 
                 ITravel travel = new Travel();
                 travel.StrStartingPlaceTravel = startPlace;
                 travel.StrDestinationPlaceTravel = endPlace;
+                travel.DateRequestTravel = dateRequest;
                 travel.Customer = new User();
                 travel.Customer.IntIdUser = idUser;
                 travel.Customer.StrNamePerson = customerName;
@@ -246,6 +245,12 @@ namespace wEasyGoDriver.views
             var travelPointStart = GMapProviders.GoogleMap.GetPoint(travel.StrStartingPlaceTravel, out statusStart);
             var travelPointEnd = GMapProviders.GoogleMap.GetPoint(travel.StrDestinationPlaceTravel, out statusEnd);
 
+            // Ruta de viaje solicitada
+
+            GDirections directionTravel = (statusEnd == GeoCoderStatusCode.OK && statusStart == GeoCoderStatusCode.OK) ? getRoute(travelPointStart.Value, travelPointEnd.Value) : null;
+            travel.IntTotalPriceTravel = TravelController.CalculePriceTravel((int)directionTravel.DistanceValue);
+            travel.NumKMPriceTravel = (int)directionTravel.DistanceValue;
+
             #region [Generación de datos de solicitud]
 
             System.Windows.Forms.Panel pnlViaje = new Panel();
@@ -362,9 +367,7 @@ namespace wEasyGoDriver.views
                     gMapPrincipal.Zoom = 15;
                 }
 
-                GDirections direction = getRoute(travelPointStart.Value, travelPointEnd.Value);
-
-                travelRoute = new GMapRoute(direction.Route, "Ruta de viaje");
+                travelRoute = new GMapRoute(directionTravel.Route, "Ruta de viaje");
 
                 routeOver.Clear();
                 routeOver.Routes.Add(travelRoute);
@@ -406,13 +409,12 @@ namespace wEasyGoDriver.views
 
                     // RUTA DEL USUARIO -------------------------
 
-                    GDirections direction = getRoute(travelPointStart.Value, travelPointEnd.Value);
-                    travelRoute = new GMapRoute(direction.Route, "Ruta de viaje");
+                    travelRoute = new GMapRoute(directionTravel.Route, "Ruta de viaje");
                     travelRoute.Stroke.Color = Color.BlueViolet;
                     travelRoute.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
 
                     // Marcador final
-                    changeEndMarker(direction.EndLocation);
+                    changeEndMarker(directionTravel.EndLocation);
 
                     routeOver.Routes.Clear();
                     routeOver.Routes.Add(startRoute);
@@ -437,6 +439,9 @@ namespace wEasyGoDriver.views
                     {
                         dataMoto.StrStateMoto = "busy";
                         _groupID = $"{dataUser.IntIdUser}{connectId}";
+
+                        this.travelController = new TravelController(travel.StrStartingPlaceTravel, travel.StrDestinationPlaceTravel, travel.IntTotalPriceTravel, travel.NumKMPriceTravel, travel.DateRequestTravel, travel.Customer, dataMoto);
+
                         actualTravel = new Travel();
                         actualTravel.StrStateTravel = "waiting";
 
