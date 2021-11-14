@@ -59,7 +59,7 @@ namespace LibClassEasyGo
         public string StrColorMoto { get => strColorMoto; set => strColorMoto = value; }
 
 
-        private NpgsqlConnection conn = new Connect().Conn();
+        protected NpgsqlConnection conn = new Connect().Conn();
         public Motorcycle()
         {
 

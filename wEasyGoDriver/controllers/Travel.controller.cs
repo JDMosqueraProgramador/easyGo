@@ -55,7 +55,7 @@ namespace wEasyGoDriver.controllers
 
         public static int CalculePriceTravel(int distance)
         {
-            return (distance * 200);
+            return 3000 + (int)(distance * 0.500);
         }
 
         public ITravel GetTravel()

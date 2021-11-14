@@ -7,7 +7,8 @@ namespace EasyGoServer.Hubs
     {
 
         private string _AvailableGroupName = "available";
-        public async Task SendTravel(int idUser, string customerName, string startPlace, string endPlace)
+
+        public async Task SendTravel(int idUser, string customerName, double[] startPlace, double[] endPlace)
         {
             //Context.UserIdentifier = idUser;
             await Clients.Group(_AvailableGroupName).SendAsync("ReceiveTravel", idUser, customerName, startPlace, endPlace, DateTime.Now, Context.ConnectionId);

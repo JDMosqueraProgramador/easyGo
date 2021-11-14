@@ -14,8 +14,6 @@ namespace wEasyGoDriver.models
         {
         }
 
-        private NpgsqlConnection conn = new Connect().Conn();
-
         public MotorcycleModel(string strLicensePlateMoto, int intNumSerieMoto, int intNumChasisMoto, int intVimMoto, string strStateMoto, int intNumLicenseMoto, string strMarkMoto, int intCylinderMoto, string strModelMoto, string strFuelTypeMoto, string strLinkPropertyCard, User owner, User driver, string strColorMoto) : base(strLicensePlateMoto, intNumSerieMoto, intNumChasisMoto, intVimMoto, strStateMoto, intNumLicenseMoto, strMarkMoto, intCylinderMoto, strModelMoto, strFuelTypeMoto, strLinkPropertyCard, owner, driver, strColorMoto)
         {
         }
