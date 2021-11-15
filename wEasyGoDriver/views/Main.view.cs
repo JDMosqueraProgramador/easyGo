@@ -64,6 +64,8 @@ namespace wEasyGoDriver.views
 
         #endregion
 
+        
+
         int panelCant = 0;
 
         public frmMain(long phone)
@@ -788,7 +790,7 @@ namespace wEasyGoDriver.views
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            new frmPerfilConductor(3127022532).Show();
+            new frmPerfilConductor(dataUser.IntPhoneUser).Show();
 
 
         }
