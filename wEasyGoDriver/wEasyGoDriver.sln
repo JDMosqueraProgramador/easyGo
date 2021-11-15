@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31702.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wEasyGoDriver", "wEasyGoDriver.csproj", "{232D0456-FE37-44DB-845D-14353D862820}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wEasyGoAdmin", "..\wEasyGoAdmin\wEasyGoAdmin.csproj", "{C8345640-51EF-4579-BD4F-97FB883C55F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{232D0456-FE37-44DB-845D-14353D862820}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{232D0456-FE37-44DB-845D-14353D862820}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{232D0456-FE37-44DB-845D-14353D862820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8345640-51EF-4579-BD4F-97FB883C55F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8345640-51EF-4579-BD4F-97FB883C55F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8345640-51EF-4579-BD4F-97FB883C55F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8345640-51EF-4579-BD4F-97FB883C55F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
