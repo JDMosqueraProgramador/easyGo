@@ -30,6 +30,8 @@ namespace wEasyGoDriver.views
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox52 = new System.Windows.Forms.PictureBox();
+            this.pictureBox51 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
@@ -40,12 +42,10 @@ namespace wEasyGoDriver.views
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.txtComentarioViaje = new System.Windows.Forms.TextBox();
-            this.pictureBox52 = new System.Windows.Forms.PictureBox();
-            this.pictureBox51 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,6 +63,27 @@ namespace wEasyGoDriver.views
             this.panel1.Size = new System.Drawing.Size(365, 435);
             this.panel1.TabIndex = 178;
             // 
+            // pictureBox52
+            // 
+            this.pictureBox52.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox52.Image = global::wEasyGoDriver.Properties.Resources.atras;
+            this.pictureBox52.Location = new System.Drawing.Point(7, 12);
+            this.pictureBox52.Name = "pictureBox52";
+            this.pictureBox52.Size = new System.Drawing.Size(43, 25);
+            this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox52.TabIndex = 178;
+            this.pictureBox52.TabStop = false;
+            // 
+            // pictureBox51
+            // 
+            this.pictureBox51.Image = global::wEasyGoDriver.Properties.Resources.cuenta_bancaria;
+            this.pictureBox51.Location = new System.Drawing.Point(148, 34);
+            this.pictureBox51.Name = "pictureBox51";
+            this.pictureBox51.Size = new System.Drawing.Size(96, 84);
+            this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox51.TabIndex = 177;
+            this.pictureBox51.TabStop = false;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
@@ -77,6 +98,7 @@ namespace wEasyGoDriver.views
             this.button1.TabIndex = 176;
             this.button1.Text = "Enviar calificación";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 
@@ -177,27 +199,6 @@ namespace wEasyGoDriver.views
             this.txtComentarioViaje.Size = new System.Drawing.Size(333, 95);
             this.txtComentarioViaje.TabIndex = 172;
             // 
-            // pictureBox52
-            // 
-            this.pictureBox52.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox52.Image = global::wEasyGoDriver.Properties.Resources.atras;
-            this.pictureBox52.Location = new System.Drawing.Point(7, 12);
-            this.pictureBox52.Name = "pictureBox52";
-            this.pictureBox52.Size = new System.Drawing.Size(43, 25);
-            this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox52.TabIndex = 178;
-            this.pictureBox52.TabStop = false;
-            // 
-            // pictureBox51
-            // 
-            this.pictureBox51.Image = global::wEasyGoDriver.Properties.Resources.cuenta_bancaria;
-            this.pictureBox51.Location = new System.Drawing.Point(148, 34);
-            this.pictureBox51.Name = "pictureBox51";
-            this.pictureBox51.Size = new System.Drawing.Size(96, 84);
-            this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox51.TabIndex = 177;
-            this.pictureBox51.TabStop = false;
-            // 
             // Comentarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,10 +208,10 @@ namespace wEasyGoDriver.views
             this.Name = "Comentarios";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }

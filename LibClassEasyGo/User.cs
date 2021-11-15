@@ -201,14 +201,15 @@ namespace LibClassEasyGo
 
         }
 
-        public bool login(long phone, string password)
+        public bool login(long phone, string password, string rol)
         {
-            string select = "SELECT * FROM tblUser WHERE intPhoneUser = @phone and strpassword = @password;";
+            string select = "SELECT * FROM sp_login (@phone,@password,@strRolUser)";
 
             NpgsqlCommand cmd = new NpgsqlCommand(select, conn);
 
             cmd.Parameters.AddWithValue("@phone", NpgsqlTypes.NpgsqlDbType.Bigint, phone);
             cmd.Parameters.AddWithValue("@password", NpgsqlTypes.NpgsqlDbType.Varchar, password);
+            cmd.Parameters.AddWithValue("@strRolUser", NpgsqlTypes.NpgsqlDbType.Varchar, rol);
 
             NpgsqlDataReader data = cmd.ExecuteReader();
 

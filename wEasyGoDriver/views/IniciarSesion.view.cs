@@ -37,13 +37,43 @@ namespace wEasyGoDriver.views
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            new frmMain(3127022532).Show();
+            /*new frmMain(3127022532).Show();*/
 
-            /* userController = new UserController();
+            
+
+            /*
             if (userController.ExecuteLogin(Convert.ToInt64(txtusername.Text), txtContraseña.Text))
             {
                 new frmRegistro().Show();
             } */
+
+            try
+            {
+                userController = new UserController();
+                if (txtusername.Text != "" && txtContraseña.Text != "")
+                {
+
+                    if (userController.ExecuteLogin(Convert.ToInt64(txtusername.Text), txtContraseña.Text))
+                    {
+                        new frmMain(Convert.ToInt64(txtusername.Text)).Show();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("El número telefónico es incorrecto", "Acceso denegado");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe completar todos los campos", "Acceso denegado");
+                }
+            }
+
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+
+            }
         }
 
         private void frmIniciarSesion_Load(object sender, EventArgs e)
