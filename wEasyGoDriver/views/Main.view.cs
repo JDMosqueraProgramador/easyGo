@@ -59,12 +59,11 @@ namespace wEasyGoDriver.views
 
         private string _baseUrl = "https://eaasygo.azurewebsites.net/";
         private string _url = "https://eaasygo.azurewebsites.net/travelHub";
+
         HubConnection signalConn;
         private string _groupID = null;
 
         #endregion
-
-        
 
         int panelCant = 0;
 
@@ -243,8 +242,13 @@ namespace wEasyGoDriver.views
 
             signalConn.Closed += async (error) =>
             {
-                System.Threading.Thread.Sleep(5000);
-                await signalConn.StartAsync();
+                do
+                {
+                    MessageBox.Show("Intentando conectar...", $"Intentando conectar nuevamente...");
+                    System.Threading.Thread.Sleep(5000);
+                    await signalConn.StartAsync();
+
+                } while (signalConn.State != HubConnectionState.Connected);
             };
 
         }
@@ -583,7 +587,6 @@ namespace wEasyGoDriver.views
 
                 if (this.travelController.ExecuteCancelTravel())
                 {
-
                     pnlViajeAceptado.Visible = false;
 
                     flpViajes.Controls.Clear();
@@ -791,14 +794,13 @@ namespace wEasyGoDriver.views
         private void button1_Click_1(object sender, EventArgs e)
         {
             new frmPerfilConductor(dataUser.IntPhoneUser).Show();
-
-
         }
 
         private void tabMainHistorial_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 
 }
