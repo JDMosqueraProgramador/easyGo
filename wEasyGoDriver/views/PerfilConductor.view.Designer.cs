@@ -30,6 +30,7 @@ namespace wEasyGoDriver.views
         private void InitializeComponent()
         {
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.cerrarForm = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblColorMoto = new System.Windows.Forms.Label();
             this.lblMarcaMoto = new System.Windows.Forms.Label();
@@ -71,8 +72,8 @@ namespace wEasyGoDriver.views
             this.pictureBox48 = new System.Windows.Forms.PictureBox();
             this.pictureBox49 = new System.Windows.Forms.PictureBox();
             this.pictureBox50 = new System.Windows.Forms.PictureBox();
-            this.cerrarForm = new System.Windows.Forms.PictureBox();
             this.pnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox58)).BeginInit();
@@ -99,12 +100,11 @@ namespace wEasyGoDriver.views
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitulo
             // 
-            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(156)))));
+            this.pnlTitulo.BackColor = System.Drawing.Color.MediumPurple;
             this.pnlTitulo.Controls.Add(this.cerrarForm);
             this.pnlTitulo.Controls.Add(this.lblTitle);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -112,6 +112,18 @@ namespace wEasyGoDriver.views
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1002, 60);
             this.pnlTitulo.TabIndex = 3;
+            // 
+            // cerrarForm
+            // 
+            this.cerrarForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cerrarForm.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
+            this.cerrarForm.Location = new System.Drawing.Point(953, 14);
+            this.cerrarForm.Name = "cerrarForm";
+            this.cerrarForm.Size = new System.Drawing.Size(43, 25);
+            this.cerrarForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cerrarForm.TabIndex = 48;
+            this.cerrarForm.TabStop = false;
+            this.cerrarForm.Click += new System.EventHandler(this.cerrarForm_Click);
             // 
             // lblTitle
             // 
@@ -372,7 +384,7 @@ namespace wEasyGoDriver.views
             // 
             // pictureBox34
             // 
-            this.pictureBox34.Image = global::wEasyGoDriver.Properties.Resources.locksmith;
+            this.pictureBox34.Image = global::wEasyGoDriver.Properties.Resources.log_in;
             this.pictureBox34.Location = new System.Drawing.Point(247, 66);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(132, 93);
@@ -548,18 +560,6 @@ namespace wEasyGoDriver.views
             this.pictureBox50.TabIndex = 223;
             this.pictureBox50.TabStop = false;
             // 
-            // cerrarForm
-            // 
-            this.cerrarForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cerrarForm.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
-            this.cerrarForm.Location = new System.Drawing.Point(953, 14);
-            this.cerrarForm.Name = "cerrarForm";
-            this.cerrarForm.Size = new System.Drawing.Size(43, 25);
-            this.cerrarForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cerrarForm.TabIndex = 48;
-            this.cerrarForm.TabStop = false;
-            this.cerrarForm.Click += new System.EventHandler(this.cerrarForm_Click);
-            // 
             // frmPerfilConductor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -613,6 +613,7 @@ namespace wEasyGoDriver.views
             this.Load += new System.EventHandler(this.frmPerfilConductor_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox58)).EndInit();
@@ -639,7 +640,6 @@ namespace wEasyGoDriver.views
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
