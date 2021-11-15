@@ -62,24 +62,30 @@ namespace wEasyGoDriver.views
         public frmPerfilConductor(long phone)
         {
 
-
             InitializeComponent();
 
             userController = new UserController(phone);
             dataUser = new UserController(phone).getDataUser();
             dataMotorcycle = moto.ExecuteGetMotorcycle(dataUser.IntIdUser);
 
-            if (userController.getDataUser() == null)
+            try
             {
 
-                MessageBox.Show("Acceso denegado a esta sesión");
-                this.Close();
+
+                if (userController.getDataUser() == null)
+                {
+                    MessageBox.Show("Acceso denegado a esta sesión");
+                    this.Close();
+                }
+                else
+                {
+                    InitializeForm();
+                }
 
             }
-            else
+            catch (Exception err)
             {
-                InitializeForm();
-
+                MessageBox.Show(err.Message);
             }
         }
 
@@ -103,6 +109,5 @@ namespace wEasyGoDriver.views
 
         }
 
-     
     }
 }
