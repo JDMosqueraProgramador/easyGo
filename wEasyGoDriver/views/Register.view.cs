@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using wEasyGoDriver.controllers;
 using LibClassEasyGo;
 using System.IO;
+using wEasyGoDriver.views;
 
 namespace wEasyGoDriver
 {
@@ -127,6 +128,10 @@ namespace wEasyGoDriver
                         lblSeleccioneConductor.Visible = false;
                         tabsRegistros.SelectedTab = tabVehiculo;
                         this.EnableTab(tabVehiculo);
+                    } else
+                    {
+                        new frmMain(DataUser.IntPhoneUser).Show();
+                        this.Close();
                     }
                 }
             }
@@ -179,6 +184,7 @@ namespace wEasyGoDriver
                 if (soat.ExecuteinsertSoat() && tecno.ExecuteInsertTechnomechanical())
                 {
                     MessageBox.Show("Soat y tecnomicanica agregados correctamente");
+                    new frmMain(DataUser.IntPhoneUser).Show();
                 }
             }
             catch (Exception err)

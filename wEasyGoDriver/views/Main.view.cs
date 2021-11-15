@@ -57,8 +57,8 @@ namespace wEasyGoDriver.views
 
         #region [Variables de signalR]
 
-        private string _baseUrl = "https://localhost:7173";
-        private string _url = "https://localhost:7173/travelHub";
+        private string _baseUrl = "https://eaasygo.azurewebsites.net/";
+        private string _url = "https://eaasygo.azurewebsites.net/travelHub";
         HubConnection signalConn;
         private string _groupID = null;
 
@@ -80,15 +80,34 @@ namespace wEasyGoDriver.views
 
         public async void InicializeForm()
         {
+
+            #region [Inicialización de componentes y datos]
+
             pnlViajeAceptado.Visible = false;
             btnTerminarViaje.Visible = false;
 
             if (dataMoto != null && dataUser != null)
             {
+
+                if(dataUser.StrRolUser == "Owner")
+                {
+                    MessageBox.Show("El perfil del dueño aún no se encuentra disponible");
+                    this.Close();
+                }
+
                 dtgHistorialViajes.DataSource = userController.GetDriverHistory(dataMoto.StrLicensePlateMoto);
                 lblEstadoMoto.Text = dataMoto.StrStateMoto;
                 dataMoto.StrStateMoto = "inactive";
+
             }
+            else if (dataUser != null && dataMoto == null)
+            {
+                MessageBox.Show("El dueño de el vehículo aún no lo ha registrado con su vehículo, verifique cuando sea registrado y vuelva a iniciar sesión");
+
+                this.Close();
+            }
+
+            #endregion
 
             #region [Configuración de signalR]
 
@@ -132,7 +151,7 @@ namespace wEasyGoDriver.views
 
             signalConn.On<string, int>("CancelAcceptTravel", async (groupName, idTravel) =>
             {
-                notifyViaje.ShowBalloonTip(5000, $"{lblNombreAceptado.Text} Ha cancelado el viaje", "El usuario ha cancelado el viaje ya aceptado", ToolTipIcon.Error);               
+                notifyViaje.ShowBalloonTip(5000, $"{lblNombreAceptado.Text} Ha cancelado el viaje", "El usuario ha cancelado el viaje ya aceptado", ToolTipIcon.Error);
                 this.ClearMap();
 
                 await signalConn.InvokeAsync("RemoveGroup", groupName);
@@ -149,6 +168,7 @@ namespace wEasyGoDriver.views
             });
 
             #endregion
+        
         }
 
         private async void frmMain_Load(object sender, EventArgs e)
@@ -202,7 +222,7 @@ namespace wEasyGoDriver.views
                     markerPosition.Position = actualPoint;
                 }
 
-                if(_groupID != null)
+                if (_groupID != null)
                 {
                     signalConn.InvokeAsync("SendPosition", latitude, longitude, _groupID);
                 }
@@ -210,7 +230,7 @@ namespace wEasyGoDriver.views
             };
 
             positionWatcher.Start();
-            
+
             #endregion
 
         }
@@ -236,17 +256,9 @@ namespace wEasyGoDriver.views
             PointLatLng travelPointStart = new PointLatLng(startPlace[0], startPlace[1]);
             PointLatLng travelPointEnd = new PointLatLng(endPlace[0], endPlace[1]);
 
-            //GeoCoderStatusCode statusStart;
-            //GeoCoderStatusCode statusEnd;
-
-            //var travelPointStart = GMapProviders.GoogleMap.GetPoint(travel.StrStartingPlaceTravel, out statusStart);
-            //var travelPointEnd = GMapProviders.GoogleMap.GetPoint(travel.StrDestinationPlaceTravel, out statusEnd);
-
             // Ruta de viaje solicitada
 
             GDirections directionTravel = getRoute(travelPointStart, travelPointEnd);
-
-            //GDirections directionTravel = (statusEnd == GeoCoderStatusCode.OK && statusStart == GeoCoderStatusCode.OK) ? getRoute(travelPointStart.Value, travelPointEnd.Value) : null;
 
             travel.StrStartingPlaceTravel = directionTravel.StartAddress;
             travel.StrDestinationPlaceTravel = directionTravel.EndAddress;
@@ -353,22 +365,17 @@ namespace wEasyGoDriver.views
             btnVerDetalles.TabIndex = 6;
             btnVerDetalles.Text = "Ver detalles";
             btnVerDetalles.UseVisualStyleBackColor = true;
-            btnVerDetalles.Click += new System.EventHandler((object sender, EventArgs e) => {
+            btnVerDetalles.Click += new System.EventHandler((object sender, EventArgs e) =>
+            {
 
                 // RUTA PROVISIONAL ------------------------------------------------------------------
 
-                //if (statusStart == GeoCoderStatusCode.OK)
-                //{
-                    changeStartMarker(travelPointStart);
-                    gMapPrincipal.Position = travelPointStart;
+                changeStartMarker(travelPointStart);
+                gMapPrincipal.Position = travelPointStart;
 
-                //}
 
-                //if (statusEnd == GeoCoderStatusCode.OK)
-                //{
-                    changeEndMarker(travelPointEnd);
-                    gMapPrincipal.Zoom = 15;
-                //}
+                changeEndMarker(travelPointEnd);
+                gMapPrincipal.Zoom = 15;
 
                 travelRoute = new GMapRoute(directionTravel.Route, "Ruta de viaje");
 
@@ -394,92 +401,89 @@ namespace wEasyGoDriver.views
             btnAceptarViaje.Click += new System.EventHandler(async (object sender, EventArgs e) =>
             {
 
-                //if (statusEnd == GeoCoderStatusCode.OK && statusStart == GeoCoderStatusCode.OK)
-                //{
+                #region [Rutas de viaje y de inicio, marcadores y mapas]
 
-                    #region [Rutas de viaje y de inicio, marcadores y mapas]
+                // RUTA DEL CONDUCTOR HASTA EL USUARIO -------------------------
 
-                    // RUTA DEL CONDUCTOR HASTA EL USUARIO -------------------------
+                GDirections dirPositionToStart = getRoute(actualPoint, travelPointStart);
 
-                    GDirections dirPositionToStart = getRoute(actualPoint, travelPointStart);
+                startRoute = new GMapRoute(dirPositionToStart.Route, "Ruta de llegada de conductor");
+                startRoute.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+                startRoute.Stroke.Color = Color.Red;
 
-                    startRoute = new GMapRoute(dirPositionToStart.Route, "Ruta de llegada de conductor");
-                    startRoute.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-                    startRoute.Stroke.Color = Color.Red;
+                // Marcador inicial del usuario
+                changeStartMarker(dirPositionToStart.EndLocation);
 
-                    // Marcador inicial del usuario
-                    changeStartMarker(dirPositionToStart.EndLocation);
+                // RUTA DEL USUARIO -------------------------
 
-                    // RUTA DEL USUARIO -------------------------
+                travelRoute = new GMapRoute(directionTravel.Route, "Ruta de viaje");
+                travelRoute.Stroke.Color = Color.BlueViolet;
+                travelRoute.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
 
-                    travelRoute = new GMapRoute(directionTravel.Route, "Ruta de viaje");
-                    travelRoute.Stroke.Color = Color.BlueViolet;
-                    travelRoute.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+                // Marcador final
+                changeEndMarker(directionTravel.EndLocation);
 
-                    // Marcador final
-                    changeEndMarker(directionTravel.EndLocation);
+                routeOver.Routes.Clear();
+                routeOver.Routes.Add(startRoute);
+                // routeOver.Routes.Add(travelRoute);
 
-                    routeOver.Routes.Clear();
-                    routeOver.Routes.Add(startRoute);
-                    // routeOver.Routes.Add(travelRoute);
+                if (gMapPrincipal.Overlays.Contains(routeOver)) gMapPrincipal.Overlays.Remove(routeOver);
 
-                    if (gMapPrincipal.Overlays.Contains(routeOver)) gMapPrincipal.Overlays.Remove(routeOver);
+                gMapPrincipal.Overlays.Add(routeOver);
+                gMapPrincipal.Overlays.Remove(markerOverlay);
+                gMapPrincipal.Overlays.Add(markerOverlay);
 
-                    gMapPrincipal.Overlays.Add(routeOver);
-                    gMapPrincipal.Overlays.Remove(markerOverlay);
-                    gMapPrincipal.Overlays.Add(markerOverlay);
+                gMapPrincipal.Zoom = gMapPrincipal.Zoom += 1;
+                gMapPrincipal.Zoom = gMapPrincipal.Zoom -= 1;
 
-                    gMapPrincipal.Zoom = gMapPrincipal.Zoom += 1;
-                    gMapPrincipal.Zoom = gMapPrincipal.Zoom -= 1;
+                #endregion
+
+                #region [Registro de viaje, movimientos en SIGNALR]
+
+                // Instanciamos el viaje para luego crearlo 
+
+                travel.StrStateTravel = "waiting";
+                this.travelController = new TravelController(travel.StrStartingPlaceTravel, travel.StrDestinationPlaceTravel, travel.IntTotalPriceTravel, travel.NumKMPriceTravel, travel.DateRequestTravel, travel.StrRuteTravel, travel.StrStateTravel, travel.Customer, dataMoto);
+
+                if (this.travelController.ExecuteCreateTravel())
+                {
+
+                    // Cambiar estado de la moto/conductor en base de datos
+                    motoControlller.ExecuteChangeState("busy", dataMoto.StrLicensePlateMoto);
+                    _groupID = $"{dataUser.IntIdUser}{connectId}";
+                    dataMoto.StrStateMoto = "busy";
+
+                    actualTravel = this.travelController.GetTravel();
+
+                    // Desconectar de el grupo de disponibles
+                    await signalConn.InvokeAsync("RemoveAvailable");
+                    await signalConn.InvokeAsync("AcceptTravel", dataUser.IntIdUser, connectId, actualTravel.IntIdTravel);
+
+                    #region [Habilitar panel para manejo del viaje]
+
+                    lblTitleViajeAceptado.Text = "Recogiendo a " + travel.Customer.StrNamePerson;
+                    lblPrecioAceptado.Text = travel.IntTotalPriceTravel.ToString() + " pesos";
+                    lblInicioAceptado.Text = travel.StrStartingPlaceTravel;
+                    lblDestinoAceptado.Text = travel.StrDestinationPlaceTravel;
+                    lblTelefonoAceptado.Text = travel.Customer.IntPhoneUser.ToString();
+                    lblNombreAceptado.Text = $"{travel.Customer.StrNamePerson} {travel.Customer.StrLastNamePerson}";
+
+                    flpViajes.Controls.Clear();
+                    pnlViajeAceptado.Visible = true;
+                    flpViajes.Controls.Add(pnlViajeAceptado);
 
                     #endregion
 
-                    #region [Registro de viaje, movimientos en SIGNALR]
-
-                    // Instanciamos el viaje para luego crearlo 
-
-                    travel.StrStateTravel = "waiting";
-                    this.travelController = new TravelController(travel.StrStartingPlaceTravel, travel.StrDestinationPlaceTravel, travel.IntTotalPriceTravel, travel.NumKMPriceTravel, travel.DateRequestTravel, travel.StrRuteTravel, travel.StrStateTravel, travel.Customer, dataMoto);
-
-                    if (this.travelController.ExecuteCreateTravel())
-                    {
-
-                        // Cambiar estado de la moto/conductor en base de datos
-                        motoControlller.ExecuteChangeState("busy", dataMoto.StrLicensePlateMoto);
-                        _groupID = $"{dataUser.IntIdUser}{connectId}";
-                        dataMoto.StrStateMoto = "busy";
-
-                        actualTravel = this.travelController.GetTravel();
-
-                        // Desconectar de el grupo de disponibles
-                        await signalConn.InvokeAsync("RemoveAvailable");
-                        await signalConn.InvokeAsync("AcceptTravel", dataUser.IntIdUser, connectId, actualTravel.IntIdTravel);
-
-                        #region [Habilitar panel para manejo del viaje]
-
-                        lblTitleViajeAceptado.Text = "Recogiendo a " + travel.Customer.StrNamePerson;
-                        lblPrecioAceptado.Text = travel.IntTotalPriceTravel.ToString() + " pesos";
-                        lblInicioAceptado.Text = travel.StrStartingPlaceTravel;
-                        lblDestinoAceptado.Text = travel.StrDestinationPlaceTravel;
-                        lblTelefonoAceptado.Text = travel.Customer.IntPhoneUser.ToString();
-                        lblNombreAceptado.Text = $"{travel.Customer.StrNamePerson} {travel.Customer.StrLastNamePerson}";
-
-                        flpViajes.Controls.Clear();
-                        pnlViajeAceptado.Visible = true;
-                        flpViajes.Controls.Add(pnlViajeAceptado);
-
-                        #endregion
-
-                    }
-                    else
-                    {
-                        throw new Exception("No ha sido posible registrar el viaje, intente nuevamente");
-                    }
+                }
+                else
+                {
+                    throw new Exception("No ha sido posible registrar el viaje, intente nuevamente");
+                }
 
                 //}
 
-                    #endregion
-                    
+                #endregion
+
             });
 
             // 
@@ -491,9 +495,10 @@ namespace wEasyGoDriver.views
             btnRechazarViaje.TabIndex = 8;
             btnRechazarViaje.Text = "Rechazar viaje";
             btnRechazarViaje.UseVisualStyleBackColor = true;
-            btnRechazarViaje.Click += new System.EventHandler((object sender, EventArgs e) => {
+            btnRechazarViaje.Click += new System.EventHandler((object sender, EventArgs e) =>
+            {
 
-                if(startPoint == travelPointStart && endPoint == travelPointEnd)
+                if (startPoint == travelPointStart && endPoint == travelPointEnd)
                 {
                     routeOver.Clear();
                     markerOverlay.Markers.Remove(markerStart);
@@ -517,10 +522,11 @@ namespace wEasyGoDriver.views
 
             var routeDirections = GMapProviders.GoogleMap.GetDirections(out direction, start, end, false, false, false, false, false);
 
-            if(routeDirections == DirectionsStatusCode.OK)
+            if (routeDirections == DirectionsStatusCode.OK)
             {
                 return direction;
-            } else
+            }
+            else
             {
                 throw new Exception("Error al generar ruta");
                 return null;
@@ -577,7 +583,7 @@ namespace wEasyGoDriver.views
                 {
 
                     pnlViajeAceptado.Visible = false;
-                         
+
                     flpViajes.Controls.Clear();
                     flpViajes.Controls.Add(lblAvisoViajes);
                     lblAvisoViajes.Visible = true;
@@ -594,7 +600,8 @@ namespace wEasyGoDriver.views
 
                     motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto);
 
-                } else
+                }
+                else
                 {
                     throw new Exception("No ha sido posible cancelar el viaje, intente nuevamente");
                 }
@@ -626,12 +633,13 @@ namespace wEasyGoDriver.views
                     btnViajeAceptado.Enabled = false;
                     btnCancelarAceptado.Enabled = false;
 
-                } else
+                }
+                else
                 {
                     throw new Exception("Error al comenzar viaje, intente nuevamente");
                 }
             }
-            
+
         }
 
         private async void btnEnInicioAceptado_Click(object sender, EventArgs e)
@@ -642,7 +650,7 @@ namespace wEasyGoDriver.views
 
         private async void btnTerminarViaje_Click(object sender, EventArgs e)
         {
-            if(actualTravel.StrStateTravel == "traveling")
+            if (actualTravel.StrStateTravel == "traveling")
             {
                 if (this.travelController.FinishTravel())
                 {
@@ -670,8 +678,6 @@ namespace wEasyGoDriver.views
                 {
                     throw new Exception("Error al terminar viaje, intente nuevamente");
                 }
-
-               
 
             }
 
@@ -784,7 +790,7 @@ namespace wEasyGoDriver.views
         {
             new frmPerfilConductor(3127022532).Show();
 
-           
+
         }
 
         private void tabMainHistorial_Click(object sender, EventArgs e)

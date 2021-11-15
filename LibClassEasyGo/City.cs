@@ -39,7 +39,7 @@ namespace LibClassEasyGo
         public List<City> GetCities()
         {
             List<City> cities = new List<City>();
-            string select = "SELECT intIdCity, strNameCity FROM tblCity";
+            string select = "SELECT * FROM sp_get_cities()";
 
             NpgsqlCommand cmd = new NpgsqlCommand(select, conn);
 
