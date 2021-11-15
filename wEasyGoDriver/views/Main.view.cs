@@ -101,12 +101,12 @@ namespace wEasyGoDriver.views
                 MessageBox.Show(err.Message);
             }
 
-            signalConn.On<int, string, string, string, DateTime, string>("ReceiveTravel", async (idUser, customerName, startPlace, endPlace, dateRequest, connectId) =>
+            signalConn.On<int, string, double[], double[], DateTime, string>("ReceiveTravel", async (idUser, customerName, startPlace, endPlace, dateRequest, connectId) =>
             {
 
                 ITravel travel = new Travel();
-                travel.StrStartingPlaceTravel = startPlace;
-                travel.StrDestinationPlaceTravel = endPlace;
+                //travel.StrStartingPlaceTravel = startPlace;
+                //travel.StrDestinationPlaceTravel = endPlace;
                 travel.DateRequestTravel = dateRequest;
                 travel.Customer = new User();
                 travel.Customer.IntIdUser = idUser;
@@ -117,7 +117,7 @@ namespace wEasyGoDriver.views
 
                 // MessageBox.Show(travel.ToString());
 
-                flpViajes.Controls.Add(await generateTravelRequest(panelCant, travel, connectId));
+                flpViajes.Controls.Add(await generateTravelRequest(panelCant, travel, connectId, startPlace, endPlace));
 
                 panelCant++;
 
@@ -230,18 +230,26 @@ namespace wEasyGoDriver.views
 
         // PANEL DEL MAPA --------------------------------------------------------------
 
-        public async Task<Panel> generateTravelRequest(int name, ITravel travel, string connectId)
+        public async Task<Panel> generateTravelRequest(int name, ITravel travel, string connectId, double[] startPlace, double[] endPlace)
         {
 
-            GeoCoderStatusCode statusStart;
-            GeoCoderStatusCode statusEnd;
+            PointLatLng travelPointStart = new PointLatLng(startPlace[0], startPlace[1]);
+            PointLatLng travelPointEnd = new PointLatLng(endPlace[0], endPlace[1]);
 
-            var travelPointStart = GMapProviders.GoogleMap.GetPoint(travel.StrStartingPlaceTravel, out statusStart);
-            var travelPointEnd = GMapProviders.GoogleMap.GetPoint(travel.StrDestinationPlaceTravel, out statusEnd);
+            //GeoCoderStatusCode statusStart;
+            //GeoCoderStatusCode statusEnd;
+
+            //var travelPointStart = GMapProviders.GoogleMap.GetPoint(travel.StrStartingPlaceTravel, out statusStart);
+            //var travelPointEnd = GMapProviders.GoogleMap.GetPoint(travel.StrDestinationPlaceTravel, out statusEnd);
 
             // Ruta de viaje solicitada
 
-            GDirections directionTravel = (statusEnd == GeoCoderStatusCode.OK && statusStart == GeoCoderStatusCode.OK) ? getRoute(travelPointStart.Value, travelPointEnd.Value) : null;
+            GDirections directionTravel = getRoute(travelPointStart, travelPointEnd);
+
+            //GDirections directionTravel = (statusEnd == GeoCoderStatusCode.OK && statusStart == GeoCoderStatusCode.OK) ? getRoute(travelPointStart.Value, travelPointEnd.Value) : null;
+
+            travel.StrStartingPlaceTravel = directionTravel.StartAddress;
+            travel.StrDestinationPlaceTravel = directionTravel.EndAddress;
             travel.IntTotalPriceTravel = TravelController.CalculePriceTravel((int)directionTravel.DistanceValue);
             travel.NumKMPriceTravel = (int)directionTravel.DistanceValue;
             travel.StrRuteTravel = JsonConvert.SerializeObject(directionTravel.Route);
@@ -349,18 +357,18 @@ namespace wEasyGoDriver.views
 
                 // RUTA PROVISIONAL ------------------------------------------------------------------
 
-                if (statusStart == GeoCoderStatusCode.OK)
-                {
-                    changeStartMarker(travelPointStart.Value);
-                    gMapPrincipal.Position = travelPointStart.Value;
+                //if (statusStart == GeoCoderStatusCode.OK)
+                //{
+                    changeStartMarker(travelPointStart);
+                    gMapPrincipal.Position = travelPointStart;
 
-                }
+                //}
 
-                if (statusEnd == GeoCoderStatusCode.OK)
-                {
-                    changeEndMarker(travelPointEnd.Value);
+                //if (statusEnd == GeoCoderStatusCode.OK)
+                //{
+                    changeEndMarker(travelPointEnd);
                     gMapPrincipal.Zoom = 15;
-                }
+                //}
 
                 travelRoute = new GMapRoute(directionTravel.Route, "Ruta de viaje");
 
@@ -386,14 +394,14 @@ namespace wEasyGoDriver.views
             btnAceptarViaje.Click += new System.EventHandler(async (object sender, EventArgs e) =>
             {
 
-                if (statusEnd == GeoCoderStatusCode.OK && statusStart == GeoCoderStatusCode.OK)
-                {
+                //if (statusEnd == GeoCoderStatusCode.OK && statusStart == GeoCoderStatusCode.OK)
+                //{
 
                     #region [Rutas de viaje y de inicio, marcadores y mapas]
 
                     // RUTA DEL CONDUCTOR HASTA EL USUARIO -------------------------
 
-                    GDirections dirPositionToStart = getRoute(actualPoint, travelPointStart.Value);
+                    GDirections dirPositionToStart = getRoute(actualPoint, travelPointStart);
 
                     startRoute = new GMapRoute(dirPositionToStart.Route, "Ruta de llegada de conductor");
                     startRoute.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
@@ -468,7 +476,7 @@ namespace wEasyGoDriver.views
                         throw new Exception("No ha sido posible registrar el viaje, intente nuevamente");
                     }
 
-                }
+                //}
 
                     #endregion
                     
@@ -485,7 +493,7 @@ namespace wEasyGoDriver.views
             btnRechazarViaje.UseVisualStyleBackColor = true;
             btnRechazarViaje.Click += new System.EventHandler((object sender, EventArgs e) => {
 
-                if(startPoint == travelPointStart.Value && endPoint == travelPointEnd.Value)
+                if(startPoint == travelPointStart && endPoint == travelPointEnd)
                 {
                     routeOver.Clear();
                     markerOverlay.Markers.Remove(markerStart);
