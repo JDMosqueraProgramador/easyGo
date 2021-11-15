@@ -32,39 +32,20 @@ namespace wEasyGoDriver
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabsRegistros = new System.Windows.Forms.TabControl();
             this.tabPersona = new System.Windows.Forms.TabPage();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.grpPersona = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.rdoDueño = new System.Windows.Forms.RadioButton();
             this.dateOfBirthPerson = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.cmbCiudad = new System.Windows.Forms.ComboBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.txtNumeroCelular = new System.Windows.Forms.TextBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.grpRoles = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabVehiculo = new System.Windows.Forms.TabPage();
             this.flpRegistrarVehiculo = new System.Windows.Forms.FlowLayoutPanel();
             this.lblSeleccioneConductor = new System.Windows.Forms.Label();
@@ -82,6 +63,43 @@ namespace wEasyGoDriver
             this.txtNumeroChasis = new System.Windows.Forms.TextBox();
             this.txtNumeroSerie = new System.Windows.Forms.TextBox();
             this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.tabPapelesVehiculo = new System.Windows.Forms.TabPage();
+            this.dateVigenciaHastaTecno = new System.Windows.Forms.DateTimePicker();
+            this.dateVigenciaHastaSoat = new System.Windows.Forms.DateTimePicker();
+            this.btnRegistrarPapeles = new System.Windows.Forms.Button();
+            this.txtIdSoat = new System.Windows.Forms.TextBox();
+            this.btnCargarImgSoat = new System.Windows.Forms.Button();
+            this.btnCargarImgTecno = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabLicencia = new System.Windows.Forms.TabPage();
+            this.grpPropiedad = new System.Windows.Forms.GroupBox();
+            this.rdoNoVehiculo = new System.Windows.Forms.RadioButton();
+            this.rdoSiVehiculo = new System.Windows.Forms.RadioButton();
+            this.btnRegistrarLicencia = new System.Windows.Forms.Button();
+            this.btnCargarimgLicencia = new System.Windows.Forms.Button();
+            this.dateVigenciaHastaLicencia = new System.Windows.Forms.DateTimePicker();
+            this.txtNumerodeLicencia = new System.Windows.Forms.TextBox();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.grpRoles = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox39 = new System.Windows.Forms.PictureBox();
             this.pictureBox40 = new System.Windows.Forms.PictureBox();
             this.pictureBox41 = new System.Windows.Forms.PictureBox();
@@ -106,16 +124,7 @@ namespace wEasyGoDriver
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.tabPapelesVehiculo = new System.Windows.Forms.TabPage();
             this.pictureBox48 = new System.Windows.Forms.PictureBox();
-            this.dateVigenciaHastaTecno = new System.Windows.Forms.DateTimePicker();
-            this.dateVigenciaHastaSoat = new System.Windows.Forms.DateTimePicker();
-            this.btnRegistrarPapeles = new System.Windows.Forms.Button();
-            this.txtIdSoat = new System.Windows.Forms.TextBox();
-            this.btnCargarImgSoat = new System.Windows.Forms.Button();
-            this.btnCargarImgTecno = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox47 = new System.Windows.Forms.PictureBox();
             this.btn = new System.Windows.Forms.PictureBox();
             this.pictureBox49 = new System.Windows.Forms.PictureBox();
@@ -126,14 +135,6 @@ namespace wEasyGoDriver
             this.pictureBox52 = new System.Windows.Forms.PictureBox();
             this.pictureBox43 = new System.Windows.Forms.PictureBox();
             this.pictureBox44 = new System.Windows.Forms.PictureBox();
-            this.tabLicencia = new System.Windows.Forms.TabPage();
-            this.grpPropiedad = new System.Windows.Forms.GroupBox();
-            this.rdoNoVehiculo = new System.Windows.Forms.RadioButton();
-            this.rdoSiVehiculo = new System.Windows.Forms.RadioButton();
-            this.btnRegistrarLicencia = new System.Windows.Forms.Button();
-            this.btnCargarimgLicencia = new System.Windows.Forms.Button();
-            this.dateVigenciaHastaLicencia = new System.Windows.Forms.DateTimePicker();
-            this.txtNumerodeLicencia = new System.Windows.Forms.TextBox();
             this.grpVigenciaLicencia = new System.Windows.Forms.PictureBox();
             this.pictureBox53 = new System.Windows.Forms.PictureBox();
             this.pictureBox54 = new System.Windows.Forms.PictureBox();
@@ -141,15 +142,21 @@ namespace wEasyGoDriver
             this.pictureBox58 = new System.Windows.Forms.PictureBox();
             this.pictureBox59 = new System.Windows.Forms.PictureBox();
             this.pictureBox60 = new System.Windows.Forms.PictureBox();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.tabsRegistros.SuspendLayout();
             this.tabPersona.SuspendLayout();
+            this.grpPersona.SuspendLayout();
+            this.tabVehiculo.SuspendLayout();
+            this.flpRegistrarVehiculo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarConductor)).BeginInit();
+            this.tabPapelesVehiculo.SuspendLayout();
+            this.tabLicencia.SuspendLayout();
+            this.grpPropiedad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            this.grpPersona.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
@@ -166,9 +173,6 @@ namespace wEasyGoDriver
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabVehiculo.SuspendLayout();
-            this.flpRegistrarVehiculo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarConductor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).BeginInit();
@@ -193,7 +197,6 @@ namespace wEasyGoDriver
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            this.tabPapelesVehiculo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn)).BeginInit();
@@ -205,8 +208,6 @@ namespace wEasyGoDriver
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
-            this.tabLicencia.SuspendLayout();
-            this.grpPropiedad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpVigenciaLicencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).BeginInit();
@@ -214,7 +215,6 @@ namespace wEasyGoDriver
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox58)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
@@ -273,28 +273,6 @@ namespace wEasyGoDriver
             this.tabPersona.UseVisualStyleBackColor = true;
             this.tabPersona.Click += new System.EventHandler(this.tabPersona_Click);
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox9.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox9.Location = new System.Drawing.Point(64, 208);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 116;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox8.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox8.Location = new System.Drawing.Point(64, 141);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 115;
-            this.pictureBox8.TabStop = false;
-            // 
             // txtCedula
             // 
             this.txtCedula.BackColor = System.Drawing.Color.Gainsboro;
@@ -308,17 +286,6 @@ namespace wEasyGoDriver
             this.txtCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCedula.Enter += new System.EventHandler(this.txtCedula_Enter);
             this.txtCedula.Leave += new System.EventHandler(this.txtCedula_Leave);
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox19.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox19.Location = new System.Drawing.Point(49, 118);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox19.TabIndex = 114;
-            this.pictureBox19.TabStop = false;
             // 
             // grpPersona
             // 
@@ -361,36 +328,14 @@ namespace wEasyGoDriver
             this.dateOfBirthPerson.Size = new System.Drawing.Size(160, 20);
             this.dateOfBirthPerson.TabIndex = 111;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox3.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox3.Location = new System.Drawing.Point(64, 406);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(39, 16);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 110;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox5.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox5.Location = new System.Drawing.Point(49, 385);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 109;
-            this.pictureBox5.TabStop = false;
-            // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.White;
-            this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
+            this.btnRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnRegistrar.ForeColor = System.Drawing.Color.MediumPurple;
             this.btnRegistrar.Location = new System.Drawing.Point(246, 491);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(134, 50);
@@ -426,28 +371,6 @@ namespace wEasyGoDriver
             this.cmbGenero.TabIndex = 88;
             this.cmbGenero.Text = "                   Genero";
             // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox17.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox17.Location = new System.Drawing.Point(324, 345);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 107;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox18.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox18.Location = new System.Drawing.Point(303, 318);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 106;
-            this.pictureBox18.TabStop = false;
-            // 
             // cmbCiudad
             // 
             this.cmbCiudad.BackColor = System.Drawing.Color.Gainsboro;
@@ -459,39 +382,6 @@ namespace wEasyGoDriver
             this.cmbCiudad.Size = new System.Drawing.Size(166, 21);
             this.cmbCiudad.TabIndex = 87;
             this.cmbCiudad.Text = "                     Ciudad";
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox15.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox15.Location = new System.Drawing.Point(64, 345);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 105;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox16.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox16.Location = new System.Drawing.Point(49, 319);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 104;
-            this.pictureBox16.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox13.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox13.Location = new System.Drawing.Point(318, 208);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 103;
-            this.pictureBox13.TabStop = false;
             // 
             // txtNumeroCelular
             // 
@@ -508,28 +398,6 @@ namespace wEasyGoDriver
             this.txtNumeroCelular.Enter += new System.EventHandler(this.txtNumeroCelular_Enter);
             this.txtNumeroCelular.Leave += new System.EventHandler(this.txtNumeroCelular_Leave);
             // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox14.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox14.Location = new System.Drawing.Point(303, 185);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox14.TabIndex = 102;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox11.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox11.Location = new System.Drawing.Point(318, 274);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 100;
-            this.pictureBox11.TabStop = false;
-            // 
             // txtContraseña
             // 
             this.txtContraseña.BackColor = System.Drawing.Color.Gainsboro;
@@ -543,17 +411,6 @@ namespace wEasyGoDriver
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox12.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox12.Location = new System.Drawing.Point(303, 251);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 99;
-            this.pictureBox12.TabStop = false;
             // 
             // txtApellidos
             // 
@@ -569,28 +426,6 @@ namespace wEasyGoDriver
             this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
             this.txtApellidos.Leave += new System.EventHandler(this.txtApellidos_Leave);
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox10.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox10.Location = new System.Drawing.Point(49, 185);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 97;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox7.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox7.Location = new System.Drawing.Point(318, 141);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 95;
-            this.pictureBox7.TabStop = false;
-            // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.Gainsboro;
@@ -605,28 +440,6 @@ namespace wEasyGoDriver
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
-            // grpRoles
-            // 
-            this.grpRoles.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.grpRoles.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.grpRoles.Location = new System.Drawing.Point(303, 118);
-            this.grpRoles.Name = "grpRoles";
-            this.grpRoles.Size = new System.Drawing.Size(248, 61);
-            this.grpRoles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.grpRoles.TabIndex = 94;
-            this.grpRoles.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox4.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox4.Location = new System.Drawing.Point(64, 274);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 92;
-            this.pictureBox4.TabStop = false;
-            // 
             // txtCorreo
             // 
             this.txtCorreo.BackColor = System.Drawing.Color.Gainsboro;
@@ -640,27 +453,6 @@ namespace wEasyGoDriver
             this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
             this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox6.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox6.Location = new System.Drawing.Point(49, 252);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 91;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::wEasyGoDriver.Properties.Resources.locksmith;
-            this.pictureBox1.Location = new System.Drawing.Point(246, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 88);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 86;
-            this.pictureBox1.TabStop = false;
             // 
             // tabVehiculo
             // 
@@ -749,11 +541,11 @@ namespace wEasyGoDriver
             // 
             this.btnRegistrarMoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnRegistrarMoto.BackColor = System.Drawing.Color.White;
-            this.btnRegistrarMoto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnRegistrarMoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnRegistrarMoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnRegistrarMoto.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
+            this.btnRegistrarMoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRegistrarMoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnRegistrarMoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarMoto.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnRegistrarMoto.ForeColor = System.Drawing.Color.MediumPurple;
             this.btnRegistrarMoto.Location = new System.Drawing.Point(192, 93);
             this.btnRegistrarMoto.Name = "btnRegistrarMoto";
             this.btnRegistrarMoto.Size = new System.Drawing.Size(114, 50);
@@ -924,6 +716,442 @@ namespace wEasyGoDriver
             this.txtPlaca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPlaca.Enter += new System.EventHandler(this.txtPlaca_Enter);
             this.txtPlaca.Leave += new System.EventHandler(this.txtPlaca_Leave);
+            // 
+            // tabPapelesVehiculo
+            // 
+            this.tabPapelesVehiculo.Controls.Add(this.pictureBox48);
+            this.tabPapelesVehiculo.Controls.Add(this.dateVigenciaHastaTecno);
+            this.tabPapelesVehiculo.Controls.Add(this.dateVigenciaHastaSoat);
+            this.tabPapelesVehiculo.Controls.Add(this.btnRegistrarPapeles);
+            this.tabPapelesVehiculo.Controls.Add(this.txtIdSoat);
+            this.tabPapelesVehiculo.Controls.Add(this.btnCargarImgSoat);
+            this.tabPapelesVehiculo.Controls.Add(this.btnCargarImgTecno);
+            this.tabPapelesVehiculo.Controls.Add(this.label3);
+            this.tabPapelesVehiculo.Controls.Add(this.label2);
+            this.tabPapelesVehiculo.Controls.Add(this.pictureBox47);
+            this.tabPapelesVehiculo.Controls.Add(this.btn);
+            this.tabPapelesVehiculo.Controls.Add(this.pictureBox49);
+            this.tabPapelesVehiculo.Controls.Add(this.pictureBox50);
+            this.tabPapelesVehiculo.Controls.Add(this.pictureBox45);
+            this.tabPapelesVehiculo.Controls.Add(this.pictureBox46);
+            this.tabPapelesVehiculo.Controls.Add(this.pictureBox51);
+            this.tabPapelesVehiculo.Controls.Add(this.pictureBox52);
+            this.tabPapelesVehiculo.Controls.Add(this.pictureBox43);
+            this.tabPapelesVehiculo.Controls.Add(this.pictureBox44);
+            this.tabPapelesVehiculo.Location = new System.Drawing.Point(4, 22);
+            this.tabPapelesVehiculo.Name = "tabPapelesVehiculo";
+            this.tabPapelesVehiculo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPapelesVehiculo.Size = new System.Drawing.Size(592, 577);
+            this.tabPapelesVehiculo.TabIndex = 2;
+            this.tabPapelesVehiculo.Text = "Papeles vehiculo";
+            this.tabPapelesVehiculo.UseVisualStyleBackColor = true;
+            // 
+            // dateVigenciaHastaTecno
+            // 
+            this.dateVigenciaHastaTecno.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateVigenciaHastaTecno.Location = new System.Drawing.Point(121, 164);
+            this.dateVigenciaHastaTecno.Name = "dateVigenciaHastaTecno";
+            this.dateVigenciaHastaTecno.Size = new System.Drawing.Size(160, 20);
+            this.dateVigenciaHastaTecno.TabIndex = 177;
+            // 
+            // dateVigenciaHastaSoat
+            // 
+            this.dateVigenciaHastaSoat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateVigenciaHastaSoat.Location = new System.Drawing.Point(375, 287);
+            this.dateVigenciaHastaSoat.Name = "dateVigenciaHastaSoat";
+            this.dateVigenciaHastaSoat.Size = new System.Drawing.Size(160, 20);
+            this.dateVigenciaHastaSoat.TabIndex = 174;
+            // 
+            // btnRegistrarPapeles
+            // 
+            this.btnRegistrarPapeles.BackColor = System.Drawing.Color.White;
+            this.btnRegistrarPapeles.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
+            this.btnRegistrarPapeles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRegistrarPapeles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRegistrarPapeles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarPapeles.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnRegistrarPapeles.Location = new System.Drawing.Point(245, 434);
+            this.btnRegistrarPapeles.Name = "btnRegistrarPapeles";
+            this.btnRegistrarPapeles.Size = new System.Drawing.Size(134, 50);
+            this.btnRegistrarPapeles.TabIndex = 173;
+            this.btnRegistrarPapeles.Text = "Registrar Papeles";
+            this.btnRegistrarPapeles.UseVisualStyleBackColor = false;
+            this.btnRegistrarPapeles.Click += new System.EventHandler(this.btnRegistrarPapeles_Click);
+            // 
+            // txtIdSoat
+            // 
+            this.txtIdSoat.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtIdSoat.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdSoat.ForeColor = System.Drawing.Color.DimGray;
+            this.txtIdSoat.Location = new System.Drawing.Point(131, 288);
+            this.txtIdSoat.Name = "txtIdSoat";
+            this.txtIdSoat.Size = new System.Drawing.Size(161, 13);
+            this.txtIdSoat.TabIndex = 170;
+            this.txtIdSoat.Text = "id soat";
+            this.txtIdSoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIdSoat.Enter += new System.EventHandler(this.txtIdSoat_Enter);
+            this.txtIdSoat.Leave += new System.EventHandler(this.txtIdSoat_Leave);
+            // 
+            // btnCargarImgSoat
+            // 
+            this.btnCargarImgSoat.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnCargarImgSoat.Location = new System.Drawing.Point(131, 357);
+            this.btnCargarImgSoat.Name = "btnCargarImgSoat";
+            this.btnCargarImgSoat.Size = new System.Drawing.Size(166, 26);
+            this.btnCargarImgSoat.TabIndex = 167;
+            this.btnCargarImgSoat.Text = "cargar imagen soat";
+            this.btnCargarImgSoat.UseVisualStyleBackColor = true;
+            this.btnCargarImgSoat.Click += new System.EventHandler(this.btnCargarImgSoat_Click);
+            // 
+            // btnCargarImgTecno
+            // 
+            this.btnCargarImgTecno.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnCargarImgTecno.Location = new System.Drawing.Point(375, 158);
+            this.btnCargarImgTecno.Name = "btnCargarImgTecno";
+            this.btnCargarImgTecno.Size = new System.Drawing.Size(166, 26);
+            this.btnCargarImgTecno.TabIndex = 158;
+            this.btnCargarImgTecno.Text = "cargar imagen tecnomecanica";
+            this.btnCargarImgTecno.UseVisualStyleBackColor = true;
+            this.btnCargarImgTecno.Click += new System.EventHandler(this.btnCargarImgTecno_Click);
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(148, 229);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(337, 12);
+            this.label3.TabIndex = 145;
+            this.label3.Text = "Soat";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(260, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.TabIndex = 144;
+            this.label2.Text = "Tecnomecanica";
+            // 
+            // tabLicencia
+            // 
+            this.tabLicencia.Controls.Add(this.grpPropiedad);
+            this.tabLicencia.Controls.Add(this.btnRegistrarLicencia);
+            this.tabLicencia.Controls.Add(this.btnCargarimgLicencia);
+            this.tabLicencia.Controls.Add(this.dateVigenciaHastaLicencia);
+            this.tabLicencia.Controls.Add(this.txtNumerodeLicencia);
+            this.tabLicencia.Controls.Add(this.grpVigenciaLicencia);
+            this.tabLicencia.Controls.Add(this.pictureBox53);
+            this.tabLicencia.Controls.Add(this.pictureBox54);
+            this.tabLicencia.Controls.Add(this.pictureBox57);
+            this.tabLicencia.Controls.Add(this.pictureBox58);
+            this.tabLicencia.Controls.Add(this.pictureBox59);
+            this.tabLicencia.Controls.Add(this.pictureBox60);
+            this.tabLicencia.Location = new System.Drawing.Point(4, 22);
+            this.tabLicencia.Name = "tabLicencia";
+            this.tabLicencia.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLicencia.Size = new System.Drawing.Size(592, 577);
+            this.tabLicencia.TabIndex = 3;
+            this.tabLicencia.Text = "Licencia";
+            this.tabLicencia.UseVisualStyleBackColor = true;
+            this.tabLicencia.Enter += new System.EventHandler(this.tabLicencia_Enter);
+            // 
+            // grpPropiedad
+            // 
+            this.grpPropiedad.Controls.Add(this.rdoNoVehiculo);
+            this.grpPropiedad.Controls.Add(this.rdoSiVehiculo);
+            this.grpPropiedad.Location = new System.Drawing.Point(313, 235);
+            this.grpPropiedad.Name = "grpPropiedad";
+            this.grpPropiedad.Size = new System.Drawing.Size(243, 61);
+            this.grpPropiedad.TabIndex = 184;
+            this.grpPropiedad.TabStop = false;
+            this.grpPropiedad.Text = "¿Conduciras un vehiculo propio?";
+            // 
+            // rdoNoVehiculo
+            // 
+            this.rdoNoVehiculo.AutoSize = true;
+            this.rdoNoVehiculo.Location = new System.Drawing.Point(116, 23);
+            this.rdoNoVehiculo.Name = "rdoNoVehiculo";
+            this.rdoNoVehiculo.Size = new System.Drawing.Size(39, 17);
+            this.rdoNoVehiculo.TabIndex = 1;
+            this.rdoNoVehiculo.Text = "No";
+            this.rdoNoVehiculo.UseVisualStyleBackColor = true;
+            // 
+            // rdoSiVehiculo
+            // 
+            this.rdoSiVehiculo.AutoSize = true;
+            this.rdoSiVehiculo.Location = new System.Drawing.Point(42, 23);
+            this.rdoSiVehiculo.Name = "rdoSiVehiculo";
+            this.rdoSiVehiculo.Size = new System.Drawing.Size(34, 17);
+            this.rdoSiVehiculo.TabIndex = 0;
+            this.rdoSiVehiculo.Text = "Si";
+            this.rdoSiVehiculo.UseVisualStyleBackColor = true;
+            // 
+            // btnRegistrarLicencia
+            // 
+            this.btnRegistrarLicencia.BackColor = System.Drawing.Color.White;
+            this.btnRegistrarLicencia.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
+            this.btnRegistrarLicencia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRegistrarLicencia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRegistrarLicencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarLicencia.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnRegistrarLicencia.Location = new System.Drawing.Point(244, 316);
+            this.btnRegistrarLicencia.Name = "btnRegistrarLicencia";
+            this.btnRegistrarLicencia.Size = new System.Drawing.Size(134, 50);
+            this.btnRegistrarLicencia.TabIndex = 181;
+            this.btnRegistrarLicencia.Text = "Registrar Licencia";
+            this.btnRegistrarLicencia.UseVisualStyleBackColor = false;
+            this.btnRegistrarLicencia.Click += new System.EventHandler(this.btnRegistrarLicencia_Click);
+            // 
+            // btnCargarimgLicencia
+            // 
+            this.btnCargarimgLicencia.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnCargarimgLicencia.Location = new System.Drawing.Point(119, 252);
+            this.btnCargarimgLicencia.Name = "btnCargarimgLicencia";
+            this.btnCargarimgLicencia.Size = new System.Drawing.Size(166, 26);
+            this.btnCargarimgLicencia.TabIndex = 178;
+            this.btnCargarimgLicencia.Text = "cargar imagen licencia";
+            this.btnCargarimgLicencia.UseVisualStyleBackColor = true;
+            this.btnCargarimgLicencia.Click += new System.EventHandler(this.btnCargarimgLicencia_Click);
+            // 
+            // dateVigenciaHastaLicencia
+            // 
+            this.dateVigenciaHastaLicencia.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateVigenciaHastaLicencia.Location = new System.Drawing.Point(368, 178);
+            this.dateVigenciaHastaLicencia.Name = "dateVigenciaHastaLicencia";
+            this.dateVigenciaHastaLicencia.Size = new System.Drawing.Size(160, 20);
+            this.dateVigenciaHastaLicencia.TabIndex = 177;
+            // 
+            // txtNumerodeLicencia
+            // 
+            this.txtNumerodeLicencia.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtNumerodeLicencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNumerodeLicencia.ForeColor = System.Drawing.Color.DimGray;
+            this.txtNumerodeLicencia.Location = new System.Drawing.Point(119, 178);
+            this.txtNumerodeLicencia.Name = "txtNumerodeLicencia";
+            this.txtNumerodeLicencia.Size = new System.Drawing.Size(166, 13);
+            this.txtNumerodeLicencia.TabIndex = 128;
+            this.txtNumerodeLicencia.Text = "Número de licencia";
+            this.txtNumerodeLicencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumerodeLicencia.Enter += new System.EventHandler(this.txtNumerodeLicencia_Enter);
+            this.txtNumerodeLicencia.Leave += new System.EventHandler(this.txtNumerodeLicencia_Leave);
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Image = global::wEasyGoDriver.Properties.Resources.register_new;
+            this.pictureBox26.Location = new System.Drawing.Point(-3, -22);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(593, 637);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox26.TabIndex = 87;
+            this.pictureBox26.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox9.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox9.Location = new System.Drawing.Point(64, 208);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 116;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox8.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox8.Location = new System.Drawing.Point(64, 141);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 115;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox19.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox19.Location = new System.Drawing.Point(49, 118);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox19.TabIndex = 114;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox3.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox3.Location = new System.Drawing.Point(64, 406);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(39, 16);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 110;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox5.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox5.Location = new System.Drawing.Point(49, 385);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 109;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox17.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox17.Location = new System.Drawing.Point(324, 345);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox17.TabIndex = 107;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox18.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox18.Location = new System.Drawing.Point(303, 318);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 106;
+            this.pictureBox18.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox15.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox15.Location = new System.Drawing.Point(64, 345);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 105;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox16.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox16.Location = new System.Drawing.Point(49, 319);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox16.TabIndex = 104;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox13.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox13.Location = new System.Drawing.Point(318, 208);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 103;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox14.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox14.Location = new System.Drawing.Point(303, 185);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 102;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox11.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox11.Location = new System.Drawing.Point(318, 274);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 100;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox12.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox12.Location = new System.Drawing.Point(303, 251);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 99;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox10.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox10.Location = new System.Drawing.Point(49, 185);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 97;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox7.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox7.Location = new System.Drawing.Point(318, 141);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 95;
+            this.pictureBox7.TabStop = false;
+            // 
+            // grpRoles
+            // 
+            this.grpRoles.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.grpRoles.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.grpRoles.Location = new System.Drawing.Point(303, 118);
+            this.grpRoles.Name = "grpRoles";
+            this.grpRoles.Size = new System.Drawing.Size(248, 61);
+            this.grpRoles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.grpRoles.TabIndex = 94;
+            this.grpRoles.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox4.Image = global::wEasyGoDriver.Properties.Resources.email;
+            this.pictureBox4.Location = new System.Drawing.Point(64, 274);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 92;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox6.Image = global::wEasyGoDriver.Properties.Resources.btn1;
+            this.pictureBox6.Location = new System.Drawing.Point(49, 252);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 91;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::wEasyGoDriver.Properties.Resources.log_in;
+            this.pictureBox1.Location = new System.Drawing.Point(246, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(107, 88);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 86;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox39
             // 
@@ -1189,130 +1417,15 @@ namespace wEasyGoDriver
             this.pictureBox20.TabIndex = 117;
             this.pictureBox20.TabStop = false;
             // 
-            // tabPapelesVehiculo
-            // 
-            this.tabPapelesVehiculo.Controls.Add(this.pictureBox48);
-            this.tabPapelesVehiculo.Controls.Add(this.dateVigenciaHastaTecno);
-            this.tabPapelesVehiculo.Controls.Add(this.dateVigenciaHastaSoat);
-            this.tabPapelesVehiculo.Controls.Add(this.btnRegistrarPapeles);
-            this.tabPapelesVehiculo.Controls.Add(this.txtIdSoat);
-            this.tabPapelesVehiculo.Controls.Add(this.btnCargarImgSoat);
-            this.tabPapelesVehiculo.Controls.Add(this.btnCargarImgTecno);
-            this.tabPapelesVehiculo.Controls.Add(this.label3);
-            this.tabPapelesVehiculo.Controls.Add(this.label2);
-            this.tabPapelesVehiculo.Controls.Add(this.pictureBox47);
-            this.tabPapelesVehiculo.Controls.Add(this.btn);
-            this.tabPapelesVehiculo.Controls.Add(this.pictureBox49);
-            this.tabPapelesVehiculo.Controls.Add(this.pictureBox50);
-            this.tabPapelesVehiculo.Controls.Add(this.pictureBox45);
-            this.tabPapelesVehiculo.Controls.Add(this.pictureBox46);
-            this.tabPapelesVehiculo.Controls.Add(this.pictureBox51);
-            this.tabPapelesVehiculo.Controls.Add(this.pictureBox52);
-            this.tabPapelesVehiculo.Controls.Add(this.pictureBox43);
-            this.tabPapelesVehiculo.Controls.Add(this.pictureBox44);
-            this.tabPapelesVehiculo.Location = new System.Drawing.Point(4, 22);
-            this.tabPapelesVehiculo.Name = "tabPapelesVehiculo";
-            this.tabPapelesVehiculo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPapelesVehiculo.Size = new System.Drawing.Size(592, 577);
-            this.tabPapelesVehiculo.TabIndex = 2;
-            this.tabPapelesVehiculo.Text = "Papeles vehiculo";
-            this.tabPapelesVehiculo.UseVisualStyleBackColor = true;
-            // 
             // pictureBox48
             // 
-            this.pictureBox48.Image = global::wEasyGoDriver.Properties.Resources.locksmith;
+            this.pictureBox48.Image = global::wEasyGoDriver.Properties.Resources.log_in;
             this.pictureBox48.Location = new System.Drawing.Point(243, 6);
             this.pictureBox48.Name = "pictureBox48";
             this.pictureBox48.Size = new System.Drawing.Size(107, 88);
             this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox48.TabIndex = 187;
             this.pictureBox48.TabStop = false;
-            // 
-            // dateVigenciaHastaTecno
-            // 
-            this.dateVigenciaHastaTecno.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateVigenciaHastaTecno.Location = new System.Drawing.Point(121, 164);
-            this.dateVigenciaHastaTecno.Name = "dateVigenciaHastaTecno";
-            this.dateVigenciaHastaTecno.Size = new System.Drawing.Size(160, 20);
-            this.dateVigenciaHastaTecno.TabIndex = 177;
-            // 
-            // dateVigenciaHastaSoat
-            // 
-            this.dateVigenciaHastaSoat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateVigenciaHastaSoat.Location = new System.Drawing.Point(375, 287);
-            this.dateVigenciaHastaSoat.Name = "dateVigenciaHastaSoat";
-            this.dateVigenciaHastaSoat.Size = new System.Drawing.Size(160, 20);
-            this.dateVigenciaHastaSoat.TabIndex = 174;
-            // 
-            // btnRegistrarPapeles
-            // 
-            this.btnRegistrarPapeles.BackColor = System.Drawing.Color.White;
-            this.btnRegistrarPapeles.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnRegistrarPapeles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnRegistrarPapeles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnRegistrarPapeles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarPapeles.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnRegistrarPapeles.Location = new System.Drawing.Point(245, 434);
-            this.btnRegistrarPapeles.Name = "btnRegistrarPapeles";
-            this.btnRegistrarPapeles.Size = new System.Drawing.Size(134, 50);
-            this.btnRegistrarPapeles.TabIndex = 173;
-            this.btnRegistrarPapeles.Text = "Registrar Papeles";
-            this.btnRegistrarPapeles.UseVisualStyleBackColor = false;
-            this.btnRegistrarPapeles.Click += new System.EventHandler(this.btnRegistrarPapeles_Click);
-            // 
-            // txtIdSoat
-            // 
-            this.txtIdSoat.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtIdSoat.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIdSoat.ForeColor = System.Drawing.Color.DimGray;
-            this.txtIdSoat.Location = new System.Drawing.Point(131, 288);
-            this.txtIdSoat.Name = "txtIdSoat";
-            this.txtIdSoat.Size = new System.Drawing.Size(161, 13);
-            this.txtIdSoat.TabIndex = 170;
-            this.txtIdSoat.Text = "id soat";
-            this.txtIdSoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtIdSoat.Enter += new System.EventHandler(this.txtIdSoat_Enter);
-            this.txtIdSoat.Leave += new System.EventHandler(this.txtIdSoat_Leave);
-            // 
-            // btnCargarImgSoat
-            // 
-            this.btnCargarImgSoat.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnCargarImgSoat.Location = new System.Drawing.Point(131, 357);
-            this.btnCargarImgSoat.Name = "btnCargarImgSoat";
-            this.btnCargarImgSoat.Size = new System.Drawing.Size(166, 26);
-            this.btnCargarImgSoat.TabIndex = 167;
-            this.btnCargarImgSoat.Text = "cargar imagen soat";
-            this.btnCargarImgSoat.UseVisualStyleBackColor = true;
-            this.btnCargarImgSoat.Click += new System.EventHandler(this.btnCargarImgSoat_Click);
-            // 
-            // btnCargarImgTecno
-            // 
-            this.btnCargarImgTecno.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnCargarImgTecno.Location = new System.Drawing.Point(375, 158);
-            this.btnCargarImgTecno.Name = "btnCargarImgTecno";
-            this.btnCargarImgTecno.Size = new System.Drawing.Size(166, 26);
-            this.btnCargarImgTecno.TabIndex = 158;
-            this.btnCargarImgTecno.Text = "cargar imagen tecnomecanica";
-            this.btnCargarImgTecno.UseVisualStyleBackColor = true;
-            this.btnCargarImgTecno.Click += new System.EventHandler(this.btnCargarImgTecno_Click);
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(148, 229);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(337, 12);
-            this.label3.TabIndex = 145;
-            this.label3.Text = "Soat";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(260, 109);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
-            this.label2.TabIndex = 144;
-            this.label2.Text = "Tecnomecanica";
             // 
             // pictureBox47
             // 
@@ -1424,113 +1537,10 @@ namespace wEasyGoDriver
             this.pictureBox44.TabIndex = 159;
             this.pictureBox44.TabStop = false;
             // 
-            // tabLicencia
-            // 
-            this.tabLicencia.Controls.Add(this.grpPropiedad);
-            this.tabLicencia.Controls.Add(this.btnRegistrarLicencia);
-            this.tabLicencia.Controls.Add(this.btnCargarimgLicencia);
-            this.tabLicencia.Controls.Add(this.dateVigenciaHastaLicencia);
-            this.tabLicencia.Controls.Add(this.txtNumerodeLicencia);
-            this.tabLicencia.Controls.Add(this.grpVigenciaLicencia);
-            this.tabLicencia.Controls.Add(this.pictureBox53);
-            this.tabLicencia.Controls.Add(this.pictureBox54);
-            this.tabLicencia.Controls.Add(this.pictureBox57);
-            this.tabLicencia.Controls.Add(this.pictureBox58);
-            this.tabLicencia.Controls.Add(this.pictureBox59);
-            this.tabLicencia.Controls.Add(this.pictureBox60);
-            this.tabLicencia.Location = new System.Drawing.Point(4, 22);
-            this.tabLicencia.Name = "tabLicencia";
-            this.tabLicencia.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLicencia.Size = new System.Drawing.Size(592, 577);
-            this.tabLicencia.TabIndex = 3;
-            this.tabLicencia.Text = "Licencia";
-            this.tabLicencia.UseVisualStyleBackColor = true;
-            this.tabLicencia.Enter += new System.EventHandler(this.tabLicencia_Enter);
-            // 
-            // grpPropiedad
-            // 
-            this.grpPropiedad.Controls.Add(this.rdoNoVehiculo);
-            this.grpPropiedad.Controls.Add(this.rdoSiVehiculo);
-            this.grpPropiedad.Location = new System.Drawing.Point(313, 235);
-            this.grpPropiedad.Name = "grpPropiedad";
-            this.grpPropiedad.Size = new System.Drawing.Size(243, 61);
-            this.grpPropiedad.TabIndex = 184;
-            this.grpPropiedad.TabStop = false;
-            this.grpPropiedad.Text = "¿Conduciras un vehiculo propio?";
-            // 
-            // rdoNoVehiculo
-            // 
-            this.rdoNoVehiculo.AutoSize = true;
-            this.rdoNoVehiculo.Location = new System.Drawing.Point(116, 23);
-            this.rdoNoVehiculo.Name = "rdoNoVehiculo";
-            this.rdoNoVehiculo.Size = new System.Drawing.Size(39, 17);
-            this.rdoNoVehiculo.TabIndex = 1;
-            this.rdoNoVehiculo.Text = "No";
-            this.rdoNoVehiculo.UseVisualStyleBackColor = true;
-            // 
-            // rdoSiVehiculo
-            // 
-            this.rdoSiVehiculo.AutoSize = true;
-            this.rdoSiVehiculo.Location = new System.Drawing.Point(42, 23);
-            this.rdoSiVehiculo.Name = "rdoSiVehiculo";
-            this.rdoSiVehiculo.Size = new System.Drawing.Size(34, 17);
-            this.rdoSiVehiculo.TabIndex = 0;
-            this.rdoSiVehiculo.Text = "Si";
-            this.rdoSiVehiculo.UseVisualStyleBackColor = true;
-            // 
-            // btnRegistrarLicencia
-            // 
-            this.btnRegistrarLicencia.BackColor = System.Drawing.Color.White;
-            this.btnRegistrarLicencia.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnRegistrarLicencia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnRegistrarLicencia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnRegistrarLicencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarLicencia.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnRegistrarLicencia.Location = new System.Drawing.Point(244, 316);
-            this.btnRegistrarLicencia.Name = "btnRegistrarLicencia";
-            this.btnRegistrarLicencia.Size = new System.Drawing.Size(134, 50);
-            this.btnRegistrarLicencia.TabIndex = 181;
-            this.btnRegistrarLicencia.Text = "Registrar Licencia";
-            this.btnRegistrarLicencia.UseVisualStyleBackColor = false;
-            this.btnRegistrarLicencia.Click += new System.EventHandler(this.btnRegistrarLicencia_Click);
-            // 
-            // btnCargarimgLicencia
-            // 
-            this.btnCargarimgLicencia.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnCargarimgLicencia.Location = new System.Drawing.Point(119, 252);
-            this.btnCargarimgLicencia.Name = "btnCargarimgLicencia";
-            this.btnCargarimgLicencia.Size = new System.Drawing.Size(166, 26);
-            this.btnCargarimgLicencia.TabIndex = 178;
-            this.btnCargarimgLicencia.Text = "cargar imagen licencia";
-            this.btnCargarimgLicencia.UseVisualStyleBackColor = true;
-            this.btnCargarimgLicencia.Click += new System.EventHandler(this.btnCargarimgLicencia_Click);
-            // 
-            // dateVigenciaHastaLicencia
-            // 
-            this.dateVigenciaHastaLicencia.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateVigenciaHastaLicencia.Location = new System.Drawing.Point(368, 178);
-            this.dateVigenciaHastaLicencia.Name = "dateVigenciaHastaLicencia";
-            this.dateVigenciaHastaLicencia.Size = new System.Drawing.Size(160, 20);
-            this.dateVigenciaHastaLicencia.TabIndex = 177;
-            // 
-            // txtNumerodeLicencia
-            // 
-            this.txtNumerodeLicencia.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtNumerodeLicencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumerodeLicencia.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNumerodeLicencia.Location = new System.Drawing.Point(119, 178);
-            this.txtNumerodeLicencia.Name = "txtNumerodeLicencia";
-            this.txtNumerodeLicencia.Size = new System.Drawing.Size(166, 13);
-            this.txtNumerodeLicencia.TabIndex = 128;
-            this.txtNumerodeLicencia.Text = "Número de licencia";
-            this.txtNumerodeLicencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNumerodeLicencia.Enter += new System.EventHandler(this.txtNumerodeLicencia_Enter);
-            this.txtNumerodeLicencia.Leave += new System.EventHandler(this.txtNumerodeLicencia_Leave);
-            // 
             // grpVigenciaLicencia
             // 
-            this.grpVigenciaLicencia.Image = global::wEasyGoDriver.Properties.Resources.locksmith;
-            this.grpVigenciaLicencia.Location = new System.Drawing.Point(231, 44);
+            this.grpVigenciaLicencia.Image = global::wEasyGoDriver.Properties.Resources.log_in;
+            this.grpVigenciaLicencia.Location = new System.Drawing.Point(255, 38);
             this.grpVigenciaLicencia.Name = "grpVigenciaLicencia";
             this.grpVigenciaLicencia.Size = new System.Drawing.Size(107, 88);
             this.grpVigenciaLicencia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1603,19 +1613,9 @@ namespace wEasyGoDriver
             this.pictureBox60.TabIndex = 129;
             this.pictureBox60.TabStop = false;
             // 
-            // pictureBox26
-            // 
-            this.pictureBox26.Image = global::wEasyGoDriver.Properties.Resources.Bienvenido_a_la_plataforma1;
-            this.pictureBox26.Location = new System.Drawing.Point(-3, -22);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(593, 637);
-            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox26.TabIndex = 87;
-            this.pictureBox26.TabStop = false;
-            // 
             // btnSalir
             // 
-            this.btnSalir.Image = global::wEasyGoDriver.Properties.Resources.x;
+            this.btnSalir.Image = global::wEasyGoDriver.Properties.Resources.new_x;
             this.btnSalir.Location = new System.Drawing.Point(1219, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(43, 25);
@@ -1654,11 +1654,23 @@ namespace wEasyGoDriver
             this.tabsRegistros.ResumeLayout(false);
             this.tabPersona.ResumeLayout(false);
             this.tabPersona.PerformLayout();
+            this.grpPersona.ResumeLayout(false);
+            this.grpPersona.PerformLayout();
+            this.tabVehiculo.ResumeLayout(false);
+            this.tabVehiculo.PerformLayout();
+            this.flpRegistrarVehiculo.ResumeLayout(false);
+            this.flpRegistrarVehiculo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarConductor)).EndInit();
+            this.tabPapelesVehiculo.ResumeLayout(false);
+            this.tabPapelesVehiculo.PerformLayout();
+            this.tabLicencia.ResumeLayout(false);
+            this.tabLicencia.PerformLayout();
+            this.grpPropiedad.ResumeLayout(false);
+            this.grpPropiedad.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            this.grpPersona.ResumeLayout(false);
-            this.grpPersona.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
@@ -1675,11 +1687,6 @@ namespace wEasyGoDriver
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabVehiculo.ResumeLayout(false);
-            this.tabVehiculo.PerformLayout();
-            this.flpRegistrarVehiculo.ResumeLayout(false);
-            this.flpRegistrarVehiculo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarConductor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).EndInit();
@@ -1704,8 +1711,6 @@ namespace wEasyGoDriver
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            this.tabPapelesVehiculo.ResumeLayout(false);
-            this.tabPapelesVehiculo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn)).EndInit();
@@ -1717,10 +1722,6 @@ namespace wEasyGoDriver
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
-            this.tabLicencia.ResumeLayout(false);
-            this.tabLicencia.PerformLayout();
-            this.grpPropiedad.ResumeLayout(false);
-            this.grpPropiedad.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpVigenciaLicencia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).EndInit();
@@ -1728,7 +1729,6 @@ namespace wEasyGoDriver
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox58)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);

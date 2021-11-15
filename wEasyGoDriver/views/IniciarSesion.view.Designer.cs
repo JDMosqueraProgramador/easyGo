@@ -53,14 +53,14 @@ namespace wEasyGoDriver.views
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.BackColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnIniciarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnIniciarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnIniciarSesion.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
+            this.btnIniciarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnIniciarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarSesion.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(586, 370);
+            this.btnIniciarSesion.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnIniciarSesion.Location = new System.Drawing.Point(586, 367);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(134, 50);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(141, 50);
             this.btnIniciarSesion.TabIndex = 58;
             this.btnIniciarSesion.Text = "Iniciar sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
@@ -69,6 +69,7 @@ namespace wEasyGoDriver.views
             // lnklblRegistro
             // 
             this.lnklblRegistro.AutoSize = true;
+            this.lnklblRegistro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.lnklblRegistro.Location = new System.Drawing.Point(608, 333);
             this.lnklblRegistro.Name = "lnklblRegistro";
             this.lnklblRegistro.Size = new System.Drawing.Size(100, 13);
@@ -109,7 +110,7 @@ namespace wEasyGoDriver.views
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(608, 150);
+            this.label1.Location = new System.Drawing.Point(617, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 50;
@@ -119,7 +120,7 @@ namespace wEasyGoDriver.views
             // btnCerrar
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::wEasyGoDriver.Properties.Resources.x;
+            this.btnCerrar.Image = global::wEasyGoDriver.Properties.Resources.new_x;
             this.btnCerrar.Location = new System.Drawing.Point(759, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(43, 25);
@@ -163,17 +164,17 @@ namespace wEasyGoDriver.views
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::wEasyGoDriver.Properties.Resources.locksmith;
+            this.pictureBox2.Image = global::wEasyGoDriver.Properties.Resources.log_in;
             this.pictureBox2.Location = new System.Drawing.Point(586, 58);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(132, 78);
+            this.pictureBox2.Size = new System.Drawing.Size(141, 78);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 49;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::wEasyGoDriver.Properties.Resources._1_1_;
+            this.pictureBox1.Image = global::wEasyGoDriver.Properties.Resources.log_in_driver2;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(503, 450);

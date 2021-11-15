@@ -32,14 +32,11 @@ namespace wEasyGoDriver.views
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.cerrarForm = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.tabsMain = new System.Windows.Forms.TabControl();
             this.tabMainInicio = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.lblEstadoMoto = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFechaSoat = new System.Windows.Forms.Label();
@@ -79,22 +76,25 @@ namespace wEasyGoDriver.views
             this.lblTituloHistorial = new System.Windows.Forms.Label();
             this.dtgHistorialViajes = new System.Windows.Forms.DataGridView();
             this.notifyViaje = new System.Windows.Forms.NotifyIcon(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cerrarForm = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.tabsMain.SuspendLayout();
             this.tabMainInicio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabMainViajes.SuspendLayout();
             this.flpViajes.SuspendLayout();
             this.pnlViajeAceptado.SuspendLayout();
             this.tabMainHistorial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHistorialViajes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitulo
             // 
-            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(156)))));
+            this.pnlTitulo.BackColor = System.Drawing.Color.MediumPurple;
             this.pnlTitulo.Controls.Add(this.cerrarForm);
             this.pnlTitulo.Controls.Add(this.btnCerrar);
             this.pnlTitulo.Controls.Add(this.lblTitle);
@@ -103,29 +103,6 @@ namespace wEasyGoDriver.views
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1011, 60);
             this.pnlTitulo.TabIndex = 2;
-            // 
-            // cerrarForm
-            // 
-            this.cerrarForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cerrarForm.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
-            this.cerrarForm.Location = new System.Drawing.Point(953, 14);
-            this.cerrarForm.Name = "cerrarForm";
-            this.cerrarForm.Size = new System.Drawing.Size(43, 25);
-            this.cerrarForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cerrarForm.TabIndex = 48;
-            this.cerrarForm.TabStop = false;
-            this.cerrarForm.Click += new System.EventHandler(this.cerrarForm_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
-            this.btnCerrar.Location = new System.Drawing.Point(886, 14);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(43, 25);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 47;
-            this.btnCerrar.TabStop = false;
             // 
             // lblTitle
             // 
@@ -194,16 +171,6 @@ namespace wEasyGoDriver.views
             this.lblEstadoMoto.Size = new System.Drawing.Size(38, 16);
             this.lblEstadoMoto.TabIndex = 13;
             this.lblEstadoMoto.Text = "valor";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::wEasyGoDriver.Properties.Resources.biker_iStock_1575255671;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(507, 419);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -649,6 +616,39 @@ namespace wEasyGoDriver.views
             this.notifyViaje.Text = "EasyGo Driver";
             this.notifyViaje.Visible = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::wEasyGoDriver.Properties.Resources.driver2;
+            this.pictureBox1.Location = new System.Drawing.Point(-4, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(507, 419);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cerrarForm
+            // 
+            this.cerrarForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cerrarForm.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
+            this.cerrarForm.Location = new System.Drawing.Point(953, 14);
+            this.cerrarForm.Name = "cerrarForm";
+            this.cerrarForm.Size = new System.Drawing.Size(43, 25);
+            this.cerrarForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cerrarForm.TabIndex = 48;
+            this.cerrarForm.TabStop = false;
+            this.cerrarForm.Click += new System.EventHandler(this.cerrarForm_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
+            this.btnCerrar.Location = new System.Drawing.Point(886, 14);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(43, 25);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 47;
+            this.btnCerrar.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -663,12 +663,9 @@ namespace wEasyGoDriver.views
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.tabsMain.ResumeLayout(false);
             this.tabMainInicio.ResumeLayout(false);
             this.tabMainInicio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabMainViajes.ResumeLayout(false);
             this.flpViajes.ResumeLayout(false);
             this.pnlViajeAceptado.ResumeLayout(false);
@@ -676,6 +673,9 @@ namespace wEasyGoDriver.views
             this.tabMainHistorial.ResumeLayout(false);
             this.tabMainHistorial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHistorialViajes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }

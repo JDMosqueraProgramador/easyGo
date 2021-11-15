@@ -204,6 +204,16 @@
     <Content Include="assets\prueba3.jfif" />
     <Content Include="assets\prueba3.jpg" />
     <Content Include="assets\prueba4.jpg" />
+    <None Include="Resources\register new.png" />
+    <None Include="Resources\log in driver2.png" />
+    <None Include="Resources\log in driver1.png" />
+    <None Include="Resources\new x.png" />
+    <None Include="Resources\log in.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\log in driver.png" />
+    <None Include="Resources\Diver Log in.png" />
+    <None Include="Resources\driver2.png" />
+    <None Include="Resources\driver1.png" />
     <None Include="Resources\atras.png" />
     <None Include="Resources\cuenta-bancaria.png" />
     <None Include="Resources\btnDatos.png" />
