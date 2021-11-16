@@ -142,11 +142,13 @@ namespace wEasyGoAdmin.View
             lblTipoCombustible.Text = dataMoto.StrFuelTypeMoto.ToString();
             lblModeloMotocicleta.Text = dataMoto.StrModelMoto.ToString();
             lblColorMotocicleta.Text = dataMoto.StrColorMoto.ToString();
+            lblEstadoMoto.Text = dataMoto.StrStateMoto;
 
             if(dataMoto.StrStateMoto == "disabled")
             {
                 btnHabilitar.Text = "Habilitar";
-            } else
+            } 
+            else
             {
                 btnHabilitar.Text = "Deshabilitar";
             }
