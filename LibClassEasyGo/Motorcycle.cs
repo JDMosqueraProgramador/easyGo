@@ -70,7 +70,7 @@ namespace LibClassEasyGo
             {
                 while (data.Read())
                 {
-                    IUser user = new User(Convert.ToInt32(data[11]), data[12].ToString(), data[13].ToString(), Convert.ToDateTime(data[14]), Convert.ToBoolean(data[15]), data[16].ToString(), Convert.ToInt32(data[17]), Convert.ToInt64(data[18]), data[19].ToString(), Convert.ToDateTime(data[20]), data[21].ToString(), Convert.ToInt32(data[22]));
+                    IUser user = new User(Convert.ToInt64(data[11]), data[12].ToString(), data[13].ToString(), Convert.ToDateTime(data[14]), Convert.ToBoolean(data[15]), data[16].ToString(), Convert.ToInt32(data[17]), Convert.ToInt64(data[18]), data[19].ToString(), Convert.ToDateTime(data[20]), data[21].ToString(), Convert.ToInt32(data[22]));
                     
                     moto = new Motorcycle(data[0].ToString(), data[1].ToString(), Convert.ToInt64(data[2]), data[3].ToString(), Convert.ToInt32(data[4]), data[5].ToString(), data[6].ToString(), data[7].ToString(), user, user, data[10].ToString());
 
