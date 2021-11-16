@@ -32,6 +32,10 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.tabPapeles = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -57,6 +61,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.tabDatosConductor = new System.Windows.Forms.TabPage();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.btnAvanzarPapeles = new System.Windows.Forms.PictureBox();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -77,7 +89,6 @@
             this.pictureBox48 = new System.Windows.Forms.PictureBox();
             this.pictureBox50 = new System.Windows.Forms.PictureBox();
             this.tabBuscarConductor = new System.Windows.Forms.TabPage();
-            this.lblPrueba = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox55 = new System.Windows.Forms.PictureBox();
@@ -96,6 +107,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabsValidar = new System.Windows.Forms.TabControl();
             this.lblVinMotocicleta = new System.Windows.Forms.TabPage();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.lblEstadoMoto = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox54 = new System.Windows.Forms.PictureBox();
@@ -121,26 +140,6 @@
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.tabPapeles.SuspendLayout();
@@ -259,6 +258,50 @@
             this.tabPapeles.Text = "Papeles vehículo-conductor";
             this.tabPapeles.UseVisualStyleBackColor = true;
             this.tabPapeles.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Gainsboro;
+            this.label23.ForeColor = System.Drawing.Color.DimGray;
+            this.label23.Location = new System.Drawing.Point(692, 146);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(41, 13);
+            this.label23.TabIndex = 317;
+            this.label23.Text = "id soat:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Gainsboro;
+            this.label22.ForeColor = System.Drawing.Color.DimGray;
+            this.label22.Location = new System.Drawing.Point(690, 211);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(57, 13);
+            this.label22.TabIndex = 316;
+            this.label22.Text = "Fecha vig:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Gainsboro;
+            this.label21.ForeColor = System.Drawing.Color.DimGray;
+            this.label21.Location = new System.Drawing.Point(358, 147);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(57, 13);
+            this.label21.TabIndex = 315;
+            this.label21.Text = "Fecha vig:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Gainsboro;
+            this.label13.ForeColor = System.Drawing.Color.DimGray;
+            this.label13.Location = new System.Drawing.Point(60, 211);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(57, 13);
+            this.label13.TabIndex = 314;
+            this.label13.Text = "Fecha vig:";
             // 
             // label12
             // 
@@ -541,6 +584,94 @@
             this.tabDatosConductor.Text = "Datos conductor";
             this.tabDatosConductor.UseVisualStyleBackColor = true;
             // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Gainsboro;
+            this.label41.ForeColor = System.Drawing.Color.DimGray;
+            this.label41.Location = new System.Drawing.Point(516, 237);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(42, 13);
+            this.label41.TabIndex = 327;
+            this.label41.Text = "Celular:";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Gainsboro;
+            this.label42.ForeColor = System.Drawing.Color.DimGray;
+            this.label42.Location = new System.Drawing.Point(516, 307);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(43, 13);
+            this.label42.TabIndex = 326;
+            this.label42.Text = "Ciudad:";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.Gainsboro;
+            this.label43.ForeColor = System.Drawing.Color.DimGray;
+            this.label43.Location = new System.Drawing.Point(516, 374);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(26, 13);
+            this.label43.TabIndex = 325;
+            this.label43.Text = "Rol:";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.Gainsboro;
+            this.label44.ForeColor = System.Drawing.Color.DimGray;
+            this.label44.Location = new System.Drawing.Point(516, 176);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(49, 13);
+            this.label44.TabIndex = 324;
+            this.label44.Text = "Apellidos";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Gainsboro;
+            this.label40.ForeColor = System.Drawing.Color.DimGray;
+            this.label40.Location = new System.Drawing.Point(254, 241);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(38, 13);
+            this.label40.TabIndex = 323;
+            this.label40.Text = "E-mail:";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Gainsboro;
+            this.label39.ForeColor = System.Drawing.Color.DimGray;
+            this.label39.Location = new System.Drawing.Point(254, 308);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(63, 13);
+            this.label39.TabIndex = 322;
+            this.label39.Text = "Nacimiento:";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Gainsboro;
+            this.label38.ForeColor = System.Drawing.Color.DimGray;
+            this.label38.Location = new System.Drawing.Point(254, 374);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(42, 13);
+            this.label38.TabIndex = 321;
+            this.label38.Text = "Género";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Gainsboro;
+            this.label37.ForeColor = System.Drawing.Color.DimGray;
+            this.label37.Location = new System.Drawing.Point(254, 173);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(47, 13);
+            this.label37.TabIndex = 320;
+            this.label37.Text = "Nombre:";
+            // 
             // btnAvanzarPapeles
             // 
             this.btnAvanzarPapeles.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -751,7 +882,6 @@
             // 
             // tabBuscarConductor
             // 
-            this.tabBuscarConductor.Controls.Add(this.lblPrueba);
             this.tabBuscarConductor.Controls.Add(this.label20);
             this.tabBuscarConductor.Controls.Add(this.label18);
             this.tabBuscarConductor.Controls.Add(this.pictureBox55);
@@ -775,17 +905,6 @@
             this.tabBuscarConductor.TabIndex = 0;
             this.tabBuscarConductor.Text = "Ver conductores";
             this.tabBuscarConductor.UseVisualStyleBackColor = true;
-            // 
-            // lblPrueba
-            // 
-            this.lblPrueba.AutoSize = true;
-            this.lblPrueba.BackColor = System.Drawing.Color.Transparent;
-            this.lblPrueba.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblPrueba.Location = new System.Drawing.Point(300, 74);
-            this.lblPrueba.Name = "lblPrueba";
-            this.lblPrueba.Size = new System.Drawing.Size(28, 13);
-            this.lblPrueba.TabIndex = 319;
-            this.lblPrueba.Text = "dato";
             // 
             // label20
             // 
@@ -1022,6 +1141,94 @@
             this.lblVinMotocicleta.TabIndex = 3;
             this.lblVinMotocicleta.Text = "Datos vehiculo";
             this.lblVinMotocicleta.UseVisualStyleBackColor = true;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Gainsboro;
+            this.label36.ForeColor = System.Drawing.Color.DimGray;
+            this.label36.Location = new System.Drawing.Point(312, 335);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(43, 13);
+            this.label36.TabIndex = 326;
+            this.label36.Text = "Estado:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Gainsboro;
+            this.label35.ForeColor = System.Drawing.Color.DimGray;
+            this.label35.Location = new System.Drawing.Point(312, 268);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(45, 13);
+            this.label35.TabIndex = 325;
+            this.label35.Text = "Modelo:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Gainsboro;
+            this.label34.ForeColor = System.Drawing.Color.DimGray;
+            this.label34.Location = new System.Drawing.Point(309, 206);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(40, 13);
+            this.label34.TabIndex = 324;
+            this.label34.Text = "Marca:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Gainsboro;
+            this.label33.ForeColor = System.Drawing.Color.DimGray;
+            this.label33.Location = new System.Drawing.Point(309, 140);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(50, 13);
+            this.label33.TabIndex = 323;
+            this.label33.Text = "Licencia:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Gainsboro;
+            this.label32.ForeColor = System.Drawing.Color.DimGray;
+            this.label32.Location = new System.Drawing.Point(58, 337);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(34, 13);
+            this.label32.TabIndex = 322;
+            this.label32.Text = "Color:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Gainsboro;
+            this.label31.ForeColor = System.Drawing.Color.DimGray;
+            this.label31.Location = new System.Drawing.Point(55, 270);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(67, 13);
+            this.label31.TabIndex = 321;
+            this.label31.Text = "Combustible:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Gainsboro;
+            this.label30.ForeColor = System.Drawing.Color.DimGray;
+            this.label30.Location = new System.Drawing.Point(55, 205);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(52, 13);
+            this.label30.TabIndex = 320;
+            this.label30.Text = "Cilindraje:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Gainsboro;
+            this.label24.ForeColor = System.Drawing.Color.DimGray;
+            this.label24.Location = new System.Drawing.Point(55, 140);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(37, 13);
+            this.label24.TabIndex = 319;
+            this.label24.Text = "Placa:";
             // 
             // lblEstadoMoto
             // 
@@ -1297,226 +1504,6 @@
             this.label29.Text = "Datos motocicleta";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Gainsboro;
-            this.label13.ForeColor = System.Drawing.Color.DimGray;
-            this.label13.Location = new System.Drawing.Point(60, 211);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(57, 13);
-            this.label13.TabIndex = 314;
-            this.label13.Text = "Fecha vig:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Gainsboro;
-            this.label21.ForeColor = System.Drawing.Color.DimGray;
-            this.label21.Location = new System.Drawing.Point(358, 147);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(57, 13);
-            this.label21.TabIndex = 315;
-            this.label21.Text = "Fecha vig:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Gainsboro;
-            this.label22.ForeColor = System.Drawing.Color.DimGray;
-            this.label22.Location = new System.Drawing.Point(690, 211);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(57, 13);
-            this.label22.TabIndex = 316;
-            this.label22.Text = "Fecha vig:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Gainsboro;
-            this.label23.ForeColor = System.Drawing.Color.DimGray;
-            this.label23.Location = new System.Drawing.Point(692, 146);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(41, 13);
-            this.label23.TabIndex = 317;
-            this.label23.Text = "id soat:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Gainsboro;
-            this.label24.ForeColor = System.Drawing.Color.DimGray;
-            this.label24.Location = new System.Drawing.Point(55, 140);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(37, 13);
-            this.label24.TabIndex = 319;
-            this.label24.Text = "Placa:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Gainsboro;
-            this.label30.ForeColor = System.Drawing.Color.DimGray;
-            this.label30.Location = new System.Drawing.Point(55, 205);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(52, 13);
-            this.label30.TabIndex = 320;
-            this.label30.Text = "Cilindraje:";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Gainsboro;
-            this.label31.ForeColor = System.Drawing.Color.DimGray;
-            this.label31.Location = new System.Drawing.Point(55, 270);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(67, 13);
-            this.label31.TabIndex = 321;
-            this.label31.Text = "Combustible:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Gainsboro;
-            this.label32.ForeColor = System.Drawing.Color.DimGray;
-            this.label32.Location = new System.Drawing.Point(58, 337);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(34, 13);
-            this.label32.TabIndex = 322;
-            this.label32.Text = "Color:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.Gainsboro;
-            this.label33.ForeColor = System.Drawing.Color.DimGray;
-            this.label33.Location = new System.Drawing.Point(309, 140);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(50, 13);
-            this.label33.TabIndex = 323;
-            this.label33.Text = "Licencia:";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Gainsboro;
-            this.label34.ForeColor = System.Drawing.Color.DimGray;
-            this.label34.Location = new System.Drawing.Point(309, 206);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(40, 13);
-            this.label34.TabIndex = 324;
-            this.label34.Text = "Marca:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.Gainsboro;
-            this.label35.ForeColor = System.Drawing.Color.DimGray;
-            this.label35.Location = new System.Drawing.Point(312, 268);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(45, 13);
-            this.label35.TabIndex = 325;
-            this.label35.Text = "Modelo:";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Gainsboro;
-            this.label36.ForeColor = System.Drawing.Color.DimGray;
-            this.label36.Location = new System.Drawing.Point(312, 335);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(43, 13);
-            this.label36.TabIndex = 326;
-            this.label36.Text = "Estado:";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Gainsboro;
-            this.label37.ForeColor = System.Drawing.Color.DimGray;
-            this.label37.Location = new System.Drawing.Point(254, 173);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(47, 13);
-            this.label37.TabIndex = 320;
-            this.label37.Text = "Nombre:";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Gainsboro;
-            this.label38.ForeColor = System.Drawing.Color.DimGray;
-            this.label38.Location = new System.Drawing.Point(254, 374);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(42, 13);
-            this.label38.TabIndex = 321;
-            this.label38.Text = "Género";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.Gainsboro;
-            this.label39.ForeColor = System.Drawing.Color.DimGray;
-            this.label39.Location = new System.Drawing.Point(254, 308);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(63, 13);
-            this.label39.TabIndex = 322;
-            this.label39.Text = "Nacimiento:";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Gainsboro;
-            this.label40.ForeColor = System.Drawing.Color.DimGray;
-            this.label40.Location = new System.Drawing.Point(254, 241);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(38, 13);
-            this.label40.TabIndex = 323;
-            this.label40.Text = "E-mail:";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Gainsboro;
-            this.label41.ForeColor = System.Drawing.Color.DimGray;
-            this.label41.Location = new System.Drawing.Point(516, 237);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(42, 13);
-            this.label41.TabIndex = 327;
-            this.label41.Text = "Celular:";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Gainsboro;
-            this.label42.ForeColor = System.Drawing.Color.DimGray;
-            this.label42.Location = new System.Drawing.Point(516, 307);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(43, 13);
-            this.label42.TabIndex = 326;
-            this.label42.Text = "Ciudad:";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.Gainsboro;
-            this.label43.ForeColor = System.Drawing.Color.DimGray;
-            this.label43.Location = new System.Drawing.Point(516, 374);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(26, 13);
-            this.label43.TabIndex = 325;
-            this.label43.Text = "Rol:";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Gainsboro;
-            this.label44.ForeColor = System.Drawing.Color.DimGray;
-            this.label44.Location = new System.Drawing.Point(516, 176);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(49, 13);
-            this.label44.TabIndex = 324;
-            this.label44.Text = "Apellidos";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1675,7 +1662,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblPrueba;
         private System.Windows.Forms.Label lblEstadoMoto;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label23;
