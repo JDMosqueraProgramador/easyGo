@@ -59,12 +59,11 @@ namespace wEasyGoDriver.views
 
         private string _baseUrl = "https://eaasygo.azurewebsites.net/";
         private string _url = "https://eaasygo.azurewebsites.net/travelHub";
+
         HubConnection signalConn;
         private string _groupID = null;
 
         #endregion
-
-        
 
         int panelCant = 0;
 
@@ -88,25 +87,35 @@ namespace wEasyGoDriver.views
             pnlViajeAceptado.Visible = false;
             btnTerminarViaje.Visible = false;
 
-            if (dataMoto != null && dataUser != null)
+            try
             {
 
-                if(dataUser.StrRolUser == "Owner")
+                if (dataMoto != null && dataUser != null)
                 {
-                    MessageBox.Show("El perfil del dueño aún no se encuentra disponible");
+
+                    if (dataUser.StrRolUser == "Owner")
+                    {
+                        MessageBox.Show("El perfil del dueño aún no se encuentra disponible");
+                        this.Close();
+                    }
+
+                    dtgHistorialViajes.DataSource = userController.GetDriverHistory(dataMoto.StrLicensePlateMoto);
+                    lblEstadoMoto.Text = dataMoto.StrStateMoto;
+                    dataMoto.StrStateMoto = "inactive";
+
+                }
+                else if (dataUser != null && dataMoto == null)
+                {
+                    MessageBox.Show("El dueño de el vehículo aún no lo ha registrado con su vehículo, verifique cuando sea registrado y vuelva a iniciar sesión");
+
                     this.Close();
                 }
 
-                dtgHistorialViajes.DataSource = userController.GetDriverHistory(dataMoto.StrLicensePlateMoto);
-                lblEstadoMoto.Text = dataMoto.StrStateMoto;
-                dataMoto.StrStateMoto = "inactive";
-
             }
-            else if (dataUser != null && dataMoto == null)
+            catch (Exception err)
             {
-                MessageBox.Show("El dueño de el vehículo aún no lo ha registrado con su vehículo, verifique cuando sea registrado y vuelva a iniciar sesión");
 
-                this.Close();
+                MessageBox.Show(err.Message);
             }
 
             #endregion
@@ -116,61 +125,62 @@ namespace wEasyGoDriver.views
             try
             {
                 await signalConn.StartAsync();
+
+                signalConn.On<int, string, double[], double[], DateTime, string>("ReceiveTravel", async (idUser, customerName, startPlace, endPlace, dateRequest, connectId) =>
+                {
+
+                    ITravel travel = new Travel();
+                //travel.StrStartingPlaceTravel = startPlace;
+                //travel.StrDestinationPlaceTravel = endPlace;
+                travel.DateRequestTravel = dateRequest;
+                    travel.Customer = new User();
+                    travel.Customer.IntIdUser = idUser;
+                    travel.Customer.StrNamePerson = customerName;
+
+                    notifyViaje.Text = $"Solicitud de viaje de {customerName}";
+                    notifyViaje.ShowBalloonTip(4000, notifyViaje.Text, "Podrás aceptar o rechazar la solicitud", ToolTipIcon.Info);
+
+                // MessageBox.Show(travel.ToString());
+
+                flpViajes.Controls.Add(await generateTravelRequest(panelCant, travel, connectId, startPlace, endPlace));
+
+                    panelCant++;
+
+                });
+
+                signalConn.On<int, string>("RemoveTravel", async (idUser, customerName) =>
+                {
+                    flpViajes.Controls.Remove(flpViajes.Controls.Find($"pnlViaje{idUser}", false)[0]);
+                    notifyViaje.ShowBalloonTip(2000, $"{customerName} ha cancelado el viaje", "Se eliminará de tu panel de viajes", ToolTipIcon.Error);
+
+                });
+
+                signalConn.On<string, int>("CancelAcceptTravel", async (groupName, idTravel) =>
+                {
+                    notifyViaje.ShowBalloonTip(5000, $"{lblNombreAceptado.Text} Ha cancelado el viaje", "El usuario ha cancelado el viaje ya aceptado", ToolTipIcon.Error);
+                    this.ClearMap();
+
+                    await signalConn.InvokeAsync("RemoveGroup", groupName);
+                    _groupID = null;
+                    actualTravel = null;
+                    await signalConn.InvokeAsync("AddAvailable");
+
+                    pnlViajeAceptado.Visible = false;
+
+                    motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto);
+
+                    MessageBox.Show("Viaje cancelado", "El viaje ha sido cancelado", MessageBoxButtons.OK);
+
+                });
+
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
             }
 
-            signalConn.On<int, string, double[], double[], DateTime, string>("ReceiveTravel", async (idUser, customerName, startPlace, endPlace, dateRequest, connectId) =>
-            {
-
-                ITravel travel = new Travel();
-                //travel.StrStartingPlaceTravel = startPlace;
-                //travel.StrDestinationPlaceTravel = endPlace;
-                travel.DateRequestTravel = dateRequest;
-                travel.Customer = new User();
-                travel.Customer.IntIdUser = idUser;
-                travel.Customer.StrNamePerson = customerName;
-
-                notifyViaje.Text = $"Solicitud de viaje de {customerName}";
-                notifyViaje.ShowBalloonTip(4000, notifyViaje.Text, "Podrás aceptar o rechazar la solicitud", ToolTipIcon.Info);
-
-                // MessageBox.Show(travel.ToString());
-
-                flpViajes.Controls.Add(await generateTravelRequest(panelCant, travel, connectId, startPlace, endPlace));
-
-                panelCant++;
-
-            });
-
-            signalConn.On<int, string>("RemoveTravel", async (idUser, customerName) =>
-            {
-                flpViajes.Controls.Remove(flpViajes.Controls.Find($"pnlViaje{idUser}", false)[0]);
-                notifyViaje.ShowBalloonTip(2000, $"{customerName} ha cancelado el viaje", "Se eliminará de tu panel de viajes", ToolTipIcon.Error);
-
-            });
-
-            signalConn.On<string, int>("CancelAcceptTravel", async (groupName, idTravel) =>
-            {
-                notifyViaje.ShowBalloonTip(5000, $"{lblNombreAceptado.Text} Ha cancelado el viaje", "El usuario ha cancelado el viaje ya aceptado", ToolTipIcon.Error);
-                this.ClearMap();
-
-                await signalConn.InvokeAsync("RemoveGroup", groupName);
-                _groupID = null;
-                actualTravel = null;
-                await signalConn.InvokeAsync("AddAvailable");
-
-                pnlViajeAceptado.Visible = false;
-
-                motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto);
-
-                MessageBox.Show("Viaje cancelado", "El viaje ha sido cancelado", MessageBoxButtons.OK);
-
-            });
-
             #endregion
-        
+
         }
 
         private async void frmMain_Load(object sender, EventArgs e)
@@ -200,38 +210,47 @@ namespace wEasyGoDriver.views
             markerOverlay.Markers.Add(markerStart);
             markerStart.ToolTipMode = MarkerTooltipMode.Always;
 
-            positionWatcher.PositionChanged += (sen, evt) =>
+            try
+            {
+                positionWatcher.PositionChanged += (sen, evt) =>
+                {
+
+                    latitude = evt.Position.Location.Latitude;
+                    longitude = evt.Position.Location.Longitude;
+
+                    actualPoint = new PointLatLng(latitude, longitude);
+
+                    if (gMapPrincipal.Position.IsEmpty) gMapPrincipal.Position = new PointLatLng(latitude, longitude);
+
+                    if (markerPosition == null)
+                    {
+                        markerPosition = new GMarkerGoogle(actualPoint, GMarkerGoogleType.purple_pushpin);
+                        markerOverlay.Markers.Add(markerPosition);
+                        markerPosition.ToolTipMode = MarkerTooltipMode.Always;
+                        markerPosition.ToolTipText = "Tu ubicación actual";
+
+                        gMapPrincipal.Overlays.Add(markerOverlay);
+                    }
+                    else
+                    {
+                        markerPosition.Position = actualPoint;
+                    }
+
+                    if (_groupID != null)
+                    {
+                        signalConn.InvokeAsync("SendPosition", latitude, longitude, _groupID);
+                    }
+
+                };
+
+                positionWatcher.Start();
+
+            }
+            catch (Exception err)
             {
 
-                latitude = evt.Position.Location.Latitude;
-                longitude = evt.Position.Location.Longitude;
-
-                actualPoint = new PointLatLng(latitude, longitude);
-
-                if (gMapPrincipal.Position.IsEmpty) gMapPrincipal.Position = new PointLatLng(latitude, longitude);
-
-                if (markerPosition == null)
-                {
-                    markerPosition = new GMarkerGoogle(actualPoint, GMarkerGoogleType.purple_pushpin);
-                    markerOverlay.Markers.Add(markerPosition);
-                    markerPosition.ToolTipMode = MarkerTooltipMode.Always;
-                    markerPosition.ToolTipText = "Tu ubicación actual";
-
-                    gMapPrincipal.Overlays.Add(markerOverlay);
-                }
-                else
-                {
-                    markerPosition.Position = actualPoint;
-                }
-
-                if (_groupID != null)
-                {
-                    signalConn.InvokeAsync("SendPosition", latitude, longitude, _groupID);
-                }
-
-            };
-
-            positionWatcher.Start();
+                MessageBox.Show(err.Message);
+            }
 
             #endregion
 
@@ -243,8 +262,13 @@ namespace wEasyGoDriver.views
 
             signalConn.Closed += async (error) =>
             {
-                System.Threading.Thread.Sleep(5000);
-                await signalConn.StartAsync();
+                do
+                {
+                    MessageBox.Show("Intentando conectar...", $"Intentando conectar nuevamente...");
+                    System.Threading.Thread.Sleep(5000);
+                    await signalConn.StartAsync();
+
+                } while (signalConn.State != HubConnectionState.Connected);
             };
 
         }
@@ -580,32 +604,41 @@ namespace wEasyGoDriver.views
         {
             if (MessageBox.Show("¿Seguro que deseas cancelar el viaje ya aceptado?", "Cancelación de viaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-
-                if (this.travelController.ExecuteCancelTravel())
+                try
                 {
 
-                    pnlViajeAceptado.Visible = false;
-
-                    flpViajes.Controls.Clear();
-                    flpViajes.Controls.Add(lblAvisoViajes);
-                    lblAvisoViajes.Visible = true;
-
-                    gMapPrincipal.Overlays.Remove(routeOver);
-                    markerOverlay.Markers.Remove(markerStart);
-                    markerOverlay.Markers.Remove(markerEnd);
-                    this.enfocarPosicion();
 
 
-                    await signalConn.InvokeAsync("CancelAcceptedTravel", this._groupID, actualTravel.IntIdTravel);
+                    if (this.travelController.ExecuteCancelTravel())
+                    {
+                        pnlViajeAceptado.Visible = false;
 
-                    await signalConn.InvokeAsync("AddAvailable");
+                        flpViajes.Controls.Clear();
+                        flpViajes.Controls.Add(lblAvisoViajes);
+                        lblAvisoViajes.Visible = true;
 
-                    motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto);
+                        gMapPrincipal.Overlays.Remove(routeOver);
+                        markerOverlay.Markers.Remove(markerStart);
+                        markerOverlay.Markers.Remove(markerEnd);
+                        this.enfocarPosicion();
+
+
+                        await signalConn.InvokeAsync("CancelAcceptedTravel", this._groupID, actualTravel.IntIdTravel);
+
+                        await signalConn.InvokeAsync("AddAvailable");
+
+                        motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto);
+
+                    }
+                    else
+                    {
+                        throw new Exception("No ha sido posible cancelar el viaje, intente nuevamente");
+                    }
 
                 }
-                else
+                catch (Exception err)
                 {
-                    throw new Exception("No ha sido posible cancelar el viaje, intente nuevamente");
+                    MessageBox.Show(err.Message);
                 }
             }
 
@@ -613,74 +646,94 @@ namespace wEasyGoDriver.views
 
         private void btnViajeAceptado_Click(object sender, EventArgs e)
         {
-            if (actualTravel.StrStateTravel == "waiting")
+            try
             {
-
-                if (this.travelController.StartTravel())
+                if (actualTravel.StrStateTravel == "waiting")
                 {
-                    actualTravel = this.travelController.GetTravel();
+                    if (this.travelController.StartTravel())
+                    {
+                        actualTravel = this.travelController.GetTravel();
 
-                    signalConn.InvokeAsync("StartTravel", this._groupID);
+                        signalConn.InvokeAsync("StartTravel", this._groupID);
 
-                    this.routeOver.Routes.Clear();
-                    this.routeOver.Routes.Add(travelRoute);
+                        this.routeOver.Routes.Clear();
+                        this.routeOver.Routes.Add(travelRoute);
 
-                    gMapPrincipal.Zoom += 1;
-                    gMapPrincipal.Zoom -= 1;
+                        gMapPrincipal.Zoom += 1;
+                        gMapPrincipal.Zoom -= 1;
 
-                    btnTerminarViaje.Enabled = true;
-                    btnTerminarViaje.Visible = true;
+                        btnTerminarViaje.Enabled = true;
+                        btnTerminarViaje.Visible = true;
 
-                    btnEnInicioAceptado.Enabled = false;
-                    btnViajeAceptado.Enabled = false;
-                    btnCancelarAceptado.Enabled = false;
+                        btnEnInicioAceptado.Enabled = false;
+                        btnViajeAceptado.Enabled = false;
+                        btnCancelarAceptado.Enabled = false;
 
+                    }
+                    else
+                    {
+                        throw new Exception("Error al comenzar viaje, intente nuevamente");
+                    }
                 }
-                else
-                {
-                    throw new Exception("Error al comenzar viaje, intente nuevamente");
-                }
+
             }
-
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
 
         private async void btnEnInicioAceptado_Click(object sender, EventArgs e)
         {
-            await signalConn.InvokeAsync("SendInStart", _groupID);
+            try
+            {
+                await signalConn.InvokeAsync("SendInStart", _groupID);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
             btnEnInicioAceptado.Enabled = false;
         }
 
         private async void btnTerminarViaje_Click(object sender, EventArgs e)
         {
-            if (actualTravel.StrStateTravel == "traveling")
+            try
             {
-                if (this.travelController.FinishTravel())
+                if (actualTravel.StrStateTravel == "traveling")
                 {
-                    motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto);
+                    if (this.travelController.FinishTravel())
+                    {
+                        motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto);
 
-                    await signalConn.InvokeAsync("FinishTravel", _groupID);
-                    MessageBox.Show("Viaje finalizado con éxito", "Recuerda cobrarle el dinero correspondiente al usuario");
+                        await signalConn.InvokeAsync("FinishTravel", _groupID);
+                        MessageBox.Show("Viaje finalizado con éxito", "Recuerda cobrarle el dinero correspondiente al usuario");
 
-                    await signalConn.InvokeAsync("AddAvailable");
+                        await signalConn.InvokeAsync("AddAvailable");
 
-                    actualTravel = null;
-                    dataMoto.StrStateMoto = "available";
-                    btnEstado.Text = "Terminar jornada";
-                    ClearMap();
+                        actualTravel = null;
+                        dataMoto.StrStateMoto = "available";
+                        btnEstado.Text = "Terminar jornada";
+                        ClearMap();
 
+                        btnTerminarViaje.Visible = false;
+                        pnlViajeAceptado.Visible = false;
+                        if (!this.Controls.Contains(lblAvisoViajes)) this.Controls.Add(lblAvisoViajes);
+                        lblAvisoViajes.Visible = true;
 
-                    btnTerminarViaje.Visible = false;
-                    pnlViajeAceptado.Visible = false;
-                    if (!this.Controls.Contains(lblAvisoViajes)) this.Controls.Add(lblAvisoViajes);
-                    lblAvisoViajes.Visible = true;
+                    }
+                    else
+                    {
+                        throw new Exception("Error al terminar viaje, intente nuevamente");
+                    }
 
                 }
 
-                else
-                {
-                    throw new Exception("Error al terminar viaje, intente nuevamente");
-                }
-
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
             }
 
         }
@@ -738,50 +791,58 @@ namespace wEasyGoDriver.views
         private async void btnEstado_Click(object sender, EventArgs e)
         {
 
-            switch (dataMoto.StrStateMoto)
+            try
             {
-                case "inactive":
-                    if (motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto))
-                    {
-                        await signalConn.InvokeAsync("AddAvailable");
-                        dataMoto.StrStateMoto = "available";
-                        btnEstado.Text = "Terminar jornada";
-                        tabsMain.SelectedTab = tabMainViajes;
-                    }
+                switch (dataMoto.StrStateMoto)
+                {
+                    case "inactive":
+                        if (motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto))
+                        {
+                            await signalConn.InvokeAsync("AddAvailable");
+                            dataMoto.StrStateMoto = "available";
+                            btnEstado.Text = "Terminar jornada";
+                            tabsMain.SelectedTab = tabMainViajes;
+                        }
 
-                    break;
+                        break;
 
-                case "available":
+                    case "available":
 
-                    if (motoControlller.ExecuteChangeState("inactive", dataMoto.StrLicensePlateMoto))
-                    {
-                        await signalConn.InvokeAsync("RemoveAvailable");
-                        dataMoto.StrStateMoto = "inactive";
-                        btnEstado.Text = "Iniciar jornada";
-                    }
+                        if (motoControlller.ExecuteChangeState("inactive", dataMoto.StrLicensePlateMoto))
+                        {
+                            await signalConn.InvokeAsync("RemoveAvailable");
+                            dataMoto.StrStateMoto = "inactive";
+                            btnEstado.Text = "Iniciar jornada";
+                        }
 
-                    break;
+                        break;
 
-                case "disabled":
-                    btnEstado.Text = "";
-                    break;
+                    case "disabled":
+                        btnEstado.Text = "";
+                        break;
 
-                /*case "busy":
+                    /*case "busy":
 
-                    btnEstado.Enabled = false;
-                    break; */
+                        btnEstado.Enabled = false;
+                        break; */
 
-                default:
-                    if (motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto))
-                    {
-                        await signalConn.InvokeAsync("AddAvailable");
-                        dataMoto.StrStateMoto = "available";
-                        btnEstado.Text = "Terminar jornada";
-                        tabsMain.SelectedTab = tabMainViajes;
-                    }
+                    default:
+                        if (motoControlller.ExecuteChangeState("available", dataMoto.StrLicensePlateMoto))
+                        {
+                            await signalConn.InvokeAsync("AddAvailable");
+                            dataMoto.StrStateMoto = "available";
+                            btnEstado.Text = "Terminar jornada";
+                            tabsMain.SelectedTab = tabMainViajes;
+                        }
 
-                    break;
+                        break;
 
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
             }
 
             lblEstadoMoto.Text = dataMoto.StrStateMoto;
@@ -791,14 +852,13 @@ namespace wEasyGoDriver.views
         private void button1_Click_1(object sender, EventArgs e)
         {
             new frmPerfilConductor(dataUser.IntPhoneUser).Show();
-
-
         }
 
         private void tabMainHistorial_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 
 }

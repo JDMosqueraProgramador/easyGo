@@ -100,9 +100,6 @@ namespace wEasyGoDriver
                     this.EnableTab(tabLicencia);
                 }
 
-                
-
-
             }
             catch (Exception err)
             {
@@ -189,7 +186,6 @@ namespace wEasyGoDriver
             }
             catch (Exception err)
             {
-
                 MessageBox.Show(err.Message);
             }
         }
