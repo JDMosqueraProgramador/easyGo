@@ -286,6 +286,12 @@
   <ItemGroup>
     <None Include="Resources\btnDatos.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\wEasyGoDriver\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\wEasyGoDriver\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

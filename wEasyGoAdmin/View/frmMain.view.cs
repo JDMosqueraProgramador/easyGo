@@ -85,6 +85,14 @@ namespace wEasyGoAdmin.View
             this.Close();
         }
 
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            tabsAministrar.SelectedTab = tabPapeles;
+        }
     }
 }

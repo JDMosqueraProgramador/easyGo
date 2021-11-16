@@ -30,13 +30,29 @@
         {
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.tabsAdministracion = new System.Windows.Forms.TabControl();
-            this.tabBuscarConductor = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtgConductores = new System.Windows.Forms.DataGridView();
-            this.txtNombreConductor = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
+            this.tabDatosVehiculo = new System.Windows.Forms.TabPage();
+            this.tabPapeles = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabDatosConductor = new System.Windows.Forms.TabPage();
+            this.lblNombreConductor = new System.Windows.Forms.Label();
+            this.lblApellidoConductor = new System.Windows.Forms.Label();
+            this.lblFechaNacimientoConductor = new System.Windows.Forms.Label();
+            this.lblGeneroConductor = new System.Windows.Forms.Label();
+            this.lblCiudadConductor = new System.Windows.Forms.Label();
+            this.lblNumeroCelularConductor = new System.Windows.Forms.Label();
+            this.lblEmailConductor = new System.Windows.Forms.Label();
+            this.lblRolConductor = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tabBuscarConductor = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNombreConductor = new System.Windows.Forms.TextBox();
+            this.dtgConductores = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,18 +60,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lblRolConductor = new System.Windows.Forms.Label();
-            this.lblEmailConductor = new System.Windows.Forms.Label();
-            this.lblNumeroCelularConductor = new System.Windows.Forms.Label();
-            this.lblCiudadConductor = new System.Windows.Forms.Label();
-            this.lblGeneroConductor = new System.Windows.Forms.Label();
-            this.lblFechaNacimientoConductor = new System.Windows.Forms.Label();
-            this.lblApellidoConductor = new System.Windows.Forms.Label();
-            this.lblNombreConductor = new System.Windows.Forms.Label();
+            this.tabsAministrar = new System.Windows.Forms.TabControl();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
             this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.pictureBox36 = new System.Windows.Forms.PictureBox();
@@ -73,14 +81,24 @@
             this.pictureBox48 = new System.Windows.Forms.PictureBox();
             this.pictureBox49 = new System.Windows.Forms.PictureBox();
             this.pictureBox50 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnlTitulo.SuspendLayout();
-            this.tabsAdministracion.SuspendLayout();
+            this.tabPapeles.SuspendLayout();
+            this.tabDatosConductor.SuspendLayout();
             this.tabBuscarConductor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConductores)).BeginInit();
-            this.tabDatosConductor.SuspendLayout();
+            this.tabsAministrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
@@ -98,6 +116,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,88 +149,136 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Home";
             // 
-            // tabsAdministracion
+            // bunifuFormDock1
             // 
-            this.tabsAdministracion.Controls.Add(this.tabBuscarConductor);
-            this.tabsAdministracion.Controls.Add(this.tabDatosConductor);
-            this.tabsAdministracion.Location = new System.Drawing.Point(22, 72);
-            this.tabsAdministracion.Name = "tabsAdministracion";
-            this.tabsAdministracion.SelectedIndex = 0;
-            this.tabsAdministracion.Size = new System.Drawing.Size(970, 456);
-            this.tabsAdministracion.TabIndex = 226;
+            this.bunifuFormDock1.AllowFormDragging = true;
+            this.bunifuFormDock1.AllowFormDropShadow = true;
+            this.bunifuFormDock1.AllowFormResizing = true;
+            this.bunifuFormDock1.AllowHidingBottomRegion = true;
+            this.bunifuFormDock1.AllowOpacityChangesWhileDragging = false;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.RightBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.RightBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.TopBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.TopBorder.ShowBorder = true;
+            this.bunifuFormDock1.ContainerControl = this;
+            this.bunifuFormDock1.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
+            this.bunifuFormDock1.DockingIndicatorsOpacity = 0.5D;
+            this.bunifuFormDock1.DockingOptions.DockAll = true;
+            this.bunifuFormDock1.DockingOptions.DockBottomLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockBottomRight = true;
+            this.bunifuFormDock1.DockingOptions.DockFullScreen = true;
+            this.bunifuFormDock1.DockingOptions.DockLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockRight = true;
+            this.bunifuFormDock1.DockingOptions.DockTopLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockTopRight = true;
+            this.bunifuFormDock1.FormDraggingOpacity = 0.9D;
+            this.bunifuFormDock1.ParentForm = this;
+            this.bunifuFormDock1.ShowCursorChanges = true;
+            this.bunifuFormDock1.ShowDockingIndicators = true;
+            this.bunifuFormDock1.TitleBarOptions.AllowFormDragging = true;
+            this.bunifuFormDock1.TitleBarOptions.BunifuFormDock = this.bunifuFormDock1;
+            this.bunifuFormDock1.TitleBarOptions.DoubleClickToExpandWindow = true;
+            this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
+            this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
-            // tabBuscarConductor
+            // tabDatosVehiculo
             // 
-            this.tabBuscarConductor.Controls.Add(this.label9);
-            this.tabBuscarConductor.Controls.Add(this.label8);
-            this.tabBuscarConductor.Controls.Add(this.label7);
-            this.tabBuscarConductor.Controls.Add(this.label6);
-            this.tabBuscarConductor.Controls.Add(this.label5);
-            this.tabBuscarConductor.Controls.Add(this.label4);
-            this.tabBuscarConductor.Controls.Add(this.label3);
-            this.tabBuscarConductor.Controls.Add(this.label2);
-            this.tabBuscarConductor.Controls.Add(this.dtgConductores);
-            this.tabBuscarConductor.Controls.Add(this.txtNombreConductor);
-            this.tabBuscarConductor.Controls.Add(this.pictureBox31);
-            this.tabBuscarConductor.Controls.Add(this.pictureBox32);
-            this.tabBuscarConductor.Controls.Add(this.label1);
-            this.tabBuscarConductor.Location = new System.Drawing.Point(4, 22);
-            this.tabBuscarConductor.Name = "tabBuscarConductor";
-            this.tabBuscarConductor.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBuscarConductor.Size = new System.Drawing.Size(962, 430);
-            this.tabBuscarConductor.TabIndex = 0;
-            this.tabBuscarConductor.Text = "Ver conductores";
-            this.tabBuscarConductor.UseVisualStyleBackColor = true;
+            this.tabDatosVehiculo.Location = new System.Drawing.Point(4, 22);
+            this.tabDatosVehiculo.Name = "tabDatosVehiculo";
+            this.tabDatosVehiculo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDatosVehiculo.Size = new System.Drawing.Size(962, 442);
+            this.tabDatosVehiculo.TabIndex = 3;
+            this.tabDatosVehiculo.Text = "Datos vehiculo";
+            this.tabDatosVehiculo.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // tabPapeles
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(587, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 20);
-            this.label2.TabIndex = 124;
-            this.label2.Text = "Lista de conductores";
+            this.tabPapeles.Controls.Add(this.label14);
+            this.tabPapeles.Controls.Add(this.label10);
+            this.tabPapeles.Controls.Add(this.label11);
+            this.tabPapeles.Controls.Add(this.label12);
+            this.tabPapeles.Controls.Add(this.label13);
+            this.tabPapeles.Controls.Add(this.pictureBox1);
+            this.tabPapeles.Controls.Add(this.pictureBox2);
+            this.tabPapeles.Controls.Add(this.pictureBox3);
+            this.tabPapeles.Controls.Add(this.pictureBox4);
+            this.tabPapeles.Controls.Add(this.pictureBox7);
+            this.tabPapeles.Controls.Add(this.pictureBox8);
+            this.tabPapeles.Controls.Add(this.pictureBox9);
+            this.tabPapeles.Controls.Add(this.pictureBox10);
+            this.tabPapeles.Location = new System.Drawing.Point(4, 22);
+            this.tabPapeles.Name = "tabPapeles";
+            this.tabPapeles.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPapeles.Size = new System.Drawing.Size(962, 442);
+            this.tabPapeles.TabIndex = 2;
+            this.tabPapeles.Text = "Papeles vehículo-conductor";
+            this.tabPapeles.UseVisualStyleBackColor = true;
+            this.tabPapeles.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // dtgConductores
+            // label13
             // 
-            this.dtgConductores.BackgroundColor = System.Drawing.Color.White;
-            this.dtgConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgConductores.Location = new System.Drawing.Point(368, 75);
-            this.dtgConductores.Name = "dtgConductores";
-            this.dtgConductores.Size = new System.Drawing.Size(575, 318);
-            this.dtgConductores.TabIndex = 123;
+            this.label13.BackColor = System.Drawing.Color.Gainsboro;
+            this.label13.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label13.Location = new System.Drawing.Point(85, 99);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(142, 17);
+            this.label13.TabIndex = 272;
+            this.label13.Text = "Número de licencia";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtNombreConductor
+            // label12
             // 
-            this.txtNombreConductor.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtNombreConductor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombreConductor.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombreConductor.Location = new System.Drawing.Point(107, 139);
-            this.txtNombreConductor.Name = "txtNombreConductor";
-            this.txtNombreConductor.Size = new System.Drawing.Size(166, 13);
-            this.txtNombreConductor.TabIndex = 120;
-            this.txtNombreConductor.Text = "Nombre conductor";
-            this.txtNombreConductor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNombreConductor.TextChanged += new System.EventHandler(this.txtNombreConductor_TextChanged);
-            this.txtNombreConductor.Enter += new System.EventHandler(this.txtNombreConductor_Enter);
-            this.txtNombreConductor.Leave += new System.EventHandler(this.txtNombreConductor_Leave);
+            this.label12.BackColor = System.Drawing.Color.Gainsboro;
+            this.label12.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label12.Location = new System.Drawing.Point(85, 165);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(142, 17);
+            this.label12.TabIndex = 275;
+            this.label12.Text = "Fotografía de la licencia";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // label11
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(31, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(297, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Aqui puedes consultar los conductores registrados:";
+            this.label11.BackColor = System.Drawing.Color.Gainsboro;
+            this.label11.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label11.Location = new System.Drawing.Point(346, 164);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(142, 17);
+            this.label11.TabIndex = 280;
+            this.label11.Text = "Vehículo propio";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Gainsboro;
+            this.label10.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label10.Location = new System.Drawing.Point(346, 98);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(142, 17);
+            this.label10.TabIndex = 283;
+            this.label10.Text = "Fecha de videncia ";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.Location = new System.Drawing.Point(96, 37);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(337, 12);
+            this.label14.TabIndex = 284;
+            this.label14.Text = "Datos licencia";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabDatosConductor
             // 
+            this.tabDatosConductor.Controls.Add(this.pictureBox5);
             this.tabDatosConductor.Controls.Add(this.pictureBox34);
             this.tabDatosConductor.Controls.Add(this.label16);
             this.tabDatosConductor.Controls.Add(this.lblRolConductor);
@@ -234,10 +308,178 @@
             this.tabDatosConductor.Location = new System.Drawing.Point(4, 22);
             this.tabDatosConductor.Name = "tabDatosConductor";
             this.tabDatosConductor.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDatosConductor.Size = new System.Drawing.Size(962, 430);
+            this.tabDatosConductor.Size = new System.Drawing.Size(962, 442);
             this.tabDatosConductor.TabIndex = 1;
             this.tabDatosConductor.Text = "Datos conductor";
             this.tabDatosConductor.UseVisualStyleBackColor = true;
+            // 
+            // lblNombreConductor
+            // 
+            this.lblNombreConductor.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblNombreConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblNombreConductor.Location = new System.Drawing.Point(297, 172);
+            this.lblNombreConductor.Name = "lblNombreConductor";
+            this.lblNombreConductor.Size = new System.Drawing.Size(142, 17);
+            this.lblNombreConductor.TabIndex = 251;
+            this.lblNombreConductor.Text = "Nombre";
+            this.lblNombreConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblApellidoConductor
+            // 
+            this.lblApellidoConductor.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblApellidoConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblApellidoConductor.Location = new System.Drawing.Point(297, 238);
+            this.lblApellidoConductor.Name = "lblApellidoConductor";
+            this.lblApellidoConductor.Size = new System.Drawing.Size(142, 17);
+            this.lblApellidoConductor.TabIndex = 254;
+            this.lblApellidoConductor.Text = "Apellidos";
+            this.lblApellidoConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFechaNacimientoConductor
+            // 
+            this.lblFechaNacimientoConductor.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblFechaNacimientoConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblFechaNacimientoConductor.Location = new System.Drawing.Point(297, 307);
+            this.lblFechaNacimientoConductor.Name = "lblFechaNacimientoConductor";
+            this.lblFechaNacimientoConductor.Size = new System.Drawing.Size(142, 17);
+            this.lblFechaNacimientoConductor.TabIndex = 257;
+            this.lblFechaNacimientoConductor.Text = "Fecha de nacimiento";
+            this.lblFechaNacimientoConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblGeneroConductor
+            // 
+            this.lblGeneroConductor.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblGeneroConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblGeneroConductor.Location = new System.Drawing.Point(297, 372);
+            this.lblGeneroConductor.Name = "lblGeneroConductor";
+            this.lblGeneroConductor.Size = new System.Drawing.Size(142, 17);
+            this.lblGeneroConductor.TabIndex = 260;
+            this.lblGeneroConductor.Text = "Género";
+            this.lblGeneroConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblCiudadConductor
+            // 
+            this.lblCiudadConductor.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblCiudadConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblCiudadConductor.Location = new System.Drawing.Point(558, 306);
+            this.lblCiudadConductor.Name = "lblCiudadConductor";
+            this.lblCiudadConductor.Size = new System.Drawing.Size(142, 17);
+            this.lblCiudadConductor.TabIndex = 263;
+            this.lblCiudadConductor.Text = "Ciudad";
+            this.lblCiudadConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNumeroCelularConductor
+            // 
+            this.lblNumeroCelularConductor.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblNumeroCelularConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblNumeroCelularConductor.Location = new System.Drawing.Point(558, 237);
+            this.lblNumeroCelularConductor.Name = "lblNumeroCelularConductor";
+            this.lblNumeroCelularConductor.Size = new System.Drawing.Size(142, 17);
+            this.lblNumeroCelularConductor.TabIndex = 266;
+            this.lblNumeroCelularConductor.Text = "Numero de celular";
+            this.lblNumeroCelularConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblEmailConductor
+            // 
+            this.lblEmailConductor.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblEmailConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblEmailConductor.Location = new System.Drawing.Point(558, 171);
+            this.lblEmailConductor.Name = "lblEmailConductor";
+            this.lblEmailConductor.Size = new System.Drawing.Size(142, 17);
+            this.lblEmailConductor.TabIndex = 269;
+            this.lblEmailConductor.Text = "E-mail";
+            this.lblEmailConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblRolConductor
+            // 
+            this.lblRolConductor.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblRolConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblRolConductor.Location = new System.Drawing.Point(558, 372);
+            this.lblRolConductor.Name = "lblRolConductor";
+            this.lblRolConductor.Size = new System.Drawing.Size(142, 17);
+            this.lblRolConductor.TabIndex = 272;
+            this.lblRolConductor.Text = "Rol";
+            this.lblRolConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label16.Location = new System.Drawing.Point(436, 121);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 13);
+            this.label16.TabIndex = 273;
+            this.label16.Text = "Datos del conductor ";
+            // 
+            // tabBuscarConductor
+            // 
+            this.tabBuscarConductor.Controls.Add(this.label9);
+            this.tabBuscarConductor.Controls.Add(this.label8);
+            this.tabBuscarConductor.Controls.Add(this.label7);
+            this.tabBuscarConductor.Controls.Add(this.label6);
+            this.tabBuscarConductor.Controls.Add(this.label5);
+            this.tabBuscarConductor.Controls.Add(this.label4);
+            this.tabBuscarConductor.Controls.Add(this.label3);
+            this.tabBuscarConductor.Controls.Add(this.label2);
+            this.tabBuscarConductor.Controls.Add(this.dtgConductores);
+            this.tabBuscarConductor.Controls.Add(this.txtNombreConductor);
+            this.tabBuscarConductor.Controls.Add(this.pictureBox31);
+            this.tabBuscarConductor.Controls.Add(this.pictureBox32);
+            this.tabBuscarConductor.Controls.Add(this.label1);
+            this.tabBuscarConductor.Location = new System.Drawing.Point(4, 22);
+            this.tabBuscarConductor.Name = "tabBuscarConductor";
+            this.tabBuscarConductor.Padding = new System.Windows.Forms.Padding(3);
+            this.tabBuscarConductor.Size = new System.Drawing.Size(962, 442);
+            this.tabBuscarConductor.TabIndex = 0;
+            this.tabBuscarConductor.Text = "Ver conductores";
+            this.tabBuscarConductor.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label1.Location = new System.Drawing.Point(31, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(297, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Aqui puedes consultar los conductores registrados:";
+            // 
+            // txtNombreConductor
+            // 
+            this.txtNombreConductor.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtNombreConductor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreConductor.ForeColor = System.Drawing.Color.DimGray;
+            this.txtNombreConductor.Location = new System.Drawing.Point(107, 139);
+            this.txtNombreConductor.Name = "txtNombreConductor";
+            this.txtNombreConductor.Size = new System.Drawing.Size(166, 13);
+            this.txtNombreConductor.TabIndex = 120;
+            this.txtNombreConductor.Text = "Nombre conductor";
+            this.txtNombreConductor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNombreConductor.TextChanged += new System.EventHandler(this.txtNombreConductor_TextChanged);
+            this.txtNombreConductor.Enter += new System.EventHandler(this.txtNombreConductor_Enter);
+            this.txtNombreConductor.Leave += new System.EventHandler(this.txtNombreConductor_Leave);
+            // 
+            // dtgConductores
+            // 
+            this.dtgConductores.BackgroundColor = System.Drawing.Color.White;
+            this.dtgConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgConductores.Location = new System.Drawing.Point(368, 75);
+            this.dtgConductores.Name = "dtgConductores";
+            this.dtgConductores.Size = new System.Drawing.Size(575, 318);
+            this.dtgConductores.TabIndex = 123;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label2.Location = new System.Drawing.Point(587, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(177, 20);
+            this.label2.TabIndex = 124;
+            this.label2.Text = "Lista de conductores";
             // 
             // label3
             // 
@@ -316,143 +558,17 @@
             this.label9.TabIndex = 131;
             this.label9.Text = "aceptar la solicitud de ingreso.";
             // 
-            // bunifuFormDock1
+            // tabsAministrar
             // 
-            this.bunifuFormDock1.AllowFormDragging = true;
-            this.bunifuFormDock1.AllowFormDropShadow = true;
-            this.bunifuFormDock1.AllowFormResizing = true;
-            this.bunifuFormDock1.AllowHidingBottomRegion = true;
-            this.bunifuFormDock1.AllowOpacityChangesWhileDragging = false;
-            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderThickness = 1;
-            this.bunifuFormDock1.BorderOptions.BottomBorder.ShowBorder = true;
-            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderThickness = 1;
-            this.bunifuFormDock1.BorderOptions.LeftBorder.ShowBorder = true;
-            this.bunifuFormDock1.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuFormDock1.BorderOptions.RightBorder.BorderThickness = 1;
-            this.bunifuFormDock1.BorderOptions.RightBorder.ShowBorder = true;
-            this.bunifuFormDock1.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuFormDock1.BorderOptions.TopBorder.BorderThickness = 1;
-            this.bunifuFormDock1.BorderOptions.TopBorder.ShowBorder = true;
-            this.bunifuFormDock1.ContainerControl = this;
-            this.bunifuFormDock1.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
-            this.bunifuFormDock1.DockingIndicatorsOpacity = 0.5D;
-            this.bunifuFormDock1.DockingOptions.DockAll = true;
-            this.bunifuFormDock1.DockingOptions.DockBottomLeft = true;
-            this.bunifuFormDock1.DockingOptions.DockBottomRight = true;
-            this.bunifuFormDock1.DockingOptions.DockFullScreen = true;
-            this.bunifuFormDock1.DockingOptions.DockLeft = true;
-            this.bunifuFormDock1.DockingOptions.DockRight = true;
-            this.bunifuFormDock1.DockingOptions.DockTopLeft = true;
-            this.bunifuFormDock1.DockingOptions.DockTopRight = true;
-            this.bunifuFormDock1.FormDraggingOpacity = 0.9D;
-            this.bunifuFormDock1.ParentForm = this;
-            this.bunifuFormDock1.ShowCursorChanges = true;
-            this.bunifuFormDock1.ShowDockingIndicators = true;
-            this.bunifuFormDock1.TitleBarOptions.AllowFormDragging = true;
-            this.bunifuFormDock1.TitleBarOptions.BunifuFormDock = this.bunifuFormDock1;
-            this.bunifuFormDock1.TitleBarOptions.DoubleClickToExpandWindow = true;
-            this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
-            this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label16.Location = new System.Drawing.Point(436, 121);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(106, 13);
-            this.label16.TabIndex = 273;
-            this.label16.Text = "Datos del conductor ";
-            // 
-            // lblRolConductor
-            // 
-            this.lblRolConductor.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblRolConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblRolConductor.Location = new System.Drawing.Point(558, 372);
-            this.lblRolConductor.Name = "lblRolConductor";
-            this.lblRolConductor.Size = new System.Drawing.Size(142, 17);
-            this.lblRolConductor.TabIndex = 272;
-            this.lblRolConductor.Text = "Rol";
-            this.lblRolConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblEmailConductor
-            // 
-            this.lblEmailConductor.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblEmailConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblEmailConductor.Location = new System.Drawing.Point(558, 171);
-            this.lblEmailConductor.Name = "lblEmailConductor";
-            this.lblEmailConductor.Size = new System.Drawing.Size(142, 17);
-            this.lblEmailConductor.TabIndex = 269;
-            this.lblEmailConductor.Text = "E-mail";
-            this.lblEmailConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblNumeroCelularConductor
-            // 
-            this.lblNumeroCelularConductor.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblNumeroCelularConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblNumeroCelularConductor.Location = new System.Drawing.Point(558, 237);
-            this.lblNumeroCelularConductor.Name = "lblNumeroCelularConductor";
-            this.lblNumeroCelularConductor.Size = new System.Drawing.Size(142, 17);
-            this.lblNumeroCelularConductor.TabIndex = 266;
-            this.lblNumeroCelularConductor.Text = "Numero de celular";
-            this.lblNumeroCelularConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCiudadConductor
-            // 
-            this.lblCiudadConductor.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblCiudadConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblCiudadConductor.Location = new System.Drawing.Point(558, 306);
-            this.lblCiudadConductor.Name = "lblCiudadConductor";
-            this.lblCiudadConductor.Size = new System.Drawing.Size(142, 17);
-            this.lblCiudadConductor.TabIndex = 263;
-            this.lblCiudadConductor.Text = "Ciudad";
-            this.lblCiudadConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblGeneroConductor
-            // 
-            this.lblGeneroConductor.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblGeneroConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblGeneroConductor.Location = new System.Drawing.Point(297, 372);
-            this.lblGeneroConductor.Name = "lblGeneroConductor";
-            this.lblGeneroConductor.Size = new System.Drawing.Size(142, 17);
-            this.lblGeneroConductor.TabIndex = 260;
-            this.lblGeneroConductor.Text = "Género";
-            this.lblGeneroConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFechaNacimientoConductor
-            // 
-            this.lblFechaNacimientoConductor.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblFechaNacimientoConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblFechaNacimientoConductor.Location = new System.Drawing.Point(297, 307);
-            this.lblFechaNacimientoConductor.Name = "lblFechaNacimientoConductor";
-            this.lblFechaNacimientoConductor.Size = new System.Drawing.Size(142, 17);
-            this.lblFechaNacimientoConductor.TabIndex = 257;
-            this.lblFechaNacimientoConductor.Text = "Fecha de nacimiento";
-            this.lblFechaNacimientoConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblApellidoConductor
-            // 
-            this.lblApellidoConductor.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblApellidoConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblApellidoConductor.Location = new System.Drawing.Point(297, 238);
-            this.lblApellidoConductor.Name = "lblApellidoConductor";
-            this.lblApellidoConductor.Size = new System.Drawing.Size(142, 17);
-            this.lblApellidoConductor.TabIndex = 254;
-            this.lblApellidoConductor.Text = "Apellidos";
-            this.lblApellidoConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblNombreConductor
-            // 
-            this.lblNombreConductor.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblNombreConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblNombreConductor.Location = new System.Drawing.Point(297, 172);
-            this.lblNombreConductor.Name = "lblNombreConductor";
-            this.lblNombreConductor.Size = new System.Drawing.Size(142, 17);
-            this.lblNombreConductor.TabIndex = 251;
-            this.lblNombreConductor.Text = "Nombre";
-            this.lblNombreConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tabsAministrar.Controls.Add(this.tabBuscarConductor);
+            this.tabsAministrar.Controls.Add(this.tabDatosConductor);
+            this.tabsAministrar.Controls.Add(this.tabPapeles);
+            this.tabsAministrar.Controls.Add(this.tabDatosVehiculo);
+            this.tabsAministrar.Location = new System.Drawing.Point(22, 72);
+            this.tabsAministrar.Name = "tabsAministrar";
+            this.tabsAministrar.SelectedIndex = 0;
+            this.tabsAministrar.Size = new System.Drawing.Size(970, 468);
+            this.tabsAministrar.TabIndex = 226;
             // 
             // pictureBox31
             // 
@@ -475,6 +591,18 @@
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox32.TabIndex = 121;
             this.pictureBox32.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = global::wEasyGoAdmin.Properties.Resources.next1;
+            this.pictureBox5.Location = new System.Drawing.Point(913, 6);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(43, 25);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 275;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox34
             // 
@@ -654,6 +782,90 @@
             this.pictureBox50.TabIndex = 249;
             this.pictureBox50.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox1.Location = new System.Drawing.Point(291, 99);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 282;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox2.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox2.Location = new System.Drawing.Point(276, 76);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 281;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox3.Location = new System.Drawing.Point(291, 165);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 279;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox4.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox4.Location = new System.Drawing.Point(276, 142);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 278;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox7.Location = new System.Drawing.Point(30, 166);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 274;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox8.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox8.Location = new System.Drawing.Point(15, 143);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 273;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox9.Location = new System.Drawing.Point(30, 100);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 271;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox10.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox10.Location = new System.Drawing.Point(15, 77);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 270;
+            this.pictureBox10.TabStop = false;
+            // 
             // btnCerrar
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -672,7 +884,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1010, 552);
-            this.Controls.Add(this.tabsAdministracion);
+            this.Controls.Add(this.tabsAministrar);
             this.Controls.Add(this.pnlTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
@@ -681,14 +893,16 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            this.tabsAdministracion.ResumeLayout(false);
+            this.tabPapeles.ResumeLayout(false);
+            this.tabDatosConductor.ResumeLayout(false);
+            this.tabDatosConductor.PerformLayout();
             this.tabBuscarConductor.ResumeLayout(false);
             this.tabBuscarConductor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConductores)).EndInit();
-            this.tabDatosConductor.ResumeLayout(false);
-            this.tabDatosConductor.PerformLayout();
+            this.tabsAministrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
@@ -706,6 +920,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
 
@@ -716,15 +938,9 @@
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.TabControl tabsAdministracion;
+        private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
+        private System.Windows.Forms.TabControl tabsAministrar;
         private System.Windows.Forms.TabPage tabBuscarConductor;
-        private System.Windows.Forms.TabPage tabDatosConductor;
-        private System.Windows.Forms.DataGridView dtgConductores;
-        private System.Windows.Forms.TextBox txtNombreConductor;
-        private System.Windows.Forms.PictureBox pictureBox31;
-        private System.Windows.Forms.PictureBox pictureBox32;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -732,7 +948,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dtgConductores;
+        private System.Windows.Forms.TextBox txtNombreConductor;
+        private System.Windows.Forms.PictureBox pictureBox31;
+        private System.Windows.Forms.PictureBox pictureBox32;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabDatosConductor;
+        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lblRolConductor;
@@ -759,5 +982,20 @@
         private System.Windows.Forms.PictureBox pictureBox48;
         private System.Windows.Forms.PictureBox pictureBox49;
         private System.Windows.Forms.PictureBox pictureBox50;
+        private System.Windows.Forms.TabPage tabPapeles;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.TabPage tabDatosVehiculo;
     }
 }
