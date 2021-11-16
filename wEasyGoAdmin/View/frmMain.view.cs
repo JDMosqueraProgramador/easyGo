@@ -106,7 +106,10 @@ namespace wEasyGoAdmin.View
         private void dtgConductores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            int id = int.Parse(dtgConductores.Rows[0].Cells[6].Value.ToString());
+            try
+            {
+
+                int id = int.Parse(dtgConductores.SelectedRows[0].Cells[6].Value.ToString());
 
             dataMoto = MotorcycleController.GetMoto(id);
             dataPapers = MotorcycleController.GetPapers(dataMoto.StrLicensePlateMoto);
@@ -131,27 +134,35 @@ namespace wEasyGoAdmin.View
 
             //fotos
 
-            fotoLicencia.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strimagelicense.Replace("../..", "")}");
-            FotoTecno.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strurltechnomechanical.Replace("../..", "")}");
-            fotoSoat.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strurlsoat.Replace("../..", "")}");
-            fotoTarjetaPropiedad.Image = Image.FromFile($"../../../wEasyGoDriver{dataMoto.StrLinkPropertyCard.Replace("../..", "")}");
+      
+                fotoLicencia.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strimagelicense.Replace("../..", "")}");
+                FotoTecno.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strurltechnomechanical.Replace("../..", "")}");
+                fotoSoat.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strurlsoat.Replace("../..", "")}");
+                fotoTarjetaPropiedad.Image = Image.FromFile($"../../../wEasyGoDriver{dataMoto.StrLinkPropertyCard.Replace("../..", "")}");
 
-            lblPLaca.Text = dataMoto.StrLicensePlateMoto;
-            lblNumeroLicenciaMoto.Text = dataMoto.IntNumLicenseMoto.ToString();
-            lblCilindraje.Text = dataMoto.IntCylinderMoto.ToString();
-            lblMarcaMoto.Text = dataMoto.StrMarkMoto.ToString();
-            lblTipoCombustible.Text = dataMoto.StrFuelTypeMoto.ToString();
-            lblModeloMotocicleta.Text = dataMoto.StrModelMoto.ToString();
-            lblColorMotocicleta.Text = dataMoto.StrColorMoto.ToString();
-            lblEstadoMoto.Text = dataMoto.StrStateMoto;
+                lblPLaca.Text = dataMoto.StrLicensePlateMoto;
+                lblNumeroLicenciaMoto.Text = dataMoto.IntNumLicenseMoto.ToString();
+                lblCilindraje.Text = dataMoto.IntCylinderMoto.ToString();
+                lblMarcaMoto.Text = dataMoto.StrMarkMoto.ToString();
+                lblTipoCombustible.Text = dataMoto.StrFuelTypeMoto.ToString();
+                lblModeloMotocicleta.Text = dataMoto.StrModelMoto.ToString();
+                lblColorMotocicleta.Text = dataMoto.StrColorMoto.ToString();
+                lblEstadoMoto.Text = dataMoto.StrStateMoto;
 
-            if(dataMoto.StrStateMoto == "disabled")
+                if (dataMoto.StrStateMoto == "disabled")
+                {
+                    btnHabilitar.Text = "Habilitar";
+                }
+                else
+                {
+                    btnHabilitar.Text = "Deshabilitar";
+                }
+
+            }
+            catch (Exception err)
             {
-                btnHabilitar.Text = "Habilitar";
-            } 
-            else
-            {
-                btnHabilitar.Text = "Deshabilitar";
+
+                MessageBox.Show(err.Message);
             }
 
             tabsValidar.SelectedTab = tabDatosConductor;
