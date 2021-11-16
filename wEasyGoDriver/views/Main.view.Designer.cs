@@ -32,11 +32,13 @@ namespace wEasyGoDriver.views
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.cerrarForm = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.tabsMain = new System.Windows.Forms.TabControl();
             this.tabMainInicio = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.lblEstadoMoto = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFechaSoat = new System.Windows.Forms.Label();
@@ -73,28 +75,26 @@ namespace wEasyGoDriver.views
             this.lblTitleViajeAceptado = new System.Windows.Forms.Label();
             this.gMapPrincipal = new GMap.NET.WindowsForms.GMapControl();
             this.tabMainHistorial = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.lblTituloHistorial = new System.Windows.Forms.Label();
             this.dtgHistorialViajes = new System.Windows.Forms.DataGridView();
             this.notifyViaje = new System.Windows.Forms.NotifyIcon(this.components);
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.cerrarForm = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
             this.tabsMain.SuspendLayout();
             this.tabMainInicio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabMainViajes.SuspendLayout();
             this.flpViajes.SuspendLayout();
             this.pnlViajeAceptado.SuspendLayout();
             this.tabMainHistorial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgHistorialViajes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHistorialViajes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitulo
@@ -107,6 +107,18 @@ namespace wEasyGoDriver.views
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1011, 60);
             this.pnlTitulo.TabIndex = 2;
+            // 
+            // cerrarForm
+            // 
+            this.cerrarForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cerrarForm.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
+            this.cerrarForm.Location = new System.Drawing.Point(953, 14);
+            this.cerrarForm.Name = "cerrarForm";
+            this.cerrarForm.Size = new System.Drawing.Size(43, 25);
+            this.cerrarForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cerrarForm.TabIndex = 48;
+            this.cerrarForm.TabStop = false;
+            this.cerrarForm.Click += new System.EventHandler(this.cerrarForm_Click);
             // 
             // lblTitle
             // 
@@ -174,11 +186,21 @@ namespace wEasyGoDriver.views
             this.lblEstadoMoto.AutoSize = true;
             this.lblEstadoMoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoMoto.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblEstadoMoto.Location = new System.Drawing.Point(785, 67);
+            this.lblEstadoMoto.Location = new System.Drawing.Point(776, 78);
             this.lblEstadoMoto.Name = "lblEstadoMoto";
-            this.lblEstadoMoto.Size = new System.Drawing.Size(42, 20);
+            this.lblEstadoMoto.Size = new System.Drawing.Size(70, 20);
             this.lblEstadoMoto.TabIndex = 13;
-            this.lblEstadoMoto.Text = "valor";
+            this.lblEstadoMoto.Text = "available";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::wEasyGoDriver.Properties.Resources.driver2;
+            this.pictureBox1.Location = new System.Drawing.Point(-4, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(507, 419);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -186,7 +208,7 @@ namespace wEasyGoDriver.views
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(652, 65);
+            this.label2.Location = new System.Drawing.Point(643, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 24);
             this.label2.TabIndex = 11;
@@ -280,7 +302,6 @@ namespace wEasyGoDriver.views
             // 
             // btnEstado
             // 
-            this.btnEstado.FlatAppearance.BorderSize = 0;
             this.btnEstado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnEstado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -609,6 +630,75 @@ namespace wEasyGoDriver.views
             this.tabMainHistorial.UseVisualStyleBackColor = true;
             this.tabMainHistorial.Click += new System.EventHandler(this.tabMainHistorial_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label5.Location = new System.Drawing.Point(81, 274);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(162, 13);
+            this.label5.TabIndex = 146;
+            this.label5.Text = "3225158266 y exponga su caso.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label4.Location = new System.Drawing.Point(62, 249);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(201, 13);
+            this.label4.TabIndex = 145;
+            this.label4.Text = "Contacte con la administración al número";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label3.Location = new System.Drawing.Point(45, 226);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(240, 13);
+            this.label3.TabIndex = 144;
+            this.label3.Text = "En caso de que necesite acceso a la información";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::wEasyGoDriver.Properties.Resources.history;
+            this.pictureBox2.Location = new System.Drawing.Point(101, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(131, 111);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 143;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label14.Location = new System.Drawing.Point(118, 147);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(97, 20);
+            this.label14.TabIndex = 136;
+            this.label14.Text = "Bienvenido";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label15.Location = new System.Drawing.Point(45, 188);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(246, 13);
+            this.label15.TabIndex = 132;
+            this.label15.Text = "Aqui podra el historial de viajes realizados";
+            // 
             // lblTituloHistorial
             // 
             this.lblTituloHistorial.AutoSize = true;
@@ -635,97 +725,6 @@ namespace wEasyGoDriver.views
             this.notifyViaje.Text = "EasyGo Driver";
             this.notifyViaje.Visible = true;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label14.Location = new System.Drawing.Point(118, 147);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 20);
-            this.label14.TabIndex = 136;
-            this.label14.Text = "Bienvenido";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label15.Location = new System.Drawing.Point(45, 188);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(246, 13);
-            this.label15.TabIndex = 132;
-            this.label15.Text = "Aqui podra el historial de viajes realizados";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::wEasyGoDriver.Properties.Resources.driver2;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(507, 419);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::wEasyGoDriver.Properties.Resources.history;
-            this.pictureBox2.Location = new System.Drawing.Point(101, 16);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(131, 111);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 143;
-            this.pictureBox2.TabStop = false;
-            // 
-            // cerrarForm
-            // 
-            this.cerrarForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cerrarForm.Image = global::wEasyGoDriver.Properties.Resources.CerrarForm;
-            this.cerrarForm.Location = new System.Drawing.Point(953, 14);
-            this.cerrarForm.Name = "cerrarForm";
-            this.cerrarForm.Size = new System.Drawing.Size(43, 25);
-            this.cerrarForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cerrarForm.TabIndex = 48;
-            this.cerrarForm.TabStop = false;
-            this.cerrarForm.Click += new System.EventHandler(this.cerrarForm_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Location = new System.Drawing.Point(45, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(240, 13);
-            this.label3.TabIndex = 144;
-            this.label3.Text = "En caso de que necesite acceso a la información";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label4.Location = new System.Drawing.Point(62, 249);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(201, 13);
-            this.label4.TabIndex = 145;
-            this.label4.Text = "Contacte con la administración al número";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label5.Location = new System.Drawing.Point(81, 274);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 13);
-            this.label5.TabIndex = 146;
-            this.label5.Text = "3225158266 y exponga su caso.";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -740,19 +739,19 @@ namespace wEasyGoDriver.views
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).EndInit();
             this.tabsMain.ResumeLayout(false);
             this.tabMainInicio.ResumeLayout(false);
             this.tabMainInicio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabMainViajes.ResumeLayout(false);
             this.flpViajes.ResumeLayout(false);
             this.pnlViajeAceptado.ResumeLayout(false);
             this.pnlViajeAceptado.PerformLayout();
             this.tabMainHistorial.ResumeLayout(false);
             this.tabMainHistorial.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgHistorialViajes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHistorialViajes)).EndInit();
             this.ResumeLayout(false);
 
         }

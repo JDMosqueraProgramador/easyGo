@@ -518,8 +518,6 @@ namespace wEasyGoDriver.views
                     throw new Exception("No ha sido posible registrar el viaje, intente nuevamente");
                 }
 
-                //}
-
                 #endregion
 
             });

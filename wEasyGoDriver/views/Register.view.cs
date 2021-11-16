@@ -24,9 +24,6 @@ namespace wEasyGoDriver
         string contraseña = "";
 
         string placa = "";
-        string numeroSerie = "";
-        string numeroChasis = "";
-        string vin= "";
         string numeroLicenciaMoto= "";
         string marca= "";
         string cilindraje= "";
@@ -61,18 +58,6 @@ namespace wEasyGoDriver
             cmbTipoCombustible.Items.AddRange(new object[] { "Gasolina", "Eléctrico" });
         }
 
-        private void btnAddID_Click(object sender, EventArgs e)
-        {
-            UserController user = new UserController();
-
-            user.getIdentification("D:/Projects/EasyGo/wEasyGoDriver/assets/prueba1.jpg");
-
-            pictureBox1.Image = user.bitImg;
-
-            MessageBox.Show(user.Text);
-
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -97,7 +82,7 @@ namespace wEasyGoDriver
                     DataUser = userController.getDataUser();
                     MessageBox.Show("Registrado, continúe con los pasos del registro");
 
-                    this.EnableTab(tabLicencia);
+                    this.EnableTab(tabsRegistros.SelectedTab);
                 }
 
             }
@@ -146,11 +131,11 @@ namespace wEasyGoDriver
             {
                 if (rdoSiVehiculo.Checked)
                 {
-                    motoController = new MotorcycleControlller(txtPlaca.Text, Convert.ToInt32(txtNumeroSerie.Text), Convert.ToInt32(txtNumeroChasis.Text), Convert.ToInt32(txtVin.Text), Convert.ToInt32(txtNumeroLicenciaMoto.Text), txtMarca.Text, Convert.ToInt32(txtCilindraje.Text), txtModelo.Text, cmbTipoCombustible.Text, btnCargarTarjPropiedad.Tag.ToString(), DataUser.IntIdUser, DataUser.IntIdUser, cmbColorMotocicleta.Text);
+                    motoController = new MotorcycleControlller(txtPlaca.Text, Convert.ToInt64(txtNumeroLicenciaMoto.Text), txtMarca.Text, Convert.ToInt32(txtCilindraje.Text), txtModelo.Text, cmbTipoCombustible.Text, btnCargarTarjPropiedad.Tag.ToString(), DataUser.IntIdUser, DataUser.IntIdUser, cmbColorMotocicleta.Text);
                 }
                 else
                 {
-                    motoController = new MotorcycleControlller(txtPlaca.Text, Convert.ToInt32(txtNumeroSerie.Text), Convert.ToInt32(txtNumeroChasis.Text), Convert.ToInt32(txtVin.Text), Convert.ToInt32(txtNumeroLicenciaMoto.Text), txtMarca.Text, Convert.ToInt32(txtCilindraje.Text), txtModelo.Text, cmbTipoCombustible.Text, btnCargarTarjPropiedad.Tag.ToString(), DataUser.IntIdUser, Convert.ToInt32(dtgBuscarConductor.SelectedRows[0].Cells[6].Value), cmbColorMotocicleta.Text);
+                    motoController = new MotorcycleControlller(txtPlaca.Text, Convert.ToInt64(txtNumeroLicenciaMoto.Text), txtMarca.Text, Convert.ToInt32(txtCilindraje.Text), txtModelo.Text, cmbTipoCombustible.Text, btnCargarTarjPropiedad.Tag.ToString(), DataUser.IntIdUser, Convert.ToInt32(dtgBuscarConductor.SelectedRows[0].Cells[6].Value), cmbColorMotocicleta.Text);
                 }
 
                 if (motoController.ExecuteInsertMoto())
@@ -182,6 +167,7 @@ namespace wEasyGoDriver
                 {
                     MessageBox.Show("Soat y tecnomicanica agregados correctamente");
                     new frmMain(DataUser.IntPhoneUser).Show();
+                    this.Close();
                 }
             }
             catch (Exception err)
@@ -555,102 +541,6 @@ namespace wEasyGoDriver
                 {
                     txtPlaca.Text = placa;
                     txtPlaca.ForeColor = Color.DimGray;
-                }
-            }
-        }
-
-        private void txtNumeroSerie_Enter(object sender, EventArgs e)
-        {
-            txtNumeroSerie.Text = "";
-            txtNumeroSerie.ForeColor = Color.DimGray;
-        }
-
-        private void txtNumeroSerie_Leave(object sender, EventArgs e)
-        {
-            numeroSerie = txtNumeroSerie.Text;
-
-            if (numeroSerie.Equals("Número de serie"))
-            {
-                txtNumeroSerie.Text = "Número de serie";
-                txtNumeroSerie.ForeColor = Color.DimGray;
-
-            }
-            else
-            {
-                if (numeroSerie.Equals(""))
-                {
-                    txtNumeroSerie.Text = "Número de serie";
-                    txtNumeroSerie.ForeColor = Color.DimGray;
-
-                }
-                else
-                {
-                    txtNumeroSerie.Text = numeroSerie;
-                    txtNumeroSerie.ForeColor = Color.DimGray;
-                }
-            }
-        }
-
-        private void txtNumeroChasis_Enter(object sender, EventArgs e)
-        {
-            txtNumeroChasis.Text = "";
-            txtNumeroChasis.ForeColor = Color.DimGray;
-        }
-
-        private void txtNumeroChasis_Leave(object sender, EventArgs e)
-        {
-            numeroChasis = txtNumeroChasis.Text;
-
-            if (numeroChasis.Equals("Número chasis"))
-            {
-                txtNumeroChasis.Text = "Número chasis";
-                txtNumeroChasis.ForeColor = Color.DimGray;
-
-            }
-            else
-            {
-                if (numeroChasis.Equals(""))
-                {
-                    txtNumeroChasis.Text = "Número chasis";
-                    txtNumeroChasis.ForeColor = Color.DimGray;
-
-                }
-                else
-                {
-                    txtNumeroChasis.Text = numeroChasis;
-                    txtNumeroChasis.ForeColor = Color.DimGray;
-                }
-            }
-        }
-
-        private void txtVin_Enter(object sender, EventArgs e)
-        {
-            txtVin.ForeColor = Color.DimGray;
-            txtVin.Text = "";
-        }
-
-        private void txtVin_Leave(object sender, EventArgs e)
-        {
-            vin = txtVin.Text;
-
-            if (vin.Equals("Vin de la moto"))
-            {
-                txtVin.Text = "Vin de la moto";
-                txtVin.ForeColor = Color.DimGray;
-
-            }
-            else
-            {
-                if (vin.Equals(""))
-                {
-                    txtVin.Text = "Vin de la moto";
-                    txtVin.ForeColor = Color.DimGray;
-
-                }
-                else
-                {
-                    txtVin.Text = vin;
-                    txtVin.ForeColor = Color.DimGray;
                 }
             }
         }

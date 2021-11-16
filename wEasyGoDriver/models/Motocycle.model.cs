@@ -14,20 +14,20 @@ namespace wEasyGoDriver.models
         {
         }
 
-        public MotorcycleModel(string strLicensePlateMoto, int intNumSerieMoto, int intNumChasisMoto, int intVimMoto, string strStateMoto, int intNumLicenseMoto, string strMarkMoto, int intCylinderMoto, string strModelMoto, string strFuelTypeMoto, string strLinkPropertyCard, User owner, User driver, string strColorMoto) : base(strLicensePlateMoto, intNumSerieMoto, intNumChasisMoto, intVimMoto, strStateMoto, intNumLicenseMoto, strMarkMoto, intCylinderMoto, strModelMoto, strFuelTypeMoto, strLinkPropertyCard, owner, driver, strColorMoto)
+        public MotorcycleModel(string strLicensePlateMoto, string strStateMoto, long intNumLicenseMoto, string strMarkMoto, int intCylinderMoto, string strModelMoto, string strFuelTypeMoto, string strLinkPropertyCard, IUser owner, IUser driver, string strColorMoto) : base(strLicensePlateMoto, strStateMoto, intNumLicenseMoto, strMarkMoto, intCylinderMoto, strModelMoto, strFuelTypeMoto, strLinkPropertyCard, owner, driver, strColorMoto)
         {
         }
 
         public bool InsertMotorcycle()
         {
-            string insert = "CALL sp_insert_moto(@strLicensePlateMoto, @intNumSerieMoto, @intNumChasisMoto, @intVimMoto, @strStateMoto, @intNumLicenseMoto, @strMarkMoto, @intCylinderMoto, @strModelMoto, @strFuelTypeMoto, @strLinkPropertyCard, @intIdOwner, @intIdDriver, @strColorMoto)";
+            string insert = "CALL sp_insert_moto(@strLicensePlateMoto, @strStateMoto, @intNumLicenseMoto, @strMarkMoto, @intCylinderMoto, @strModelMoto, @strFuelTypeMoto, @strLinkPropertyCard, @intIdOwner, @intIdDriver, @strColorMoto)";
 
             NpgsqlCommand cmd = new NpgsqlCommand(insert, conn);
 
             cmd.Parameters.AddWithValue("@strLicensePlateMoto", StrLicensePlateMoto);
-            cmd.Parameters.AddWithValue("@intNumSerieMoto", IntNumSerieMoto);
+            /*cmd.Parameters.AddWithValue("@intNumSerieMoto", IntNumSerieMoto);
             cmd.Parameters.AddWithValue("@intNumChasisMoto", IntNumChasisMoto);
-            cmd.Parameters.AddWithValue("@intVimMoto", IntVimMoto);
+            cmd.Parameters.AddWithValue("@intVimMoto", IntVimMoto);*/
             cmd.Parameters.AddWithValue("@strStateMoto", StrStateMoto);
             cmd.Parameters.AddWithValue("@intNumLicenseMoto", IntNumLicenseMoto);
             cmd.Parameters.AddWithValue("@strMarkMoto", StrMarkMoto);

@@ -13,7 +13,7 @@ namespace wEasyGoDriver.controllers
     {
         MotorcycleModel moto;
 
-        public MotorcycleControlller(string strLicensePlateMoto, int intNumSerieMoto, int intNumChasisMoto, int intVimMoto, int intNumLicenseMoto, string strMarkMoto, int intCylinderMoto, string strModelMoto, string strFuelTypeMoto, string strLinkPropertyCard, int owner, int driver, string strColorMoto)
+        public MotorcycleControlller(string strLicensePlateMoto, long intNumLicenseMoto, string strMarkMoto, int intCylinderMoto, string strModelMoto, string strFuelTypeMoto, string strLinkPropertyCard, int owner, int driver, string strColorMoto)
         {
             string strStateMoto = "disabled";
 
@@ -22,14 +22,13 @@ namespace wEasyGoDriver.controllers
             UserModel driverClass = new UserModel();
             driverClass.IntIdUser = driver;
 
-            moto = new MotorcycleModel(strLicensePlateMoto, intNumSerieMoto, intNumChasisMoto, intVimMoto, strStateMoto, intNumLicenseMoto, strMarkMoto, intCylinderMoto, strModelMoto, strFuelTypeMoto, strLinkPropertyCard, ownerClass, driverClass, strColorMoto);
+            moto = new MotorcycleModel(strLicensePlateMoto, strStateMoto, intNumLicenseMoto, strMarkMoto, intCylinderMoto, strModelMoto, strFuelTypeMoto, strLinkPropertyCard, ownerClass, driverClass, strColorMoto);
         }
 
         public MotorcycleControlller()
         {
             moto = new MotorcycleModel();
         }
-
 
 
         public bool ExecuteInsertMoto()

@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="City.cs" />
     <Compile Include="Connect.cs" />
+    <Compile Include="IMotorcycle.cs" />
     <Compile Include="ITravel.cs" />
     <Compile Include="Motorcycle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

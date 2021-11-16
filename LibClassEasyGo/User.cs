@@ -90,7 +90,7 @@ namespace LibClassEasyGo
 
             if(StrRolUser == "Customer")
             {
-                cmd.Parameters.AddWithValue("@intIdCardPerson", null);
+                cmd.Parameters.AddWithValue("@intIdCardPerson", DBNull.Value);
             } else
             {
                 cmd.Parameters.AddWithValue("@intIdCardPerson", NpgsqlTypes.NpgsqlDbType.Bigint, this.IntIdCardPerson);
