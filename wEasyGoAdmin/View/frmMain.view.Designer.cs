@@ -31,7 +31,6 @@
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.tabPapeles = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -237,46 +236,6 @@
             this.lblTitle.Size = new System.Drawing.Size(53, 18);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Home";
-            // 
-            // bunifuFormDock1
-            // 
-            this.bunifuFormDock1.AllowFormDragging = true;
-            this.bunifuFormDock1.AllowFormDropShadow = true;
-            this.bunifuFormDock1.AllowFormResizing = true;
-            this.bunifuFormDock1.AllowHidingBottomRegion = true;
-            this.bunifuFormDock1.AllowOpacityChangesWhileDragging = false;
-            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderThickness = 1;
-            this.bunifuFormDock1.BorderOptions.BottomBorder.ShowBorder = true;
-            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderThickness = 1;
-            this.bunifuFormDock1.BorderOptions.LeftBorder.ShowBorder = true;
-            this.bunifuFormDock1.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuFormDock1.BorderOptions.RightBorder.BorderThickness = 1;
-            this.bunifuFormDock1.BorderOptions.RightBorder.ShowBorder = true;
-            this.bunifuFormDock1.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuFormDock1.BorderOptions.TopBorder.BorderThickness = 1;
-            this.bunifuFormDock1.BorderOptions.TopBorder.ShowBorder = true;
-            this.bunifuFormDock1.ContainerControl = this;
-            this.bunifuFormDock1.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
-            this.bunifuFormDock1.DockingIndicatorsOpacity = 0.5D;
-            this.bunifuFormDock1.DockingOptions.DockAll = true;
-            this.bunifuFormDock1.DockingOptions.DockBottomLeft = true;
-            this.bunifuFormDock1.DockingOptions.DockBottomRight = true;
-            this.bunifuFormDock1.DockingOptions.DockFullScreen = true;
-            this.bunifuFormDock1.DockingOptions.DockLeft = true;
-            this.bunifuFormDock1.DockingOptions.DockRight = true;
-            this.bunifuFormDock1.DockingOptions.DockTopLeft = true;
-            this.bunifuFormDock1.DockingOptions.DockTopRight = true;
-            this.bunifuFormDock1.FormDraggingOpacity = 0.9D;
-            this.bunifuFormDock1.ParentForm = this;
-            this.bunifuFormDock1.ShowCursorChanges = true;
-            this.bunifuFormDock1.ShowDockingIndicators = true;
-            this.bunifuFormDock1.TitleBarOptions.AllowFormDragging = true;
-            this.bunifuFormDock1.TitleBarOptions.BunifuFormDock = this.bunifuFormDock1;
-            this.bunifuFormDock1.TitleBarOptions.DoubleClickToExpandWindow = true;
-            this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
-            this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
             // tabPapeles
             // 
@@ -682,7 +641,7 @@
             // 
             this.lblEmailConductor.BackColor = System.Drawing.Color.Gainsboro;
             this.lblEmailConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblEmailConductor.Location = new System.Drawing.Point(558, 171);
+            this.lblEmailConductor.Location = new System.Drawing.Point(297, 239);
             this.lblEmailConductor.Name = "lblEmailConductor";
             this.lblEmailConductor.Size = new System.Drawing.Size(142, 17);
             this.lblEmailConductor.TabIndex = 269;
@@ -737,7 +696,7 @@
             // 
             this.lblApellidoConductor.BackColor = System.Drawing.Color.Gainsboro;
             this.lblApellidoConductor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblApellidoConductor.Location = new System.Drawing.Point(297, 238);
+            this.lblApellidoConductor.Location = new System.Drawing.Point(558, 173);
             this.lblApellidoConductor.Name = "lblApellidoConductor";
             this.lblApellidoConductor.Size = new System.Drawing.Size(142, 17);
             this.lblApellidoConductor.TabIndex = 254;
@@ -779,7 +738,7 @@
             // pictureBox37
             // 
             this.pictureBox37.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox37.Location = new System.Drawing.Point(503, 172);
+            this.pictureBox37.Location = new System.Drawing.Point(242, 240);
             this.pictureBox37.Name = "pictureBox37";
             this.pictureBox37.Size = new System.Drawing.Size(39, 14);
             this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -790,7 +749,7 @@
             // 
             this.pictureBox38.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox38.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox38.Location = new System.Drawing.Point(488, 149);
+            this.pictureBox38.Location = new System.Drawing.Point(227, 217);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(248, 61);
             this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -884,7 +843,7 @@
             // pictureBox47
             // 
             this.pictureBox47.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox47.Location = new System.Drawing.Point(242, 239);
+            this.pictureBox47.Location = new System.Drawing.Point(503, 174);
             this.pictureBox47.Name = "pictureBox47";
             this.pictureBox47.Size = new System.Drawing.Size(39, 14);
             this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -895,7 +854,7 @@
             // 
             this.pictureBox48.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox48.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox48.Location = new System.Drawing.Point(227, 216);
+            this.pictureBox48.Location = new System.Drawing.Point(488, 151);
             this.pictureBox48.Name = "pictureBox48";
             this.pictureBox48.Size = new System.Drawing.Size(248, 61);
             this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1091,7 +1050,7 @@
             this.dtgConductores.Size = new System.Drawing.Size(570, 318);
             this.dtgConductores.TabIndex = 123;
             this.dtgConductores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgConductores_CellClick);
-           
+            this.dtgConductores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgConductores_CellContentClick);
             // 
             // txtNombreConductor
             // 
@@ -1619,7 +1578,6 @@
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label lblTitle;
-        private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
         private System.Windows.Forms.TabControl lblNumeroLicencia;
         private System.Windows.Forms.TabPage tabBuscarConductor;
         private System.Windows.Forms.Label label9;
