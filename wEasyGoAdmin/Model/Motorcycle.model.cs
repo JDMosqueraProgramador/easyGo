@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,22 @@ namespace wEasyGoAdmin.Model
 
             return papers;
 
+        }
+
+        public DataTable getDriversDisabled()
+        {
+            string select = "SELECT * FROM sp_get_drivers_disabled()";
+
+            //NpgsqlCommand cmd = new NpgsqlCommand(select, this.conn);
+
+            DataTable table = new DataTable();
+
+            NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(select, this.conn);
+            //NpgsqlCommandBuilder builder = new NpgsqlCommandBuilder(adapter);
+
+            adapter.Fill(table);
+             
+            return table;
 
         }
 

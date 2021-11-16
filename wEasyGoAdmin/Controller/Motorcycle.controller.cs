@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using wEasyGoAdmin.Model;
 using LibClassEasyGo;
+using System.Data;
 
 namespace wEasyGoAdmin.Controller
 {
@@ -24,6 +25,11 @@ namespace wEasyGoAdmin.Controller
         public static bool ExecuteChangeState(string state, string licensePlate)
         {
             return new MotorcycleModel().ChangeState(state, licensePlate);
+        }
+
+        public static DataTable GetDriversDisabled()
+        {
+            return new MotorcycleModel().getDriversDisabled();
         }
 
     }

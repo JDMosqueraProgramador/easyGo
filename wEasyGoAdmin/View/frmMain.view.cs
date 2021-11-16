@@ -18,7 +18,6 @@ namespace wEasyGoAdmin.View
 
         string conductor="";
 
-
         IMotorcycle dataMoto;
         Papers dataPapers;
 
@@ -31,6 +30,8 @@ namespace wEasyGoAdmin.View
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+
+            dtgConductores.DataSource = MotorcycleController.GetDriversDisabled();
             txtNombreConductor.Text = "Nombre del conductor";
             txtNombreConductor.ForeColor = Color.DimGray;
 
@@ -123,7 +124,6 @@ namespace wEasyGoAdmin.View
                 lblGeneroConductor.Text = dataMoto.Driver.BoolGenderPerson.ToString();
                 lblRolConductor.Text = dataMoto.Driver.StrRolUser;
 
-
                 /*lblPrueba.Text = value.ToString();*/
 
                 lblNumeroLicenciacc.Text = dataPapers.Intnumlicense.ToString();
@@ -133,7 +133,6 @@ namespace wEasyGoAdmin.View
                 lblFechaVigenciaHastaSoat.Text = dataPapers.Datevaliduntilsoat.ToString();
 
                 //fotos
-
 
                 fotoLicencia.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strimagelicense.Replace("../..", "")}");
                 FotoTecno.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strurltechnomechanical.Replace("../..", "")}");
@@ -158,6 +157,9 @@ namespace wEasyGoAdmin.View
                     btnHabilitar.Text = "Deshabilitar";
                 }
 
+                tabsValidar.SelectedTab = tabDatosConductor;
+
+
             }
             catch (Exception err)
             {
@@ -165,7 +167,6 @@ namespace wEasyGoAdmin.View
                 MessageBox.Show(err.Message);
             }
 
-            tabsValidar.SelectedTab = tabDatosConductor;
         }
 
         private void dtgConductores_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -178,7 +179,6 @@ namespace wEasyGoAdmin.View
 
             try
             {
-
                 if (dataMoto.StrStateMoto == "disabled")
                 {
                     if (MotorcycleController.ExecuteChangeState("inactive", dataMoto.StrLicensePlateMoto))
