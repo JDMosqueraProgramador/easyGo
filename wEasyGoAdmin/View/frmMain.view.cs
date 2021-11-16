@@ -111,30 +111,30 @@ namespace wEasyGoAdmin.View
 
                 int id = int.Parse(dtgConductores.SelectedRows[0].Cells[6].Value.ToString());
 
-            dataMoto = MotorcycleController.GetMoto(id);
-            dataPapers = MotorcycleController.GetPapers(dataMoto.StrLicensePlateMoto);
+                dataMoto = MotorcycleController.GetMoto(id);
+                dataPapers = MotorcycleController.GetPapers(dataMoto.StrLicensePlateMoto);
 
-            lblNombreConductor.Text = dataMoto.Driver.StrNamePerson;
-            lblApellidoConductor.Text = dataMoto.Driver.StrLastNamePerson;
-            lblEmailConductor.Text = dataMoto.Driver.StrEmailUser;
-            lblNumeroCelularConductor.Text = dataMoto.Driver.IntPhoneUser.ToString();
-            lblFechaNacimientoConductor.Text = dataMoto.Driver.DateOfBirthPerson.ToString();
-            lblCiudadConductor.Text = dataMoto.Driver.City;
-            lblGeneroConductor.Text = dataMoto.Driver.BoolGenderPerson.ToString();
-            lblRolConductor.Text = dataMoto.Driver.StrRolUser;
+                lblNombreConductor.Text = dataMoto.Driver.StrNamePerson;
+                lblApellidoConductor.Text = dataMoto.Driver.StrLastNamePerson;
+                lblEmailConductor.Text = dataMoto.Driver.StrEmailUser;
+                lblNumeroCelularConductor.Text = dataMoto.Driver.IntPhoneUser.ToString();
+                lblFechaNacimientoConductor.Text = dataMoto.Driver.DateOfBirthPerson.ToString();
+                lblCiudadConductor.Text = dataMoto.Driver.City;
+                lblGeneroConductor.Text = dataMoto.Driver.BoolGenderPerson.ToString();
+                lblRolConductor.Text = dataMoto.Driver.StrRolUser;
 
 
-            /*lblPrueba.Text = value.ToString();*/
+                /*lblPrueba.Text = value.ToString();*/
 
-            lblNumeroLicenciacc.Text = dataPapers.Intnumlicense.ToString();
-            lblFechaVigenciaHastaLicencia.Text = dataPapers.Datevaliditylicense.ToString();
-            dateVigenciaHastaTecno.Text = dataPapers.Datevaliduntiltechnomechanical.ToString();
-            lblIdSoat.Text = dataPapers.Intidsoat.ToString();
-            lblFechaVigenciaHastaSoat.Text = dataPapers.Datevaliduntilsoat.ToString();
+                lblNumeroLicenciacc.Text = dataPapers.Intnumlicense.ToString();
+                lblFechaVigenciaHastaLicencia.Text = dataPapers.Datevaliditylicense.ToString();
+                dateVigenciaHastaTecno.Text = dataPapers.Datevaliduntiltechnomechanical.ToString();
+                lblIdSoat.Text = dataPapers.Intidsoat.ToString();
+                lblFechaVigenciaHastaSoat.Text = dataPapers.Datevaliduntilsoat.ToString();
 
-            //fotos
+                //fotos
 
-      
+
                 fotoLicencia.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strimagelicense.Replace("../..", "")}");
                 FotoTecno.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strurltechnomechanical.Replace("../..", "")}");
                 fotoSoat.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strurlsoat.Replace("../..", "")}");
@@ -175,23 +175,34 @@ namespace wEasyGoAdmin.View
 
         private void btnHabilitar_Click(object sender, EventArgs e)
         {
-            if(dataMoto.StrStateMoto == "disabled")
+
+            try
             {
-                if (MotorcycleController.ExecuteChangeState("inactive", dataMoto.StrLicensePlateMoto))
+
+                if (dataMoto.StrStateMoto == "disabled")
                 {
-                    dataMoto.StrStateMoto = "inactive";
-                    MessageBox.Show($"Ha habilitado la moto {dataMoto.StrLicensePlateMoto} para realizar viajes");
-                    btnHabilitar.Text = "Deshabilitar";
+                    if (MotorcycleController.ExecuteChangeState("inactive", dataMoto.StrLicensePlateMoto))
+                    {
+                        dataMoto.StrStateMoto = "inactive";
+                        MessageBox.Show($"Ha habilitado la moto {dataMoto.StrLicensePlateMoto} para realizar viajes");
+                        btnHabilitar.Text = "Deshabilitar";
+                    }
                 }
-            } 
-            else
+                else
+                {
+                    if (MotorcycleController.ExecuteChangeState("disabled", dataMoto.StrLicensePlateMoto))
+                    {
+                        dataMoto.StrStateMoto = "disabled";
+                        MessageBox.Show($"Ha deshabilitado la moto {dataMoto.StrLicensePlateMoto} para realizar viajes");
+                        btnHabilitar.Text = "Habilitar";
+                    }
+                }
+
+            }
+            catch (Exception err)
             {
-                if (MotorcycleController.ExecuteChangeState("disabled", dataMoto.StrLicensePlateMoto))
-                {
-                    dataMoto.StrStateMoto = "disabled";
-                    MessageBox.Show($"Ha deshabilitado la moto {dataMoto.StrLicensePlateMoto} para realizar viajes");
-                    btnHabilitar.Text = "Habilitar";
-                }
+
+                MessageBox.Show(err.Message);
             }
         }
     }
