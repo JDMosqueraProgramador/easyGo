@@ -204,6 +204,9 @@
     <Content Include="assets\prueba3.jfif" />
     <Content Include="assets\prueba3.jpg" />
     <Content Include="assets\prueba4.jpg" />
+    <None Include="Resources\history.png" />
+    <None Include="Resources\historial driver.png" />
+    <None Include="Resources\Proveedores Gris.png" />
     <None Include="Resources\register new.png" />
     <None Include="Resources\log in driver2.png" />
     <None Include="Resources\log in driver1.png" />

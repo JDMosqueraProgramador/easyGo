@@ -286,6 +286,27 @@
   <ItemGroup>
     <None Include="Resources\btnDatos.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuenta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\licencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery_motorcycle_shipping_vespa_coronavirus_icon_142121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\wEasyGoDriver\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\wEasyGoDriver\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

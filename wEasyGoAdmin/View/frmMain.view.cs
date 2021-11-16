@@ -85,6 +85,34 @@ namespace wEasyGoAdmin.View
             this.Close();
         }
 
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnAvanzarPapeles_Click(object sender, EventArgs e)
+        {
+            lblNumeroLicencia.SelectedTab = tabPapeles;
+        }
+
+        private void btnAvanzarDatosvehiculo_Click(object sender, EventArgs e)
+        {
+            lblNumeroLicencia.SelectedTab = lblVinMotocicleta;
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
