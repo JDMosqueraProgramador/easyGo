@@ -131,10 +131,10 @@ namespace wEasyGoAdmin.View
 
             //fotos
 
-            fotoLicencia.Text = dataPapers.Strimagelicense.ToString();
-            FotoTecno.Text = dataPapers.Strurltechnomechanical.ToString();
-            fotoSoat.Text = dataPapers.Strurlsoat.ToString();
-            fotoTarjetaPropiedad.Text = dataMoto.StrLinkPropertyCard.ToString();
+            fotoLicencia.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strimagelicense.Replace("../..", "")}");
+            FotoTecno.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strurltechnomechanical.Replace("../..", "")}");
+            fotoSoat.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strurlsoat.Replace("../..", "")}");
+            fotoTarjetaPropiedad.Image = Image.FromFile($"../../../wEasyGoDriver{dataMoto.StrLinkPropertyCard.Replace("../..", "")}");
 
             lblPLaca.Text = dataMoto.StrLicensePlateMoto;
             lblNumeroLicenciaMoto.Text = dataMoto.IntNumLicenseMoto.ToString();
@@ -182,11 +182,6 @@ namespace wEasyGoAdmin.View
                     btnHabilitar.Text = "Habilitar";
                 }
             }
-        }
-
-        private void fotoLicencia_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

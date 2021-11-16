@@ -427,6 +427,7 @@
             this.fotoSoat.Location = new System.Drawing.Point(669, 283);
             this.fotoSoat.Name = "fotoSoat";
             this.fotoSoat.Size = new System.Drawing.Size(248, 162);
+            this.fotoSoat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fotoSoat.TabIndex = 305;
             this.fotoSoat.TabStop = false;
             // 
@@ -435,6 +436,7 @@
             this.FotoTecno.Location = new System.Drawing.Point(341, 283);
             this.FotoTecno.Name = "FotoTecno";
             this.FotoTecno.Size = new System.Drawing.Size(248, 163);
+            this.FotoTecno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.FotoTecno.TabIndex = 304;
             this.FotoTecno.TabStop = false;
             // 
@@ -443,6 +445,7 @@
             this.fotoLicencia.Location = new System.Drawing.Point(34, 283);
             this.fotoLicencia.Name = "fotoLicencia";
             this.fotoLicencia.Size = new System.Drawing.Size(248, 163);
+            this.fotoLicencia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fotoLicencia.TabIndex = 303;
             this.fotoLicencia.TabStop = false;
             // 
@@ -1204,6 +1207,7 @@
             this.fotoTarjetaPropiedad.Location = new System.Drawing.Point(564, 117);
             this.fotoTarjetaPropiedad.Name = "fotoTarjetaPropiedad";
             this.fotoTarjetaPropiedad.Size = new System.Drawing.Size(392, 190);
+            this.fotoTarjetaPropiedad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fotoTarjetaPropiedad.TabIndex = 305;
             this.fotoTarjetaPropiedad.TabStop = false;
             // 
