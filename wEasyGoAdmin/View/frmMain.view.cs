@@ -124,7 +124,10 @@ namespace wEasyGoAdmin.View
 
             /*lblPrueba.Text = value.ToString();*/
 
-            lblNombreConductor.Text = dataMoto.Driver.StrNamePerson;
+            lblNumeroLicencia.Text = dataPapers.Intnumlicense.ToString();
+            //lbl.Text = dataPapers.Intnumlicense.ToString();
+
+
 
 
         }
