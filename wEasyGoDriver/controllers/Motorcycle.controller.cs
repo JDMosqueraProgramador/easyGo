@@ -15,7 +15,7 @@ namespace wEasyGoDriver.controllers
 
         public MotorcycleControlller(string strLicensePlateMoto, int intNumSerieMoto, int intNumChasisMoto, int intVimMoto, int intNumLicenseMoto, string strMarkMoto, int intCylinderMoto, string strModelMoto, string strFuelTypeMoto, string strLinkPropertyCard, int owner, int driver, string strColorMoto)
         {
-            string strStateMoto = "inactive";
+            string strStateMoto = "disabled";
 
             UserModel ownerClass = new UserModel();
             ownerClass.IntIdUser = owner;

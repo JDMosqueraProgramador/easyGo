@@ -99,6 +99,14 @@ namespace wEasyGoDriver.views
                         this.Close();
                     }
 
+                    if(dataMoto.StrStateMoto == "disabled")
+                    {
+                        MessageBox.Show("El usuario se encuentra dehsabilitado actualmente, los datos de su vehículo están en etapa de revisión.");
+                        btnEstado.Enabled = false;
+                        EnableTab(this.tabMainInicio);
+
+                    }
+
                     dtgHistorialViajes.DataSource = userController.GetDriverHistory(dataMoto.StrLicensePlateMoto);
                     lblEstadoMoto.Text = dataMoto.StrStateMoto;
                     dataMoto.StrStateMoto = "inactive";
@@ -110,11 +118,15 @@ namespace wEasyGoDriver.views
 
                     this.Close();
                 }
+                else
+                {
+                    MessageBox.Show("No tiene permiso para acceder a esta sesión");
+                    this.Close();
+                }
 
             }
             catch (Exception err)
             {
-
                 MessageBox.Show(err.Message);
             }
 
@@ -818,7 +830,7 @@ namespace wEasyGoDriver.views
                         break;
 
                     case "disabled":
-                        btnEstado.Text = "";
+                        MessageBox.Show("No es posible cambiar el estado");
                         break;
 
                     /*case "busy":
@@ -857,6 +869,13 @@ namespace wEasyGoDriver.views
         private void tabMainHistorial_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void EnableTab(TabPage page)
+        {
+            foreach (Control ctl in this.tabsMain.TabPages) ctl.Enabled = false;
+
+            ((Control)page).Enabled = true;
         }
 
     }
