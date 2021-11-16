@@ -90,9 +90,14 @@ namespace wEasyGoAdmin.View
 
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void btnAvanzarPapeles_Click(object sender, EventArgs e)
         {
-            tabsAministrar.SelectedTab = tabPapeles;
+            lblNumeroLicencia.SelectedTab = tabPapeles;
+        }
+
+        private void btnAvanzarDatosvehiculo_Click(object sender, EventArgs e)
+        {
+            lblNumeroLicencia.SelectedTab = lblVinMotocicleta;
         }
     }
 }
