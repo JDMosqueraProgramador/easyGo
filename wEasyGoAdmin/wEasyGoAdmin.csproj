@@ -200,7 +200,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Motorcycle.controller.cs" />
     <Compile Include="Controller\User.controller.cs" />
+    <Compile Include="Model\Motorcycle.model.cs" />
+    <Compile Include="Model\Papers.cs" />
     <Compile Include="Model\User.model.cs" />
     <Compile Include="View\frmIniciarSesion.view.cs">
       <SubType>Form</SubType>
