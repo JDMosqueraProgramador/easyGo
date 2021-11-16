@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.tabPapeles = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -43,7 +45,25 @@
             this.label14 = new System.Windows.Forms.Label();
             this.lblFechaVigenciaHasta = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnAvanzarDatosvehiculo = new System.Windows.Forms.PictureBox();
+            this.fotoSoat = new System.Windows.Forms.PictureBox();
+            this.FotoTecno = new System.Windows.Forms.PictureBox();
+            this.fotoLicencia = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.tabDatosConductor = new System.Windows.Forms.TabPage();
+            this.btnAvanzarPapeles = new System.Windows.Forms.PictureBox();
+            this.pictureBox34 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.lblRolConductor = new System.Windows.Forms.Label();
             this.lblEmailConductor = new System.Windows.Forms.Label();
@@ -53,24 +73,6 @@
             this.lblFechaNacimientoConductor = new System.Windows.Forms.Label();
             this.lblApellidoConductor = new System.Windows.Forms.Label();
             this.lblNombreConductor = new System.Windows.Forms.Label();
-            this.tabBuscarConductor = new System.Windows.Forms.TabPage();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtgConductores = new System.Windows.Forms.DataGridView();
-            this.txtNombreConductor = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblNumeroLicencia = new System.Windows.Forms.TabControl();
-            this.pictureBox55 = new System.Windows.Forms.PictureBox();
-            this.pictureBox31 = new System.Windows.Forms.PictureBox();
-            this.pictureBox32 = new System.Windows.Forms.PictureBox();
-            this.btnAvanzarPapeles = new System.Windows.Forms.PictureBox();
-            this.pictureBox34 = new System.Windows.Forms.PictureBox();
             this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.pictureBox37 = new System.Windows.Forms.PictureBox();
@@ -87,67 +89,77 @@
             this.pictureBox48 = new System.Windows.Forms.PictureBox();
             this.pictureBox49 = new System.Windows.Forms.PictureBox();
             this.pictureBox50 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnAvanzarDatosvehiculo = new System.Windows.Forms.PictureBox();
-            this.fotoSoat = new System.Windows.Forms.PictureBox();
-            this.FotoTecno = new System.Windows.Forms.PictureBox();
-            this.fotoLicencia = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.tabBuscarConductor = new System.Windows.Forms.TabPage();
+            this.lblPrueba = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox29 = new System.Windows.Forms.PictureBox();
-            this.pictureBox28 = new System.Windows.Forms.PictureBox();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox52 = new System.Windows.Forms.PictureBox();
-            this.pictureBox51 = new System.Windows.Forms.PictureBox();
-            this.pictureBox33 = new System.Windows.Forms.PictureBox();
-            this.pictureBox30 = new System.Windows.Forms.PictureBox();
-            this.fotoTarjetaPropiedad = new System.Windows.Forms.PictureBox();
-            this.pictureBox53 = new System.Windows.Forms.PictureBox();
-            this.lblPLaca = new System.Windows.Forms.Label();
-            this.lblNumeroLicenciaMoto = new System.Windows.Forms.Label();
-            this.lblMarcaMoto = new System.Windows.Forms.Label();
-            this.lblTipoCombustible = new System.Windows.Forms.Label();
-            this.lblColorMotocicleta = new System.Windows.Forms.Label();
-            this.lblCilindraje = new System.Windows.Forms.Label();
-            this.lblModeloMotocicleta = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.btnHabilitar = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btnDeshabilitar = new System.Windows.Forms.Button();
-            this.pictureBox54 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox55 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtgConductores = new System.Windows.Forms.DataGridView();
+            this.txtNombreConductor = new System.Windows.Forms.TextBox();
+            this.pictureBox31 = new System.Windows.Forms.PictureBox();
+            this.pictureBox32 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNumeroLicencia = new System.Windows.Forms.TabControl();
             this.lblVinMotocicleta = new System.Windows.Forms.TabPage();
+            this.pictureBox54 = new System.Windows.Forms.PictureBox();
+            this.btnDeshabilitar = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnHabilitar = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.lblModeloMotocicleta = new System.Windows.Forms.Label();
+            this.lblCilindraje = new System.Windows.Forms.Label();
+            this.lblColorMotocicleta = new System.Windows.Forms.Label();
+            this.lblTipoCombustible = new System.Windows.Forms.Label();
+            this.lblMarcaMoto = new System.Windows.Forms.Label();
+            this.lblNumeroLicenciaMoto = new System.Windows.Forms.Label();
+            this.lblPLaca = new System.Windows.Forms.Label();
+            this.pictureBox53 = new System.Windows.Forms.PictureBox();
+            this.fotoTarjetaPropiedad = new System.Windows.Forms.PictureBox();
+            this.pictureBox30 = new System.Windows.Forms.PictureBox();
+            this.pictureBox33 = new System.Windows.Forms.PictureBox();
+            this.pictureBox51 = new System.Windows.Forms.PictureBox();
+            this.pictureBox52 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
+            this.pictureBox29 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label29 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.tabPapeles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAvanzarDatosvehiculo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoSoat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoTecno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoLicencia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tabDatosConductor.SuspendLayout();
-            this.tabBuscarConductor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgConductores)).BeginInit();
-            this.lblNumeroLicencia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAvanzarPapeles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
@@ -166,42 +178,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAvanzarDatosvehiculo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoSoat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FotoTecno)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoLicencia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoTarjetaPropiedad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).BeginInit();
+            this.tabBuscarConductor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConductores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
+            this.lblNumeroLicencia.SuspendLayout();
             this.lblVinMotocicleta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoTarjetaPropiedad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitulo
@@ -214,6 +214,18 @@
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1010, 56);
             this.pnlTitulo.TabIndex = 225;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = global::wEasyGoAdmin.Properties.Resources.CerrarForm;
+            this.btnCerrar.Location = new System.Drawing.Point(949, 14);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(43, 25);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 47;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // lblTitle
             // 
@@ -268,6 +280,7 @@
             // 
             // tabPapeles
             // 
+            this.tabPapeles.Controls.Add(this.label12);
             this.tabPapeles.Controls.Add(this.label28);
             this.tabPapeles.Controls.Add(this.label27);
             this.tabPapeles.Controls.Add(this.label26);
@@ -294,7 +307,6 @@
             this.tabPapeles.Controls.Add(this.pictureBox13);
             this.tabPapeles.Controls.Add(this.pictureBox1);
             this.tabPapeles.Controls.Add(this.pictureBox2);
-            this.tabPapeles.Controls.Add(this.pictureBox9);
             this.tabPapeles.Controls.Add(this.pictureBox10);
             this.tabPapeles.Location = new System.Drawing.Point(4, 22);
             this.tabPapeles.Name = "tabPapeles";
@@ -304,6 +316,17 @@
             this.tabPapeles.Text = "Papeles vehículo-conductor";
             this.tabPapeles.UseVisualStyleBackColor = true;
             this.tabPapeles.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Gainsboro;
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Location = new System.Drawing.Point(60, 148);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 13);
+            this.label12.TabIndex = 313;
+            this.label12.Text = "Número:";
             // 
             // label28
             // 
@@ -414,6 +437,167 @@
             this.label13.Text = "Número de licencia";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::wEasyGoAdmin.Properties.Resources.soat;
+            this.pictureBox5.Location = new System.Drawing.Point(754, 6);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(107, 88);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 309;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::wEasyGoAdmin.Properties.Resources.cuenta;
+            this.pictureBox4.Location = new System.Drawing.Point(414, 6);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(107, 88);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 308;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::wEasyGoAdmin.Properties.Resources.licencia;
+            this.pictureBox3.Location = new System.Drawing.Point(107, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(107, 88);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 307;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnAvanzarDatosvehiculo
+            // 
+            this.btnAvanzarDatosvehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAvanzarDatosvehiculo.Image = global::wEasyGoAdmin.Properties.Resources.next1;
+            this.btnAvanzarDatosvehiculo.Location = new System.Drawing.Point(916, 6);
+            this.btnAvanzarDatosvehiculo.Name = "btnAvanzarDatosvehiculo";
+            this.btnAvanzarDatosvehiculo.Size = new System.Drawing.Size(43, 25);
+            this.btnAvanzarDatosvehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAvanzarDatosvehiculo.TabIndex = 306;
+            this.btnAvanzarDatosvehiculo.TabStop = false;
+            this.btnAvanzarDatosvehiculo.Click += new System.EventHandler(this.btnAvanzarDatosvehiculo_Click);
+            // 
+            // fotoSoat
+            // 
+            this.fotoSoat.Location = new System.Drawing.Point(669, 283);
+            this.fotoSoat.Name = "fotoSoat";
+            this.fotoSoat.Size = new System.Drawing.Size(248, 162);
+            this.fotoSoat.TabIndex = 305;
+            this.fotoSoat.TabStop = false;
+            // 
+            // FotoTecno
+            // 
+            this.FotoTecno.Location = new System.Drawing.Point(341, 283);
+            this.FotoTecno.Name = "FotoTecno";
+            this.FotoTecno.Size = new System.Drawing.Size(248, 163);
+            this.FotoTecno.TabIndex = 304;
+            this.FotoTecno.TabStop = false;
+            // 
+            // fotoLicencia
+            // 
+            this.fotoLicencia.Location = new System.Drawing.Point(34, 283);
+            this.fotoLicencia.Name = "fotoLicencia";
+            this.fotoLicencia.Size = new System.Drawing.Size(248, 163);
+            this.fotoLicencia.TabIndex = 303;
+            this.fotoLicencia.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox14.Location = new System.Drawing.Point(684, 210);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 301;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox15.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox15.Location = new System.Drawing.Point(669, 187);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 300;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox16.Location = new System.Drawing.Point(684, 147);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox16.TabIndex = 294;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox17.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox17.Location = new System.Drawing.Point(669, 124);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox17.TabIndex = 293;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox12.Location = new System.Drawing.Point(356, 147);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 286;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox13.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox13.Location = new System.Drawing.Point(341, 124);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 285;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox1.Location = new System.Drawing.Point(49, 210);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 282;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox2.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox2.Location = new System.Drawing.Point(34, 187);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 281;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox10.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox10.Location = new System.Drawing.Point(34, 124);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 270;
+            this.pictureBox10.TabStop = false;
+            // 
             // tabDatosConductor
             // 
             this.tabDatosConductor.Controls.Add(this.btnAvanzarPapeles);
@@ -450,6 +634,28 @@
             this.tabDatosConductor.TabIndex = 1;
             this.tabDatosConductor.Text = "Datos conductor";
             this.tabDatosConductor.UseVisualStyleBackColor = true;
+            // 
+            // btnAvanzarPapeles
+            // 
+            this.btnAvanzarPapeles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAvanzarPapeles.Image = global::wEasyGoAdmin.Properties.Resources.next1;
+            this.btnAvanzarPapeles.Location = new System.Drawing.Point(913, 6);
+            this.btnAvanzarPapeles.Name = "btnAvanzarPapeles";
+            this.btnAvanzarPapeles.Size = new System.Drawing.Size(43, 25);
+            this.btnAvanzarPapeles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAvanzarPapeles.TabIndex = 275;
+            this.btnAvanzarPapeles.TabStop = false;
+            this.btnAvanzarPapeles.Click += new System.EventHandler(this.btnAvanzarPapeles_Click);
+            // 
+            // pictureBox34
+            // 
+            this.pictureBox34.Image = global::wEasyGoAdmin.Properties.Resources.admin_log_in;
+            this.pictureBox34.Location = new System.Drawing.Point(422, 16);
+            this.pictureBox34.Name = "pictureBox34";
+            this.pictureBox34.Size = new System.Drawing.Size(132, 93);
+            this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox34.TabIndex = 274;
+            this.pictureBox34.TabStop = false;
             // 
             // label16
             // 
@@ -548,223 +754,6 @@
             this.lblNombreConductor.TabIndex = 251;
             this.lblNombreConductor.Text = "Nombre";
             this.lblNombreConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tabBuscarConductor
-            // 
-            this.tabBuscarConductor.Controls.Add(this.label20);
-            this.tabBuscarConductor.Controls.Add(this.label18);
-            this.tabBuscarConductor.Controls.Add(this.pictureBox55);
-            this.tabBuscarConductor.Controls.Add(this.label9);
-            this.tabBuscarConductor.Controls.Add(this.label8);
-            this.tabBuscarConductor.Controls.Add(this.label7);
-            this.tabBuscarConductor.Controls.Add(this.label6);
-            this.tabBuscarConductor.Controls.Add(this.label5);
-            this.tabBuscarConductor.Controls.Add(this.label4);
-            this.tabBuscarConductor.Controls.Add(this.label3);
-            this.tabBuscarConductor.Controls.Add(this.label2);
-            this.tabBuscarConductor.Controls.Add(this.dtgConductores);
-            this.tabBuscarConductor.Controls.Add(this.txtNombreConductor);
-            this.tabBuscarConductor.Controls.Add(this.pictureBox31);
-            this.tabBuscarConductor.Controls.Add(this.pictureBox32);
-            this.tabBuscarConductor.Controls.Add(this.label1);
-            this.tabBuscarConductor.Location = new System.Drawing.Point(4, 22);
-            this.tabBuscarConductor.Name = "tabBuscarConductor";
-            this.tabBuscarConductor.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBuscarConductor.Size = new System.Drawing.Size(962, 452);
-            this.tabBuscarConductor.TabIndex = 0;
-            this.tabBuscarConductor.Text = "Ver conductores";
-            this.tabBuscarConductor.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label9.Location = new System.Drawing.Point(110, 389);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(150, 13);
-            this.label9.TabIndex = 131;
-            this.label9.Text = "aceptar la solicitud de ingreso.";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label8.Location = new System.Drawing.Point(37, 365);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(276, 13);
-            this.label8.TabIndex = 130;
-            this.label8.Text = "si hay alguna inconsistencia informar a el conductor y no ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label7.Location = new System.Drawing.Point(37, 341);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(280, 13);
-            this.label7.TabIndex = 129;
-            this.label7.Text = "son correctos podrá aceptar el conductor en la plataforma";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label6.Location = new System.Drawing.Point(37, 317);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(291, 13);
-            this.label6.TabIndex = 128;
-            this.label6.Text = "apartado de verificacion de los datos. recuerde que si estos ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label5.Location = new System.Drawing.Point(37, 291);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(296, 13);
-            this.label5.TabIndex = 127;
-            this.label5.Text = "sobre el resultado de la busqueda, luego se redirecionara a el";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label4.Location = new System.Drawing.Point(37, 268);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(293, 13);
-            this.label4.TabIndex = 126;
-            this.label4.Text = "Recuerda que para seleccionar uno debes hacer doble click";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Location = new System.Drawing.Point(140, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 20);
-            this.label3.TabIndex = 125;
-            this.label3.Text = "Bienvenido";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(571, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 20);
-            this.label2.TabIndex = 124;
-            this.label2.Text = "Lista de conductores";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // dtgConductores
-            // 
-            this.dtgConductores.BackgroundColor = System.Drawing.Color.White;
-            this.dtgConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgConductores.Location = new System.Drawing.Point(366, 99);
-            this.dtgConductores.Name = "dtgConductores";
-            this.dtgConductores.Size = new System.Drawing.Size(570, 318);
-            this.dtgConductores.TabIndex = 123;
-            // 
-            // txtNombreConductor
-            // 
-            this.txtNombreConductor.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtNombreConductor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombreConductor.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombreConductor.Location = new System.Drawing.Point(113, 208);
-            this.txtNombreConductor.Name = "txtNombreConductor";
-            this.txtNombreConductor.Size = new System.Drawing.Size(166, 13);
-            this.txtNombreConductor.TabIndex = 120;
-            this.txtNombreConductor.Text = "Nombre conductor";
-            this.txtNombreConductor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNombreConductor.TextChanged += new System.EventHandler(this.txtNombreConductor_TextChanged);
-            this.txtNombreConductor.Enter += new System.EventHandler(this.txtNombreConductor_Enter);
-            this.txtNombreConductor.Leave += new System.EventHandler(this.txtNombreConductor_Leave);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(37, 161);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(297, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Aqui puedes consultar los conductores registrados:";
-            // 
-            // lblNumeroLicencia
-            // 
-            this.lblNumeroLicencia.Controls.Add(this.tabBuscarConductor);
-            this.lblNumeroLicencia.Controls.Add(this.tabDatosConductor);
-            this.lblNumeroLicencia.Controls.Add(this.tabPapeles);
-            this.lblNumeroLicencia.Controls.Add(this.lblVinMotocicleta);
-            this.lblNumeroLicencia.Location = new System.Drawing.Point(22, 72);
-            this.lblNumeroLicencia.Name = "lblNumeroLicencia";
-            this.lblNumeroLicencia.SelectedIndex = 0;
-            this.lblNumeroLicencia.Size = new System.Drawing.Size(970, 478);
-            this.lblNumeroLicencia.TabIndex = 226;
-            // 
-            // pictureBox55
-            // 
-            this.pictureBox55.Image = global::wEasyGoAdmin.Properties.Resources.check;
-            this.pictureBox55.Location = new System.Drawing.Point(130, 31);
-            this.pictureBox55.Name = "pictureBox55";
-            this.pictureBox55.Size = new System.Drawing.Size(107, 88);
-            this.pictureBox55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox55.TabIndex = 316;
-            this.pictureBox55.TabStop = false;
-            // 
-            // pictureBox31
-            // 
-            this.pictureBox31.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox31.Image = global::wEasyGoAdmin.Properties.Resources.lupa1;
-            this.pictureBox31.Location = new System.Drawing.Point(68, 208);
-            this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox31.TabIndex = 122;
-            this.pictureBox31.TabStop = false;
-            // 
-            // pictureBox32
-            // 
-            this.pictureBox32.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox32.Image = global::wEasyGoAdmin.Properties.Resources.btn1;
-            this.pictureBox32.Location = new System.Drawing.Point(53, 185);
-            this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox32.TabIndex = 121;
-            this.pictureBox32.TabStop = false;
-            // 
-            // btnAvanzarPapeles
-            // 
-            this.btnAvanzarPapeles.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAvanzarPapeles.Image = global::wEasyGoAdmin.Properties.Resources.next1;
-            this.btnAvanzarPapeles.Location = new System.Drawing.Point(913, 6);
-            this.btnAvanzarPapeles.Name = "btnAvanzarPapeles";
-            this.btnAvanzarPapeles.Size = new System.Drawing.Size(43, 25);
-            this.btnAvanzarPapeles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAvanzarPapeles.TabIndex = 275;
-            this.btnAvanzarPapeles.TabStop = false;
-            this.btnAvanzarPapeles.Click += new System.EventHandler(this.btnAvanzarPapeles_Click);
-            // 
-            // pictureBox34
-            // 
-            this.pictureBox34.Image = global::wEasyGoAdmin.Properties.Resources.admin_log_in;
-            this.pictureBox34.Location = new System.Drawing.Point(422, 16);
-            this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(132, 93);
-            this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox34.TabIndex = 274;
-            this.pictureBox34.TabStop = false;
             // 
             // pictureBox35
             // 
@@ -934,188 +923,54 @@
             this.pictureBox50.TabIndex = 249;
             this.pictureBox50.TabStop = false;
             // 
-            // pictureBox5
+            // tabBuscarConductor
             // 
-            this.pictureBox5.Image = global::wEasyGoAdmin.Properties.Resources.soat;
-            this.pictureBox5.Location = new System.Drawing.Point(754, 6);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(107, 88);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 309;
-            this.pictureBox5.TabStop = false;
+            this.tabBuscarConductor.Controls.Add(this.lblPrueba);
+            this.tabBuscarConductor.Controls.Add(this.label20);
+            this.tabBuscarConductor.Controls.Add(this.label18);
+            this.tabBuscarConductor.Controls.Add(this.pictureBox55);
+            this.tabBuscarConductor.Controls.Add(this.label9);
+            this.tabBuscarConductor.Controls.Add(this.label8);
+            this.tabBuscarConductor.Controls.Add(this.label7);
+            this.tabBuscarConductor.Controls.Add(this.label6);
+            this.tabBuscarConductor.Controls.Add(this.label5);
+            this.tabBuscarConductor.Controls.Add(this.label4);
+            this.tabBuscarConductor.Controls.Add(this.label3);
+            this.tabBuscarConductor.Controls.Add(this.label2);
+            this.tabBuscarConductor.Controls.Add(this.dtgConductores);
+            this.tabBuscarConductor.Controls.Add(this.txtNombreConductor);
+            this.tabBuscarConductor.Controls.Add(this.pictureBox31);
+            this.tabBuscarConductor.Controls.Add(this.pictureBox32);
+            this.tabBuscarConductor.Controls.Add(this.label1);
+            this.tabBuscarConductor.Location = new System.Drawing.Point(4, 22);
+            this.tabBuscarConductor.Name = "tabBuscarConductor";
+            this.tabBuscarConductor.Padding = new System.Windows.Forms.Padding(3);
+            this.tabBuscarConductor.Size = new System.Drawing.Size(962, 452);
+            this.tabBuscarConductor.TabIndex = 0;
+            this.tabBuscarConductor.Text = "Ver conductores";
+            this.tabBuscarConductor.UseVisualStyleBackColor = true;
             // 
-            // pictureBox4
+            // lblPrueba
             // 
-            this.pictureBox4.Image = global::wEasyGoAdmin.Properties.Resources.cuenta;
-            this.pictureBox4.Location = new System.Drawing.Point(414, 6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(107, 88);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 308;
-            this.pictureBox4.TabStop = false;
+            this.lblPrueba.AutoSize = true;
+            this.lblPrueba.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrueba.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblPrueba.Location = new System.Drawing.Point(300, 74);
+            this.lblPrueba.Name = "lblPrueba";
+            this.lblPrueba.Size = new System.Drawing.Size(28, 13);
+            this.lblPrueba.TabIndex = 319;
+            this.lblPrueba.Text = "dato";
             // 
-            // pictureBox3
+            // label20
             // 
-            this.pictureBox3.Image = global::wEasyGoAdmin.Properties.Resources.licencia;
-            this.pictureBox3.Location = new System.Drawing.Point(107, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(107, 88);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 307;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btnAvanzarDatosvehiculo
-            // 
-            this.btnAvanzarDatosvehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAvanzarDatosvehiculo.Image = global::wEasyGoAdmin.Properties.Resources.next1;
-            this.btnAvanzarDatosvehiculo.Location = new System.Drawing.Point(916, 6);
-            this.btnAvanzarDatosvehiculo.Name = "btnAvanzarDatosvehiculo";
-            this.btnAvanzarDatosvehiculo.Size = new System.Drawing.Size(43, 25);
-            this.btnAvanzarDatosvehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAvanzarDatosvehiculo.TabIndex = 306;
-            this.btnAvanzarDatosvehiculo.TabStop = false;
-            this.btnAvanzarDatosvehiculo.Click += new System.EventHandler(this.btnAvanzarDatosvehiculo_Click);
-            // 
-            // fotoSoat
-            // 
-            this.fotoSoat.Location = new System.Drawing.Point(669, 283);
-            this.fotoSoat.Name = "fotoSoat";
-            this.fotoSoat.Size = new System.Drawing.Size(248, 162);
-            this.fotoSoat.TabIndex = 305;
-            this.fotoSoat.TabStop = false;
-            // 
-            // FotoTecno
-            // 
-            this.FotoTecno.Location = new System.Drawing.Point(341, 283);
-            this.FotoTecno.Name = "FotoTecno";
-            this.FotoTecno.Size = new System.Drawing.Size(248, 163);
-            this.FotoTecno.TabIndex = 304;
-            this.FotoTecno.TabStop = false;
-            // 
-            // fotoLicencia
-            // 
-            this.fotoLicencia.Location = new System.Drawing.Point(34, 283);
-            this.fotoLicencia.Name = "fotoLicencia";
-            this.fotoLicencia.Size = new System.Drawing.Size(248, 163);
-            this.fotoLicencia.TabIndex = 303;
-            this.fotoLicencia.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox14.Location = new System.Drawing.Point(684, 210);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox14.TabIndex = 301;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox15.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox15.Location = new System.Drawing.Point(669, 187);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 300;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox16.Location = new System.Drawing.Point(684, 147);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 294;
-            this.pictureBox16.TabStop = false;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox17.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox17.Location = new System.Drawing.Point(669, 124);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 293;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox12.Location = new System.Drawing.Point(356, 147);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 286;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox13.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox13.Location = new System.Drawing.Point(341, 124);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 285;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 210);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 282;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox2.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox2.Location = new System.Drawing.Point(34, 187);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 281;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox9.Location = new System.Drawing.Point(49, 147);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 271;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox10.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox10.Location = new System.Drawing.Point(34, 124);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 270;
-            this.pictureBox10.TabStop = false;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::wEasyGoAdmin.Properties.Resources.CerrarForm;
-            this.btnCerrar.Location = new System.Drawing.Point(949, 14);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(43, 25);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 47;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label20.Location = new System.Drawing.Point(527, 74);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(255, 13);
+            this.label20.TabIndex = 318;
+            this.label20.Text = "https://www.runt.com.co/ciudadano/consulta-placa";
             // 
             // label18
             // 
@@ -1129,345 +984,176 @@
             this.label18.Text = "Tenga en cuenta que para la validación deberá acceder con los datos proporcionado" +
     "s a la página";
             // 
-            // label20
+            // pictureBox55
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label20.Location = new System.Drawing.Point(527, 74);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(255, 13);
-            this.label20.TabIndex = 318;
-            this.label20.Text = "https://www.runt.com.co/ciudadano/consulta-placa";
+            this.pictureBox55.Image = global::wEasyGoAdmin.Properties.Resources.check;
+            this.pictureBox55.Location = new System.Drawing.Point(130, 31);
+            this.pictureBox55.Name = "pictureBox55";
+            this.pictureBox55.Size = new System.Drawing.Size(107, 88);
+            this.pictureBox55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox55.TabIndex = 316;
+            this.pictureBox55.TabStop = false;
             // 
-            // pictureBox7
+            // label9
             // 
-            this.pictureBox7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox7.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox7.Location = new System.Drawing.Point(28, 117);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 273;
-            this.pictureBox7.TabStop = false;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label9.Location = new System.Drawing.Point(110, 389);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(150, 13);
+            this.label9.TabIndex = 131;
+            this.label9.Text = "aceptar la solicitud de ingreso.";
             // 
-            // pictureBox6
+            // label8
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox6.Location = new System.Drawing.Point(43, 140);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 274;
-            this.pictureBox6.TabStop = false;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label8.Location = new System.Drawing.Point(37, 365);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(276, 13);
+            this.label8.TabIndex = 130;
+            this.label8.Text = "si hay alguna inconsistencia informar a el conductor y no ";
             // 
-            // pictureBox29
+            // label7
             // 
-            this.pictureBox29.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox29.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox29.Location = new System.Drawing.Point(282, 117);
-            this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox29.TabIndex = 285;
-            this.pictureBox29.TabStop = false;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label7.Location = new System.Drawing.Point(37, 341);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(280, 13);
+            this.label7.TabIndex = 129;
+            this.label7.Text = "son correctos podrá aceptar el conductor en la plataforma";
             // 
-            // pictureBox28
+            // label6
             // 
-            this.pictureBox28.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox28.Location = new System.Drawing.Point(297, 140);
-            this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox28.TabIndex = 286;
-            this.pictureBox28.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label6.Location = new System.Drawing.Point(37, 317);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(291, 13);
+            this.label6.TabIndex = 128;
+            this.label6.Text = "apartado de verificacion de los datos. recuerde que si estos ";
             // 
-            // pictureBox27
+            // label5
             // 
-            this.pictureBox27.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox27.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox27.Location = new System.Drawing.Point(282, 183);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox27.TabIndex = 288;
-            this.pictureBox27.TabStop = false;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label5.Location = new System.Drawing.Point(37, 291);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(296, 13);
+            this.label5.TabIndex = 127;
+            this.label5.Text = "sobre el resultado de la busqueda, luego se redirecionara a el";
             // 
-            // pictureBox26
+            // label4
             // 
-            this.pictureBox26.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox26.Location = new System.Drawing.Point(297, 206);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox26.TabIndex = 289;
-            this.pictureBox26.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label4.Location = new System.Drawing.Point(37, 268);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(293, 13);
+            this.label4.TabIndex = 126;
+            this.label4.Text = "Recuerda que para seleccionar uno debes hacer doble click";
             // 
-            // pictureBox25
+            // label3
             // 
-            this.pictureBox25.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox25.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox25.Location = new System.Drawing.Point(28, 246);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox25.TabIndex = 291;
-            this.pictureBox25.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label3.Location = new System.Drawing.Point(140, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 20);
+            this.label3.TabIndex = 125;
+            this.label3.Text = "Bienvenido";
             // 
-            // pictureBox24
+            // label2
             // 
-            this.pictureBox24.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox24.Location = new System.Drawing.Point(43, 269);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox24.TabIndex = 292;
-            this.pictureBox24.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label2.Location = new System.Drawing.Point(571, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(177, 20);
+            this.label2.TabIndex = 124;
+            this.label2.Text = "Lista de conductores";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // pictureBox23
+            // dtgConductores
             // 
-            this.pictureBox23.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox23.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox23.Location = new System.Drawing.Point(148, 316);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox23.TabIndex = 294;
-            this.pictureBox23.TabStop = false;
+            this.dtgConductores.BackgroundColor = System.Drawing.Color.White;
+            this.dtgConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgConductores.Location = new System.Drawing.Point(366, 99);
+            this.dtgConductores.Name = "dtgConductores";
+            this.dtgConductores.Size = new System.Drawing.Size(570, 318);
+            this.dtgConductores.TabIndex = 123;
+            this.dtgConductores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgConductores_CellClick);
+            this.dtgConductores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgConductores_CellContentClick);
             // 
-            // pictureBox22
+            // txtNombreConductor
             // 
-            this.pictureBox22.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox22.Location = new System.Drawing.Point(163, 339);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox22.TabIndex = 295;
-            this.pictureBox22.TabStop = false;
+            this.txtNombreConductor.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtNombreConductor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreConductor.ForeColor = System.Drawing.Color.DimGray;
+            this.txtNombreConductor.Location = new System.Drawing.Point(113, 208);
+            this.txtNombreConductor.Name = "txtNombreConductor";
+            this.txtNombreConductor.Size = new System.Drawing.Size(166, 13);
+            this.txtNombreConductor.TabIndex = 120;
+            this.txtNombreConductor.Text = "Nombre conductor";
+            this.txtNombreConductor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNombreConductor.TextChanged += new System.EventHandler(this.txtNombreConductor_TextChanged);
+            this.txtNombreConductor.Enter += new System.EventHandler(this.txtNombreConductor_Enter);
+            this.txtNombreConductor.Leave += new System.EventHandler(this.txtNombreConductor_Leave);
             // 
-            // pictureBox52
+            // pictureBox31
             // 
-            this.pictureBox52.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox52.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox52.Location = new System.Drawing.Point(28, 182);
-            this.pictureBox52.Name = "pictureBox52";
-            this.pictureBox52.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox52.TabIndex = 297;
-            this.pictureBox52.TabStop = false;
+            this.pictureBox31.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox31.Image = global::wEasyGoAdmin.Properties.Resources.lupa1;
+            this.pictureBox31.Location = new System.Drawing.Point(68, 208);
+            this.pictureBox31.Name = "pictureBox31";
+            this.pictureBox31.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox31.TabIndex = 122;
+            this.pictureBox31.TabStop = false;
             // 
-            // pictureBox51
+            // pictureBox32
             // 
-            this.pictureBox51.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox51.Location = new System.Drawing.Point(43, 205);
-            this.pictureBox51.Name = "pictureBox51";
-            this.pictureBox51.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox51.TabIndex = 298;
-            this.pictureBox51.TabStop = false;
+            this.pictureBox32.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox32.Image = global::wEasyGoAdmin.Properties.Resources.btn1;
+            this.pictureBox32.Location = new System.Drawing.Point(53, 185);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox32.TabIndex = 121;
+            this.pictureBox32.TabStop = false;
             // 
-            // pictureBox33
+            // label1
             // 
-            this.pictureBox33.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox33.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
-            this.pictureBox33.Location = new System.Drawing.Point(282, 245);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox33.TabIndex = 300;
-            this.pictureBox33.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label1.Location = new System.Drawing.Point(37, 161);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(297, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Aqui puedes consultar los conductores registrados:";
             // 
-            // pictureBox30
+            // lblNumeroLicencia
             // 
-            this.pictureBox30.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox30.Location = new System.Drawing.Point(297, 268);
-            this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox30.TabIndex = 301;
-            this.pictureBox30.TabStop = false;
-            // 
-            // fotoTarjetaPropiedad
-            // 
-            this.fotoTarjetaPropiedad.Location = new System.Drawing.Point(564, 117);
-            this.fotoTarjetaPropiedad.Name = "fotoTarjetaPropiedad";
-            this.fotoTarjetaPropiedad.Size = new System.Drawing.Size(392, 190);
-            this.fotoTarjetaPropiedad.TabIndex = 305;
-            this.fotoTarjetaPropiedad.TabStop = false;
-            // 
-            // pictureBox53
-            // 
-            this.pictureBox53.Image = global::wEasyGoAdmin.Properties.Resources.delivery_motorcycle_shipping_vespa_coronavirus_icon_142121;
-            this.pictureBox53.Location = new System.Drawing.Point(211, 3);
-            this.pictureBox53.Name = "pictureBox53";
-            this.pictureBox53.Size = new System.Drawing.Size(107, 88);
-            this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox53.TabIndex = 309;
-            this.pictureBox53.TabStop = false;
-            // 
-            // lblPLaca
-            // 
-            this.lblPLaca.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblPLaca.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblPLaca.Location = new System.Drawing.Point(98, 139);
-            this.lblPLaca.Name = "lblPLaca";
-            this.lblPLaca.Size = new System.Drawing.Size(142, 17);
-            this.lblPLaca.TabIndex = 275;
-            this.lblPLaca.Text = "Placa";
-            this.lblPLaca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblNumeroLicenciaMoto
-            // 
-            this.lblNumeroLicenciaMoto.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblNumeroLicenciaMoto.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblNumeroLicenciaMoto.Location = new System.Drawing.Point(352, 139);
-            this.lblNumeroLicenciaMoto.Name = "lblNumeroLicenciaMoto";
-            this.lblNumeroLicenciaMoto.Size = new System.Drawing.Size(142, 17);
-            this.lblNumeroLicenciaMoto.TabIndex = 287;
-            this.lblNumeroLicenciaMoto.Text = "Número de licencia moto";
-            this.lblNumeroLicenciaMoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblMarcaMoto
-            // 
-            this.lblMarcaMoto.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblMarcaMoto.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblMarcaMoto.Location = new System.Drawing.Point(352, 205);
-            this.lblMarcaMoto.Name = "lblMarcaMoto";
-            this.lblMarcaMoto.Size = new System.Drawing.Size(142, 17);
-            this.lblMarcaMoto.TabIndex = 290;
-            this.lblMarcaMoto.Text = "Marca motocicleta";
-            this.lblMarcaMoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTipoCombustible
-            // 
-            this.lblTipoCombustible.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblTipoCombustible.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblTipoCombustible.Location = new System.Drawing.Point(98, 268);
-            this.lblTipoCombustible.Name = "lblTipoCombustible";
-            this.lblTipoCombustible.Size = new System.Drawing.Size(142, 17);
-            this.lblTipoCombustible.TabIndex = 293;
-            this.lblTipoCombustible.Text = "Tipo de combustible";
-            this.lblTipoCombustible.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblColorMotocicleta
-            // 
-            this.lblColorMotocicleta.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblColorMotocicleta.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblColorMotocicleta.Location = new System.Drawing.Point(218, 338);
-            this.lblColorMotocicleta.Name = "lblColorMotocicleta";
-            this.lblColorMotocicleta.Size = new System.Drawing.Size(142, 17);
-            this.lblColorMotocicleta.TabIndex = 296;
-            this.lblColorMotocicleta.Text = "Color motocicleta";
-            this.lblColorMotocicleta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCilindraje
-            // 
-            this.lblCilindraje.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblCilindraje.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblCilindraje.Location = new System.Drawing.Point(98, 204);
-            this.lblCilindraje.Name = "lblCilindraje";
-            this.lblCilindraje.Size = new System.Drawing.Size(142, 17);
-            this.lblCilindraje.TabIndex = 299;
-            this.lblCilindraje.Text = "Cilindraje motocicleta";
-            this.lblCilindraje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblModeloMotocicleta
-            // 
-            this.lblModeloMotocicleta.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblModeloMotocicleta.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblModeloMotocicleta.Location = new System.Drawing.Point(352, 267);
-            this.lblModeloMotocicleta.Name = "lblModeloMotocicleta";
-            this.lblModeloMotocicleta.Size = new System.Drawing.Size(142, 17);
-            this.lblModeloMotocicleta.TabIndex = 302;
-            this.lblModeloMotocicleta.Text = "Modelo Motocicleta";
-            this.lblModeloMotocicleta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label25.Location = new System.Drawing.Point(668, 96);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(175, 15);
-            this.label25.TabIndex = 306;
-            this.label25.Text = "Fotografía tarjeta de propiedad";
-            // 
-            // btnHabilitar
-            // 
-            this.btnHabilitar.BackColor = System.Drawing.Color.White;
-            this.btnHabilitar.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnHabilitar.FlatAppearance.BorderSize = 0;
-            this.btnHabilitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnHabilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnHabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHabilitar.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.btnHabilitar.Location = new System.Drawing.Point(614, 383);
-            this.btnHabilitar.Name = "btnHabilitar";
-            this.btnHabilitar.Size = new System.Drawing.Size(134, 50);
-            this.btnHabilitar.TabIndex = 310;
-            this.btnHabilitar.Text = "Habilitar ";
-            this.btnHabilitar.UseVisualStyleBackColor = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label11.Location = new System.Drawing.Point(611, 321);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(294, 13);
-            this.label11.TabIndex = 311;
-            this.label11.Text = "Si todos los papeles e información del condutor esta correcta";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label10.Location = new System.Drawing.Point(629, 340);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(261, 13);
-            this.label10.TabIndex = 312;
-            this.label10.Text = "puede habilitar a el presente conductor de lo contrario";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label17.Location = new System.Drawing.Point(695, 356);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(148, 13);
-            this.label17.TabIndex = 313;
-            this.label17.Text = "pase a revisar otro conductor.";
-            // 
-            // btnDeshabilitar
-            // 
-            this.btnDeshabilitar.BackColor = System.Drawing.Color.White;
-            this.btnDeshabilitar.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnDeshabilitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnDeshabilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnDeshabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeshabilitar.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.btnDeshabilitar.Location = new System.Drawing.Point(771, 383);
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(134, 50);
-            this.btnDeshabilitar.TabIndex = 314;
-            this.btnDeshabilitar.Text = "Deshabilitar";
-            this.btnDeshabilitar.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox54
-            // 
-            this.pictureBox54.Image = global::wEasyGoAdmin.Properties.Resources.soat;
-            this.pictureBox54.Location = new System.Drawing.Point(704, 5);
-            this.pictureBox54.Name = "pictureBox54";
-            this.pictureBox54.Size = new System.Drawing.Size(107, 88);
-            this.pictureBox54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox54.TabIndex = 315;
-            this.pictureBox54.TabStop = false;
+            this.lblNumeroLicencia.Controls.Add(this.tabBuscarConductor);
+            this.lblNumeroLicencia.Controls.Add(this.tabDatosConductor);
+            this.lblNumeroLicencia.Controls.Add(this.tabPapeles);
+            this.lblNumeroLicencia.Controls.Add(this.lblVinMotocicleta);
+            this.lblNumeroLicencia.Location = new System.Drawing.Point(22, 72);
+            this.lblNumeroLicencia.Name = "lblNumeroLicencia";
+            this.lblNumeroLicencia.SelectedIndex = 0;
+            this.lblNumeroLicencia.Size = new System.Drawing.Size(970, 478);
+            this.lblNumeroLicencia.TabIndex = 226;
             // 
             // lblVinMotocicleta
             // 
@@ -1510,6 +1196,334 @@
             this.lblVinMotocicleta.Text = "Datos vehiculo";
             this.lblVinMotocicleta.UseVisualStyleBackColor = true;
             // 
+            // pictureBox54
+            // 
+            this.pictureBox54.Image = global::wEasyGoAdmin.Properties.Resources.soat;
+            this.pictureBox54.Location = new System.Drawing.Point(704, 5);
+            this.pictureBox54.Name = "pictureBox54";
+            this.pictureBox54.Size = new System.Drawing.Size(107, 88);
+            this.pictureBox54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox54.TabIndex = 315;
+            this.pictureBox54.TabStop = false;
+            // 
+            // btnDeshabilitar
+            // 
+            this.btnDeshabilitar.BackColor = System.Drawing.Color.White;
+            this.btnDeshabilitar.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            this.btnDeshabilitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnDeshabilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnDeshabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeshabilitar.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.btnDeshabilitar.Location = new System.Drawing.Point(771, 383);
+            this.btnDeshabilitar.Name = "btnDeshabilitar";
+            this.btnDeshabilitar.Size = new System.Drawing.Size(134, 50);
+            this.btnDeshabilitar.TabIndex = 314;
+            this.btnDeshabilitar.Text = "Deshabilitar";
+            this.btnDeshabilitar.UseVisualStyleBackColor = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label17.Location = new System.Drawing.Point(695, 356);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(148, 13);
+            this.label17.TabIndex = 313;
+            this.label17.Text = "pase a revisar otro conductor.";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label10.Location = new System.Drawing.Point(629, 340);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(261, 13);
+            this.label10.TabIndex = 312;
+            this.label10.Text = "puede habilitar a el presente conductor de lo contrario";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label11.Location = new System.Drawing.Point(611, 321);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(294, 13);
+            this.label11.TabIndex = 311;
+            this.label11.Text = "Si todos los papeles e información del condutor esta correcta";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // btnHabilitar
+            // 
+            this.btnHabilitar.BackColor = System.Drawing.Color.White;
+            this.btnHabilitar.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            this.btnHabilitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnHabilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnHabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHabilitar.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.btnHabilitar.Location = new System.Drawing.Point(614, 383);
+            this.btnHabilitar.Name = "btnHabilitar";
+            this.btnHabilitar.Size = new System.Drawing.Size(134, 50);
+            this.btnHabilitar.TabIndex = 310;
+            this.btnHabilitar.Text = "Habilitar ";
+            this.btnHabilitar.UseVisualStyleBackColor = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label25.Location = new System.Drawing.Point(668, 96);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(175, 15);
+            this.label25.TabIndex = 306;
+            this.label25.Text = "Fotografía tarjeta de propiedad";
+            // 
+            // lblModeloMotocicleta
+            // 
+            this.lblModeloMotocicleta.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblModeloMotocicleta.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblModeloMotocicleta.Location = new System.Drawing.Point(352, 267);
+            this.lblModeloMotocicleta.Name = "lblModeloMotocicleta";
+            this.lblModeloMotocicleta.Size = new System.Drawing.Size(142, 17);
+            this.lblModeloMotocicleta.TabIndex = 302;
+            this.lblModeloMotocicleta.Text = "Modelo Motocicleta";
+            this.lblModeloMotocicleta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblCilindraje
+            // 
+            this.lblCilindraje.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblCilindraje.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblCilindraje.Location = new System.Drawing.Point(98, 204);
+            this.lblCilindraje.Name = "lblCilindraje";
+            this.lblCilindraje.Size = new System.Drawing.Size(142, 17);
+            this.lblCilindraje.TabIndex = 299;
+            this.lblCilindraje.Text = "Cilindraje motocicleta";
+            this.lblCilindraje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblColorMotocicleta
+            // 
+            this.lblColorMotocicleta.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblColorMotocicleta.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblColorMotocicleta.Location = new System.Drawing.Point(218, 338);
+            this.lblColorMotocicleta.Name = "lblColorMotocicleta";
+            this.lblColorMotocicleta.Size = new System.Drawing.Size(142, 17);
+            this.lblColorMotocicleta.TabIndex = 296;
+            this.lblColorMotocicleta.Text = "Color motocicleta";
+            this.lblColorMotocicleta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTipoCombustible
+            // 
+            this.lblTipoCombustible.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblTipoCombustible.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblTipoCombustible.Location = new System.Drawing.Point(98, 268);
+            this.lblTipoCombustible.Name = "lblTipoCombustible";
+            this.lblTipoCombustible.Size = new System.Drawing.Size(142, 17);
+            this.lblTipoCombustible.TabIndex = 293;
+            this.lblTipoCombustible.Text = "Tipo de combustible";
+            this.lblTipoCombustible.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMarcaMoto
+            // 
+            this.lblMarcaMoto.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblMarcaMoto.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblMarcaMoto.Location = new System.Drawing.Point(352, 205);
+            this.lblMarcaMoto.Name = "lblMarcaMoto";
+            this.lblMarcaMoto.Size = new System.Drawing.Size(142, 17);
+            this.lblMarcaMoto.TabIndex = 290;
+            this.lblMarcaMoto.Text = "Marca motocicleta";
+            this.lblMarcaMoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNumeroLicenciaMoto
+            // 
+            this.lblNumeroLicenciaMoto.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblNumeroLicenciaMoto.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblNumeroLicenciaMoto.Location = new System.Drawing.Point(352, 139);
+            this.lblNumeroLicenciaMoto.Name = "lblNumeroLicenciaMoto";
+            this.lblNumeroLicenciaMoto.Size = new System.Drawing.Size(142, 17);
+            this.lblNumeroLicenciaMoto.TabIndex = 287;
+            this.lblNumeroLicenciaMoto.Text = "Número de licencia moto";
+            this.lblNumeroLicenciaMoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblPLaca
+            // 
+            this.lblPLaca.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblPLaca.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblPLaca.Location = new System.Drawing.Point(98, 139);
+            this.lblPLaca.Name = "lblPLaca";
+            this.lblPLaca.Size = new System.Drawing.Size(142, 17);
+            this.lblPLaca.TabIndex = 275;
+            this.lblPLaca.Text = "Placa";
+            this.lblPLaca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox53
+            // 
+            this.pictureBox53.Image = global::wEasyGoAdmin.Properties.Resources.delivery_motorcycle_shipping_vespa_coronavirus_icon_142121;
+            this.pictureBox53.Location = new System.Drawing.Point(211, 3);
+            this.pictureBox53.Name = "pictureBox53";
+            this.pictureBox53.Size = new System.Drawing.Size(107, 88);
+            this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox53.TabIndex = 309;
+            this.pictureBox53.TabStop = false;
+            // 
+            // fotoTarjetaPropiedad
+            // 
+            this.fotoTarjetaPropiedad.Location = new System.Drawing.Point(564, 117);
+            this.fotoTarjetaPropiedad.Name = "fotoTarjetaPropiedad";
+            this.fotoTarjetaPropiedad.Size = new System.Drawing.Size(392, 190);
+            this.fotoTarjetaPropiedad.TabIndex = 305;
+            this.fotoTarjetaPropiedad.TabStop = false;
+            // 
+            // pictureBox30
+            // 
+            this.pictureBox30.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox30.Location = new System.Drawing.Point(297, 268);
+            this.pictureBox30.Name = "pictureBox30";
+            this.pictureBox30.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox30.TabIndex = 301;
+            this.pictureBox30.TabStop = false;
+            // 
+            // pictureBox33
+            // 
+            this.pictureBox33.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox33.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox33.Location = new System.Drawing.Point(282, 245);
+            this.pictureBox33.Name = "pictureBox33";
+            this.pictureBox33.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox33.TabIndex = 300;
+            this.pictureBox33.TabStop = false;
+            // 
+            // pictureBox51
+            // 
+            this.pictureBox51.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox51.Location = new System.Drawing.Point(43, 205);
+            this.pictureBox51.Name = "pictureBox51";
+            this.pictureBox51.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox51.TabIndex = 298;
+            this.pictureBox51.TabStop = false;
+            // 
+            // pictureBox52
+            // 
+            this.pictureBox52.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox52.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox52.Location = new System.Drawing.Point(28, 182);
+            this.pictureBox52.Name = "pictureBox52";
+            this.pictureBox52.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox52.TabIndex = 297;
+            this.pictureBox52.TabStop = false;
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox22.Location = new System.Drawing.Point(163, 339);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox22.TabIndex = 295;
+            this.pictureBox22.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox23.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox23.Location = new System.Drawing.Point(148, 316);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox23.TabIndex = 294;
+            this.pictureBox23.TabStop = false;
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox24.Location = new System.Drawing.Point(43, 269);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox24.TabIndex = 292;
+            this.pictureBox24.TabStop = false;
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox25.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox25.Location = new System.Drawing.Point(28, 246);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox25.TabIndex = 291;
+            this.pictureBox25.TabStop = false;
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox26.Location = new System.Drawing.Point(297, 206);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox26.TabIndex = 289;
+            this.pictureBox26.TabStop = false;
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox27.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox27.Location = new System.Drawing.Point(282, 183);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox27.TabIndex = 288;
+            this.pictureBox27.TabStop = false;
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox28.Location = new System.Drawing.Point(297, 140);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox28.TabIndex = 286;
+            this.pictureBox28.TabStop = false;
+            // 
+            // pictureBox29
+            // 
+            this.pictureBox29.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox29.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox29.Location = new System.Drawing.Point(282, 117);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox29.TabIndex = 285;
+            this.pictureBox29.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox6.Location = new System.Drawing.Point(43, 140);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(39, 14);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 274;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox7.Image = global::wEasyGoAdmin.Properties.Resources.btnDatos;
+            this.pictureBox7.Location = new System.Drawing.Point(28, 117);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 273;
+            this.pictureBox7.TabStop = false;
+            // 
             // label29
             // 
             this.label29.Location = new System.Drawing.Point(98, 98);
@@ -1534,16 +1548,27 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.tabPapeles.ResumeLayout(false);
+            this.tabPapeles.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAvanzarDatosvehiculo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoSoat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoTecno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoLicencia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.tabDatosConductor.ResumeLayout(false);
             this.tabDatosConductor.PerformLayout();
-            this.tabBuscarConductor.ResumeLayout(false);
-            this.tabBuscarConductor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgConductores)).EndInit();
-            this.lblNumeroLicencia.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAvanzarPapeles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
@@ -1562,43 +1587,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAvanzarDatosvehiculo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoSoat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FotoTecno)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoLicencia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoTarjetaPropiedad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).EndInit();
+            this.tabBuscarConductor.ResumeLayout(false);
+            this.tabBuscarConductor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConductores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
+            this.lblNumeroLicencia.ResumeLayout(false);
             this.lblVinMotocicleta.ResumeLayout(false);
             this.lblVinMotocicleta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoTarjetaPropiedad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1658,7 +1672,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label dateVigenciaHastaTecno;
         private System.Windows.Forms.PictureBox pictureBox12;
@@ -1716,5 +1729,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblPrueba;
     }
 }

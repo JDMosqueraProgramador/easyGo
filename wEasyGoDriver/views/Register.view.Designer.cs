@@ -720,6 +720,8 @@ namespace wEasyGoDriver
             this.dtgBuscarConductor.Name = "dtgBuscarConductor";
             this.dtgBuscarConductor.Size = new System.Drawing.Size(482, 66);
             this.dtgBuscarConductor.TabIndex = 139;
+            this.dtgBuscarConductor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgBuscarConductor_CellClick);
+            this.dtgBuscarConductor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgBuscarConductor_CellContentClick);
             // 
             // btnRegistrarMoto
             // 

@@ -754,5 +754,14 @@ namespace wEasyGoDriver
             ((Control)page).Enabled = true;
         }
 
+        private void dtgBuscarConductor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgBuscarConductor_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using wEasyGoAdmin.Controller;
 using wEasyGoAdmin.Model;
-
+using LibClassEasyGo;
 
 namespace wEasyGoAdmin.View
 {
@@ -17,6 +17,8 @@ namespace wEasyGoAdmin.View
     {
 
         string conductor="";
+
+        IUser dataUser;
 
 
         UserController userController;
@@ -112,6 +114,22 @@ namespace wEasyGoAdmin.View
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dtgConductores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgConductores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            int id;
+            id = int.Parse(dtgConductores.Rows[0].Cells[0].Value.ToString());
+
+            /*lblPrueba.Text = value.ToString();*/
+
 
         }
     }

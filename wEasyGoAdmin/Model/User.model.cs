@@ -48,6 +48,20 @@ namespace wEasyGoAdmin.Model
 
         }
 
+        /*protected DataTable selectDriver()
+        {
+            //Comando para seleciionar evento y conectarlo a la base de datos
+            string select = "SELECT intCodigoEvento as 'Código', strNombreEvento as 'Nombre', strFormadorEvento as 'Formador', tblProcesoFormativo.strNombreProceso as 'Proceso formativo' FROM tblEvento inner join tblProcesoFormativo ON tblEvento.intCodigoProceso = tblProcesoFormativo.intCodigoProceso";
+            NpgsqlCommand query = new SqlCommand(select, newConnection());
+
+            //creacion de datatable
+            DataTable table = new DataTable();
+            SqlDataAdapter data = new SqlDataAdapter(query);
+
+            data.Fill(table);
+            return table;
+        }*/
+
 
     }
 }
