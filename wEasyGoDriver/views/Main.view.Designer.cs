@@ -29,7 +29,6 @@ namespace wEasyGoDriver.views
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.cerrarForm = new System.Windows.Forms.PictureBox();
@@ -83,7 +82,7 @@ namespace wEasyGoDriver.views
             this.label15 = new System.Windows.Forms.Label();
             this.lblTituloHistorial = new System.Windows.Forms.Label();
             this.dtgHistorialViajes = new System.Windows.Forms.DataGridView();
-            this.notifyViaje = new System.Windows.Forms.NotifyIcon(this.components);
+            this.notifyViaje = new System.Windows.Forms.NotifyIcon();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
             this.tabsMain.SuspendLayout();
@@ -636,7 +635,7 @@ namespace wEasyGoDriver.views
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label5.Location = new System.Drawing.Point(81, 274);
+            this.label5.Location = new System.Drawing.Point(83, 313);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(162, 13);
             this.label5.TabIndex = 146;
@@ -648,7 +647,7 @@ namespace wEasyGoDriver.views
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label4.Location = new System.Drawing.Point(62, 249);
+            this.label4.Location = new System.Drawing.Point(64, 288);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 13);
             this.label4.TabIndex = 145;
@@ -660,7 +659,7 @@ namespace wEasyGoDriver.views
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Location = new System.Drawing.Point(45, 226);
+            this.label3.Location = new System.Drawing.Point(47, 265);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(240, 13);
             this.label3.TabIndex = 144;
@@ -669,7 +668,7 @@ namespace wEasyGoDriver.views
             // pictureBox2
             // 
             this.pictureBox2.Image = global::wEasyGoDriver.Properties.Resources.history;
-            this.pictureBox2.Location = new System.Drawing.Point(101, 16);
+            this.pictureBox2.Location = new System.Drawing.Point(103, 55);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(131, 111);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -681,7 +680,7 @@ namespace wEasyGoDriver.views
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label14.Location = new System.Drawing.Point(118, 147);
+            this.label14.Location = new System.Drawing.Point(120, 186);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(97, 20);
             this.label14.TabIndex = 136;
@@ -693,7 +692,7 @@ namespace wEasyGoDriver.views
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label15.Location = new System.Drawing.Point(45, 188);
+            this.label15.Location = new System.Drawing.Point(47, 227);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(246, 13);
             this.label15.TabIndex = 132;
