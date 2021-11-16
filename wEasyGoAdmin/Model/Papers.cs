@@ -9,6 +9,7 @@ namespace wEasyGoAdmin.Model
 {
     internal class Papers
     {
+        int intnumlicense;
         DateTime datevaliditylicense;
         string strimagelicense;
         int intidsoat;
@@ -18,7 +19,7 @@ namespace wEasyGoAdmin.Model
         string strurltechnomechanical;
         string strlicenseplatemoto;
 
-
+        public int Intnumlicense { get => intnumlicense; set => intnumlicense = value; }
         public DateTime Datevaliditylicense { get => datevaliditylicense; set => datevaliditylicense = value; }
         public string Strimagelicense { get => strimagelicense; set => strimagelicense = value; }
         public int Intidsoat { get => intidsoat; set => intidsoat = value; }
@@ -28,8 +29,9 @@ namespace wEasyGoAdmin.Model
         public string Strurltechnomechanical { get => strurltechnomechanical; set => strurltechnomechanical = value; }
         public string Strlicenseplatemoto { get => strlicenseplatemoto; set => strlicenseplatemoto = value; }
 
-        public Papers(DateTime datevaliditylicense, string strimagelicense, int intidsoat, DateTime datevaliduntilsoat, string strurlsoat, DateTime datevaliduntiltechnomechanical, string strurltechnomechanical, string strlicenseplatemoto)
+        public Papers(int intnumlicense, DateTime datevaliditylicense, string strimagelicense, int intidsoat, DateTime datevaliduntilsoat, string strurlsoat, DateTime datevaliduntiltechnomechanical, string strurltechnomechanical, string strlicenseplatemoto)
         {
+            Intnumlicense = intnumlicense;
             Datevaliditylicense = datevaliditylicense;
             Strimagelicense = strimagelicense;
             Intidsoat = intidsoat;

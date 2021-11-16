@@ -34,7 +34,7 @@ namespace wEasyGoAdmin.Model
             {
                 while (data.Read())
                 {
-                    papers = new Papers((DateTime)data[0], data[1].ToString(), (int)data[2], (DateTime)data[3], data[4].ToString(), (DateTime)data[5], (string)data[6], (string)data[7]);
+                    papers = new Papers((int)data[0], (DateTime)data[1], data[2].ToString(), (int)data[3], (DateTime)data[4], data[5].ToString(), (DateTime)data[6], (string)data[7], (string)data[8]);
                 }
             }
 
