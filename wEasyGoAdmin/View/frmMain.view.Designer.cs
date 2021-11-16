@@ -1081,7 +1081,6 @@
             this.label2.Size = new System.Drawing.Size(177, 20);
             this.label2.TabIndex = 124;
             this.label2.Text = "Lista de conductores";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dtgConductores
             // 
@@ -1092,7 +1091,7 @@
             this.dtgConductores.Size = new System.Drawing.Size(570, 318);
             this.dtgConductores.TabIndex = 123;
             this.dtgConductores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgConductores_CellClick);
-            this.dtgConductores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgConductores_CellContentClick);
+           
             // 
             // txtNombreConductor
             // 
@@ -1242,7 +1241,6 @@
             this.label10.Size = new System.Drawing.Size(261, 13);
             this.label10.TabIndex = 312;
             this.label10.Text = "puede habilitar a el presente conductor de lo contrario";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -1254,7 +1252,6 @@
             this.label11.Size = new System.Drawing.Size(294, 13);
             this.label11.TabIndex = 311;
             this.label11.Text = "Si todos los papeles e información del condutor esta correcta";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // btnHabilitar
             // 

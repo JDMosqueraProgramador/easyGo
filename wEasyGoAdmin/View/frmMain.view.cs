@@ -18,8 +18,10 @@ namespace wEasyGoAdmin.View
 
         string conductor="";
 
-        IUser dataUser;
+        // IUser dataUser;
 
+        IMotorcycle dataMoto;
+        Papers dataPapers;
 
         UserController userController;
 
@@ -102,31 +104,13 @@ namespace wEasyGoAdmin.View
             lblNumeroLicencia.SelectedTab = lblVinMotocicleta;
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtgConductores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dtgConductores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            int id;
-            id = int.Parse(dtgConductores.Rows[0].Cells[0].Value.ToString());
+            int id = int.Parse(dtgConductores.Rows[0].Cells[0].Value.ToString());
+
+            dataMoto = MotorcycleController.GetMoto(id);
+            dataPapers = MotorcycleController.GetPapers(dataMoto.StrLicensePlateMoto);
 
             /*lblPrueba.Text = value.ToString();*/
 
