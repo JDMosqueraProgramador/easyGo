@@ -108,7 +108,7 @@
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::wEasyGoAdmin.Properties.Resources.x_admin;
-            this.btnCerrar.Location = new System.Drawing.Point(741, -1);
+            this.btnCerrar.Location = new System.Drawing.Point(741, 7);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(43, 25);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -10,7 +10,6 @@ namespace wEasyGoAdmin.Controller
 {
     internal class MotorcycleController
     {
-        MotorcycleModel motoModel;
 
         public static IMotorcycle GetMoto(int idUser)
         {
@@ -20,6 +19,11 @@ namespace wEasyGoAdmin.Controller
         public static Papers GetPapers(string licensePlate)
         {
             return new MotorcycleModel().SelectPapers(licensePlate);
+        }
+
+        public static bool ExecuteChangeState(string state, string licensePlate)
+        {
+            return new MotorcycleModel().ChangeState(state, licensePlate);
         }
 
     }

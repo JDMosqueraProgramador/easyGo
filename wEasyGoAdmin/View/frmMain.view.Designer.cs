@@ -109,7 +109,6 @@
             this.tabsValidar = new System.Windows.Forms.TabControl();
             this.lblVinMotocicleta = new System.Windows.Forms.TabPage();
             this.pictureBox54 = new System.Windows.Forms.PictureBox();
-            this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -1116,7 +1115,6 @@
             // lblVinMotocicleta
             // 
             this.lblVinMotocicleta.Controls.Add(this.pictureBox54);
-            this.lblVinMotocicleta.Controls.Add(this.btnDeshabilitar);
             this.lblVinMotocicleta.Controls.Add(this.label17);
             this.lblVinMotocicleta.Controls.Add(this.label10);
             this.lblVinMotocicleta.Controls.Add(this.label11);
@@ -1164,21 +1162,6 @@
             this.pictureBox54.TabIndex = 315;
             this.pictureBox54.TabStop = false;
             // 
-            // btnDeshabilitar
-            // 
-            this.btnDeshabilitar.BackColor = System.Drawing.Color.White;
-            this.btnDeshabilitar.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnDeshabilitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnDeshabilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnDeshabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeshabilitar.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.btnDeshabilitar.Location = new System.Drawing.Point(771, 383);
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(134, 50);
-            this.btnDeshabilitar.TabIndex = 314;
-            this.btnDeshabilitar.Text = "Deshabilitar";
-            this.btnDeshabilitar.UseVisualStyleBackColor = false;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -1220,12 +1203,13 @@
             this.btnHabilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnHabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHabilitar.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.btnHabilitar.Location = new System.Drawing.Point(614, 383);
+            this.btnHabilitar.Location = new System.Drawing.Point(614, 384);
             this.btnHabilitar.Name = "btnHabilitar";
-            this.btnHabilitar.Size = new System.Drawing.Size(134, 50);
+            this.btnHabilitar.Size = new System.Drawing.Size(291, 50);
             this.btnHabilitar.TabIndex = 310;
             this.btnHabilitar.Text = "Habilitar ";
             this.btnHabilitar.UseVisualStyleBackColor = false;
+            this.btnHabilitar.Click += new System.EventHandler(this.btnHabilitar_Click);
             // 
             // label25
             // 
@@ -1654,7 +1638,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TabPage lblVinMotocicleta;
         private System.Windows.Forms.PictureBox pictureBox54;
-        private System.Windows.Forms.Button btnDeshabilitar;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
