@@ -31,11 +31,10 @@ namespace wEasyGoAdmin.Model
 
         public DataTable SearchDriver(string name)
         {
-            string select = "SELECT * FROM search_user_by_name(@namePerson, @rol) AS Driver WHERE Driver.intIdUser NOT IN(SELECT intiddriver FROM tblmotorcycle); ";
+            string select = "SELECT * FROM sp_search_drivers(@namePerson); ";
 
             NpgsqlCommand cmd = new NpgsqlCommand(select, this.conn);
             cmd.Parameters.AddWithValue("@namePerson", name);
-            cmd.Parameters.AddWithValue("@rol", "Driver");
 
             // NpgsqlDataReader data = cmd.ExecuteReader();
             DataTable table = new DataTable();
@@ -47,6 +46,12 @@ namespace wEasyGoAdmin.Model
             return table;
 
         }
+
+
+
+
+
+
 
         /*protected DataTable selectDriver()
         {

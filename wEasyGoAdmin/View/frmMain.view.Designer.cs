@@ -42,8 +42,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.dateVigenciaHastaTecno = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.lblFechaVigenciaHasta = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblFechaVigenciaHastaLicencia = new System.Windows.Forms.Label();
+            this.lblNumeroLicenciacc = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -106,7 +106,7 @@
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblNumeroLicencia = new System.Windows.Forms.TabControl();
+            this.tabsValidar = new System.Windows.Forms.TabControl();
             this.lblVinMotocicleta = new System.Windows.Forms.TabPage();
             this.pictureBox54 = new System.Windows.Forms.PictureBox();
             this.btnDeshabilitar = new System.Windows.Forms.Button();
@@ -182,7 +182,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgConductores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
-            this.lblNumeroLicencia.SuspendLayout();
+            this.tabsValidar.SuspendLayout();
             this.lblVinMotocicleta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).BeginInit();
@@ -249,8 +249,8 @@
             this.tabPapeles.Controls.Add(this.label19);
             this.tabPapeles.Controls.Add(this.dateVigenciaHastaTecno);
             this.tabPapeles.Controls.Add(this.label14);
-            this.tabPapeles.Controls.Add(this.lblFechaVigenciaHasta);
-            this.tabPapeles.Controls.Add(this.label13);
+            this.tabPapeles.Controls.Add(this.lblFechaVigenciaHastaLicencia);
+            this.tabPapeles.Controls.Add(this.lblNumeroLicenciacc);
             this.tabPapeles.Controls.Add(this.pictureBox5);
             this.tabPapeles.Controls.Add(this.pictureBox4);
             this.tabPapeles.Controls.Add(this.pictureBox3);
@@ -374,27 +374,27 @@
             this.label14.Text = "Datos licencia";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblFechaVigenciaHasta
+            // lblFechaVigenciaHastaLicencia
             // 
-            this.lblFechaVigenciaHasta.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblFechaVigenciaHasta.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblFechaVigenciaHasta.Location = new System.Drawing.Point(104, 209);
-            this.lblFechaVigenciaHasta.Name = "lblFechaVigenciaHasta";
-            this.lblFechaVigenciaHasta.Size = new System.Drawing.Size(142, 17);
-            this.lblFechaVigenciaHasta.TabIndex = 283;
-            this.lblFechaVigenciaHasta.Text = "Fecha de vigencia ";
-            this.lblFechaVigenciaHasta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblFechaVigenciaHastaLicencia.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblFechaVigenciaHastaLicencia.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblFechaVigenciaHastaLicencia.Location = new System.Drawing.Point(104, 209);
+            this.lblFechaVigenciaHastaLicencia.Name = "lblFechaVigenciaHastaLicencia";
+            this.lblFechaVigenciaHastaLicencia.Size = new System.Drawing.Size(142, 17);
+            this.lblFechaVigenciaHastaLicencia.TabIndex = 283;
+            this.lblFechaVigenciaHastaLicencia.Text = "Fecha de vigencia ";
+            this.lblFechaVigenciaHastaLicencia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // lblNumeroLicenciacc
             // 
-            this.label13.BackColor = System.Drawing.Color.Gainsboro;
-            this.label13.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label13.Location = new System.Drawing.Point(104, 146);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(142, 17);
-            this.label13.TabIndex = 272;
-            this.label13.Text = "Número de licencia";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNumeroLicenciacc.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblNumeroLicenciacc.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblNumeroLicenciacc.Location = new System.Drawing.Point(104, 146);
+            this.lblNumeroLicenciacc.Name = "lblNumeroLicenciacc";
+            this.lblNumeroLicenciacc.Size = new System.Drawing.Size(142, 17);
+            this.lblNumeroLicenciacc.TabIndex = 272;
+            this.lblNumeroLicenciacc.Text = "Número de licencia";
+            this.lblNumeroLicenciacc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox5
             // 
@@ -1101,17 +1101,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Aqui puedes consultar los conductores registrados:";
             // 
-            // lblNumeroLicencia
+            // tabsValidar
             // 
-            this.lblNumeroLicencia.Controls.Add(this.tabBuscarConductor);
-            this.lblNumeroLicencia.Controls.Add(this.tabDatosConductor);
-            this.lblNumeroLicencia.Controls.Add(this.tabPapeles);
-            this.lblNumeroLicencia.Controls.Add(this.lblVinMotocicleta);
-            this.lblNumeroLicencia.Location = new System.Drawing.Point(22, 72);
-            this.lblNumeroLicencia.Name = "lblNumeroLicencia";
-            this.lblNumeroLicencia.SelectedIndex = 0;
-            this.lblNumeroLicencia.Size = new System.Drawing.Size(970, 478);
-            this.lblNumeroLicencia.TabIndex = 226;
+            this.tabsValidar.Controls.Add(this.tabBuscarConductor);
+            this.tabsValidar.Controls.Add(this.tabDatosConductor);
+            this.tabsValidar.Controls.Add(this.tabPapeles);
+            this.tabsValidar.Controls.Add(this.lblVinMotocicleta);
+            this.tabsValidar.Location = new System.Drawing.Point(22, 72);
+            this.tabsValidar.Name = "tabsValidar";
+            this.tabsValidar.SelectedIndex = 0;
+            this.tabsValidar.Size = new System.Drawing.Size(970, 478);
+            this.tabsValidar.TabIndex = 226;
             // 
             // lblVinMotocicleta
             // 
@@ -1495,7 +1495,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1010, 552);
-            this.Controls.Add(this.lblNumeroLicencia);
+            this.Controls.Add(this.tabsValidar);
             this.Controls.Add(this.pnlTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
@@ -1549,7 +1549,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgConductores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
-            this.lblNumeroLicencia.ResumeLayout(false);
+            this.tabsValidar.ResumeLayout(false);
             this.lblVinMotocicleta.ResumeLayout(false);
             this.lblVinMotocicleta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).EndInit();
@@ -1578,7 +1578,7 @@
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.TabControl lblNumeroLicencia;
+        private System.Windows.Forms.TabControl tabsValidar;
         private System.Windows.Forms.TabPage tabBuscarConductor;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -1623,8 +1623,8 @@
         private System.Windows.Forms.PictureBox pictureBox50;
         private System.Windows.Forms.TabPage tabPapeles;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lblFechaVigenciaHasta;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblFechaVigenciaHastaLicencia;
+        private System.Windows.Forms.Label lblNumeroLicenciacc;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox10;

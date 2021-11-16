@@ -18,7 +18,6 @@ namespace wEasyGoAdmin.View
 
         string conductor="";
 
-        // IUser dataUser;
 
         IMotorcycle dataMoto;
         Papers dataPapers;
@@ -96,18 +95,18 @@ namespace wEasyGoAdmin.View
 
         private void btnAvanzarPapeles_Click(object sender, EventArgs e)
         {
-            lblNumeroLicencia.SelectedTab = tabPapeles;
+            tabsValidar.SelectedTab = tabPapeles;
         }
 
         private void btnAvanzarDatosvehiculo_Click(object sender, EventArgs e)
         {
-            lblNumeroLicencia.SelectedTab = lblVinMotocicleta;
+            tabsValidar.SelectedTab = lblVinMotocicleta;
         }
 
         private void dtgConductores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            int id = int.Parse(dtgConductores.Rows[0].Cells[0].Value.ToString());
+            int id = int.Parse(dtgConductores.Rows[0].Cells[6].Value.ToString());
 
             dataMoto = MotorcycleController.GetMoto(id);
             dataPapers = MotorcycleController.GetPapers(dataMoto.StrLicensePlateMoto);
@@ -124,12 +123,28 @@ namespace wEasyGoAdmin.View
 
             /*lblPrueba.Text = value.ToString();*/
 
-            lblNumeroLicencia.Text = dataPapers.Intnumlicense.ToString();
-            //lbl.Text = dataPapers.Intnumlicense.ToString();
+            lblNumeroLicenciacc.Text = dataPapers.Intnumlicense.ToString();
+            lblFechaVigenciaHastaLicencia.Text = dataPapers.Datevaliditylicense.ToString();
+            dateVigenciaHastaTecno.Text = dataPapers.Datevaliduntiltechnomechanical.ToString();
+            lblIdSoat.Text = dataPapers.Intidsoat.ToString();
+            lblFechaVigenciaHastaSoat.Text = dataPapers.Datevaliduntilsoat.ToString();
+
+            //fotos
+
+            fotoLicencia.Text = dataPapers.Strimagelicense.ToString();
+            FotoTecno.Text = dataPapers.Strurltechnomechanical.ToString();
+            fotoSoat.Text = dataPapers.Strurlsoat.ToString();
+
+            lblPLaca.Text = dataMoto.StrLicensePlateMoto;
+            lblNumeroLicenciaMoto.Text = dataMoto.IntNumLicenseMoto.ToString();
+            lblCilindraje.Text = dataMoto.IntCylinderMoto.ToString();
+            lblMarcaMoto.Text = dataMoto.StrMarkMoto.ToString();
+            lblTipoCombustible.Text = dataMoto.StrFuelTypeMoto.ToString();
+            lblModeloMotocicleta.Text = dataMoto.StrModelMoto.ToString();
+            lblColorMotocicleta.Text = dataMoto.StrColorMoto.ToString();
 
 
-
-
+            tabsValidar.SelectedTab = tabDatosConductor;
         }
 
         private void dtgConductores_CellContentClick(object sender, DataGridViewCellEventArgs e)
