@@ -136,5 +136,28 @@ namespace wEasyGoAdmin.View
         {
 
         }
+
+        private void btnHabilitar_Click(object sender, EventArgs e)
+        {
+            if(dataMoto.StrStateMoto == "disabled")
+            {
+                if (MotorcycleController.ExecuteChangeState("inactive", dataMoto.StrLicensePlateMoto))
+                {
+                    dataMoto.StrStateMoto = "inactive";
+                    MessageBox.Show($"Ha habilitado la moto {dataMoto.StrLicensePlateMoto} para realizar viajes");
+                    btnHabilitar.Text = "Deshabilitar";
+                }
+            } else
+            {
+
+                if (MotorcycleController.ExecuteChangeState("disabled", dataMoto.StrLicensePlateMoto))
+                {
+                    dataMoto.StrStateMoto = "disabled";
+                    MessageBox.Show($"Ha deshabilitado la moto {dataMoto.StrLicensePlateMoto} para realizar viajes");
+                    btnHabilitar.Text = "Habilitar";
+                }
+                
+            }
+        }
     }
 }
