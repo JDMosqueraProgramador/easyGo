@@ -112,8 +112,25 @@ namespace wEasyGoAdmin.View
             dataMoto = MotorcycleController.GetMoto(id);
             dataPapers = MotorcycleController.GetPapers(dataMoto.StrLicensePlateMoto);
 
+            lblNombreConductor.Text = dataMoto.Driver.StrNamePerson;
+            lblApellidoConductor.Text = dataMoto.Driver.StrLastNamePerson;
+            lblEmailConductor.Text = dataMoto.Driver.StrEmailUser;
+            lblNumeroCelularConductor.Text = dataMoto.Driver.IntPhoneUser.ToString();
+            lblFechaNacimientoConductor.Text = dataMoto.Driver.DateOfBirthPerson.ToString();
+            lblCiudadConductor.Text = dataMoto.Driver.City;
+            lblGeneroConductor.Text = dataMoto.Driver.BoolGenderPerson.ToString();
+            lblRolConductor.Text = dataMoto.Driver.StrRolUser;
+
+
             /*lblPrueba.Text = value.ToString();*/
 
+            lblNombreConductor.Text = dataMoto.Driver.StrNamePerson;
+
+
+        }
+
+        private void dtgConductores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
