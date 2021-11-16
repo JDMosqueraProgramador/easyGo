@@ -44,19 +44,5 @@ namespace wEasyGoDriver.models
             return true;
         }
 
-
-        public bool ChangeState(string state, string licensePlate)
-        {
-            string update = "CALL sp_set_motorcycle_state(@state, @licensePlate)";
-
-            NpgsqlCommand cmd = new NpgsqlCommand(update, conn);
-            cmd.Parameters.AddWithValue("@state", state);
-            cmd.Parameters.AddWithValue("@licensePlate", licensePlate);
-
-            int res = cmd.ExecuteNonQuery();
-
-            return true;
-
-        }
     }
 }
