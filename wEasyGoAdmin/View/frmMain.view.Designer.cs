@@ -89,7 +89,6 @@
             this.pictureBox49 = new System.Windows.Forms.PictureBox();
             this.pictureBox50 = new System.Windows.Forms.PictureBox();
             this.tabBuscarConductor = new System.Windows.Forms.TabPage();
-            this.lblPrueba = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox55 = new System.Windows.Forms.PictureBox();
@@ -460,6 +459,7 @@
             this.fotoLicencia.Size = new System.Drawing.Size(248, 163);
             this.fotoLicencia.TabIndex = 303;
             this.fotoLicencia.TabStop = false;
+            this.fotoLicencia.Click += new System.EventHandler(this.fotoLicencia_Click);
             // 
             // pictureBox14
             // 
@@ -883,7 +883,6 @@
             // 
             // tabBuscarConductor
             // 
-            this.tabBuscarConductor.Controls.Add(this.lblPrueba);
             this.tabBuscarConductor.Controls.Add(this.label20);
             this.tabBuscarConductor.Controls.Add(this.label18);
             this.tabBuscarConductor.Controls.Add(this.pictureBox55);
@@ -907,17 +906,6 @@
             this.tabBuscarConductor.TabIndex = 0;
             this.tabBuscarConductor.Text = "Ver conductores";
             this.tabBuscarConductor.UseVisualStyleBackColor = true;
-            // 
-            // lblPrueba
-            // 
-            this.lblPrueba.AutoSize = true;
-            this.lblPrueba.BackColor = System.Drawing.Color.Transparent;
-            this.lblPrueba.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblPrueba.Location = new System.Drawing.Point(300, 74);
-            this.lblPrueba.Name = "lblPrueba";
-            this.lblPrueba.Size = new System.Drawing.Size(28, 13);
-            this.lblPrueba.TabIndex = 319;
-            this.lblPrueba.Text = "dato";
             // 
             // label20
             // 
@@ -1668,6 +1656,5 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblPrueba;
     }
 }

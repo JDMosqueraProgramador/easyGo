@@ -134,6 +134,7 @@ namespace wEasyGoAdmin.View
             fotoLicencia.Text = dataPapers.Strimagelicense.ToString();
             FotoTecno.Text = dataPapers.Strurltechnomechanical.ToString();
             fotoSoat.Text = dataPapers.Strurlsoat.ToString();
+            fotoTarjetaPropiedad.Text = dataMoto.StrLinkPropertyCard.ToString();
 
             lblPLaca.Text = dataMoto.StrLicensePlateMoto;
             lblNumeroLicenciaMoto.Text = dataMoto.IntNumLicenseMoto.ToString();
@@ -142,7 +143,6 @@ namespace wEasyGoAdmin.View
             lblTipoCombustible.Text = dataMoto.StrFuelTypeMoto.ToString();
             lblModeloMotocicleta.Text = dataMoto.StrModelMoto.ToString();
             lblColorMotocicleta.Text = dataMoto.StrColorMoto.ToString();
-
 
             tabsValidar.SelectedTab = tabDatosConductor;
         }
@@ -173,6 +173,11 @@ namespace wEasyGoAdmin.View
                 }
                 
             }
+        }
+
+        private void fotoLicencia_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
