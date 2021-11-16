@@ -143,6 +143,16 @@ namespace wEasyGoAdmin.View
             lblTipoCombustible.Text = dataMoto.StrFuelTypeMoto.ToString();
             lblModeloMotocicleta.Text = dataMoto.StrModelMoto.ToString();
             lblColorMotocicleta.Text = dataMoto.StrColorMoto.ToString();
+            lblEstadoMoto.Text = dataMoto.StrStateMoto;
+
+            if(dataMoto.StrStateMoto == "disabled")
+            {
+                btnHabilitar.Text = "Habilitar";
+            } 
+            else
+            {
+                btnHabilitar.Text = "Deshabilitar";
+            }
 
             tabsValidar.SelectedTab = tabDatosConductor;
         }
@@ -162,16 +172,15 @@ namespace wEasyGoAdmin.View
                     MessageBox.Show($"Ha habilitado la moto {dataMoto.StrLicensePlateMoto} para realizar viajes");
                     btnHabilitar.Text = "Deshabilitar";
                 }
-            } else
+            } 
+            else
             {
-
                 if (MotorcycleController.ExecuteChangeState("disabled", dataMoto.StrLicensePlateMoto))
                 {
                     dataMoto.StrStateMoto = "disabled";
                     MessageBox.Show($"Ha deshabilitado la moto {dataMoto.StrLicensePlateMoto} para realizar viajes");
                     btnHabilitar.Text = "Habilitar";
                 }
-                
             }
         }
 
