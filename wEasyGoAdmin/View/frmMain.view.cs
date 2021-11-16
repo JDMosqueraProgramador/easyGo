@@ -99,5 +99,15 @@ namespace wEasyGoAdmin.View
         {
             lblNumeroLicencia.SelectedTab = lblVinMotocicleta;
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
