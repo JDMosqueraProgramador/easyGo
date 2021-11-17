@@ -127,6 +127,7 @@ namespace wEasyGoDriver
         private void btnRegistrarMoto_Click(object sender, EventArgs e)
         {
             MotorcycleControlller motoController;
+
             try
             {
                 if (rdoSiVehiculo.Checked)
@@ -188,18 +189,17 @@ namespace wEasyGoDriver
             {
                 if (searchFile.CheckFileExists)
                 {
-                    
+
                     route = $"../../assets/{folder}/{name}.png";
 
                     if (System.IO.File.Exists(route))
                     {
-                        System.IO.File.Replace(searchFile.FileName, route, $"../../assets/backups/{name}Backups{new Random().Next(0, 10000)}.png");
+                        //  System.IO.File.Replace(searchFile.FileName, route, $"../../assets/backups/{name}Backups{new Random().Next(0, 10000)}.png");
+                        System.IO.File.Delete(route);
                     }
-                    else
-                    {
-                        System.IO.File.Copy(searchFile.FileName, route);
-                    }
-                } 
+
+                    System.IO.File.Copy(searchFile.FileName, route);
+                }
                 else
                 {
                     throw new Exception("Archivo inválido");
