@@ -46,60 +46,48 @@ namespace wEasyGoDriver.views
             this.lblFechaNacimientoConductor = new System.Windows.Forms.Label();
             this.lblApellidoConductor = new System.Windows.Forms.Label();
             this.lblNombreConductor = new System.Windows.Forms.Label();
-            this.pictureBox54 = new System.Windows.Forms.PictureBox();
             this.pictureBox55 = new System.Windows.Forms.PictureBox();
-            this.pictureBox58 = new System.Windows.Forms.PictureBox();
             this.pictureBox59 = new System.Windows.Forms.PictureBox();
-            this.pictureBox56 = new System.Windows.Forms.PictureBox();
             this.pictureBox57 = new System.Windows.Forms.PictureBox();
-            this.pictureBox60 = new System.Windows.Forms.PictureBox();
             this.pictureBox61 = new System.Windows.Forms.PictureBox();
             this.pictureBox53 = new System.Windows.Forms.PictureBox();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
-            this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.pictureBox36 = new System.Windows.Forms.PictureBox();
-            this.pictureBox37 = new System.Windows.Forms.PictureBox();
             this.pictureBox38 = new System.Windows.Forms.PictureBox();
-            this.pictureBox39 = new System.Windows.Forms.PictureBox();
             this.pictureBox40 = new System.Windows.Forms.PictureBox();
-            this.pictureBox41 = new System.Windows.Forms.PictureBox();
             this.pictureBox42 = new System.Windows.Forms.PictureBox();
-            this.pictureBox43 = new System.Windows.Forms.PictureBox();
-            this.pictureBox44 = new System.Windows.Forms.PictureBox();
-            this.pictureBox45 = new System.Windows.Forms.PictureBox();
             this.pictureBox46 = new System.Windows.Forms.PictureBox();
-            this.pictureBox47 = new System.Windows.Forms.PictureBox();
             this.pictureBox48 = new System.Windows.Forms.PictureBox();
-            this.pictureBox49 = new System.Windows.Forms.PictureBox();
             this.pictureBox50 = new System.Windows.Forms.PictureBox();
+            this.pictureBox44 = new System.Windows.Forms.PictureBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox58)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox56)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox61)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitulo
@@ -288,16 +276,6 @@ namespace wEasyGoDriver.views
             this.lblNombreConductor.Text = "Nombre";
             this.lblNombreConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox54
-            // 
-            this.pictureBox54.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox54.Location = new System.Drawing.Point(675, 425);
-            this.pictureBox54.Name = "pictureBox54";
-            this.pictureBox54.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox54.TabIndex = 261;
-            this.pictureBox54.TabStop = false;
-            // 
             // pictureBox55
             // 
             this.pictureBox55.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -308,16 +286,6 @@ namespace wEasyGoDriver.views
             this.pictureBox55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox55.TabIndex = 260;
             this.pictureBox55.TabStop = false;
-            // 
-            // pictureBox58
-            // 
-            this.pictureBox58.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox58.Location = new System.Drawing.Point(675, 358);
-            this.pictureBox58.Name = "pictureBox58";
-            this.pictureBox58.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox58.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox58.TabIndex = 258;
-            this.pictureBox58.TabStop = false;
             // 
             // pictureBox59
             // 
@@ -330,16 +298,6 @@ namespace wEasyGoDriver.views
             this.pictureBox59.TabIndex = 257;
             this.pictureBox59.TabStop = false;
             // 
-            // pictureBox56
-            // 
-            this.pictureBox56.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox56.Location = new System.Drawing.Point(675, 291);
-            this.pictureBox56.Name = "pictureBox56";
-            this.pictureBox56.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox56.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox56.TabIndex = 255;
-            this.pictureBox56.TabStop = false;
-            // 
             // pictureBox57
             // 
             this.pictureBox57.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -350,16 +308,6 @@ namespace wEasyGoDriver.views
             this.pictureBox57.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox57.TabIndex = 254;
             this.pictureBox57.TabStop = false;
-            // 
-            // pictureBox60
-            // 
-            this.pictureBox60.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox60.Location = new System.Drawing.Point(675, 224);
-            this.pictureBox60.Name = "pictureBox60";
-            this.pictureBox60.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox60.TabIndex = 252;
-            this.pictureBox60.TabStop = false;
             // 
             // pictureBox61
             // 
@@ -392,16 +340,6 @@ namespace wEasyGoDriver.views
             this.pictureBox34.TabIndex = 248;
             this.pictureBox34.TabStop = false;
             // 
-            // pictureBox35
-            // 
-            this.pictureBox35.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox35.Location = new System.Drawing.Point(328, 426);
-            this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox35.TabIndex = 245;
-            this.pictureBox35.TabStop = false;
-            // 
             // pictureBox36
             // 
             this.pictureBox36.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -412,16 +350,6 @@ namespace wEasyGoDriver.views
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox36.TabIndex = 244;
             this.pictureBox36.TabStop = false;
-            // 
-            // pictureBox37
-            // 
-            this.pictureBox37.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox37.Location = new System.Drawing.Point(328, 222);
-            this.pictureBox37.Name = "pictureBox37";
-            this.pictureBox37.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox37.TabIndex = 242;
-            this.pictureBox37.TabStop = false;
             // 
             // pictureBox38
             // 
@@ -434,16 +362,6 @@ namespace wEasyGoDriver.views
             this.pictureBox38.TabIndex = 241;
             this.pictureBox38.TabStop = false;
             // 
-            // pictureBox39
-            // 
-            this.pictureBox39.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox39.Location = new System.Drawing.Point(328, 288);
-            this.pictureBox39.Name = "pictureBox39";
-            this.pictureBox39.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox39.TabIndex = 239;
-            this.pictureBox39.TabStop = false;
-            // 
             // pictureBox40
             // 
             this.pictureBox40.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -454,16 +372,6 @@ namespace wEasyGoDriver.views
             this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox40.TabIndex = 238;
             this.pictureBox40.TabStop = false;
-            // 
-            // pictureBox41
-            // 
-            this.pictureBox41.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox41.Location = new System.Drawing.Point(328, 357);
-            this.pictureBox41.Name = "pictureBox41";
-            this.pictureBox41.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox41.TabIndex = 236;
-            this.pictureBox41.TabStop = false;
             // 
             // pictureBox42
             // 
@@ -476,37 +384,6 @@ namespace wEasyGoDriver.views
             this.pictureBox42.TabIndex = 235;
             this.pictureBox42.TabStop = false;
             // 
-            // pictureBox43
-            // 
-            this.pictureBox43.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox43.Location = new System.Drawing.Point(67, 423);
-            this.pictureBox43.Name = "pictureBox43";
-            this.pictureBox43.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox43.TabIndex = 233;
-            this.pictureBox43.TabStop = false;
-            // 
-            // pictureBox44
-            // 
-            this.pictureBox44.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox44.Image = global::wEasyGoDriver.Properties.Resources.btnDatos;
-            this.pictureBox44.Location = new System.Drawing.Point(52, 400);
-            this.pictureBox44.Name = "pictureBox44";
-            this.pictureBox44.Size = new System.Drawing.Size(248, 61);
-            this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox44.TabIndex = 232;
-            this.pictureBox44.TabStop = false;
-            // 
-            // pictureBox45
-            // 
-            this.pictureBox45.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox45.Location = new System.Drawing.Point(67, 358);
-            this.pictureBox45.Name = "pictureBox45";
-            this.pictureBox45.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox45.TabIndex = 230;
-            this.pictureBox45.TabStop = false;
-            // 
             // pictureBox46
             // 
             this.pictureBox46.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -517,16 +394,6 @@ namespace wEasyGoDriver.views
             this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox46.TabIndex = 229;
             this.pictureBox46.TabStop = false;
-            // 
-            // pictureBox47
-            // 
-            this.pictureBox47.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox47.Location = new System.Drawing.Point(67, 289);
-            this.pictureBox47.Name = "pictureBox47";
-            this.pictureBox47.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox47.TabIndex = 227;
-            this.pictureBox47.TabStop = false;
             // 
             // pictureBox48
             // 
@@ -539,16 +406,6 @@ namespace wEasyGoDriver.views
             this.pictureBox48.TabIndex = 226;
             this.pictureBox48.TabStop = false;
             // 
-            // pictureBox49
-            // 
-            this.pictureBox49.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox49.Location = new System.Drawing.Point(67, 223);
-            this.pictureBox49.Name = "pictureBox49";
-            this.pictureBox49.Size = new System.Drawing.Size(39, 14);
-            this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox49.TabIndex = 224;
-            this.pictureBox49.TabStop = false;
-            // 
             // pictureBox50
             // 
             this.pictureBox50.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -560,23 +417,174 @@ namespace wEasyGoDriver.views
             this.pictureBox50.TabIndex = 223;
             this.pictureBox50.TabStop = false;
             // 
+            // pictureBox44
+            // 
+            this.pictureBox44.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox44.Image = global::wEasyGoDriver.Properties.Resources.btnDatos;
+            this.pictureBox44.Location = new System.Drawing.Point(52, 400);
+            this.pictureBox44.Name = "pictureBox44";
+            this.pictureBox44.Size = new System.Drawing.Size(248, 61);
+            this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox44.TabIndex = 232;
+            this.pictureBox44.TabStop = false;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Gainsboro;
+            this.label41.ForeColor = System.Drawing.Color.DimGray;
+            this.label41.Location = new System.Drawing.Point(337, 289);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(42, 13);
+            this.label41.TabIndex = 335;
+            this.label41.Text = "Celular:";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Gainsboro;
+            this.label42.ForeColor = System.Drawing.Color.DimGray;
+            this.label42.Location = new System.Drawing.Point(337, 357);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(43, 13);
+            this.label42.TabIndex = 334;
+            this.label42.Text = "Ciudad:";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.Gainsboro;
+            this.label43.ForeColor = System.Drawing.Color.DimGray;
+            this.label43.Location = new System.Drawing.Point(341, 429);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(26, 13);
+            this.label43.TabIndex = 333;
+            this.label43.Text = "Rol:";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.Gainsboro;
+            this.label44.ForeColor = System.Drawing.Color.DimGray;
+            this.label44.Location = new System.Drawing.Point(74, 290);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(49, 13);
+            this.label44.TabIndex = 332;
+            this.label44.Text = "Apellidos";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Gainsboro;
+            this.label40.ForeColor = System.Drawing.Color.DimGray;
+            this.label40.Location = new System.Drawing.Point(339, 221);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(38, 13);
+            this.label40.TabIndex = 331;
+            this.label40.Text = "E-mail:";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Gainsboro;
+            this.label39.ForeColor = System.Drawing.Color.DimGray;
+            this.label39.Location = new System.Drawing.Point(74, 359);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(63, 13);
+            this.label39.TabIndex = 330;
+            this.label39.Text = "Nacimiento:";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Gainsboro;
+            this.label38.ForeColor = System.Drawing.Color.DimGray;
+            this.label38.Location = new System.Drawing.Point(79, 422);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(42, 13);
+            this.label38.TabIndex = 329;
+            this.label38.Text = "Género";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Gainsboro;
+            this.label37.ForeColor = System.Drawing.Color.DimGray;
+            this.label37.Location = new System.Drawing.Point(79, 224);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(47, 13);
+            this.label37.TabIndex = 328;
+            this.label37.Text = "Nombre:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Gainsboro;
+            this.label35.ForeColor = System.Drawing.Color.DimGray;
+            this.label35.Location = new System.Drawing.Point(690, 292);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(45, 13);
+            this.label35.TabIndex = 339;
+            this.label35.Text = "Modelo:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Gainsboro;
+            this.label34.ForeColor = System.Drawing.Color.DimGray;
+            this.label34.Location = new System.Drawing.Point(690, 359);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(40, 13);
+            this.label34.TabIndex = 338;
+            this.label34.Text = "Marca:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Gainsboro;
+            this.label32.ForeColor = System.Drawing.Color.DimGray;
+            this.label32.Location = new System.Drawing.Point(690, 426);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(34, 13);
+            this.label32.TabIndex = 337;
+            this.label32.Text = "Color:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Gainsboro;
+            this.label24.ForeColor = System.Drawing.Color.DimGray;
+            this.label24.Location = new System.Drawing.Point(687, 226);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(37, 13);
+            this.label24.TabIndex = 336;
+            this.label24.Text = "Placa:";
+            // 
             // frmPerfilConductor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1002, 509);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.label32);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.label41);
+            this.Controls.Add(this.label42);
+            this.Controls.Add(this.label43);
+            this.Controls.Add(this.label44);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.label39);
+            this.Controls.Add(this.label38);
+            this.Controls.Add(this.label37);
             this.Controls.Add(this.lblColorMoto);
             this.Controls.Add(this.lblMarcaMoto);
-            this.Controls.Add(this.pictureBox54);
             this.Controls.Add(this.pictureBox55);
-            this.Controls.Add(this.pictureBox58);
             this.Controls.Add(this.pictureBox59);
             this.Controls.Add(this.lblModeloMoto);
             this.Controls.Add(this.lblPlacaMoto);
-            this.Controls.Add(this.pictureBox56);
             this.Controls.Add(this.pictureBox57);
-            this.Controls.Add(this.pictureBox60);
             this.Controls.Add(this.pictureBox61);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.pictureBox53);
@@ -590,21 +598,13 @@ namespace wEasyGoDriver.views
             this.Controls.Add(this.lblFechaNacimientoConductor);
             this.Controls.Add(this.lblApellidoConductor);
             this.Controls.Add(this.lblNombreConductor);
-            this.Controls.Add(this.pictureBox35);
             this.Controls.Add(this.pictureBox36);
-            this.Controls.Add(this.pictureBox37);
             this.Controls.Add(this.pictureBox38);
-            this.Controls.Add(this.pictureBox39);
             this.Controls.Add(this.pictureBox40);
-            this.Controls.Add(this.pictureBox41);
             this.Controls.Add(this.pictureBox42);
-            this.Controls.Add(this.pictureBox43);
             this.Controls.Add(this.pictureBox44);
-            this.Controls.Add(this.pictureBox45);
             this.Controls.Add(this.pictureBox46);
-            this.Controls.Add(this.pictureBox47);
             this.Controls.Add(this.pictureBox48);
-            this.Controls.Add(this.pictureBox49);
             this.Controls.Add(this.pictureBox50);
             this.Controls.Add(this.pnlTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -614,32 +614,20 @@ namespace wEasyGoDriver.views
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox58)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox56)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox61)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -652,15 +640,11 @@ namespace wEasyGoDriver.views
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblColorMoto;
         private System.Windows.Forms.Label lblMarcaMoto;
-        private System.Windows.Forms.PictureBox pictureBox54;
         private System.Windows.Forms.PictureBox pictureBox55;
-        private System.Windows.Forms.PictureBox pictureBox58;
         private System.Windows.Forms.PictureBox pictureBox59;
         private System.Windows.Forms.Label lblModeloMoto;
         private System.Windows.Forms.Label lblPlacaMoto;
-        private System.Windows.Forms.PictureBox pictureBox56;
         private System.Windows.Forms.PictureBox pictureBox57;
-        private System.Windows.Forms.PictureBox pictureBox60;
         private System.Windows.Forms.PictureBox pictureBox61;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox53;
@@ -674,21 +658,25 @@ namespace wEasyGoDriver.views
         private System.Windows.Forms.Label lblFechaNacimientoConductor;
         private System.Windows.Forms.Label lblApellidoConductor;
         private System.Windows.Forms.Label lblNombreConductor;
-        private System.Windows.Forms.PictureBox pictureBox35;
         private System.Windows.Forms.PictureBox pictureBox36;
-        private System.Windows.Forms.PictureBox pictureBox37;
         private System.Windows.Forms.PictureBox pictureBox38;
-        private System.Windows.Forms.PictureBox pictureBox39;
         private System.Windows.Forms.PictureBox pictureBox40;
-        private System.Windows.Forms.PictureBox pictureBox41;
         private System.Windows.Forms.PictureBox pictureBox42;
-        private System.Windows.Forms.PictureBox pictureBox43;
-        private System.Windows.Forms.PictureBox pictureBox44;
-        private System.Windows.Forms.PictureBox pictureBox45;
         private System.Windows.Forms.PictureBox pictureBox46;
-        private System.Windows.Forms.PictureBox pictureBox47;
         private System.Windows.Forms.PictureBox pictureBox48;
-        private System.Windows.Forms.PictureBox pictureBox49;
         private System.Windows.Forms.PictureBox pictureBox50;
+        private System.Windows.Forms.PictureBox pictureBox44;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label24;
     }
 }

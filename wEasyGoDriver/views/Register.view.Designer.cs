@@ -694,7 +694,7 @@ namespace wEasyGoDriver
             this.flpRegistrarVehiculo.Controls.Add(this.dtgBuscarConductor);
             this.flpRegistrarVehiculo.Controls.Add(this.btnRegistrarMoto);
             this.flpRegistrarVehiculo.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpRegistrarVehiculo.Location = new System.Drawing.Point(37, 350);
+            this.flpRegistrarVehiculo.Location = new System.Drawing.Point(43, 377);
             this.flpRegistrarVehiculo.Name = "flpRegistrarVehiculo";
             this.flpRegistrarVehiculo.Padding = new System.Windows.Forms.Padding(5);
             this.flpRegistrarVehiculo.Size = new System.Drawing.Size(498, 151);
@@ -745,7 +745,7 @@ namespace wEasyGoDriver
             this.txtModelo.BackColor = System.Drawing.Color.Gainsboro;
             this.txtModelo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtModelo.ForeColor = System.Drawing.Color.DimGray;
-            this.txtModelo.Location = new System.Drawing.Point(362, 98);
+            this.txtModelo.Location = new System.Drawing.Point(368, 125);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(166, 13);
             this.txtModelo.TabIndex = 153;
@@ -759,7 +759,7 @@ namespace wEasyGoDriver
             this.txtCilindraje.BackColor = System.Drawing.Color.Gainsboro;
             this.txtCilindraje.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCilindraje.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCilindraje.Location = new System.Drawing.Point(97, 165);
+            this.txtCilindraje.Location = new System.Drawing.Point(103, 192);
             this.txtCilindraje.Name = "txtCilindraje";
             this.txtCilindraje.Size = new System.Drawing.Size(166, 13);
             this.txtCilindraje.TabIndex = 150;
@@ -773,7 +773,7 @@ namespace wEasyGoDriver
             this.txtMarca.BackColor = System.Drawing.Color.Gainsboro;
             this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMarca.ForeColor = System.Drawing.Color.DimGray;
-            this.txtMarca.Location = new System.Drawing.Point(362, 31);
+            this.txtMarca.Location = new System.Drawing.Point(368, 58);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(166, 13);
             this.txtMarca.TabIndex = 147;
@@ -787,7 +787,7 @@ namespace wEasyGoDriver
             this.txtNumeroLicenciaMoto.BackColor = System.Drawing.Color.Gainsboro;
             this.txtNumeroLicenciaMoto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNumeroLicenciaMoto.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNumeroLicenciaMoto.Location = new System.Drawing.Point(97, 98);
+            this.txtNumeroLicenciaMoto.Location = new System.Drawing.Point(103, 125);
             this.txtNumeroLicenciaMoto.Name = "txtNumeroLicenciaMoto";
             this.txtNumeroLicenciaMoto.Size = new System.Drawing.Size(166, 13);
             this.txtNumeroLicenciaMoto.TabIndex = 144;
@@ -801,7 +801,7 @@ namespace wEasyGoDriver
             this.txtAsignarConductor.BackColor = System.Drawing.Color.Gainsboro;
             this.txtAsignarConductor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAsignarConductor.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAsignarConductor.Location = new System.Drawing.Point(231, 299);
+            this.txtAsignarConductor.Location = new System.Drawing.Point(237, 326);
             this.txtAsignarConductor.Name = "txtAsignarConductor";
             this.txtAsignarConductor.Size = new System.Drawing.Size(166, 13);
             this.txtAsignarConductor.TabIndex = 140;
@@ -812,7 +812,7 @@ namespace wEasyGoDriver
             // btnCargarTarjPropiedad
             // 
             this.btnCargarTarjPropiedad.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnCargarTarjPropiedad.Location = new System.Drawing.Point(362, 226);
+            this.btnCargarTarjPropiedad.Location = new System.Drawing.Point(368, 253);
             this.btnCargarTarjPropiedad.Name = "btnCargarTarjPropiedad";
             this.btnCargarTarjPropiedad.Size = new System.Drawing.Size(166, 26);
             this.btnCargarTarjPropiedad.TabIndex = 136;
@@ -829,7 +829,7 @@ namespace wEasyGoDriver
             this.cmbColorMotocicleta.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.cmbColorMotocicleta.Location = new System.Drawing.Point(362, 162);
+            this.cmbColorMotocicleta.Location = new System.Drawing.Point(368, 189);
             this.cmbColorMotocicleta.Name = "cmbColorMotocicleta";
             this.cmbColorMotocicleta.Size = new System.Drawing.Size(160, 21);
             this.cmbColorMotocicleta.TabIndex = 135;
@@ -841,7 +841,7 @@ namespace wEasyGoDriver
             this.cmbTipoCombustible.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbTipoCombustible.ForeColor = System.Drawing.Color.DimGray;
             this.cmbTipoCombustible.FormattingEnabled = true;
-            this.cmbTipoCombustible.Location = new System.Drawing.Point(97, 229);
+            this.cmbTipoCombustible.Location = new System.Drawing.Point(103, 256);
             this.cmbTipoCombustible.Name = "cmbTipoCombustible";
             this.cmbTipoCombustible.Size = new System.Drawing.Size(166, 21);
             this.cmbTipoCombustible.TabIndex = 134;
@@ -852,7 +852,7 @@ namespace wEasyGoDriver
             this.txtPlaca.BackColor = System.Drawing.Color.Gainsboro;
             this.txtPlaca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPlaca.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPlaca.Location = new System.Drawing.Point(97, 31);
+            this.txtPlaca.Location = new System.Drawing.Point(103, 58);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(166, 13);
             this.txtPlaca.TabIndex = 116;
@@ -865,7 +865,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox39.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox39.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox39.Location = new System.Drawing.Point(317, 98);
+            this.pictureBox39.Location = new System.Drawing.Point(323, 125);
             this.pictureBox39.Name = "pictureBox39";
             this.pictureBox39.Size = new System.Drawing.Size(39, 14);
             this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -876,7 +876,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox40.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox40.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox40.Location = new System.Drawing.Point(302, 75);
+            this.pictureBox40.Location = new System.Drawing.Point(308, 102);
             this.pictureBox40.Name = "pictureBox40";
             this.pictureBox40.Size = new System.Drawing.Size(248, 61);
             this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -887,7 +887,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox41.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox41.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox41.Location = new System.Drawing.Point(52, 165);
+            this.pictureBox41.Location = new System.Drawing.Point(58, 192);
             this.pictureBox41.Name = "pictureBox41";
             this.pictureBox41.Size = new System.Drawing.Size(39, 14);
             this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -898,7 +898,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox42.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox42.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox42.Location = new System.Drawing.Point(37, 142);
+            this.pictureBox42.Location = new System.Drawing.Point(43, 169);
             this.pictureBox42.Name = "pictureBox42";
             this.pictureBox42.Size = new System.Drawing.Size(248, 61);
             this.pictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -909,7 +909,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox35.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox35.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox35.Location = new System.Drawing.Point(317, 31);
+            this.pictureBox35.Location = new System.Drawing.Point(323, 58);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(39, 14);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -920,7 +920,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox36.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox36.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox36.Location = new System.Drawing.Point(302, 8);
+            this.pictureBox36.Location = new System.Drawing.Point(308, 35);
             this.pictureBox36.Name = "pictureBox36";
             this.pictureBox36.Size = new System.Drawing.Size(248, 61);
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -931,7 +931,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox37.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox37.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox37.Location = new System.Drawing.Point(52, 98);
+            this.pictureBox37.Location = new System.Drawing.Point(58, 125);
             this.pictureBox37.Name = "pictureBox37";
             this.pictureBox37.Size = new System.Drawing.Size(39, 14);
             this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -942,7 +942,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox38.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox38.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox38.Location = new System.Drawing.Point(37, 75);
+            this.pictureBox38.Location = new System.Drawing.Point(43, 102);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(248, 61);
             this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -953,7 +953,7 @@ namespace wEasyGoDriver
             // 
             this.iconAsignarConductor.BackColor = System.Drawing.Color.Gainsboro;
             this.iconAsignarConductor.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.iconAsignarConductor.Location = new System.Drawing.Point(186, 299);
+            this.iconAsignarConductor.Location = new System.Drawing.Point(192, 326);
             this.iconAsignarConductor.Name = "iconAsignarConductor";
             this.iconAsignarConductor.Size = new System.Drawing.Size(39, 14);
             this.iconAsignarConductor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -964,7 +964,7 @@ namespace wEasyGoDriver
             // 
             this.imgBackAsignarConductor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.imgBackAsignarConductor.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.imgBackAsignarConductor.Location = new System.Drawing.Point(171, 276);
+            this.imgBackAsignarConductor.Location = new System.Drawing.Point(177, 303);
             this.imgBackAsignarConductor.Name = "imgBackAsignarConductor";
             this.imgBackAsignarConductor.Size = new System.Drawing.Size(248, 61);
             this.imgBackAsignarConductor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -975,7 +975,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox31.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox31.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox31.Location = new System.Drawing.Point(317, 232);
+            this.pictureBox31.Location = new System.Drawing.Point(323, 259);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(39, 14);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -986,7 +986,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox32.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox32.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox32.Location = new System.Drawing.Point(302, 209);
+            this.pictureBox32.Location = new System.Drawing.Point(308, 236);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(248, 61);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -997,7 +997,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox29.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox29.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox29.Location = new System.Drawing.Point(317, 165);
+            this.pictureBox29.Location = new System.Drawing.Point(323, 192);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(39, 14);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1008,7 +1008,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox30.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox30.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox30.Location = new System.Drawing.Point(302, 142);
+            this.pictureBox30.Location = new System.Drawing.Point(308, 169);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(248, 61);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1019,7 +1019,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox27.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox27.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox27.Location = new System.Drawing.Point(52, 232);
+            this.pictureBox27.Location = new System.Drawing.Point(58, 259);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(39, 14);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1030,7 +1030,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox28.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox28.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox28.Location = new System.Drawing.Point(37, 209);
+            this.pictureBox28.Location = new System.Drawing.Point(43, 236);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(248, 61);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1041,7 +1041,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox2.Image = global::wEasyGoDriver.Properties.Resources.email;
-            this.pictureBox2.Location = new System.Drawing.Point(52, 31);
+            this.pictureBox2.Location = new System.Drawing.Point(58, 58);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(39, 14);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1052,7 +1052,7 @@ namespace wEasyGoDriver
             // 
             this.pictureBox20.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox20.Image = global::wEasyGoDriver.Properties.Resources.btn1;
-            this.pictureBox20.Location = new System.Drawing.Point(37, 8);
+            this.pictureBox20.Location = new System.Drawing.Point(43, 35);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(248, 61);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
