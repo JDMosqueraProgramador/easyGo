@@ -757,6 +757,7 @@ namespace wEasyGoDriver.views
 
                         btnTerminarViaje.Visible = false;
                         pnlViajeAceptado.Visible = false;
+                        dtgHistorialViajes.DataSource = userController.GetDriverHistory(dataMoto.StrLicensePlateMoto);
                         if (!this.Controls.Contains(lblAvisoViajes)) this.Controls.Add(lblAvisoViajes);
                         lblAvisoViajes.Visible = true;
 
