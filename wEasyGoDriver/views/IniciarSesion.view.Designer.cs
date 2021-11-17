@@ -70,7 +70,7 @@ namespace wEasyGoDriver.views
             // 
             this.lnklblRegistro.AutoSize = true;
             this.lnklblRegistro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lnklblRegistro.Location = new System.Drawing.Point(608, 333);
+            this.lnklblRegistro.Location = new System.Drawing.Point(606, 333);
             this.lnklblRegistro.Name = "lnklblRegistro";
             this.lnklblRegistro.Size = new System.Drawing.Size(100, 13);
             this.lnklblRegistro.TabIndex = 57;
@@ -86,7 +86,7 @@ namespace wEasyGoDriver.views
             this.txtContraseña.Location = new System.Drawing.Point(586, 282);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(161, 13);
-            this.txtContraseña.TabIndex = 53;
+            this.txtContraseña.TabIndex = 2;
             this.txtContraseña.Text = "Contraseña";
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
@@ -100,7 +100,7 @@ namespace wEasyGoDriver.views
             this.txtusername.Location = new System.Drawing.Point(586, 214);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(161, 13);
-            this.txtusername.TabIndex = 51;
+            this.txtusername.TabIndex = 1;
             this.txtusername.Text = "Número de celular";
             this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtusername.Enter += new System.EventHandler(this.txtusername_Enter);

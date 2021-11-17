@@ -206,6 +206,7 @@ namespace wEasyGoDriver.views
             this.ClientSize = new System.Drawing.Size(365, 441);
             this.Controls.Add(this.panel1);
             this.Name = "Comentarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).EndInit();
