@@ -31,7 +31,7 @@ namespace wEasyGoAdmin.Model
 
         public DataTable SearchDriver(string name)
         {
-            string select = "SELECT * FROM sp_search_drivers(@namePerson); ";
+            string select = "SELECT intidcardperson as \"Documento\", strnameperson as \"Nombres\", strlastnameperson as \"Apellidos\", dateofbirthperson as \"Fecha nacimiento\", boolgenderperson as \"Género\", city as \"Ciudad\", intiduser as \"ID\", intphoneuser as \"Celular\", stremailuser as \"Email\", datecreatead as \"Fecha de registro\", strroluser as \"Rol\", intidperson as \"ID persona\" FROM sp_search_drivers(@namePerson);";
 
             NpgsqlCommand cmd = new NpgsqlCommand(select, this.conn);
             cmd.Parameters.AddWithValue("@namePerson", name);
@@ -49,7 +49,7 @@ namespace wEasyGoAdmin.Model
 
         public DataTable SelectDriversDisabled()
         {
-            string select = "SELECT * FROM sp_search_drivers(@namePerson); ";
+            string select = "SELECT intidcardperson as \"Documento\", strnameperson as \"Nombres\", strlastnameperson as \"Apellidos\", dateofbirthperson as \"Fecha nacimiento\", boolgenderperson as \"Género\", city as \"Ciudad\", intiduser as \"ID\", intphoneuser as \"Celular\", stremailuser as \"Email\", datecreatead as \"Fecha de registro\", strroluser as \"Rol\", intidperson as \"ID persona\" FROM sp_search_drivers(@namePerson);";
 
             NpgsqlCommand cmd = new NpgsqlCommand(select, this.conn);
             cmd.Parameters.AddWithValue("@namePerson", "A");
