@@ -260,7 +260,6 @@ namespace wEasyGoDriver.views
             }
             catch (Exception err)
             {
-
                 MessageBox.Show(err.Message);
             }
 

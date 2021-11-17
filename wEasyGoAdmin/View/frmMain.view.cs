@@ -18,7 +18,6 @@ namespace wEasyGoAdmin.View
 
         string conductor="";
 
-
         IMotorcycle dataMoto;
         Papers dataPapers;
 
@@ -31,6 +30,10 @@ namespace wEasyGoAdmin.View
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+
+            
+            //dtgConductores.DataSource = new UserController().ExecuteSearchUser("");
+            dtgConductores.DataSource = new UserController().GetDriversDisabled();
             txtNombreConductor.Text = "Nombre del conductor";
             txtNombreConductor.ForeColor = Color.DimGray;
 
@@ -123,7 +126,6 @@ namespace wEasyGoAdmin.View
                 lblGeneroConductor.Text = dataMoto.Driver.BoolGenderPerson.ToString();
                 lblRolConductor.Text = dataMoto.Driver.StrRolUser;
 
-
                 /*lblPrueba.Text = value.ToString();*/
 
                 lblNumeroLicenciacc.Text = dataPapers.Intnumlicense.ToString();
@@ -134,7 +136,6 @@ namespace wEasyGoAdmin.View
 
                 //fotos
 
-      
                 fotoLicencia.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strimagelicense.Replace("../..", "")}");
                 FotoTecno.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strurltechnomechanical.Replace("../..", "")}");
                 fotoSoat.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strurlsoat.Replace("../..", "")}");
@@ -158,6 +159,9 @@ namespace wEasyGoAdmin.View
                     btnHabilitar.Text = "Deshabilitar";
                 }
 
+                tabsValidar.SelectedTab = tabDatosConductor;
+
+
             }
             catch (Exception err)
             {
@@ -165,7 +169,6 @@ namespace wEasyGoAdmin.View
                 MessageBox.Show(err.Message);
             }
 
-                 tabsValidar.SelectedTab = tabDatosConductor;
         }
 
         private void dtgConductores_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -175,23 +178,33 @@ namespace wEasyGoAdmin.View
 
         private void btnHabilitar_Click(object sender, EventArgs e)
         {
-            if(dataMoto.StrStateMoto == "disabled")
+
+            try
             {
-                if (MotorcycleController.ExecuteChangeState("inactive", dataMoto.StrLicensePlateMoto))
+                if (dataMoto.StrStateMoto == "disabled")
                 {
-                    dataMoto.StrStateMoto = "inactive";
-                    MessageBox.Show($"Ha habilitado la moto {dataMoto.StrLicensePlateMoto} para realizar viajes");
-                    btnHabilitar.Text = "Deshabilitar";
+                    if (MotorcycleController.ExecuteChangeState("inactive", dataMoto.StrLicensePlateMoto))
+                    {
+                        dataMoto.StrStateMoto = "inactive";
+                        MessageBox.Show($"Ha habilitado la moto {dataMoto.StrLicensePlateMoto} para realizar viajes");
+                        btnHabilitar.Text = "Deshabilitar";
+                    }
                 }
-            } 
-            else
+                else
+                {
+                    if (MotorcycleController.ExecuteChangeState("disabled", dataMoto.StrLicensePlateMoto))
+                    {
+                        dataMoto.StrStateMoto = "disabled";
+                        MessageBox.Show($"Ha deshabilitado la moto {dataMoto.StrLicensePlateMoto} para realizar viajes");
+                        btnHabilitar.Text = "Habilitar";
+                    }
+                }
+
+            }
+            catch (Exception err)
             {
-                if (MotorcycleController.ExecuteChangeState("disabled", dataMoto.StrLicensePlateMoto))
-                {
-                    dataMoto.StrStateMoto = "disabled";
-                    MessageBox.Show($"Ha deshabilitado la moto {dataMoto.StrLicensePlateMoto} para realizar viajes");
-                    btnHabilitar.Text = "Habilitar";
-                }
+
+                MessageBox.Show(err.Message);
             }
         }
     }

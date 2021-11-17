@@ -47,6 +47,24 @@ namespace wEasyGoAdmin.Model
 
         }
 
+        public DataTable SelectDriversDisabled()
+        {
+            string select = "SELECT * FROM sp_search_drivers(@namePerson); ";
+
+            NpgsqlCommand cmd = new NpgsqlCommand(select, this.conn);
+            cmd.Parameters.AddWithValue("@namePerson", "A");
+
+            // NpgsqlDataReader data = cmd.ExecuteReader();
+            DataTable table = new DataTable();
+            NpgsqlDataAdapter drivers = new NpgsqlDataAdapter(cmd);
+            NpgsqlCommandBuilder builder = new NpgsqlCommandBuilder(drivers);
+
+            drivers.Fill(table);
+
+            return table;
+
+        }
+
 
 
 

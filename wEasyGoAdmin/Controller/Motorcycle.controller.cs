@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using wEasyGoAdmin.Model;
 using LibClassEasyGo;
+using System.Data;
 
 namespace wEasyGoAdmin.Controller
 {
