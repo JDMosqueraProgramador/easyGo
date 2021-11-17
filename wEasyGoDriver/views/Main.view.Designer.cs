@@ -29,6 +29,7 @@ namespace wEasyGoDriver.views
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.cerrarForm = new System.Windows.Forms.PictureBox();
@@ -82,7 +83,7 @@ namespace wEasyGoDriver.views
             this.label15 = new System.Windows.Forms.Label();
             this.lblTituloHistorial = new System.Windows.Forms.Label();
             this.dtgHistorialViajes = new System.Windows.Forms.DataGridView();
-            this.notifyViaje = new System.Windows.Forms.NotifyIcon();
+            this.notifyViaje = new System.Windows.Forms.NotifyIcon(this.components);
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarForm)).BeginInit();
             this.tabsMain.SuspendLayout();
@@ -734,6 +735,7 @@ namespace wEasyGoDriver.views
             this.Controls.Add(this.pnlTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EASY GO";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlTitulo.ResumeLayout(false);

@@ -609,6 +609,7 @@ namespace wEasyGoDriver.views
             this.Controls.Add(this.pnlTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPerfilConductor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PerfilConductor";
             this.Load += new System.EventHandler(this.frmPerfilConductor_Load);
             this.pnlTitulo.ResumeLayout(false);
