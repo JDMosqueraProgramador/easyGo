@@ -75,7 +75,6 @@ namespace wEasyGoDriver.views
 
             dataUser = userController.getDataUser();
             dataMoto = motoControlller.ExecuteGetMotorcycle(dataUser.IntIdUser);
-            dataPapers = motoControlller.GetPapers(dataMoto.StrLicensePlateMoto);
 
             InitializeComponent();
             initializeSignal();
@@ -111,6 +110,8 @@ namespace wEasyGoDriver.views
                         EnableTab(this.tabMainInicio);
                     }
 
+
+                    dataPapers = motoControlller.GetPapers(dataMoto.StrLicensePlateMoto);
                     if (!motoControlller.ValidatePapers(dataPapers))
                     {
                         dataMoto.StrStateMoto = "disabled";
