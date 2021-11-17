@@ -111,28 +111,28 @@ namespace wEasyGoAdmin.View
 
                 int id = int.Parse(dtgConductores.SelectedRows[0].Cells[6].Value.ToString());
 
-            dataMoto = MotorcycleController.GetMoto(id);
-            dataPapers = MotorcycleController.GetPapers(dataMoto.StrLicensePlateMoto);
+                dataMoto = MotorcycleController.GetMoto(id);
+                dataPapers = MotorcycleController.GetPapers(dataMoto.StrLicensePlateMoto);
 
-            lblNombreConductor.Text = dataMoto.Driver.StrNamePerson;
-            lblApellidoConductor.Text = dataMoto.Driver.StrLastNamePerson;
-            lblEmailConductor.Text = dataMoto.Driver.StrEmailUser;
-            lblNumeroCelularConductor.Text = dataMoto.Driver.IntPhoneUser.ToString();
-            lblFechaNacimientoConductor.Text = dataMoto.Driver.DateOfBirthPerson.ToString();
-            lblCiudadConductor.Text = dataMoto.Driver.City;
-            lblGeneroConductor.Text = dataMoto.Driver.BoolGenderPerson.ToString();
-            lblRolConductor.Text = dataMoto.Driver.StrRolUser;
+                lblNombreConductor.Text = dataMoto.Driver.StrNamePerson;
+                lblApellidoConductor.Text = dataMoto.Driver.StrLastNamePerson;
+                lblEmailConductor.Text = dataMoto.Driver.StrEmailUser;
+                lblNumeroCelularConductor.Text = dataMoto.Driver.IntPhoneUser.ToString();
+                lblFechaNacimientoConductor.Text = dataMoto.Driver.DateOfBirthPerson.ToString();
+                lblCiudadConductor.Text = dataMoto.Driver.City;
+                lblGeneroConductor.Text = dataMoto.Driver.BoolGenderPerson.ToString();
+                lblRolConductor.Text = dataMoto.Driver.StrRolUser;
 
 
-            /*lblPrueba.Text = value.ToString();*/
+                /*lblPrueba.Text = value.ToString();*/
 
-            lblNumeroLicenciacc.Text = dataPapers.Intnumlicense.ToString();
-            lblFechaVigenciaHastaLicencia.Text = dataPapers.Datevaliditylicense.ToString();
-            dateVigenciaHastaTecno.Text = dataPapers.Datevaliduntiltechnomechanical.ToString();
-            lblIdSoat.Text = dataPapers.Intidsoat.ToString();
-            lblFechaVigenciaHastaSoat.Text = dataPapers.Datevaliduntilsoat.ToString();
+                lblNumeroLicenciacc.Text = dataPapers.Intnumlicense.ToString();
+                lblFechaVigenciaHastaLicencia.Text = dataPapers.Datevaliditylicense.ToString();
+                dateVigenciaHastaTecno.Text = dataPapers.Datevaliduntiltechnomechanical.ToString();
+                lblIdSoat.Text = dataPapers.Intidsoat.ToString();
+                lblFechaVigenciaHastaSoat.Text = dataPapers.Datevaliduntilsoat.ToString();
 
-            //fotos
+                //fotos
 
       
                 fotoLicencia.Image = Image.FromFile($"../../../wEasyGoDriver{dataPapers.Strimagelicense.Replace("../..", "")}");
@@ -165,7 +165,7 @@ namespace wEasyGoAdmin.View
                 MessageBox.Show(err.Message);
             }
 
-            tabsValidar.SelectedTab = tabDatosConductor;
+                 tabsValidar.SelectedTab = tabDatosConductor;
         }
 
         private void dtgConductores_CellContentClick(object sender, DataGridViewCellEventArgs e)
