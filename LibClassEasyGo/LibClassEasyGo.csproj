@@ -49,6 +49,7 @@
     <Compile Include="IMotorcycle.cs" />
     <Compile Include="ITravel.cs" />
     <Compile Include="Motorcycle.cs" />
+    <Compile Include="Pappers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Travel.cs" />
     <Compile Include="User.cs" />

@@ -123,7 +123,7 @@ namespace wEasyGoAdmin.View
                 lblNumeroCelularConductor.Text = dataMoto.Driver.IntPhoneUser.ToString();
                 lblFechaNacimientoConductor.Text = dataMoto.Driver.DateOfBirthPerson.ToString();
                 lblCiudadConductor.Text = dataMoto.Driver.City;
-                lblGeneroConductor.Text = dataMoto.Driver.BoolGenderPerson.ToString();
+                lblGeneroConductor.Text = (dataMoto.Driver.BoolGenderPerson) ? "Masculino" : "Femenino";
                 lblRolConductor.Text = dataMoto.Driver.StrRolUser;
 
                 /*lblPrueba.Text = value.ToString();*/

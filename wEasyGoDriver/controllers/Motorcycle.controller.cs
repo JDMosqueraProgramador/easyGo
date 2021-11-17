@@ -46,5 +46,24 @@ namespace wEasyGoDriver.controllers
             return this.moto.ChangeState(state, licensePlate);
         }
 
+        public Papers GetPapers(string licensePlate)
+        {
+            return moto.SelectPapers(licensePlate);
+        }
+
+        public bool ValidatePapers(Papers papers)
+        {
+
+            if (papers.Datevaliduntiltechnomechanical.CompareTo(DateTime.Now) < 0 || papers.Datevaliduntilsoat.CompareTo(DateTime.Now) < 0 || papers.Datevaliditylicense.CompareTo(DateTime.Now) < 0)
+            {
+                return !ExecuteChangeState("disabled", papers.Strlicenseplatemoto);
+            }
+            else
+            {
+                return true;
+            }
+                
+        }
+
     }
 }

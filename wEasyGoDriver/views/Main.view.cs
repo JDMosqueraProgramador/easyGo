@@ -33,6 +33,8 @@ namespace wEasyGoDriver.views
         TravelController travelController;
         ITravel actualTravel;
 
+        Papers dataPapers;
+
         #endregion
 
         #region [Variables de mapas]
@@ -70,8 +72,10 @@ namespace wEasyGoDriver.views
         public frmMain(long phone)
         {
             userController = new UserController(phone);
+
             dataUser = userController.getDataUser();
             dataMoto = motoControlller.ExecuteGetMotorcycle(dataUser.IntIdUser);
+            dataPapers = motoControlller.GetPapers(dataMoto.StrLicensePlateMoto);
 
             InitializeComponent();
             initializeSignal();
@@ -92,6 +96,7 @@ namespace wEasyGoDriver.views
 
                 if (dataMoto != null && dataUser != null)
                 {
+                    // Validaciones 
 
                     if (dataUser.StrRolUser == "Owner")
                     {
@@ -104,12 +109,34 @@ namespace wEasyGoDriver.views
                         MessageBox.Show("El usuario se encuentra dehsabilitado actualmente, los datos de su vehículo están en etapa de revisión.");
                         btnEstado.Enabled = false;
                         EnableTab(this.tabMainInicio);
-
                     }
+
+                    if (!motoControlller.ValidatePapers(dataPapers))
+                    {
+                        dataMoto.StrStateMoto = "disabled";
+                        MessageBox.Show("Los papeles no se encuentran en regla y no podrá trabajar.");
+                        btnEstado.Enabled = false;
+                        EnableTab(this.tabMainInicio);
+                    }
+
+                    #region [Datos de los papeles]
 
                     dtgHistorialViajes.DataSource = userController.GetDriverHistory(dataMoto.StrLicensePlateMoto);
                     lblEstadoMoto.Text = dataMoto.StrStateMoto;
                     dataMoto.StrStateMoto = "inactive";
+
+                    lblFechaTecnomecanica.Text = dataPapers.Datevaliduntiltechnomechanical.ToShortDateString();
+                    lblFechaTecnomecanica.ForeColor = (dataPapers.Datevaliduntiltechnomechanical.CompareTo(DateTime.Now) < 0) ? Color.Red : lblFechaTecnomecanica.ForeColor;
+                    
+
+                    lblFechaSoat.Text = dataPapers.Datevaliduntilsoat.ToShortDateString();
+                    lblFechaSoat.ForeColor = (dataPapers.Datevaliduntilsoat.CompareTo(DateTime.Now) < 0) ? Color.Red : lblFechaSoat.ForeColor;
+
+
+                    lblFechaLicencia.Text = dataPapers.Datevaliditylicense.ToShortDateString();
+                    lblFechaLicencia.ForeColor = (dataPapers.Datevaliditylicense.CompareTo(DateTime.Now) < 0) ? Color.Red : lblFechaLicencia.ForeColor;
+
+                    #endregion
 
                 }
                 else if (dataUser != null && dataMoto == null)

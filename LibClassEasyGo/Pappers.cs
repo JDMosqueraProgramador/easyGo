@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace wEasyGoAdmin.Model
+namespace LibClassEasyGo
 {
-    internal class Papers
+    public class Papers
     {
         int intnumlicense;
         DateTime datevaliditylicense;
@@ -44,3 +43,4 @@ namespace wEasyGoAdmin.Model
 
     }
 }
+
