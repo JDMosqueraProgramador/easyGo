@@ -97,12 +97,6 @@ namespace wEasyGoDriver.views
                 {
                     // Validaciones 
 
-                    if (dataUser.StrRolUser == "Owner")
-                    {
-                        MessageBox.Show("El perfil del dueño aún no se encuentra disponible");
-                        this.Close();
-                    }
-
                     if(dataMoto.StrStateMoto == "disabled")
                     {
                         MessageBox.Show("El usuario se encuentra dehsabilitado actualmente, los datos de su vehículo están en etapa de revisión.");
@@ -142,7 +136,14 @@ namespace wEasyGoDriver.views
                 }
                 else if (dataUser != null && dataMoto == null)
                 {
-                    MessageBox.Show("El dueño de el vehículo aún no lo ha registrado con su vehículo, verifique cuando sea registrado y vuelva a iniciar sesión");
+                    if (dataUser.StrRolUser == "Owner")
+                    {
+                        MessageBox.Show("El perfil del dueño aún no se encuentra disponible");
+                    }
+                    else
+                    {
+                        MessageBox.Show("El dueño de el vehículo aún no lo ha registrado con su vehículo, verifique cuando sea registrado y vuelva a iniciar sesión");
+                    }
 
                     this.Close();
                 }
