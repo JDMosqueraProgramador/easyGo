@@ -31,7 +31,9 @@ namespace wEasyGoAdmin.View
         private void frmMain_Load(object sender, EventArgs e)
         {
 
-            dtgConductores.DataSource = MotorcycleController.GetDriversDisabled();
+            
+            //dtgConductores.DataSource = new UserController().ExecuteSearchUser("");
+            dtgConductores.DataSource = new UserController().GetDriversDisabled();
             txtNombreConductor.Text = "Nombre del conductor";
             txtNombreConductor.ForeColor = Color.DimGray;
 

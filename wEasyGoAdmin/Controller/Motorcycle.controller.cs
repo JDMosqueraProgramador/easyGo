@@ -27,10 +27,5 @@ namespace wEasyGoAdmin.Controller
             return new MotorcycleModel().ChangeState(state, licensePlate);
         }
 
-        public static DataTable GetDriversDisabled()
-        {
-            return new MotorcycleModel().getDriversDisabled();
-        }
-
     }
 }

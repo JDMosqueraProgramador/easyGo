@@ -43,22 +43,5 @@ namespace wEasyGoAdmin.Model
 
         }
 
-        public DataTable getDriversDisabled()
-        {
-            string select = "SELECT * FROM sp_get_drivers_disabled()";
-
-            //NpgsqlCommand cmd = new NpgsqlCommand(select, this.conn);
-
-            DataTable table = new DataTable();
-
-            NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(select, this.conn);
-            //NpgsqlCommandBuilder builder = new NpgsqlCommandBuilder(adapter);
-
-            adapter.Fill(table);
-             
-            return table;
-
-        }
-
     }
 }

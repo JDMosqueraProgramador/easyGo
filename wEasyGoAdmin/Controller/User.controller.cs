@@ -48,5 +48,10 @@ namespace wEasyGoAdmin.Controller
         {
             return model.SearchDriver(name);
         }
+
+        public DataTable GetDriversDisabled()
+        {
+            return model.SelectDriversDisabled();
+        }
     }
 }
