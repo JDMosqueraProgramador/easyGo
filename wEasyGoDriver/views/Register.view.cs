@@ -30,6 +30,7 @@ namespace wEasyGoDriver
         string modelo= "";
         string idSoat = "";
         string numeroLicencia = "";
+        string asignarConductor = "";
 
 
         UserController userController;
@@ -762,6 +763,40 @@ namespace wEasyGoDriver
         private void dtgBuscarConductor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtAsignarConductor_Enter(object sender, EventArgs e)
+        {
+
+            txtAsignarConductor.Text = "";
+            txtAsignarConductor.ForeColor = Color.DimGray;
+            
+        }
+
+        private void txtAsignarConductor_MouseLeave(object sender, EventArgs e)
+        {
+            asignarConductor = txtAsignarConductor.Text;
+
+            if (asignarConductor.Equals("Asignar conductor"))
+            {
+                txtAsignarConductor.Text = "Asignar conductor";
+                txtAsignarConductor.ForeColor = Color.DimGray;
+
+            }
+            else
+            {
+                if (asignarConductor.Equals(""))
+                {
+                    txtAsignarConductor.Text = "Asignar conductor";
+                    txtAsignarConductor.ForeColor = Color.DimGray;
+
+                }
+                else
+                {
+                    txtAsignarConductor.Text = asignarConductor;
+                    txtAsignarConductor.ForeColor = Color.DimGray;
+                }
+            }
         }
     }
 }

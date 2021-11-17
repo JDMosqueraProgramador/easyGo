@@ -808,6 +808,8 @@ namespace wEasyGoDriver
             this.txtAsignarConductor.Text = "Asignar conductor";
             this.txtAsignarConductor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAsignarConductor.TextChanged += new System.EventHandler(this.txtAsignarConductor_TextChanged);
+            this.txtAsignarConductor.Enter += new System.EventHandler(this.txtAsignarConductor_Enter);
+            this.txtAsignarConductor.MouseLeave += new System.EventHandler(this.txtAsignarConductor_MouseLeave);
             // 
             // btnCargarTarjPropiedad
             // 

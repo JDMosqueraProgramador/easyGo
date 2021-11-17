@@ -72,8 +72,10 @@ namespace wEasyGoAdmin
 
         private void txtusername_Enter(object sender, EventArgs e)
         {
-            txtusername.Text = "";
-            txtusername.ForeColor = Color.DimGray;
+            txtContraseña.Text = "";
+            txtContraseña.ForeColor = Color.DimGray;
+            txtContraseña.PasswordChar = '*';
+            txtContraseña.ForeColor = Color.DimGray;
         }
 
         private void txtContraseña_Enter(object sender, EventArgs e)
