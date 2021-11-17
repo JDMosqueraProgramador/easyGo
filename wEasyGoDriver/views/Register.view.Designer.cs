@@ -289,7 +289,7 @@ namespace wEasyGoDriver
             this.txtCedula.Location = new System.Drawing.Point(109, 141);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(166, 13);
-            this.txtCedula.TabIndex = 113;
+            this.txtCedula.TabIndex = 1;
             this.txtCedula.Text = "Cédula";
             this.txtCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCedula.Enter += new System.EventHandler(this.txtCedula_Enter);
@@ -323,7 +323,7 @@ namespace wEasyGoDriver
             this.radioButton2.Location = new System.Drawing.Point(140, 23);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(74, 17);
-            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabIndex = 11;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Conductor";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -334,7 +334,7 @@ namespace wEasyGoDriver
             this.rdoDueño.Location = new System.Drawing.Point(21, 23);
             this.rdoDueño.Name = "rdoDueño";
             this.rdoDueño.Size = new System.Drawing.Size(57, 17);
-            this.rdoDueño.TabIndex = 0;
+            this.rdoDueño.TabIndex = 10;
             this.rdoDueño.TabStop = true;
             this.rdoDueño.Text = "Dueño";
             this.rdoDueño.UseVisualStyleBackColor = true;
@@ -345,7 +345,7 @@ namespace wEasyGoDriver
             this.dateOfBirthPerson.Location = new System.Drawing.Point(115, 404);
             this.dateOfBirthPerson.Name = "dateOfBirthPerson";
             this.dateOfBirthPerson.Size = new System.Drawing.Size(160, 20);
-            this.dateOfBirthPerson.TabIndex = 111;
+            this.dateOfBirthPerson.TabIndex = 9;
             // 
             // pictureBox3
             // 
@@ -380,7 +380,7 @@ namespace wEasyGoDriver
             this.btnRegistrar.Location = new System.Drawing.Point(246, 491);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(134, 50);
-            this.btnRegistrar.TabIndex = 108;
+            this.btnRegistrar.TabIndex = 13;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -394,7 +394,7 @@ namespace wEasyGoDriver
             this.checkBox1.Location = new System.Drawing.Point(222, 463);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(173, 17);
-            this.checkBox1.TabIndex = 89;
+            this.checkBox1.TabIndex = 12;
             this.checkBox1.Text = "Aceptar terminos y condiciones";
             this.checkBox1.UseVisualStyleBackColor = false;
             // 
@@ -409,7 +409,7 @@ namespace wEasyGoDriver
             this.cmbGenero.Location = new System.Drawing.Point(369, 342);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(160, 21);
-            this.cmbGenero.TabIndex = 88;
+            this.cmbGenero.TabIndex = 8;
             this.cmbGenero.Text = "                   Genero";
             // 
             // pictureBox17
@@ -443,7 +443,7 @@ namespace wEasyGoDriver
             this.cmbCiudad.Location = new System.Drawing.Point(109, 342);
             this.cmbCiudad.Name = "cmbCiudad";
             this.cmbCiudad.Size = new System.Drawing.Size(166, 21);
-            this.cmbCiudad.TabIndex = 87;
+            this.cmbCiudad.TabIndex = 7;
             this.cmbCiudad.Text = "                     Ciudad";
             // 
             // pictureBox15
@@ -487,7 +487,7 @@ namespace wEasyGoDriver
             this.txtNumeroCelular.Location = new System.Drawing.Point(363, 208);
             this.txtNumeroCelular.Name = "txtNumeroCelular";
             this.txtNumeroCelular.Size = new System.Drawing.Size(166, 13);
-            this.txtNumeroCelular.TabIndex = 101;
+            this.txtNumeroCelular.TabIndex = 4;
             this.txtNumeroCelular.Text = "Número de celular";
             this.txtNumeroCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNumeroCelular.TextChanged += new System.EventHandler(this.txtNumeroCelular_TextChanged);
@@ -524,7 +524,7 @@ namespace wEasyGoDriver
             this.txtContraseña.Location = new System.Drawing.Point(363, 274);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(166, 13);
-            this.txtContraseña.TabIndex = 98;
+            this.txtContraseña.TabIndex = 6;
             this.txtContraseña.Text = "Contraseña";
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
@@ -549,7 +549,7 @@ namespace wEasyGoDriver
             this.txtApellidos.Location = new System.Drawing.Point(109, 208);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(166, 13);
-            this.txtApellidos.TabIndex = 96;
+            this.txtApellidos.TabIndex = 3;
             this.txtApellidos.Text = "Apellidos";
             this.txtApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
@@ -585,7 +585,7 @@ namespace wEasyGoDriver
             this.txtNombre.Location = new System.Drawing.Point(363, 141);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(166, 13);
-            this.txtNombre.TabIndex = 93;
+            this.txtNombre.TabIndex = 2;
             this.txtNombre.Text = "Nombre";
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
@@ -621,7 +621,7 @@ namespace wEasyGoDriver
             this.txtCorreo.Location = new System.Drawing.Point(109, 274);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(166, 13);
-            this.txtCorreo.TabIndex = 90;
+            this.txtCorreo.TabIndex = 5;
             this.txtCorreo.Text = "Correo electronico";
             this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
@@ -735,7 +735,7 @@ namespace wEasyGoDriver
             this.btnRegistrarMoto.Location = new System.Drawing.Point(192, 93);
             this.btnRegistrarMoto.Name = "btnRegistrarMoto";
             this.btnRegistrarMoto.Size = new System.Drawing.Size(114, 50);
-            this.btnRegistrarMoto.TabIndex = 156;
+            this.btnRegistrarMoto.TabIndex = 22;
             this.btnRegistrarMoto.Text = "Registrar vehiculo";
             this.btnRegistrarMoto.UseVisualStyleBackColor = false;
             this.btnRegistrarMoto.Click += new System.EventHandler(this.btnRegistrarMoto_Click);
@@ -748,7 +748,7 @@ namespace wEasyGoDriver
             this.txtModelo.Location = new System.Drawing.Point(368, 125);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(166, 13);
-            this.txtModelo.TabIndex = 153;
+            this.txtModelo.TabIndex = 16;
             this.txtModelo.Text = "Modelo";
             this.txtModelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtModelo.Enter += new System.EventHandler(this.txtModelo_Enter);
@@ -762,7 +762,7 @@ namespace wEasyGoDriver
             this.txtCilindraje.Location = new System.Drawing.Point(103, 192);
             this.txtCilindraje.Name = "txtCilindraje";
             this.txtCilindraje.Size = new System.Drawing.Size(166, 13);
-            this.txtCilindraje.TabIndex = 150;
+            this.txtCilindraje.TabIndex = 17;
             this.txtCilindraje.Text = "Cilindraje";
             this.txtCilindraje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCilindraje.Enter += new System.EventHandler(this.txtCilindraje_Enter);
@@ -776,7 +776,7 @@ namespace wEasyGoDriver
             this.txtMarca.Location = new System.Drawing.Point(368, 58);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(166, 13);
-            this.txtMarca.TabIndex = 147;
+            this.txtMarca.TabIndex = 14;
             this.txtMarca.Text = "Marca";
             this.txtMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMarca.Enter += new System.EventHandler(this.txtMarca_Enter);
@@ -790,7 +790,7 @@ namespace wEasyGoDriver
             this.txtNumeroLicenciaMoto.Location = new System.Drawing.Point(103, 125);
             this.txtNumeroLicenciaMoto.Name = "txtNumeroLicenciaMoto";
             this.txtNumeroLicenciaMoto.Size = new System.Drawing.Size(166, 13);
-            this.txtNumeroLicenciaMoto.TabIndex = 144;
+            this.txtNumeroLicenciaMoto.TabIndex = 15;
             this.txtNumeroLicenciaMoto.Text = "Número de licencia";
             this.txtNumeroLicenciaMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNumeroLicenciaMoto.Enter += new System.EventHandler(this.txtNumeroLicenciaMoto_Enter);
@@ -804,7 +804,7 @@ namespace wEasyGoDriver
             this.txtAsignarConductor.Location = new System.Drawing.Point(237, 326);
             this.txtAsignarConductor.Name = "txtAsignarConductor";
             this.txtAsignarConductor.Size = new System.Drawing.Size(166, 13);
-            this.txtAsignarConductor.TabIndex = 140;
+            this.txtAsignarConductor.TabIndex = 21;
             this.txtAsignarConductor.Text = "Asignar conductor";
             this.txtAsignarConductor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAsignarConductor.TextChanged += new System.EventHandler(this.txtAsignarConductor_TextChanged);
@@ -815,7 +815,7 @@ namespace wEasyGoDriver
             this.btnCargarTarjPropiedad.Location = new System.Drawing.Point(368, 253);
             this.btnCargarTarjPropiedad.Name = "btnCargarTarjPropiedad";
             this.btnCargarTarjPropiedad.Size = new System.Drawing.Size(166, 26);
-            this.btnCargarTarjPropiedad.TabIndex = 136;
+            this.btnCargarTarjPropiedad.TabIndex = 20;
             this.btnCargarTarjPropiedad.Tag = "";
             this.btnCargarTarjPropiedad.Text = "Cargar tarjeta de propiedad";
             this.btnCargarTarjPropiedad.UseVisualStyleBackColor = true;
@@ -832,7 +832,7 @@ namespace wEasyGoDriver
             this.cmbColorMotocicleta.Location = new System.Drawing.Point(368, 189);
             this.cmbColorMotocicleta.Name = "cmbColorMotocicleta";
             this.cmbColorMotocicleta.Size = new System.Drawing.Size(160, 21);
-            this.cmbColorMotocicleta.TabIndex = 135;
+            this.cmbColorMotocicleta.TabIndex = 18;
             this.cmbColorMotocicleta.Text = "       Color de la motocicleta";
             // 
             // cmbTipoCombustible
@@ -844,7 +844,7 @@ namespace wEasyGoDriver
             this.cmbTipoCombustible.Location = new System.Drawing.Point(103, 256);
             this.cmbTipoCombustible.Name = "cmbTipoCombustible";
             this.cmbTipoCombustible.Size = new System.Drawing.Size(166, 21);
-            this.cmbTipoCombustible.TabIndex = 134;
+            this.cmbTipoCombustible.TabIndex = 19;
             this.cmbTipoCombustible.Text = "       Tipo de combustible";
             // 
             // txtPlaca
@@ -855,7 +855,7 @@ namespace wEasyGoDriver
             this.txtPlaca.Location = new System.Drawing.Point(103, 58);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(166, 13);
-            this.txtPlaca.TabIndex = 116;
+            this.txtPlaca.TabIndex = 13;
             this.txtPlaca.Text = "Placa";
             this.txtPlaca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPlaca.Enter += new System.EventHandler(this.txtPlaca_Enter);
@@ -1104,7 +1104,7 @@ namespace wEasyGoDriver
             this.dateVigenciaHastaTecno.Location = new System.Drawing.Point(121, 164);
             this.dateVigenciaHastaTecno.Name = "dateVigenciaHastaTecno";
             this.dateVigenciaHastaTecno.Size = new System.Drawing.Size(160, 20);
-            this.dateVigenciaHastaTecno.TabIndex = 177;
+            this.dateVigenciaHastaTecno.TabIndex = 23;
             // 
             // dateVigenciaHastaSoat
             // 
@@ -1112,7 +1112,7 @@ namespace wEasyGoDriver
             this.dateVigenciaHastaSoat.Location = new System.Drawing.Point(375, 287);
             this.dateVigenciaHastaSoat.Name = "dateVigenciaHastaSoat";
             this.dateVigenciaHastaSoat.Size = new System.Drawing.Size(160, 20);
-            this.dateVigenciaHastaSoat.TabIndex = 174;
+            this.dateVigenciaHastaSoat.TabIndex = 26;
             // 
             // btnRegistrarPapeles
             // 
@@ -1125,7 +1125,7 @@ namespace wEasyGoDriver
             this.btnRegistrarPapeles.Location = new System.Drawing.Point(245, 434);
             this.btnRegistrarPapeles.Name = "btnRegistrarPapeles";
             this.btnRegistrarPapeles.Size = new System.Drawing.Size(134, 50);
-            this.btnRegistrarPapeles.TabIndex = 173;
+            this.btnRegistrarPapeles.TabIndex = 28;
             this.btnRegistrarPapeles.Text = "Registrar Papeles";
             this.btnRegistrarPapeles.UseVisualStyleBackColor = false;
             this.btnRegistrarPapeles.Click += new System.EventHandler(this.btnRegistrarPapeles_Click);
@@ -1138,7 +1138,7 @@ namespace wEasyGoDriver
             this.txtIdSoat.Location = new System.Drawing.Point(131, 288);
             this.txtIdSoat.Name = "txtIdSoat";
             this.txtIdSoat.Size = new System.Drawing.Size(161, 13);
-            this.txtIdSoat.TabIndex = 170;
+            this.txtIdSoat.TabIndex = 25;
             this.txtIdSoat.Text = "id soat";
             this.txtIdSoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIdSoat.Enter += new System.EventHandler(this.txtIdSoat_Enter);
@@ -1150,7 +1150,7 @@ namespace wEasyGoDriver
             this.btnCargarImgSoat.Location = new System.Drawing.Point(131, 357);
             this.btnCargarImgSoat.Name = "btnCargarImgSoat";
             this.btnCargarImgSoat.Size = new System.Drawing.Size(166, 26);
-            this.btnCargarImgSoat.TabIndex = 167;
+            this.btnCargarImgSoat.TabIndex = 27;
             this.btnCargarImgSoat.Text = "cargar imagen soat";
             this.btnCargarImgSoat.UseVisualStyleBackColor = true;
             this.btnCargarImgSoat.Click += new System.EventHandler(this.btnCargarImgSoat_Click);
@@ -1161,7 +1161,7 @@ namespace wEasyGoDriver
             this.btnCargarImgTecno.Location = new System.Drawing.Point(375, 158);
             this.btnCargarImgTecno.Name = "btnCargarImgTecno";
             this.btnCargarImgTecno.Size = new System.Drawing.Size(166, 26);
-            this.btnCargarImgTecno.TabIndex = 158;
+            this.btnCargarImgTecno.TabIndex = 24;
             this.btnCargarImgTecno.Text = "cargar imagen tecnomecanica";
             this.btnCargarImgTecno.UseVisualStyleBackColor = true;
             this.btnCargarImgTecno.Click += new System.EventHandler(this.btnCargarImgTecno_Click);
@@ -1344,7 +1344,7 @@ namespace wEasyGoDriver
             this.rdoNoVehiculo.Location = new System.Drawing.Point(116, 23);
             this.rdoNoVehiculo.Name = "rdoNoVehiculo";
             this.rdoNoVehiculo.Size = new System.Drawing.Size(39, 17);
-            this.rdoNoVehiculo.TabIndex = 1;
+            this.rdoNoVehiculo.TabIndex = 2;
             this.rdoNoVehiculo.Text = "No";
             this.rdoNoVehiculo.UseVisualStyleBackColor = true;
             // 
@@ -1354,7 +1354,7 @@ namespace wEasyGoDriver
             this.rdoSiVehiculo.Location = new System.Drawing.Point(42, 23);
             this.rdoSiVehiculo.Name = "rdoSiVehiculo";
             this.rdoSiVehiculo.Size = new System.Drawing.Size(34, 17);
-            this.rdoSiVehiculo.TabIndex = 0;
+            this.rdoSiVehiculo.TabIndex = 1;
             this.rdoSiVehiculo.Text = "Si";
             this.rdoSiVehiculo.UseVisualStyleBackColor = true;
             // 
@@ -1369,7 +1369,7 @@ namespace wEasyGoDriver
             this.btnRegistrarLicencia.Location = new System.Drawing.Point(245, 339);
             this.btnRegistrarLicencia.Name = "btnRegistrarLicencia";
             this.btnRegistrarLicencia.Size = new System.Drawing.Size(134, 50);
-            this.btnRegistrarLicencia.TabIndex = 181;
+            this.btnRegistrarLicencia.TabIndex = 33;
             this.btnRegistrarLicencia.Text = "Registrar Licencia";
             this.btnRegistrarLicencia.UseVisualStyleBackColor = false;
             this.btnRegistrarLicencia.Click += new System.EventHandler(this.btnRegistrarLicencia_Click);
@@ -1380,7 +1380,7 @@ namespace wEasyGoDriver
             this.btnCargarimgLicencia.Location = new System.Drawing.Point(120, 275);
             this.btnCargarimgLicencia.Name = "btnCargarimgLicencia";
             this.btnCargarimgLicencia.Size = new System.Drawing.Size(166, 26);
-            this.btnCargarimgLicencia.TabIndex = 178;
+            this.btnCargarimgLicencia.TabIndex = 31;
             this.btnCargarimgLicencia.Text = "cargar imagen licencia";
             this.btnCargarimgLicencia.UseVisualStyleBackColor = true;
             this.btnCargarimgLicencia.Click += new System.EventHandler(this.btnCargarimgLicencia_Click);
@@ -1391,7 +1391,7 @@ namespace wEasyGoDriver
             this.dateVigenciaHastaLicencia.Location = new System.Drawing.Point(369, 201);
             this.dateVigenciaHastaLicencia.Name = "dateVigenciaHastaLicencia";
             this.dateVigenciaHastaLicencia.Size = new System.Drawing.Size(160, 20);
-            this.dateVigenciaHastaLicencia.TabIndex = 177;
+            this.dateVigenciaHastaLicencia.TabIndex = 30;
             // 
             // txtNumerodeLicencia
             // 
@@ -1401,7 +1401,7 @@ namespace wEasyGoDriver
             this.txtNumerodeLicencia.Location = new System.Drawing.Point(120, 201);
             this.txtNumerodeLicencia.Name = "txtNumerodeLicencia";
             this.txtNumerodeLicencia.Size = new System.Drawing.Size(166, 13);
-            this.txtNumerodeLicencia.TabIndex = 128;
+            this.txtNumerodeLicencia.TabIndex = 29;
             this.txtNumerodeLicencia.Text = "Número de licencia";
             this.txtNumerodeLicencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNumerodeLicencia.Enter += new System.EventHandler(this.txtNumerodeLicencia_Enter);
