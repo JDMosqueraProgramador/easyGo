@@ -229,7 +229,10 @@ namespace wEasyGoDriver.views
 
             #region [Configuración inicial de mapas]
 
-            GMapProviders.GoogleMap.ApiKey = "AIzaSyD53-lwKKlRgkrmqM2kb19laYtq_BdG_RY";
+
+            //variables de entorno para api key.
+                
+            GMapProviders.GoogleMap.ApiKey = "AIzaSyD8VC5nOnEoBhwsEp4zn9nGF8Sg4Hg_yKM";
             gMapPrincipal.DragButton = MouseButtons.Left;
             gMapPrincipal.CanDragMap = true;
             gMapPrincipal.MapProvider = GMapProviders.GoogleMap;
