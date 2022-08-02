@@ -10,10 +10,10 @@ namespace LibClassEasyGo
     public class Connect
     {
 
-        private static readonly string host = "easygo.postgres.database.azure.com";
-        private static readonly string user = "alexadmin@easygo";
-        private static readonly string dbname = "Easygo";
-        private static readonly string password = "12345solobmx.";
+        private static readonly string host = "ec2-54-208-104-27.compute-1.amazonaws.com";
+        private static readonly string user = "qbrayutdtstfye";
+        private static readonly string dbname = "d4jjomqb2tmlrh";
+        private static readonly string password = "0e0e2e832c95c651bacc28a3d3274f89515dd766516ade44715fe30061957430";
         private static readonly string port = "5432";
 
         public NpgsqlConnection connection;
