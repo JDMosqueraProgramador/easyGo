@@ -59,8 +59,8 @@ namespace wEasyGoDriver.views
 
         #region [Variables de signalR]
 
-        private string _baseUrl = "https://eaasygo.azurewebsites.net/";
-        private string _url = "https://eaasygo.azurewebsites.net/travelHub";
+        private string _baseUrl = "http://www.easygo.somee.com/";
+        private string _url = "http://www.easygo.somee.com/travelHub";
 
         HubConnection signalConn;
         private string _groupID = null;

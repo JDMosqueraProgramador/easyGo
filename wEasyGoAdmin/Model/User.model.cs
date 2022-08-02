@@ -15,7 +15,6 @@ namespace wEasyGoAdmin.Model
         public UserModel()
         {
 
-
         }
 
         public UserModel(long intIdCardPerson, string strNamePerson, string strLastNamePerson, DateTime dateOfBirthPerson, bool boolGenderPerson, long intPhoneUser, string strEmailUser, string strRolUser) : base(intIdCardPerson, strNamePerson, strLastNamePerson, dateOfBirthPerson, boolGenderPerson, intPhoneUser, strEmailUser, strRolUser)
