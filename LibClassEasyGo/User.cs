@@ -11,7 +11,7 @@ namespace LibClassEasyGo
     {
         // Information to person
         private long intIdCardPerson;
-        private string strNamePerson;
+        private string strNamePerson; 
         private string strLastNamePerson;
         private DateTime dateOfBirthPerson;
         private bool boolGenderPerson;
@@ -199,6 +199,20 @@ namespace LibClassEasyGo
 
             return (numRows > 0);
 
+        }
+
+        public bool UpdatePassword(int idPerson, string password)
+        {
+            string update = "UPDATE tblUser SET strPassword = @strPassword WHERE intIdPerson = @intIdPerson";
+
+            NpgsqlCommand cmd = new NpgsqlCommand(update, conn);
+
+            cmd.Parameters.AddWithValue("@strPassword", password);
+            cmd.Parameters.AddWithValue("@intIdPerson", idPerson);
+
+            int numRows = cmd.ExecuteNonQuery();
+
+            return (numRows > 0);
         }
 
         public bool login(long phone, string password, string rol)
