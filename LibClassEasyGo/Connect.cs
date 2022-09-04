@@ -9,11 +9,11 @@ namespace LibClassEasyGo
 {
     public class Connect
     {
-
-        private static readonly string host = "ec2-54-208-104-27.compute-1.amazonaws.com";
-        private static readonly string user = "qbrayutdtstfye";
-        private static readonly string dbname = "d4jjomqb2tmlrh";
-        private static readonly string password = "0e0e2e832c95c651bacc28a3d3274f89515dd766516ade44715fe30061957430";
+        //----
+        private static readonly string host = "ec2-54-159-175-38.compute-1.amazonaws.com";
+        private static readonly string user = "ikjldkchmscihd";
+        private static readonly string dbname = "degedi2n7nu60o";
+        private static readonly string password = "530c77e05a644bcb42c332b3eeb7ba8acec2e16db37eff03cfdefb6f3efc34df";
         private static readonly string port = "5432";
 
         public NpgsqlConnection connection;
