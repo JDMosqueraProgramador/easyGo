@@ -59,6 +59,9 @@
     <PackageReference Include="Npgsql">
       <Version>5.0.10</Version>
     </PackageReference>
+    <PackageReference Include="SendGrid">
+      <Version>9.28.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

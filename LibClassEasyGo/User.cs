@@ -4,6 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using System.Net.Mail;
+using System.Diagnostics.CodeAnalysis;
+using System.Data;
+using System.ComponentModel;
+using SendGrid;
+using SendGrid.Helpers.Mail;
+using System.Net;
 
 namespace LibClassEasyGo
 {
@@ -24,6 +31,13 @@ namespace LibClassEasyGo
         private DateTime dateCreateAd;
         private string strRolUser;
         private int intIdPerson;
+
+        //credential email
+        private string userEmail = "easygo.soporte@gmail.com";
+        private string passwordEmail = "qlmpzxnpvvvjjwya";
+        //private string userEmail = "supportgosttv@gosttv.net";
+        //private string passwordEmail = "Cucucantabalarana";
+        private int codeEmail = 0;
 
         public long IntIdCardPerson { get => intIdCardPerson; set => intIdCardPerson = value; }
         public string StrNamePerson { get => strNamePerson; set => strNamePerson = value; }
@@ -203,12 +217,12 @@ namespace LibClassEasyGo
 
         public bool UpdatePassword(int idPerson, string password)
         {
-            string update = "UPDATE tblUser SET strPassword = @strPassword WHERE intIdPerson = @intIdPerson";
+            string update = "UPDATE tblUser SET strPassword = MD5(@strPassword) WHERE intIdUser = @intIdUser";
 
             NpgsqlCommand cmd = new NpgsqlCommand(update, conn);
 
             cmd.Parameters.AddWithValue("@strPassword", password);
-            cmd.Parameters.AddWithValue("@intIdPerson", idPerson);
+            cmd.Parameters.AddWithValue("@intIdUser", idPerson);
 
             int numRows = cmd.ExecuteNonQuery();
 
@@ -234,6 +248,39 @@ namespace LibClassEasyGo
             return state;
             
         }
+
+
+
+        //Kevin Programo esto
+
+        public async Task<int> sendMail(string mail)
+        {
+
+            Random r = new Random();
+            codeEmail = r.Next(10000, 100000);
+
+            var client = new SendGridClient("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");
+            
+            var from = new EmailAddress("easygo.soporte@gmail.com","EasyGo support");
+            var subject = "Correo de verificacion para restablecer contraseña";
+            var to = new EmailAddress(mail);
+            var plainTextContent = "Su codigo de verificacion para restablecer la contraseña es : " + codeEmail;
+            var htmlContent = "<strong> Su codigo de verificacion para restablecer la contraseña es : " + codeEmail;
+
+            var message = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+
+            var response = await client.SendEmailAsync(message).ConfigureAwait(false);;
+
+            if(response.StatusCode == HttpStatusCode.Accepted)
+            {
+                return codeEmail;
+            }
+
+            return 0;
+
+
+        }
+
 
         //public abstract int CreateUser(string password, int idCity);
 
