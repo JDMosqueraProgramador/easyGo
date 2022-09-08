@@ -259,7 +259,7 @@ namespace LibClassEasyGo
             Random r = new Random();
             codeEmail = r.Next(10000, 100000);
 
-            var client = new SendGridClient("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");
+            var client = new SendGridClient("");
             
             var from = new EmailAddress("easygo.soporte@gmail.com","EasyGo support");
             var subject = "Correo de verificacion para restablecer contraseña";
